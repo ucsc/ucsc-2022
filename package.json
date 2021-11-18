@@ -1,0 +1,25 @@
+{
+    "name": "theme-ucsc",
+    "version": "0.0.1",
+    "description": "The offficial WordPress theme for UC Santa Cruz",
+    "main": "index.js",
+    "scripts": {
+        "release": "standard-version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ucsc/theme-ucsc.git"
+    },
+    "keywords": [
+        "WordPress"
+    ],
+    "author": "UC Santa Cruz",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ucsc/theme-ucsc/issues"
+    },
+    "homepage": "https://github.com/ucsc/theme-ucsc#readme",
+    "devDependencies": {
+        "standard-version": "^9.3.2"
+    }
+}
