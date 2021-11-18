@@ -1,0 +1,239 @@
+{
+    "$schema": "https://json.schemastore.org/theme-v1.json",
+    "version": 1,
+    "templateParts": [{
+            "name": "header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "area": "footer"
+        }
+    ],
+    "settings": {
+        "blocks": {
+            "core/paragraph": {
+                "color": {
+                    "palette": [{
+                        "name": "Black",
+                        "slug": "black",
+                        "color": "#000000"
+                    }]
+                },
+                "typography": {
+                    "fontSizes": [{
+                        "slug": "normal",
+                        "size": "20px",
+                        "name": "Normal"
+                    }],
+                    "customFontSize": false
+                }
+            }
+        },
+        "color": {
+            "link": true,
+            "palette": [{
+                    "slug": "white",
+                    "color": "#fff",
+                    "name": "White"
+                },
+                {
+                    "slug": "black",
+                    "color": "#000",
+                    "name": "Black"
+                },
+                {
+                    "slug": "default-text",
+                    "color": "#222",
+                    "name": "Default Text"
+                },
+                {
+                    "slug": "dark-grey",
+                    "color": "#23282D",
+                    "name": "Dark grey"
+                },
+                {
+                    "slug": "ucsc-primary-blue",
+                    "color": "#003c6c",
+                    "name": "Primary blue"
+                },
+                {
+                    "slug": "ucsc-primary-yellow",
+                    "color": "#fdc700",
+                    "name": "Primary yellow"
+                },
+                {
+                    "slug": "ucsc-secondary-blue",
+                    "color": "#006aad",
+                    "name": "Secondary blue"
+                },
+                {
+                    "slug": "ucsc-light-blue",
+                    "color": "#13a5dc",
+                    "name": "Light blue"
+                },
+                {
+                    "slug": "ucsc-blue-green",
+                    "color": "#13a5dc",
+                    "name": "Blue-green"
+                },
+                {
+                    "slug": "ucsc-orange",
+                    "color": "#f29813",
+                    "name": "Slug orange"
+                },
+                {
+                    "slug": "ucsc-light-orange",
+                    "color": "#ffbf00",
+                    "name": "Slug light orange"
+                },
+                {
+                    "slug": "ucsc-lime-green",
+                    "color": "#93c02d",
+                    "name": "Slug lime green"
+                },
+                {
+                    "slug": "ucsc-rubine-red",
+                    "color": "#da216d",
+                    "name": "Slug rubine red"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "840px",
+            "wideSize": "1100px"
+        },
+        "typography": {
+            "customLineHeight": true,
+            "customFontSize": false,
+            "fontSizes": [{
+                    "slug": "teeny-tiny",
+                    "size": "0.875em",
+                    "name": "Teeny Tiny"
+                }, {
+                    "slug": "extra-small",
+                    "size": "1em",
+                    "name": "Extra small"
+                },
+                {
+                    "slug": "small",
+                    "size": "1.125em",
+                    "name": "Small"
+                },
+                {
+                    "slug": "normal",
+                    "size": "1.25em",
+                    "name": "Normal"
+                },
+                {
+                    "slug": "large",
+                    "size": "1.5em",
+                    "name": "Large"
+                },
+                {
+                    "slug": "extra-large",
+                    "size": "2em",
+                    "name": "Extra large"
+                },
+                {
+                    "slug": "huge",
+                    "size": "6em",
+                    "name": "Huge"
+                },
+                {
+                    "slug": "gigantic",
+                    "size": "9em",
+                    "name": "Gigantic"
+                }
+            ],
+            "fontFamilies": [{
+                    "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+                    "slug": "system-font",
+                    "name": "System Font"
+                },
+                {
+                    "fontFamily": "Roboto, sans-serif",
+                    "slug": "roboto",
+                    "name": "Roboto"
+                }
+            ]
+        },
+        "custom": {
+            "typography": {
+                "line-height": {
+                    "tiny": 1.15,
+                    "small": 1.2,
+                    "medium": 1.428571429,
+                    "normal": 1.6
+                }
+            }
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--white)",
+            "text": "var(--wp--preset--color--default-text)"
+
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--system-font)",
+            "fontSize": "var(--wp--preset--font-size--small)",
+            "textDecoration": "none",
+            "lineHeight": "var(--wp--custom--typography--line-height--medium)"
+        },
+
+        "elements": {
+            "link": {
+                "color": {
+
+                    "text": "var(--wp--preset--color--ucsc-primary-blue)"
+                },
+                "border": {
+                    "style": "solid",
+                    "color": "var(--wp--preset--color--ucsc-primary-yellow)"
+                },
+                "typography": {
+                    "textDecoration": "none"
+                }
+
+
+            },
+            "h1": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--extra-large)"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--large)",
+                    "fontWeight": "400"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--large)",
+                    "fontWeight": "500"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--normal)",
+                    "fontWeight": "500"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--extra-small)",
+                    "fontWeight": "700"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--teeny-tiny)",
+                    "fontWeight": "700"
+                }
+            }
+        }
+
+    }
+}
