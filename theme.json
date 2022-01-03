@@ -78,6 +78,16 @@
                     "name": "Light blue"
                 },
                 {
+                    "slug": "ucsc-link-blue",
+                    "color": "#01589d",
+                    "name": "Link blue"
+                },
+                {
+                    "slug": "ucsc-link-decoration",
+                    "color": "#ffc500",
+                    "name": "Link decoration"
+                },
+                {
                     "slug": "ucsc-blue-green",
                     "color": "#13a5dc",
                     "name": "Blue-green"
@@ -205,14 +215,7 @@
             "link": {
                 "color": {
 
-                    "text": "var(--wp--preset--color--ucsc-primary-blue)"
-                },
-                "border": {
-                    "style": "solid",
-                    "color": "var(--wp--preset--color--ucsc-primary-yellow)"
-                },
-                "typography": {
-                    "textDecoration": "none"
+                    "text": "var(--wp--preset--color--ucsc-link-blue)"
                 }
 
 
