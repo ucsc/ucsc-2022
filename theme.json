@@ -8,6 +8,10 @@
         {
             "name": "footer",
             "area": "footer"
+        },
+        {
+            "name": "sidebar",
+            "area": "sidebar"
         }
     ],
     "settings": {
@@ -293,5 +297,14 @@
             }
         }
 
-    }
+    },
+    "customTemplates": [{
+            "name": "page-left-column",
+            "title": "Page with left column"
+        },
+        {
+            "name": "page-right-column",
+            "title": "Page with right column"
+        }
+    ]
 }
