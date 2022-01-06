@@ -2,128 +2,139 @@
 
 .main-header {
   margin-bottom: 2em;
-  position: relative;
+
 }
 
-.main-navigation {
-  margin-bottom: 0;
-  .home & {
-    margin-bottom: 1.2em;
-  }
-}
-
-#mainNav,
-.site-nav {
-  display:flex;
-  justify-content: space-between;
-  gap: .25em;
-  padding:0;
-  margin:0;
-  flex-direction: column;
-
-  @include media($tablet) {
-
-    flex-direction: row;
-
-  }
-
+.primary-navigation {
   li {
-    padding:0;
-    margin:0;
-    list-style: none;
-    font-family: $font-family-sans-serif;
-    font-size: 1.1em;
-    text-transform: uppercase;
+    font-size: var(--wp--preset--font-size--display-three);
     font-weight: 500;
-
-    a, span {
-      color: $brand-primary-blue;
-      cursor: pointer;
-      display: block;
-      text-decoration: none;
-      padding: 0;
-      &:focus,
-      &:hover,
-      &:active {        
-        @include hoverActiveFocus($brand-secondary-blue, true);
-      }
+    text-transform: uppercase;
+    a {
+      color: var(--wp--preset--color--ucsc-primary-blue)!important
     }
 
-    // A span tag inside of an a results in double-padding.
-    // This rule removes it.
-    & > a span,
-    & > span {
-      background: transparent url(../images/down-arrow.svg) no-repeat right 60%;
-      background-size: 14px;
-      padding: 0 20px 0 0;
-    }
-
-    @include media($small-desktop-plus) {
-      font-size: 1.10rem;
-    }
-
-    @include media($tablet-minus) {
-       display:block;
-       float: none;
-
-      a, span {
-        padding: 5px 10px;
-      }
-    }
-
-    span {
-      &:focus,
-      &:hover,
-      &:active {
-        border-color: transparent;
-      }
-    }    
-
-    &:last-of-type {
-      margin-right: 0;
-    }    
-
-  }
-
-
-  /* Dropdowns */
-  li ul {
-    z-index: 1000;
-    background-color: #fff;
-    border: 1px solid $brand-light-gray;
-    margin: 0;
-    width: fit-content;
-    min-width: 14em;
-    margin-top: -1px;
-    padding: 5px 0;
-    position: absolute;
-    left: -900em;
-
-    li {
-      font-size: .8em;
-      float: none;
-      display: block;
-      text-align: left;
-      border-bottom: none;
-
-      a {
-        text-transform: none;
-        padding: .25em .75em;
-        border: none;
-
-        &:focus,
-        &:hover,
-        &:active {
-          text-decoration: underline;
-          border: none;
-        }
-      }
-    }
-  }
-
-  li:focus ul,
-  li:hover ul,
-  li.hover ul {
-    left: auto;
   }
 }
+// .main-navigation {
+//   margin-bottom: 0;
+//   .home & {
+//     margin-bottom: 1.2em;
+//   }
+// }
+
+// #mainNav,
+// .site-nav {
+//   display:flex;
+//   justify-content: space-between;
+//   gap: .25em;
+//   padding:0;
+//   margin:0;
+//   flex-direction: column;
+
+//   @include media($tablet) {
+
+//     flex-direction: row;
+
+//   }
+
+//   li {
+//     padding:0;
+//     margin:0;
+//     list-style: none;
+//     font-family: $font-family-sans-serif;
+//     font-size: 1.1em;
+//     text-transform: uppercase;
+//     font-weight: 500;
+
+//     a, span {
+//       color: $brand-primary-blue;
+//       cursor: pointer;
+//       display: block;
+//       text-decoration: none;
+//       padding: 0;
+//       &:focus,
+//       &:hover,
+//       &:active {
+//         @include hoverActiveFocus($brand-secondary-blue, true);
+//       }
+//     }
+
+//     // A span tag inside of an a results in double-padding.
+//     // This rule removes it.
+//     & > a span,
+//     & > span {
+//       background: transparent url(../images/down-arrow.svg) no-repeat right 60%;
+//       background-size: 14px;
+//       padding: 0 20px 0 0;
+//     }
+
+//     @include media($small-desktop-plus) {
+//       font-size: 1.10rem;
+//     }
+
+//     @include media($tablet-minus) {
+//        display:block;
+//        float: none;
+
+//       a, span {
+//         padding: 5px 10px;
+//       }
+//     }
+
+//     span {
+//       &:focus,
+//       &:hover,
+//       &:active {
+//         border-color: transparent;
+//       }
+//     }
+
+//     &:last-of-type {
+//       margin-right: 0;
+//     }
+
+//   }
+
+
+//   /* Dropdowns */
+//   li ul {
+//     z-index: 1000;
+//     background-color: #fff;
+//     border: 1px solid $brand-light-gray;
+//     margin: 0;
+//     width: fit-content;
+//     min-width: 14em;
+//     margin-top: -1px;
+//     padding: 5px 0;
+//     position: absolute;
+//     left: -900em;
+
+//     li {
+//       font-size: .8em;
+//       float: none;
+//       display: block;
+//       text-align: left;
+//       border-bottom: none;
+
+//       a {
+//         text-transform: none;
+//         padding: .25em .75em;
+//         border: none;
+
+//         &:focus,
+//         &:hover,
+//         &:active {
+//           text-decoration: underline;
+//           border: none;
+//         }
+//       }
+//     }
+//   }
+
+//   li:focus ul,
+//   li:hover ul,
+//   li.hover ul {
+//     left: auto;
+//   }
+// }
