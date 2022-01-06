@@ -1,310 +1,320 @@
 {
-    "$schema": "https://json.schemastore.org/theme-v1.json",
-    "version": 1,
-    "templateParts": [{
-            "name": "header",
-            "area": "header"
-        },
-        {
-            "name": "footer",
-            "area": "footer"
-        },
-        {
-            "name": "sidebar",
-            "area": "sidebar"
-        }
-    ],
-    "settings": {
-        "blocks": {
-            "core/paragraph": {
-                "color": {
-                    "palette": [{
-                        "name": "Black",
-                        "slug": "black",
-                        "color": "#000000"
-                    }]
-                },
-                "typography": {
-                    "fontSizes": [{
-                        "slug": "normal",
-                        "size": "10px",
-                        "name": "Normal"
-                    }],
-                    "customFontSize": false
-                }
-            }
-        },
-        "color": {
-            "link": true,
-            "palette": [{
-                    "slug": "white",
-                    "color": "#fff",
-                    "name": "White"
-                },
-                {
-                    "slug": "black",
-                    "color": "#000",
-                    "name": "Black"
-                },
-                {
-                    "slug": "heading-text",
-                    "color": "#003662",
-                    "name": "Heading Text"
-                },
-                {
-                    "slug": "default-text",
-                    "color": "#222",
-                    "name": "Default Text"
-                },
-                {
-                    "slug": "dark-grey",
-                    "color": "#23282D",
-                    "name": "Dark grey"
-                },
-                {
-                    "slug": "ucsc-primary-blue",
-                    "color": "#003c6c",
-                    "name": "Primary blue"
-                },
-                {
-                    "slug": "ucsc-primary-yellow",
-                    "color": "#fdc700",
-                    "name": "Primary yellow"
-                },
-                {
-                    "slug": "ucsc-secondary-blue",
-                    "color": "#006aad",
-                    "name": "Secondary blue"
-                },
-                {
-                    "slug": "ucsc-light-blue",
-                    "color": "#13a5dc",
-                    "name": "Light blue"
-                },
-                {
-                    "slug": "ucsc-link-blue",
-                    "color": "#01589d",
-                    "name": "Link blue"
-                },
-                {
-                    "slug": "ucsc-link-decoration",
-                    "color": "#ffc500",
-                    "name": "Link decoration"
-                },
-                {
-                    "slug": "ucsc-blue-green",
-                    "color": "#13a5dc",
-                    "name": "Blue-green"
-                },
-                {
-                    "slug": "ucsc-orange",
-                    "color": "#f29813",
-                    "name": "Slug orange"
-                },
-                {
-                    "slug": "ucsc-light-orange",
-                    "color": "#ffbf00",
-                    "name": "Slug light orange"
-                },
-                {
-                    "slug": "ucsc-lime-green",
-                    "color": "#93c02d",
-                    "name": "Slug lime green"
-                },
-                {
-                    "slug": "ucsc-rubine-red",
-                    "color": "#da216d",
-                    "name": "Slug rubine red"
-                }
-            ]
-        },
-        "layout": {
-            "contentSize": "840px",
-            "wideSize": "1100px"
+"$schema": "https://json.schemastore.org/theme-v1.json",
+"version": 1,
+"templateParts": [
+  {
+    "name": "header",
+    "area": "header"
+  },
+  {
+    "name": "footer",
+    "area": "footer"
+  },
+  {
+    "name": "sidebar",
+    "area": "sidebar"
+  }
+],
+"settings": {
+  "blocks": {
+    "core/paragraph": {
+      "color": {
+        "palette": [
+          {
+            "name": "Black",
+            "slug": "black",
+            "color": "#000000"
+          }
+        ]
+      },
+      "typography": {
+        "fontSizes": [
+          {
+            "slug": "normal",
+            "size": "10px",
+            "name": "Normal"
+          }
+        ],
+        "customFontSize": false
+      }
+    }
+  },
+  "color": {
+    "link": true,
+    "palette": [
+      {
+        "slug": "white",
+        "color": "#fff",
+        "name": "White"
+      },
+      {
+        "slug": "black",
+        "color": "#000",
+        "name": "Black"
+      },
+      {
+        "slug": "heading-text",
+        "color": "#003662",
+        "name": "Heading Text"
+      },
+      {
+        "slug": "default-text",
+        "color": "#222",
+        "name": "Default Text"
+      },
+      {
+        "slug": "dark-grey",
+        "color": "#23282D",
+        "name": "Dark grey"
+      },
+      {
+        "slug": "ucsc-primary-blue",
+        "color": "#003c6c",
+        "name": "Primary blue"
+      },
+      {
+        "slug": "ucsc-primary-yellow",
+        "color": "#fdc700",
+        "name": "Primary yellow"
+      },
+      {
+        "slug": "ucsc-secondary-blue",
+        "color": "#006aad",
+        "name": "Secondary blue"
+      },
+      {
+        "slug": "ucsc-light-blue",
+        "color": "#13a5dc",
+        "name": "Light blue"
+      },
+      {
+        "slug": "ucsc-link-blue",
+        "color": "#01589d",
+        "name": "Link blue"
+      },
+      {
+        "slug": "ucsc-link-decoration",
+        "color": "#ffc500",
+        "name": "Link decoration"
+      },
+      {
+        "slug": "ucsc-blue-green",
+        "color": "#13a5dc",
+        "name": "Blue-green"
+      },
+      {
+        "slug": "ucsc-orange",
+        "color": "#f29813",
+        "name": "Slug orange"
+      },
+      {
+        "slug": "ucsc-light-orange",
+        "color": "#ffbf00",
+        "name": "Slug light orange"
+      },
+      {
+        "slug": "ucsc-lime-green",
+        "color": "#93c02d",
+        "name": "Slug lime green"
+      },
+      {
+        "slug": "ucsc-rubine-red",
+        "color": "#da216d",
+        "name": "Slug rubine red"
+      }
+    ]
+  },
+  "layout": {
+        "contentSize": "67.5rem",
+        "wideSize": "1100px"
+      },
+      "spacing": {
+        "blockGap": null,
+        "customPadding": true,
+        "units": [
+          "px",
+          "em",
+          "rem",
+          "vh",
+          "vw"
+        ]
+      },
+      "typography": {
+        "customLineHeight": true,
+        "customFontSize": false,
+        "fontSizes": [
+          {
+            "slug": "display-one",
+            "size": "0.875em",
+            "name": "Display One"
+          },
+          {
+            "slug": "display-two",
+            "size": "1em",
+            "name": "Display Two"
+          },
+          {
+            "slug": "display-three",
+            "size": "1.125em",
+            "name": "Display Three"
+          },
+          {
+            "slug": "display-four",
+            "size": "1.25em",
+            "name": "Display Four"
+          },
+          {
+            "slug": "display-five",
+            "size": "1.5em",
+            "name": "Display Five"
+          },
+          {
+            "slug": "display-six",
+            "size": "2em",
+            "name": "Display Six"
+          },
+          {
+            "slug": "display-seven",
+            "size": "6em",
+            "name": "Display Seven"
+          },
+          {
+            "slug": "display-eight",
+            "size": "9em",
+            "name": "Display Eight"
+          }
+        ],
+        "fontFamilies": [
+          {
+            "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+            "slug": "system-font",
+            "name": "System Font"
+          },
+          {
+            "fontFamily": "Roboto, sans-serif",
+            "slug": "roboto",
+            "name": "Roboto"
+          }
+        ]
+      },
+      "custom": {
+
+        "line-height": {
+          "tiny": 1.15,
+          "small": 1.2,
+          "body": 1.428571429
         },
         "spacing": {
-            "blockGap": null,
-            "customPadding": true,
-            "units": [
-                "px",
-                "em",
-                "rem",
-                "vh",
-                "vw"
-            ]
-        },
-        "typography": {
-            "customLineHeight": true,
-            "customFontSize": false,
-            "fontSizes": [{
-                    "slug": "display-one",
-                    "size": "0.875em",
-                    "name": "Display One"
-                }, {
-                    "slug": "display-two",
-                    "size": "1em",
-                    "name": "Display Two"
-                },
-                {
-                    "slug": "display-three",
-                    "size": "1.125em",
-                    "name": "Display Three"
-                },
-                {
-                    "slug": "display-four",
-                    "size": "1.25em",
-                    "name": "Display Four"
-                },
-                {
-                    "slug": "display-five",
-                    "size": "1.5em",
-                    "name": "Display Five"
-                },
-                {
-                    "slug": "display-six",
-                    "size": "2em",
-                    "name": "Display Six"
-                },
-                {
-                    "slug": "display-seven",
-                    "size": "6em",
-                    "name": "Display Seven"
-                },
-                {
-                    "slug": "display-eight",
-                    "size": "9em",
-                    "name": "Display Eight"
-                }
-            ],
-            "fontFamilies": [{
-                    "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
-                    "slug": "system-font",
-                    "name": "System Font"
-                },
-                {
-                    "fontFamily": "Roboto, sans-serif",
-                    "slug": "roboto",
-                    "name": "Roboto"
-                }
-            ]
-        },
-        "custom": {
-
-            "line-height": {
-                "tiny": 1.15,
-                "small": 1.2,
-                "body": 1.428571429
-            },
-            "spacing": {
-                "unit": "20px",
-                "horizontal": "25px",
-                "vertical": "30px"
-            }
+          "unit": "20px",
+          "horizontal": "25px",
+          "vertical": "30px"
         }
+      }
     },
     "styles": {
-        "color": {
-            "background": "var(--wp--preset--color--white)",
-            "text": "var(--wp--preset--color--default-text)"
-
-        },
-        "typography": {
-            "fontFamily": "var(--wp--preset--font-family--roboto)",
-            "fontSize": "var(--wp--preset--font-size--display-two)",
-            "textDecoration": "none",
-            "lineHeight": "var(--wp--custom--line-height--body)"
-        },
-
-        "elements": {
-            "link": {
-                "color": {
-
-                    "text": "var(--wp--preset--color--ucsc-link-blue)"
-                }
-
-
-            },
-            "h1": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-six)",
-                    "fontWeight": "600"
-                }
-
-
-            },
-            "h2": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-five)",
-                    "fontWeight": "600"
-                }
-
-            },
-            "h3": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-five)",
-                    "fontWeight": "600"
-                }
-
-            },
-            "h4": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-four)",
-                    "fontWeight": "600"
-
-                }
-            },
-            "h5": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-two)",
-                    "fontWeight": "600"
-                }
-
-            },
-            "h6": {
-                "typography": {
-                    "fontSize": "var(--wp--preset--font-size--display-one)",
-                    "fontWeight": "600"
-                }
-
-            }
-        },
-        "blocks": {
-            "core/heading": {
-                "color": {
-                    "text": "var(--wp--preset--color--heading-text)"
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "1em",
-                        "right": "0",
-                        "bottom": "0.65em",
-                        "left": "0"
-                    }
-                }
-            },
-            "core/paragraph": {
-                "color": {
-                    "text": "var(--wp--preset--color--black)"
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "1em",
-                        "right": "0",
-                        "bottom": "1em",
-                        "left": "0"
-                    }
-                }
-            }
-        }
+      "color": {
+        "background": "var(--wp--preset--color--white)",
+        "text": "var(--wp--preset--color--default-text)"
 
     },
-    "customTemplates": [{
-            "name": "page-left-column",
-            "title": "Page with left column"
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--roboto)",
+      "fontSize": "var(--wp--preset--font-size--display-two)",
+      "textDecoration": "none",
+      "lineHeight": "var(--wp--custom--line-height--body)"
+    },
+
+    "elements": {
+      "link": {
+        "color": {
+
+                "text": "var(--wp--preset--color--ucsc-link-blue)"
+              }
+
+
         },
-        {
-            "name": "page-right-column",
-            "title": "Page with right column"
+        "h1": {
+          "typography": {
+            "fontSize": "var(--wp--preset--font-size--display-six)",
+            "fontWeight": "600"
+          }
+
+
+        },
+        "h2": {
+          "typography": {
+            "fontSize": "var(--wp--preset--font-size--display-five)",
+            "fontWeight": "600"
+          }
+
+        },
+        "h3": {
+          "typography": {
+            "fontSize": "var(--wp--preset--font-size--display-five)",
+            "fontWeight": "600"
+          }
+
+        },
+        "h4": {
+          "typography": {
+            "fontSize": "var(--wp--preset--font-size--display-four)",
+            "fontWeight": "600"
+
+            }
+          },
+          "h5": {
+            "typography": {
+              "fontSize": "var(--wp--preset--font-size--display-two)",
+              "fontWeight": "600"
+            }
+
+        },
+        "h6": {
+          "typography": {
+            "fontSize": "var(--wp--preset--font-size--display-one)",
+            "fontWeight": "600"
+          }
+
         }
-    ]
+      },
+      "blocks": {
+        "core/heading": {
+          "color": {
+            "text": "var(--wp--preset--color--heading-text)"
+          },
+          "spacing": {
+            "margin": {
+              "top": "1em",
+              "right": "0",
+              "bottom": "0.65em",
+              "left": "0"
+            }
+          }
+        },
+        "core/paragraph": {
+          "color": {
+            "text": "var(--wp--preset--color--black)"
+          },
+          "spacing": {
+            "margin": {
+              "top": "1em",
+              "right": "0",
+              "bottom": "1em",
+              "left": "0"
+            }
+          }
+        }
+      }
+
+},
+"customTemplates": [
+  {
+    "name": "page-left-column",
+    "title": "Page with left column"
+  },
+  {
+    "name": "page-right-column",
+    "title": "Page with right column"
+  }
+]
 }

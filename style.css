@@ -1,4 +1,4 @@
-            /*
+                /*
 Theme Name: UC Santa Cruz WordPress Theme
 Theme URI:
 Author: UC Santa Cruz
@@ -14,54 +14,45 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-ucsc
 */
 
-        .entry-content>* {
-            max-width: 800px;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
+/* .site-content {
+    word-wrap: break-word
+}
 
-        .entry-content>.alignwide {
-            max-width: 1000px;
-        }
+.site-content>* {
+    margin: 60px auto
+}
 
-        .entry-content>.alignfull {
-            max-width: none;
-        }
+.site-content>:not(.alignfull) {
+    max-width: 67.5rem;
+    /* padding: 0 15px */
+}
 
-        .entry-content>.alignleft {
-            float: left;
-            margin-right: 2em;
-        }
-
-        .entry-content>.alignright {
-            float: right;
-            margin-right: 2em;
-        }
-        /*	2. Element Base
+.site-content>.alignwide {
+    max-width: 1240px
+} */
+/*	2. Element Base
 /* ---------------------------------------------*---------------------------- */
 
-        a {
-            -webkit-text-decoration-skip: ink;
-            color: var(--wp--preset--color--ucsc-link-blue);
-            text-decoration: underline;
-            -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-            text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-            text-decoration-skip-ink: auto;
-            text-decoration-thickness: .14em;
-            text-underline-offset: .1em
-        }
+a {
+    -webkit-text-decoration-skip: ink;
+    color: var(--wp--preset--color--ucsc-link-blue);
+    text-decoration: underline;
+    -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
+    text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: .14em;
+    text-underline-offset: .1em
+}
 
-        a:active,
-        a:focus,
-        a:hover {
-            -webkit-text-decoration-skip: ink;
-            color: #003c6c;
-            text-decoration: underline;
-            -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-            text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-            text-decoration-skip-ink: auto;
-            text-decoration-thickness: .1em;
-            text-underline-offset: .1em
-        }
-
-        a {
+a:active,
+a:focus,
+a:hover {
+    -webkit-text-decoration-skip: ink;
+    color: #003c6c;
+    text-decoration: underline;
+    -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
+    text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: .1em;
+    text-underline-offset: .1em
+}
