@@ -1,0 +1,52 @@
+// Rules for the campus feedback form on every site
+
+form#feedbackform {
+  td, th {
+    background-color:transparent;
+    text-align: left;
+    border:none;
+    border-bottom: 1px solid #efefef;
+    padding: 1em 2em 1em 0;
+    vertical-align: middle;
+  }
+  td #explain, td #explain2 {
+    display: none !important;
+  }
+  th {
+    vertical-align:bottom;
+    font-weight: 700;
+    padding-bottom: 0.25em;
+  }
+  thead th {
+    border-bottom: none;
+  }
+  input, textarea {
+    color: #676661;
+  }
+  input[type=text]{
+    margin: 0;
+    width:100%;
+    padding: 0.5em;
+    border-radius:3px;
+    border:1px solid #ccc;
+  }
+  input[type=submit]{
+    margin: 0 0 1em 0;
+    width:100%;
+    padding: 0.5em;
+    border-radius:3px;
+    border:1px solid #ccc;
+    background-color: $blue;
+    color: #ffffff;
+  }
+  textarea{
+    width:100%;
+    padding: 0.5em;
+    border:1px solid #ccc;
+    border-radius:3px;
+    resize:none;
+  }
+  input[type=text]:focus,textarea:focus{
+    border-color: $blue;
+  }
+}

@@ -1,0 +1,37 @@
+// See also links appear at the bottom of news articles and left column pages
+
+#seeAlso,
+.see-also {
+  margin:0 0 2em;
+  @include clearfix;
+
+  ul {
+    margin:0;
+    padding-left:0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 2em;
+
+    li {
+      list-style-type: disc;
+      width: 100%;
+      margin:0 0.5em 0.1em 1.25em;
+      padding:0.1em 0.5em 0.1em 0.25em;
+    }
+
+    // If modernizr says the browser suuports columns,
+    // let's do it for landing pages only.
+    .csscolumns .landing & {
+      @include media($mobile) {
+        column-count: 1;
+      }
+      @include media($tablet) {
+        column-count: 2;
+      }
+      @include media($desktop) {
+        column-count: 3;
+      }
+    }
+
+  }
+}

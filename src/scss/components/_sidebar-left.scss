@@ -1,0 +1,148 @@
+@use "sass:math";
+// Rules for pages with a side bar on the left
+
+.left-column .sidebar {
+
+  .sidebar-header {
+    border-bottom: 1px solid lighten($gray-light, 20%);
+    color: $gray;
+    font-size: $font-size-base*1.2;
+    font-weight: normal;
+    padding-bottom: 2%;
+    margin-bottom: math.div($font-size-base, 2);
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    margin:0 0 2em 0;
+    padding:0;
+    &:first-child {
+      margin-top: 0.3em;
+    }
+  }
+
+   // First-order list-item and link.
+   li {
+      padding:0;
+      margin:0;
+
+      > a {
+        display: block;
+        padding:0.5em 0 0.5em 1em;
+        border-bottom:1px solid $brand-light-gray;
+        @include hoverActiveFocus($brand-secondary-blue, true);
+        &.current {
+          display:block;
+          background:$brand-primary-blue;
+          color: #fff;
+        }
+      }
+      &:first-child > a {
+         border-top:1px solid $brand-light-gray;
+      }
+   }
+
+
+    // Second level list and links (ul ul).
+    li > ul {
+
+        margin: 0;
+        padding: math.div($font-size-base, 2) 0;
+        border-bottom:1px solid lighten($gray-light, 24%);
+        li {
+          list-style: square;
+          margin:0.5em 0 0.5em 1.7em;
+          padding-left:0;
+          a {
+            border-bottom:none;
+            padding:0;
+            @include hoverActiveFocus($blue, true);
+          }
+          &:first-child a {
+            border-top:none;
+          }
+          // If it's the current open list item (added to format 4/17/2015)
+          &.current-path {
+            background-color: transparent;
+
+          }
+          // The current link inside of the list item
+          .current {
+            background-color: transparent !important;
+            color: #000;
+            text-decoration: none;
+          }
+        }
+      }
+
+      // Third level list (ul ul ul)
+      ul ul ul {
+        border-bottom: none;
+        li {
+          list-style: circle outside none;
+          margin:0 0 0 1.25em;
+          font-size: 0.9em;
+        }
+      }
+
+
+
+  .block {
+
+    border: none;
+    margin:1.25em 0;
+
+    > li {
+      border: none;
+      padding:0 0 1em 0;
+      margin:0 0 1em 0;
+      border-bottom:1px solid lighten($gray-light, 24%);
+      &:first-child a {
+        border-top:none;
+      }
+      @include media($mobile) {
+        width: 48%;
+        float: left;
+        clear: none;
+        a {
+          margin: 0.5em;
+          border: none;
+        }
+      }
+    }
+
+    a {
+      border: none;
+      padding:0;
+      margin:0;
+      @include clearfix;
+    }
+
+    img {
+      display: block;
+      float: none;
+      padding: 0;
+      margin: 0 0 0.25em 0;
+    }
+
+    .thumbnail img {
+      width:100%;
+      margin: 0 0 0.25em 0;
+      &.portrait {
+        float: left;
+        height: auto;
+        margin:0 0.75em 0.25em 0;
+        width: 48%;
+      }
+    }
+
+    .description {
+      display:block;
+      padding:0.5em 0.5em 0.5em;
+      line-height: 128%;
+    }
+
+  }
+
+}

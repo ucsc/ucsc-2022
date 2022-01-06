@@ -1,0 +1,33 @@
+// Block: thumbnail images in a grid of 3x3
+#view,
+.gallery-block {
+  
+  // Clear the 4th thumbnail to prevent
+  // the blocks from breaking when
+  // some images are different heights
+  a:nth-child(3n+4) {  
+    clear:left;
+  }
+
+  a {
+    display: block;
+    float: left;
+    width: 33%;
+    padding: 0;
+    margin: 0;
+    img {
+      display:block;
+      margin: 0;
+      width: 100%;
+      height: auto;
+      padding: 0.3em;
+      background-color: transparent;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue;
+    }
+  }
+  
+}

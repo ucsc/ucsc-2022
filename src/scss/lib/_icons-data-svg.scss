@@ -1,0 +1,56 @@
+// Base rules for svg icons
+[class^="icon-"], [class*=" icon-"] {
+  @include hide-text;
+  opacity: 0.65;
+  font-style: normal;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 0.25em;
+  background-size:cover;
+  padding:0;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.icon-ucsc-logotype {
+  min-width: 230px;
+  min-height: 64px;
+  opacity: 1.0;
+}
+
+.icon-ucsc-logotype-tagged {
+  min-width: 328px;
+  min-height: 64px;
+  opacity: 1.0;
+}
+
+.icon-ucsc-logotype-50th-tagged {
+  min-width: 362px;
+  min-height: 80px;
+  opacity: 1.0;
+  &.overflow {
+    min-width: 400px;
+    min-height: 90px;
+    z-index: 10000;
+    position: relative;
+    left: -67px;
+  }
+}
+
+ .mobile-menu.active {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpolygon%20%20fill%3D%22%23f5f4eb%22%20id%3D%22menu-close-icon%22%20points%3D%22438.393%2C374.595%20319.757%2C255.977%20438.378%2C137.348%20374.595%2C73.607%20255.995%2C192.225%20137.375%2C73.622%2073.607%2C137.352%20192.246%2C255.983%2073.622%2C374.625%20137.352%2C438.393%20256.002%2C319.734%20374.652%2C438.378%20%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: 32px;
+}
+
+.mobile-menu {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20%20fill%3D%22%23f5f4eb%22%20id%3D%22menu-icon%22%20d%3D%22M462%2C163.5H50v-65h412V163.5z%20M462%2C223.5H50v65h412V223.5z%20M462%2C348.5H50v65h412V348.5z%22/%3E%3C/svg%3E%0D%0A');
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: 32px;
+  fill: $blue;
+}

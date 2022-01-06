@@ -1,0 +1,28 @@
+// Rules for optional banners at the top of left-column pages
+
+#bannerBox,
+.banner-box {
+  // @include module-box-shadow(light);
+  // background-color: $sand-light;
+  // padding: 0.8em;
+  margin-bottom: $font-size-base;
+  // border-radius: $border-radius-base;
+
+
+  img {
+    width: 100%;
+    height:auto;
+    padding:0;
+    background-color: transparent;
+  }
+
+  .caption {
+    color: $brown-dark;
+    margin-top: .25em;
+    margin-bottom: 1em;
+    font-family: $font-family-sans-serif;
+    font-style: italic;
+    font-size: .9rem;
+  }
+
+}

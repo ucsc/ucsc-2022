@@ -1,0 +1,45 @@
+// Custom styles for news articles and people profiles
+.article {
+
+  h1:nth-child(1) {
+    margin-bottom: .25em;
+  }
+
+  .subhead,
+  .campus-message {
+    color: $gray-dark;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0 0 1em 0;
+    @include media($tablet) {
+
+      @include fontSize(20);
+
+    }
+  }
+
+  .campus-message {
+    font-size: 1.2em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .article-meta {
+    font-size: 1em;
+    margin: .5em 0 1em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .article-body {
+    :first-child {
+      margin-top: 0;
+    }
+  }
+
+}

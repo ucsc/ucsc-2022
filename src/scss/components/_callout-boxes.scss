@@ -1,0 +1,161 @@
+@use "sass:math";
+/*doc
+---
+title: Callout boxes
+name: boxes
+category: Advanced Tools
+---
+
+Callout box classes are used to add emphasis to a block of content on your page. Typically they appear at the top of a page, but they can be sprinkled throughout the page needed.:
+
+```html_example
+<div class="callout callout-right">
+<h3>Callout Box Header</h3>
+<ol>
+    <li><a href="#password">Protect Your Passwords</a></li>
+    <li><a href="#phishing">Phishing and Other Scams</a></li>
+    <li><a href="#privacy">Internet Privacy</a></li>
+    <li><a href="#google">Google Privacy and Security Tips</a></li>
+    <li><a href="#mobile">Mobile Devices</a></li>
+</ol>
+</div>
+
+```
+
+A previous iteration of these templates supported fixed widths for callout boxes using classes like `.fixed-300`. While they are still supported, we'd prefer you use one of the 3 relative width classes (`.callout-full`, `.callout-wide` or `.callout-narrow`) 
+
+We also recommend you put images in callout boxes without any surrounding tags, such as paragraph (&lt;p&gt;) tags or Division (&lt;div&gt;) tags.
+
+```html_example
+<div class="callout-left narrow">
+    <h3>Box Headline</h3>
+    <img src="http://placehold.it/300x180" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+```
+
+*/
+
+
+[class^="callout"] {
+    background-color: lighten($brand-light-gray, 6%);
+    border-bottom: 2px solid $brand-primary-blue;
+    font-size: floor($font-size-base*.95);
+    text-align: left;
+    min-width: 20%;
+    float: right;
+    margin-left: 1.5em;    
+    padding:0.75em 1em;
+
+    // The first descendant element should not have a margin.
+    :first-child {
+        margin-top:0;
+    }
+
+    td {
+      padding: $font-size-base;
+    }
+
+    p {
+      display: inline-block;
+      margin: math.div($font-size-base, 2) 0;
+      span {
+        position: relative;
+        display: inline;
+      }
+    }
+
+    img {
+      position: relative;
+      width: auto;
+      border-radius: 0;
+      height: auto;
+      margin: 0.5em 0;
+      padding: 0;
+    
+      + p {
+          margin-top: 0;
+      }
+
+    }
+
+}
+
+
+.callout-right,
+.right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.callout-left,
+.left {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+
+.callout-full {
+    width: 100%;
+}
+
+.narrow {
+    width: 38%;
+}
+
+.wide {
+    width: 62%;
+}
+
+.fixed-200 {
+    width: 200px;
+}
+
+.fixed-240 {
+    width: 240px;
+}
+
+.fixed-250 {
+    width: 250px;
+}
+
+.fixed-290 {
+    width: 290px;
+}
+
+.fixed-300 {
+    width: 300px;
+}
+
+.fixed-540 {
+    width: 540px;
+    padding: 0px;
+}
+
+
+.callout-right,
+.callout-left,
+.callout-full {
+
+    blockquote {
+        margin: 0.9em;
+        padding: 0;
+        border: none;
+    }
+
+    h3,
+    h4 {
+        margin: 0;
+    }
+
+    textarea {
+        font-family: Monaco;
+        border: 1px solid #ccc;
+        width: 70%;
+        height: 80px;
+        overflow: hidden;
+        font-size: 10px;
+    }
+
+}

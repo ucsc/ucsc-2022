@@ -1,0 +1,88 @@
+// Block: three fancy links, with an image link on top (www home page only)
+.engagement-block {
+
+  ul {
+    @include reset;    
+  }
+
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5em;    
+    
+    a,
+    span {
+      display: block;
+      transition-property: background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      color: #fff;
+      font-style: normal;
+      font-family: $font-family-sans-serif;
+      background: rgba(19, 165, 220, 1.0) url('/images/waves-2.svg') no-repeat center center;
+      background-size: 120%;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: rgba(253, 199, 0, 1.0) url('/images/waves.svg') no-repeat center center;
+        color: #000;
+        background-size: 120%; 
+        text-shadow: 0px 0px 0px #fff;       
+        span {
+          background-position: 98% center;
+
+        }
+      }
+    }
+
+    span {
+      border-radius: 0;
+      padding: 1em;
+    }
+
+    .strong-caps {
+      display: block;
+      background: none;
+      padding: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $font-family-sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      letter-spacing: .05em;
+
+    }
+
+    img {
+      padding: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    
+    &.events a {
+      background-position: 0px -20px;
+    }
+
+    &.instagram a {
+      background-position: 0px -104px;
+    }
+
+    &.virtualtour a {
+      background-position: 0px -192px;
+    }
+
+    &.campaign a {
+      background-position: 0px -280px;
+    }
+
+  }
+}

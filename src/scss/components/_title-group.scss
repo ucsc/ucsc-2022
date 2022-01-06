@@ -1,0 +1,47 @@
+// The title and subtitle on second-level pages of the main campus website
+
+.title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2em 0;
+
+    h1 {
+        color: $blue-med;
+        font-size:2.5rem;
+        margin:0;        
+        font-weight:600;
+        line-height: 1;
+        padding:0;
+    }
+
+    p {
+        padding-top: 0;
+        font-size: 1rem;
+        font-weight:300;
+        margin-top: 1em;
+    }
+
+    @include media($portrait) {
+
+        flex-direction: row;
+
+        h1 {
+          font-size: 3rem;
+          line-height: 1.2;
+          padding: 0 .5em 0 0;
+          margin: 0;
+          border-right: 4px solid $gray-very-light;
+        }
+
+        p {
+            font-size: 1.2rem;
+            padding: 0 0 0 1em;
+            margin: 0 0 0 .25em;
+            max-width: 68%;
+            border: none;            
+        }
+    }
+
+}

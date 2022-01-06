@@ -1,0 +1,27 @@
+// Breadcrumbs appear on some pages
+
+.breadcrumbs {
+
+  margin-bottom: 0.35em;
+
+  p {
+    font-size: .8rem;
+    margin: 0;
+  }
+
+  a {
+    border-bottom: 1px solid #ddd;
+  }
+
+  a:visited {
+    border-bottom: 1px dotted #ddd;
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    border-bottom: 1px solid #006aad;
+  }
+
+}

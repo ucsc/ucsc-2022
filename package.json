@@ -2,9 +2,11 @@
     "name": "theme-ucsc",
     "version": "0.0.1",
     "description": "The offficial WordPress theme for UC Santa Cruz",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
-        "release": "standard-version"
+        "release": "standard-version",
+        "start": "wp-scripts start",
+        "build": "wp-scripts build"
     },
     "repository": {
         "type": "git",
@@ -20,6 +22,7 @@
     },
     "homepage": "https://github.com/ucsc/theme-ucsc#readme",
     "devDependencies": {
+        "@wordpress/scripts": "^19.2.2",
         "standard-version": "^9.3.2"
     }
 }

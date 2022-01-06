@@ -1,0 +1,62 @@
+// Rules for the alert ribbon that appears at the top of home pages
+
+.ribbon {
+  padding: $font-size-base $font-size-base;
+  margin-bottom: 1em;
+  background-color: #cce5ff;
+  border-bottom: 2px solid #b8daff;
+  color: #004085;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.ribbon .inner {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.ribbon .header {
+  font-size: 1.3em;
+  margin: 0 0 .25em 0;
+  color: inherit;
+}
+
+.ribbon p {
+  margin: .75em 0;
+}
+
+.ribbon a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ribbon-notice {
+  background-color: #cce5ff;
+  border-bottom: 2px solid #b8daff;
+  color: #004085;
+}
+
+.ribbon-clear {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.ribbon-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.ribbon-emergency {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+@media screen and (min-width: 1100px) {
+  .ribbon {
+    font-size: 1.1rem;
+    padding: $font-size-base 0;
+  }
+}

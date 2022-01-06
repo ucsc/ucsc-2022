@@ -30,6 +30,7 @@ add_action( 'after_setup_theme', 'ucsc_theme_setup' );
  */
 function ucsc_theme_scripts() {
     wp_enqueue_style( 'ucsc-theme-styles', get_stylesheet_uri() );
+	wp_enqueue_style('ucsc-theme-styles-scss', get_template_directory_uri(). '/build/index.scss');
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_theme_scripts' );
 

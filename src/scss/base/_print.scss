@@ -1,0 +1,170 @@
+// Print styles to make everything look great on dead trees
+
+@media print {
+
+  // Box shadows, in particular, cause problems in Chrome.
+  * {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    position:relative !important;
+  }
+
+  body {
+    color:#333;
+    background-color: #fff;
+    font-size: 9pt;
+    position: relative !important;
+    float: none !important;
+    overflow: visible !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin:24pt 24pt !important;        
+  }
+
+  a {
+    border-bottom: none !important;
+  }
+
+  input[type=email],
+  input[type=password],
+  input[type=search],
+  input[type=text],
+  input[type=url],
+  input[type=date],
+  textarea {
+    border: 1px solid #999 !important;
+  }
+
+  #access-links,
+  .page-top,
+  .search,
+  .mobile-menu,
+  .main-navigation,
+  .breadcrumbs,
+  #slides,
+  .sidebar,
+  #bannerBox,
+  .banner-box,
+  .social-sharing,
+  .recent-news-block,
+  #footer,
+  .legal {
+    display:none !important;
+  }
+
+  .row,
+  .cell {
+    margin: 0 !important;
+    width: auto !important;
+  }
+
+  .php,
+  .phpContent {
+    overflow: visible !important;
+  }
+
+  .contentBox,
+  .content-box,
+  .article-body {
+    padding:0 !important;
+    border:none;
+    border-radius: 0px !important;
+    overflow: visible !important;
+  }
+
+  .content-box {
+    border-bottom: 1px solid #999;
+    padding-bottom: 24pt !important;
+  }
+  
+  #title,
+  .page-title {
+    font-size: 16pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  figure {
+    width:250px !important;
+    float:right !important;
+    background-color:transparent;
+    box-shadow:none !important;
+    border:1px solid #999 !important;
+    padding:2pt !important;
+    border-radius:0px !important;
+    margin-right: 8pt !important;
+  }
+
+  figure img {
+    background-color:transparent !important;
+    margin:0 !important;
+    padding:0 !important;
+    width:100% !important;
+    border-radius:0px !important;
+  }
+
+  .site-header {
+    padding: 0 !important;
+    margin-bottom: 18pt !important; 
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .names {
+    margin-bottom: 0px;
+  }
+
+  .campus-name {
+    .campus-logo {
+      font-size: 9pt !important;
+      color: #333 !important;
+      background-image: none !important;
+      float:none !important; 
+      display: inline !important;
+      overflow: visible !important;
+      width: auto !important;
+      height: auto !important;
+      margin:0 !important;      
+    }
+  }
+
+  .site-name {
+    display: inline !important;
+    margin: 0 0 8pt 0 !important;
+    padding: 0 !important; 
+    #site-title { 
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    h1 {
+      font-size: 14pt !important;
+      margin: 0 !important;
+      padding: 0 !important; 
+    }
+    a {
+      display: inline !important;
+      color:#333 !important;
+      font-size: 12pt !important;
+      text-transform: none !important;
+      text-decoration: none !important;
+      margin: 0px !important;
+      height: auto !important;
+      padding-bottom: 0 !important;
+    }
+  }
+
+  #sprflt,
+  .main-content {
+    max-width: 100% !important;
+    width:100% !important;
+    margin:0 auto !important;
+  }
+
+  .subhead {
+    font-size: 1.1em !important;
+  }
+
+  @page {
+    margin: 0.6in 0.45in;
+  }
+
+}

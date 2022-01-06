@@ -1,0 +1,41 @@
+.contentBox,
+.content-box {
+
+  margin:0;
+  overflow-x: auto;
+  @include clearfix;
+
+  > :first-child   {
+    margin-top: 0;
+  }
+
+  + .content-box,
+  + .contentBox {
+    margin-top: 1.75em;
+  }
+
+  a {
+    color: $brand-tertiary-blue;
+    text-decoration: underline;
+    text-decoration-color: $gold;
+    text-decoration-thickness: .14em;
+    text-underline-offset: .1em;
+    text-decoration-skip-ink: auto;
+
+    @include hoverActiveFocus($brand-primary-blue, true);
+  }  
+
+  /* Customizations for Search results page */
+  .gsc-results-wrapper-visible a {
+    border-bottom: 0px solid #fff !important;
+  }
+
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    border-color: #fff;
+    background-color: #006aad;
+    color: #fff;
+    padding: .35em .65em;
+    margin-right: 1em;
+  }
+
+}
