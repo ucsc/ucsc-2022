@@ -308,12 +308,12 @@
   },
   "customTemplates": [
     {
-      "name": "page-left-column",
-      "title": "Page with left column"
+      "name": "campus-left-column",
+      "title": "Campus page with left column"
     },
     {
-      "name": "page-right-column",
-      "title": "Page with right column"
+      "name": "campus-right-column",
+      "title": "Campus page with right column"
     }
   ]
 }
