@@ -1,205 +1,49 @@
-.main-footer {
-	background: $brand-primary-blue;
-	margin-left: -$font-size-base;
-	margin-right: -$font-size-base;
-	margin-top: $font-size-base * 4;
-	padding: $font-size-base * 2.5 $font-size-base $font-size-base * 5 $font-size-base;
-	color: #fff;
-	font-family: $font-family-sans-serif-condensed;
-	font-weight: 400;
+footer {
+  text-transform: uppercase;
+  .main-footer {
+    .address {
 
-	@include media($tablet) {
-		margin-top: 0;
-	}
+      padding-left: 100px;
+      padding-top: 20px;
 
-	a {
-		color: #fff;
-		text-decoration: underline;
-		text-transform: uppercase;
+    }
+    .location {
+      font-weight: 700;
+      font-size: .95rem;
+      margin-bottom: 3px;
 
-		&:focus,
-		&:hover,
-		&:active {
-			text-decoration: none;
-		}
-
-	}
-
-	.footer-left {
-		float: left;
-		width: 60%;
-
-		@include media($tablet-minus) {
-			float: none;
-			width: 100%
-		}
-
-		.seal {
-			float: left;
-
-			@include media($tablet-minus) {
-				float: none;
-				margin: 0 auto;
-				display: block;
-			}
-
-		}
-
-		.address {
-			text-transform: uppercase;
-			padding-left: 100px;
-			padding-top: 20px;
-
-
-			@include media($tablet-minus) {
-				padding-left: 0;
-				text-align: center;
-				margin-bottom: 3em;
-			}
-
-			.location {
-				font-weight: 700;
-				font-size: .95rem;
-				margin-bottom: 3px;
-
-
-				@include media($tablet-minus) {
-					font-size: .8rem;
-				}
-			}
-
-			.copyright {
-				font-size: .8rem;
-
-				@include media($tablet-minus) {
-					font-size: .7rem;
-				}
-			}
-
-		}
-
-	}
-
-	.footer-right {
-		float: left;
-		width: 40%;
-		text-align: right;
-
-		@include media($tablet-minus) {
-			float: none;
-			width: 100%;
-			text-align: center;
-		}
-
-		.links {
-			font-size: .8em;
-
-			a {
-				margin-left: 1em;
-
-
-				@include media($tablet-minus) {
-					margin-left: 1em;
-					margin-right: 1em;
-				}
-
-			}
-		}
-
-		.social-media {
-			text-align: right;
-			margin-top: 14px;
-			margin-bottom: 5px;
-
-
-			@include media($tablet-minus) {
-				text-align: center;
-			}
-
-			a {
-				display: inline-block;
-				margin-left: 1em;
-				font-size: 1.5em;
-
-
-				@include media($tablet-minus) {
-					margin-left: 10px;
-					margin-right: 10px
-				}
-
-				&:focus,
-				&:hover,
-				&:active {
-					color: #ededed;
-				}
-			}
-
-		}
-
-	}
-
-	// Rules for the bottom area of every WCMS page
-	#footer {
-		@include clearfix;
-		margin-bottom: 4em;
-	}
-
+    }
+    .copyright {
+      font-size: .8rem;
+    }
+    .legal {
+      text-align: center;
+      margin-bottom: 2em;
+      font-size: .8em!important;
+      ul {
+        margin: 0 0 1.5em 0;
+      }
+      li {
+        margin-left: 1.5em;
+        &:first-child:after {
+          display:none;
+        }
+        &:after {
+          background-color: var(--wp--preset--color--ucsc-primary-yellow);
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: -.75em;
+          margin-left: -2.5px;
+          margin-top: -2.5px;
+        }
+      }
+    }
+  }
 }
 
 
-
-// An IP address is displayed in the footer
-// of some pages (ITS added this)
-// We hide it from view.
-.check-ip {
-	display: none;
-}
-
-.legal {
-	text-align: center;
-	margin-bottom: 2em;
-	font-size: .8em;
-
-	@include media($tablet-minus) {
-		font-size: .7rem;		
-	}
-
-	ul {
-		margin: 0 0 1.5em 0;
-	}
-
-	li {
-		display: inline-block;
-		margin: 0;
-		position: relative;
-		margin-left: 1.5em;
-	}
-
-	li:first-child:after {
-		display: none;
-	}
-
-	li:after {
-		background-color: $brand-gold;
-		width: 5px;
-		height: 5px;
-		border-radius: 50%;
-		content: "";
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: -.75em;
-		margin-left: -2.5px;
-		margin-top: -2.5px;
-	}
-
-
-
-	.page-meta {
-		font-style: italic;
-		text-transform: uppercase;
-		margin: 0;
-
-	}
-
-}

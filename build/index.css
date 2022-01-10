@@ -129,4 +129,47 @@ html {
   border-bottom: 2px solid var(--wp--preset--color--ucsc-link-decoration);
 }
 
+footer {
+  text-transform: uppercase;
+}
+footer .main-footer .address {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+footer .main-footer .location {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+footer .main-footer .copyright {
+  font-size: 0.8rem;
+}
+footer .main-footer .legal {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 0.8em !important;
+}
+footer .main-footer .legal ul {
+  margin: 0 0 1.5em 0;
+}
+footer .main-footer .legal li {
+  margin-left: 1.5em;
+}
+footer .main-footer .legal li:first-child:after {
+  display: none;
+}
+footer .main-footer .legal li:after {
+  background-color: var(--wp--preset--color--ucsc-primary-yellow);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -0.75em;
+  margin-left: -2.5px;
+  margin-top: -2.5px;
+}
+
 /*# sourceMappingURL=index.css.map*/
