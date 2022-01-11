@@ -28,8 +28,9 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
     	 * Register Footer menu location
     	 */
     	register_nav_menus( array(
-    	    // 'primary'   => __('Primary Navigation', 'theme-ucsc'),
-    	    'footer' => __('Footer Navigation', 'theme-ucsc')
+    	    'primary'   => __('Primary Navigation', 'theme-ucsc'),
+    	    'footer' => __('Footer Navigation', 'theme-ucsc'),
+			'feedback' => __('Feedback Navigation', 'theme-ucsc')
     	) );
     }
 endif;
@@ -56,34 +57,8 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_google_fonts' );
 
 
 /**
- * Temporary function -- shortcode to list locations.
- */
-function jc_nav_menus() {
-	$menus = get_registered_nav_menus();
-
-	foreach ( $menus as $location => $description ) {
-
-		return $location . ': ' . $description . '<br />';
-	}
-}
-
-add_shortcode( 'listmenus', 'jc_nav_menus' );
-
-
-function jc_howdy(){
- $locations = get_theme_mod('nav_menu_locations');
-
-	foreach ( $locations as $location ) {
-
-		return $location . '<br />';
-	}
-}
-
-add_shortcode( 'howdy', 'jc_howdy' );
-
-/**
  *
- * Automatically generate footer legal menu upon theme activation
+ * Automatically generate footer menus upon theme activation
  *
  */
 
@@ -135,7 +110,7 @@ function ucsc_after_switch_theme() {
 
     if ( ! $run_menu_maker_once ){
         /**
-         * Setup Navigation for : Footer Menu - Legal
+         * Setup Navigation for Footer Legal Menu
          */
         $footer_menu_items = array(
             'Accreditation'  =>  'https://academicaffairs.ucsc.edu/accreditation/',
@@ -146,6 +121,13 @@ function ucsc_after_switch_theme() {
 			'Sexual Violence Prevention & Response (Title IX)' => 'https://titleix.ucsc.edu/index.html'
         );
         ucsc_generate_site_nav_menu( 'Footer Menu', $footer_menu_items, 'footer' );
+		/**
+         * Setup Navigation for Footer Feedback menu
+         */
+        $feedback_menu_items = array(
+            'Feedback'  =>  'https://www.ucsc.edu/feedback/index.html'
+        );
+        ucsc_generate_site_nav_menu( 'Feedback Menu', $feedback_menu_items, 'feedback' );
     }
 }
 add_action( 'after_switch_theme', 'ucsc_after_switch_theme');
