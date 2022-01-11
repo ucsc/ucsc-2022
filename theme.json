@@ -19,6 +19,7 @@
     "blocks": {
       "core/paragraph": {
         "color": {
+          "custom": false,
           "palette": [
             {
               "name": "Black",
@@ -40,6 +41,7 @@
       }
     },
     "color": {
+      "custom": true,
       "link": true,
       "palette": [
         {

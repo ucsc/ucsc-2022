@@ -1,3 +1,3 @@
 // Styles
 import './scss/index.scss';
-// import '../style.css';
+import './scss/style.scss';
