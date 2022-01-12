@@ -1,6 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/theme-v1.json",
-  "version": 1,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
   "templateParts": [
     {
       "name": "header",
@@ -43,11 +43,20 @@
         "typography": {
           "customFontSize": true
         }
+      },
+      "core/heading": {
+        "typography": {
+          "customFontSize": false
+        },
+        "color": {
+          "custom": false
+        }
       }
     },
     "color": {
-      "custom": true,
+      "custom": false,
       "link": true,
+"defaultPalette": false,
       "palette": [
         {
           "slug": "white",
