@@ -55,6 +55,16 @@ wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css2?
 
 add_action( 'wp_enqueue_scripts', 'ucsc_add_google_fonts' );
 
+/**
+ * Copyright shortcode
+ * returns copyright symbol and current year
+ */
+function ucsc_copyright(){
+	$copyright = '&#169;';
+	$year = date('Y');
+	return $copyright.$year;
+}
+add_shortcode( 'copyright', 'ucsc_copyright' );
 
 /**
  *
