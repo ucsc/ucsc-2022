@@ -38,6 +38,11 @@
           ],
           "customFontSize": false
         }
+      },
+      "core/navigation": {
+        "typography": {
+          "customFontSize": true
+        }
       }
     },
     "color": {
@@ -128,7 +133,7 @@
     },
     "layout": {
       "contentSize": "67.5rem",
-      "wideSize": "1100px"
+      "wideSize": "100rem"
     },
     "spacing": {
       "blockGap": null,
