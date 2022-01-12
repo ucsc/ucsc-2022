@@ -9,10 +9,6 @@
     {
       "name": "footer",
       "area": "footer"
-    },
-    {
-      "name": "sidebar",
-      "area": "sidebar"
     }
   ],
   "settings": {
@@ -29,13 +25,6 @@
           ]
         },
         "typography": {
-          "fontSizes": [
-            {
-              "slug": "normal",
-              "size": "10px",
-              "name": "Normal"
-            }
-          ],
           "customFontSize": false
         }
       },
@@ -56,7 +45,7 @@
     "color": {
       "custom": false,
       "link": true,
-"defaultPalette": false,
+      "defaultPalette": false,
       "palette": [
         {
           "slug": "white",
