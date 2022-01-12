@@ -154,37 +154,37 @@
       "fontSizes": [
         {
           "slug": "tiny",
-          "size": "0.875em",
+          "size": "0.875rem",
           "name": "Tiny"
         },
         {
           "slug": "small",
-          "size": "1em",
+          "size": "1rem",
           "name": "Small"
         },
         {
           "slug": "medium",
-          "size": "1.125em",
+          "size": "1.125rem",
           "name": "Medium"
         },
         {
           "slug": "large",
-          "size": "1.25em",
+          "size": "1.25rem",
           "name": "Large"
         },
         {
           "slug": "x-large",
-          "size": "1.5em",
+          "size": "1.5rem",
           "name": "Extra Large"
         },
         {
           "slug": "huge",
-          "size": "2em",
+          "size": "2rem",
           "name": "Huge"
         },
         {
           "slug": "gigantic",
-          "size": "6em",
+          "size": "6rem",
           "name": "Gigantic"
         }
       ],
