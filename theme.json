@@ -16,13 +16,9 @@
       "core/paragraph": {
         "color": {
           "custom": false,
-          "palette": [
-            {
-              "name": "Black",
-              "slug": "black",
-              "color": "#000000"
-            }
-          ]
+          "background": false,
+          "text": false,
+          "link": false
         },
         "typography": {
           "customFontSize": false
