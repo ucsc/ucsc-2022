@@ -12,6 +12,7 @@
     }
   ],
   "settings": {
+    "appearanceTools": true,
     "blocks": {
       "core/paragraph": {
         "color": {
@@ -127,7 +128,7 @@
     },
     "layout": {
       "contentSize": "67.5rem",
-      "wideSize": "100rem"
+      "wideSize": "90rem"
     },
     "spacing": {
       "blockGap": true,

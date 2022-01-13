@@ -24,6 +24,7 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 
         add_theme_support( 'wp-block-styles' );
 
+
 		/**
     	 * Register Footer menu location
     	 */
