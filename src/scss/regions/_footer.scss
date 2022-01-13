@@ -3,6 +3,11 @@
 //===============================
 
 .main-footer {
+  .footer-left {
+    .address {
+      margin-left: calc(var(--wp--style--block-gap)/2)!important
+    }
+  }
   .legal {
     .wp-block-navigation-item {
       &:first-child:after {
