@@ -5,9 +5,15 @@
   .main-footer{
     .footer-left {
       .address {
-        margin-left: calc(var(--wp--style--block-gap)/2)!important
+        margin-left: calc(var(--wp--style--block-gap)/2)!important;
+        .location {
+          margin: 0 0 3px 0
+        }
+        .copyright {
+          margin:0!important;
         }
       }
+    }
     .legal {
       .wp-block-navigation-item {
         &:first-child:after {
