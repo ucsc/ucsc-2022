@@ -1,23 +1,28 @@
-nav.legal {
-  .wp-block-navigation-item {
-    &:first-child:after {
-    display:none;
+//
+// Footer Styles
+//===============================
+
+.main-footer {
+  .legal {
+    .wp-block-navigation-item {
+      &:first-child:after {
+      display:none;
+      }
+      &:after {
+        background-color: var(--wp--preset--color--ucsc-primary-yellow);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -.75em;
+        margin-left: -2.5px;
+        margin-top: -2.5px;
+      }
     }
-    &:after {
-      background-color: var(--wp--preset--color--ucsc-primary-yellow);
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: -.75em;
-      margin-left: -2.5px;
-      margin-top: -2.5px;
-    }
+
   }
-
 }
-
 
