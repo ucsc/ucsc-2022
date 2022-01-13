@@ -75,6 +75,7 @@ add_shortcode( 'copyright', 'ucsc_copyright' );
 /**
  * Menu item generator
  * Automatically generate custom link that points to url parameter
+ * from: https://carlofontanos.com/auto-generate-nav-menus-on-theme-activation-in-wordpress/
  */
 function ucsc_generate_site_nav_menu_item( $term_id, $title, $url ) {
 
