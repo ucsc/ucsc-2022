@@ -17,7 +17,7 @@
         "color": {
           "custom": false,
           "background": false,
-          "text": false,
+          "text": true,
           "link": false
         },
         "typography": {
@@ -130,7 +130,7 @@
       "wideSize": "100rem"
     },
     "spacing": {
-      "blockGap": null,
+      "blockGap": true,
       "padding": true,
       "margin": true,
       "units": [
@@ -208,7 +208,7 @@
   },
   "styles": {
     "spacing": {
-      "blockGap": "1rem"
+      "blockGap": "2em"
     },
     "color": {
       "background": "var(--wp--preset--color--white)",

@@ -40,3 +40,7 @@ a:hover {
     text-decoration-thickness: .1em;
     text-underline-offset: .1em
 }
+
+.address {
+  margin-left: calc(var(--wp--style--block-gap)/2)!important
+}
