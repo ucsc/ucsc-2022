@@ -8,7 +8,10 @@
       margin-top: 1.5em;
       margin-bottom: 1em;
       border-bottom: 2px solid var(--wp--preset--color--ucsc-primary-yellow)!important;
-
+    }
+    .main-navigation {
+      margin-top:0!important;
+      margin-bottom:1.2em!important; //TODO: Only for Home Page, rest, 0px
     }
   }
 }

@@ -42,3 +42,14 @@ a:hover {
 }
 
 
+
+.campus-logo {
+    background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
+    background-size: contain;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    width: 150px;
+  }
