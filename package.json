@@ -6,7 +6,11 @@
     "scripts": {
         "release": "standard-version",
         "start": "wp-scripts start",
-        "build": "wp-scripts build"
+        "build": "wp-scripts build",
+        "lint:style": "wp-scripts lint-style",
+        "lint:css:src": "wp-scripts lint-style 'src/**/*.css'",
+        "packages-update": "wp-scripts packages-update",
+        "postpackages-update": "npm run build"
     },
     "repository": {
         "type": "git",
