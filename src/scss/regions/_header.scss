@@ -2,6 +2,19 @@
 // Header Styles
 //===============================
 .site-header {
+  .page-top {
+    .top-menu {
+      .wp-block-navigation__container {
+        gap:0.8em!important;
+      }
+    }
+    .top-search {
+      margin-left: 0!important;
+      .wp-block-search__input {
+        padding: 0.4em 0.5em!important;
+      }
+    }
+  }
   .main-header {
     margin-bottom: 2em!important;
     .names{
