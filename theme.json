@@ -19,7 +19,74 @@
           "custom": false,
           "background": false,
           "text": true,
-          "link": false
+          "link": false,
+          "palette": [
+            {
+              "slug": "white",
+              "color": "#fff",
+              "name": "White"
+            },
+            {
+              "slug": "black",
+              "color": "#000",
+              "name": "Black"
+            },
+            {
+              "slug": "default-text",
+              "color": "#222",
+              "name": "Default Text"
+            },
+            {
+              "slug": "dark-grey",
+              "color": "#23282D",
+              "name": "Dark grey"
+            },
+            {
+              "slug": "ucsc-primary-blue",
+              "color": "#003c6c",
+              "name": "Primary blue"
+            },
+            {
+              "slug": "ucsc-primary-yellow",
+              "color": "#fdc700",
+              "name": "Primary yellow"
+            },
+            {
+              "slug": "ucsc-secondary-blue",
+              "color": "#006aad",
+              "name": "Secondary blue"
+            },
+            {
+              "slug": "ucsc-light-blue",
+              "color": "#13a5dc",
+              "name": "Light blue"
+            },
+            {
+              "slug": "ucsc-blue-green",
+              "color": "#13a5dc",
+              "name": "Blue-green"
+            },
+            {
+              "slug": "ucsc-orange",
+              "color": "#f29813",
+              "name": "Slug orange"
+            },
+            {
+              "slug": "ucsc-light-orange",
+              "color": "#ffbf00",
+              "name": "Slug light orange"
+            },
+            {
+              "slug": "ucsc-lime-green",
+              "color": "#93c02d",
+              "name": "Slug lime green"
+            },
+            {
+              "slug": "ucsc-rubine-red",
+              "color": "#da216d",
+              "name": "Slug rubine red"
+            }
+          ]
         },
         "typography": {
           "customFontSize": true
