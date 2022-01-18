@@ -13,14 +13,13 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-ucsc
 */
-
 .campus-logo {
-    background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
-    background-size: contain;
-    display: block;
-    height: auto;
-    overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap;
-    width: 150px;
-  }
+            background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
+            background-size: contain;
+            display: block;
+            height: auto;
+            overflow: hidden;
+            text-indent: 101%;
+            white-space: nowrap;
+            width: 150px;
+          }
