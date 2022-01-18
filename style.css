@@ -1,4 +1,4 @@
-                /*
+/*
 Theme Name: UC Santa Cruz WordPress Theme
 Theme URI:
 Author: UC Santa Cruz
@@ -13,35 +13,6 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-ucsc
 */
-
-/*	2. Element Base
-/* ---------------------------------------------*---------------------------- */
-
-a {
-    -webkit-text-decoration-skip: ink;
-    color: var(--wp--preset--color--ucsc-link-blue);
-    text-decoration: underline;
-    -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-    text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: .14em;
-    text-underline-offset: .1em
-}
-
-a:active,
-a:focus,
-a:hover {
-    -webkit-text-decoration-skip: ink;
-    color: #003c6c;
-    text-decoration: underline;
-    -webkit-text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-    text-decoration-color: var(--wp--preset--color--ucsc-link-decoration);
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: .1em;
-    text-underline-offset: .1em
-}
-
-
 
 .campus-logo {
     background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
