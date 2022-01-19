@@ -3,6 +3,14 @@
 //===============================
 .site-header {
   .page-top {
+    .campus-logo {
+      background: transparent url($uc-seal) no-repeat 0 0;
+      display: block;
+      height: 26px;
+      overflow: hidden;
+      text-indent: -10000px;
+      width: 128px;
+    }
     .top-menu {
       .wp-block-navigation__container {
         gap:0.8em!important;
@@ -35,11 +43,4 @@
   }
 }
 
-// .campus-logo {
-//   background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
-//   display: block;
-//   height: 26px;
-//   overflow: hidden;
-//   text-indent: -10000px;
-//   width: 128px;
-// }
+
