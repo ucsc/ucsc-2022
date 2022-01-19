@@ -30,8 +30,6 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
     	 */
     	register_nav_menus( array(
     	    'primary'   => __('Primary Navigation', 'theme-ucsc'),
-    	    'footer' => __('Footer Navigation', 'theme-ucsc'),
-			'feedback' => __('Feedback Navigation', 'theme-ucsc')
     	) );
     }
 endif;
@@ -66,80 +64,3 @@ function ucsc_copyright(){
 	return $copyright.$year;
 }
 add_shortcode( 'copyright', 'ucsc_copyright' );
-
-/**
- *
- * Automatically generate footer menus upon theme activation
- *
- */
-
-/**
- * Menu item generator
- * Automatically generate custom link that points to url parameter
- * from: https://carlofontanos.com/auto-generate-nav-menus-on-theme-activation-in-wordpress/
- */
-function ucsc_generate_site_nav_menu_item( $term_id, $title, $url ) {
-
-    wp_update_nav_menu_item($term_id, 0, array(
-        'menu-item-title'   =>  sprintf( __('%s', 'theme-ucsc'), $title ),
-        'menu-item-url'     =>  $url,
-        'menu-item-status'  =>  'publish'
-    ) );
-
-}
-
-/**
- * Menu generator function
- */
-function ucsc_generate_site_nav_menu( $menu_name, $menu_items_array, $location_target ) {
-
-    $menu_footer = $menu_name;
-    wp_create_nav_menu( $menu_footer );
-    $menu_footer_obj = get_term_by( 'name', $menu_footer, 'nav_menu' );
-
-    foreach( $menu_items_array as $page_name => $page_location ){
-        ucsc_generate_site_nav_menu_item( $menu_footer_obj->term_id, $page_name, $page_location );
-    }
-
-    $locations_primary_arr = get_theme_mod( 'nav_menu_locations' );
-    $locations_primary_arr[$location_target] = $menu_footer_obj->term_id;
-    set_theme_mod( 'nav_menu_locations', $locations_primary_arr );
-
-    update_option( 'menu_check', true );
-
-}
-
-
-/**
- * Runs when user switches to your custom theme
- *
- */
-function ucsc_after_switch_theme() {
-/**
- * Setup the site navigation
- */
-    $run_menu_maker_once = get_option('menu_check');
-
-    if ( ! $run_menu_maker_once ){
-        /**
-         * Setup Navigation for Footer Legal Menu
-         */
-        $footer_menu_items = array(
-            'Accreditation'  =>  'https://academicaffairs.ucsc.edu/accreditation/',
-            'Non-Discrimination Policy' =>  'https://diversity.ucsc.edu/eeo-aa/images/non-discrimination-policy.pdf',
-            'Land Acknowledgment'  =>  'https://www.ucsc.edu/land-acknowledgement/index.html',
-            'Employment'   =>  'https://www.ucsc.edu/about/employment.html',
-            'Privacy Policy & Terms of Use'    =>  'https://its.ucsc.edu/terms/',
-			'Sexual Violence Prevention & Response (Title IX)' => 'https://titleix.ucsc.edu/index.html'
-        );
-        ucsc_generate_site_nav_menu( 'Footer Menu', $footer_menu_items, 'footer' );
-		/**
-         * Setup Navigation for Footer Feedback menu
-         */
-        $feedback_menu_items = array(
-            'Feedback'  =>  'https://www.ucsc.edu/feedback/index.html'
-        );
-        ucsc_generate_site_nav_menu( 'Feedback Menu', $feedback_menu_items, 'feedback' );
-    }
-}
-add_action( 'after_switch_theme', 'ucsc_after_switch_theme');
