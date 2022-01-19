@@ -45,11 +45,22 @@ function ucsc_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'ucsc_theme_scripts' );
 
 /**
- * Enqueue Google Roboto font.
+ * Enqueue additional Google Font Scripts
  */
+function ucsc_googleapi_scripts(){
+echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+}
+add_action('wp_head','ucsc_googleapi_scripts');
+
+/**
+ * Enqueue Google Roboto and Roboto Condensed fonts.
+ */
+
 function ucsc_add_google_fonts() {
 
 wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900', false );
+wp_enqueue_style( 'ucsc-google-roboto-condensed-font', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap', array() );
 }
 
 add_action( 'wp_enqueue_scripts', 'ucsc_add_google_fonts' );

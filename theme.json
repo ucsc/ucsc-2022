@@ -174,6 +174,11 @@
           "fontFamily": "Roboto, sans-serif",
           "slug": "roboto",
           "name": "Roboto"
+        },
+        {
+          "fontFamily": "Roboto Condensed, sans-serif",
+          "slug": "roboto-condensed",
+          "name": "Roboto Condensed"
         }
       ]
     },
@@ -327,13 +332,21 @@
           "margin": {
             "top": "0.75em",
             "right": "0",
-            "bottom": "0.75em!",
+            "bottom": "0.75em",
             "left": "0"
           }
         },
         "typography": {
           "lineHeight": "1.5",
           "fontSize": "var(--wp--preset--font-size--small)"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "'Roboto Condensed', sans-serif",
+          "fontWeight": "600",
+          "lineHeight": "1.2",
+          "textTransform": "uppercase"
         }
       }
     }
