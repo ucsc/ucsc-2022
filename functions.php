@@ -71,12 +71,16 @@ add_shortcode( 'copyright', 'ucsc_copyright' );
  * last time the page was
  * updated
  */
-function ucsc_last_modified(){
+function ucsc_last_modified_helper(){
 	$ucsc_time = get_the_time('U');
     $ucsc_modified_time = get_the_modified_time('U');
 	if ($ucsc_modified_time >= $ucsc_time + 86400) {
-
-        return '<p class="last-modified">Last modified: '.the_modified_time('F jS, Y').'</p>';
-        }
+        return the_modified_time('F jS, Y');
+	}
+}
+function ucsc_last_modified(){
+	ob_start();
+	ucsc_last_modified_helper();
+	return ob_get_clean();
 }
 add_shortcode( 'last-modified', 'ucsc_last_modified' );
