@@ -83,22 +83,22 @@
         {
           "slug": "ucsc-orange",
           "color": "#f29813",
-          "name": "Slug orange"
+          "name": "UCSC orange"
         },
         {
           "slug": "ucsc-light-orange",
           "color": "#ffbf00",
-          "name": "Slug light orange"
+          "name": "UCSC light orange"
         },
         {
           "slug": "ucsc-lime-green",
           "color": "#93c02d",
-          "name": "Slug lime green"
+          "name": "UCSC lime green"
         },
         {
           "slug": "ucsc-rubine-red",
           "color": "#da216d",
-          "name": "Slug rubine red"
+          "name": "UCSC rubine red"
         }
       ]
     },
