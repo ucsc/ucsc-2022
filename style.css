@@ -15,11 +15,10 @@ Text Domain: theme-ucsc
 */
 .campus-logo {
             background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
-            background-size: contain;
+            /* background-size: contain; */
             display: block;
-            height: auto;
+            height: 26px;
             overflow: hidden;
-            text-indent: 101%;
-            white-space: nowrap;
-            width: 150px;
+            text-indent: -10000px;
+            width: 128px;
           }
