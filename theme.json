@@ -325,9 +325,9 @@
       "core/paragraph": {
         "spacing": {
           "margin": {
-            "top": "0.75em!important",
+            "top": "0.75em",
             "right": "0",
-            "bottom": "0.75em!important",
+            "bottom": "0.75em!",
             "left": "0"
           }
         },

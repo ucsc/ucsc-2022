@@ -4,6 +4,14 @@
 
 .main-footer {
   .footer-left {
+    .uc-seal {
+      background: transparent url($uc-seal) no-repeat 0 0;
+      display: block;
+      height: 84px;
+      overflow: hidden;
+      text-indent: -10000px;
+      width: 84px;
+    }
         .address {
         margin-left: calc(var(--wp--style--block-gap)/2)!important;
         .location {
@@ -35,8 +43,8 @@
         content: "";
         display: block;
         position: absolute;
-        top: 50%;
-        left: -.75em;
+        top: 43%;
+        left: -1.125em;
         margin-left: -2.5px;
         margin-top: -2.5px;
       }
