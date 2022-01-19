@@ -17,6 +17,11 @@
   }
   .main-header {
     margin-bottom: 2em!important;
+    .wp-block-site-title {
+      a {
+        text-decoration: none;
+      }
+    }
     .names{
       margin-top: 1.5em;
       margin-bottom: 1em;
@@ -30,3 +35,11 @@
   }
 }
 
+// .campus-logo {
+//   background: transparent url(images/logos/uc-santa-cruz-2021.svg) no-repeat 0 0;
+//   display: block;
+//   height: 26px;
+//   overflow: hidden;
+//   text-indent: -10000px;
+//   width: 128px;
+// }
