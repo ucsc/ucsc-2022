@@ -11,13 +11,16 @@
       text-indent: -10000px;
       width: 128px;
     }
+    .page-top-right {
+      .row{
+        margin-top:0.45em;}}
     .top-menu {
       .wp-block-navigation__container {
         gap:0.8em!important;
       }
     }
     .top-search {
-      margin-left: 0!important;
+
       .wp-block-search__input {
         padding: 0.4em 0.5em!important;
       }
