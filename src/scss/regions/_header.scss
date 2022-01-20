@@ -26,6 +26,18 @@
   .main-header {
     margin-bottom: 2em!important;
     .wp-block-site-title {
+      &>* .flourish {
+        color: var(--wp--custom--color--flourish);
+        font-family: Georgia,serif;
+        font-size: .65em;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.3;
+        margin: 0 -0.02em;
+        position: relative;
+        text-transform: lowercase;
+        top: -0.1em;
+      }
       a {
         text-decoration: none;
       }

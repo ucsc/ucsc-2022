@@ -12,7 +12,7 @@ module.exports = {
     ...{
         entry: {
             index: path.resolve( process.cwd(), 'src', 'index.js' ),
-            "front": path.resolve( process.cwd(), 'src', 'front.js' ),
+            "theme": path.resolve( process.cwd(), 'src', 'theme.js' ),
             // "beer-list": path.resolve( process.cwd(), 'src', 'beer-list.css' ),
         },
     }

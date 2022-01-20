@@ -54,14 +54,28 @@ echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 add_action('wp_head','ucsc_googleapi_scripts');
 
 /**
- * Enqueue Google Roboto and Roboto Condensed fonts.
+ * Enqueue editor styles and scripts.
+ */
+
+function ucsc_add_admin_scripts() {
+
+wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
+wp_enqueue_script( 'ucsc-admin-scripts' );
+wp_register_style( 'ucsc-admin-styles', get_template_directory_uri() . '/build/index.css', array(), '', false );
+wp_enqueue_style( 'ucsc-admin-styles' );
+}
+
+add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
+
+/**
+ * Enqueue fonts, styles and scripts.
  */
 
 function ucsc_add_scripts() {
 
 wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900', false );
 wp_enqueue_style( 'ucsc-google-roboto-condensed-font', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap', false );
-wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/front.js', array(), '1.0.0', false );
+wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), '', true );
 wp_enqueue_script( 'ucsc-front' );
 }
 
