@@ -57,13 +57,17 @@ add_action('wp_head','ucsc_googleapi_scripts');
  * Enqueue Google Roboto and Roboto Condensed fonts.
  */
 
-function ucsc_add_google_fonts() {
+function ucsc_add_scripts() {
 
 wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900', false );
-wp_enqueue_style( 'ucsc-google-roboto-condensed-font', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap', array() );
+wp_enqueue_style( 'ucsc-google-roboto-condensed-font', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap', false );
+wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/front.js', array(), '1.0.0', false );
+wp_enqueue_script( 'ucsc-front' );
 }
 
-add_action( 'wp_enqueue_scripts', 'ucsc_add_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
+
+
 
 /**
  * Copyright shortcode
@@ -95,3 +99,5 @@ function ucsc_last_modified(){
 	return ob_get_clean();
 }
 add_shortcode( 'last-modified', 'ucsc_last_modified' );
+
+
