@@ -1,17 +1,12 @@
 // The main navigation bar on every page
 
-.main-header {
-  margin-bottom: 2em;
-
-}
-
 .primary-navigation {
   li {
     font-size: var(--wp--preset--font-size--display-three);
     font-weight: 500;
     text-transform: uppercase;
     a {
-      color: var(--wp--preset--color--ucsc-primary-blue)!important
+      color: var(--wp--preset--color--ucsc-primary-blue)
     }
 
   }
@@ -28,4 +23,9 @@
     }
   }
 
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+
+    color: var(--wp--preset--color--ucsc-primary-yellow);
 }
