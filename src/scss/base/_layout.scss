@@ -2,6 +2,11 @@
 // Layout
 //===============================
 
+// ## Base Wrap
+.wp-site-blocks {
+  padding: 0 calc(var(--wp--custom--spacing--baseline)/ 2);
+}
+
 // ### Wide and Full Widths
 @media screen and (min-width: 960px) {
   .wp-block-post-content > .alignwide,
