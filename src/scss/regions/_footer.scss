@@ -2,16 +2,20 @@
 // Footer Styles
 //===============================
 
-.main-footer {
-  .footer-left {
-    .uc-seal {
-      background: transparent url($uc-seal) no-repeat 0 0;
-      display: block;
-      height: 84px;
-      overflow: hidden;
-      text-indent: -10000px;
-      width: 84px;
-    }
+.site-footer {
+  margin-left: calc(-1 *(var(--wp--custom--spacing--baseline) / 2));
+  margin-right: calc(-1 *(var(--wp--custom--spacing--baseline) / 2));
+  clear:both;
+  .main-footer {
+    .footer-left {
+      .uc-seal {
+        background: transparent url($uc-seal) no-repeat 0 0;
+        display: block;
+        height: 84px;
+        overflow: hidden;
+        text-indent: -10000px;
+        width: 84px;
+      }
         .address {
         margin-left: calc(var(--wp--style--block-gap)/2)!important;
         .location {
@@ -20,36 +24,38 @@
         .copyright {
           margin:0;
         }
+        }
       }
+    .footer-right {
+      .social-media {
+        margin-top:14px;
+        margin-top: 0.875rem;
+        margin-bottom: 5px;
+        margin-bottom: 0.313rem;
+        }
     }
-  .footer-right {
-    .social-media {
-      margin-top:14px;
-      margin-top: 0.875rem;
-      margin-bottom: 5px;
-      margin-bottom: 0.313rem;
+    .legal {
+      .wp-block-navigation-item {
+        &:first-child:after {
+        display:none;
       }
-    }
-  .legal {
-    .wp-block-navigation-item {
-      &:first-child:after {
-      display:none;
+        &:after {
+          background-color: var(--wp--preset--color--ucsc-primary-yellow);
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 43%;
+          left: -1.125em;
+          margin-left: -2.5px;
+          margin-top: -2.5px;
+        }
       }
-      &:after {
-        background-color: var(--wp--preset--color--ucsc-primary-yellow);
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        content: "";
-        display: block;
-        position: absolute;
-        top: 43%;
-        left: -1.125em;
-        margin-left: -2.5px;
-        margin-top: -2.5px;
-      }
-    }
 
+    }
   }
 }
+
 
