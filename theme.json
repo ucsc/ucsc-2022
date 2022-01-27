@@ -7,6 +7,14 @@
       "area": "header"
     },
     {
+      "name": "main-title",
+      "area": "site-title"
+    },
+    {
+      "name": "division-title",
+      "area": "site-title"
+    },
+    {
       "name": "footer",
       "area": "footer"
     }
