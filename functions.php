@@ -8,25 +8,13 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
      * support for post thumbnails.
      */
     function ucsc_theme_setup() {
-        /**
-         * Add default posts and comments RSS feed links to <head>.
-         */
-        add_theme_support( 'automatic-feed-links' );
-
-        /**
-         * Enable support for post thumbnails and featured images.
-         */
-        add_theme_support( 'post-thumbnails' );
-
-        add_theme_support( 'editor-styles' );
-
-		add_editor_style( 'build/index.css' );
 
         add_theme_support( 'wp-block-styles' );
-
+		
+		add_editor_style( 'build/index.css' );
 
 		/**
-    	 * Register Footer menu location
+    	 * Register primary navigation menu location
     	 */
     	register_nav_menus( array(
     	    'primary'   => __('Primary Navigation', 'theme-ucsc'),
