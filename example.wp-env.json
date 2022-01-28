@@ -7,8 +7,6 @@
   },
   "themes": ["WordPress/theme-experiments"],
   "plugins": [
-    "https://github.com/WordPress/gutenberg/releases/download/v12.4.1/gutenberg.zip",
-    "https://downloads.wordpress.org/plugin/http-headers.zip",
     "https://github.com/ucsc/ucsc-gutenberg-blocks/archive/refs/heads/main.zip"
   ]
 }
