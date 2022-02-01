@@ -20,6 +20,14 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 
         add_theme_support( 'editor-styles' );
 
+<<<<<<< Updated upstream
+=======
+        add_theme_support( 'wp-block-styles' );
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 		add_editor_style( 'build/index.css' );
 
         add_theme_support( 'wp-block-styles' );
@@ -81,8 +89,14 @@ wp_enqueue_script( 'ucsc-front' );
 
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 /**
  * Copyright shortcode
  * returns copyright symbol and current year
