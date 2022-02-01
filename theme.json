@@ -51,6 +51,8 @@
       "custom": false,
       "link": true,
       "defaultPalette": false,
+      "duotone": [],
+      "gradients": [],
       "palette": [
         {
           "slug": "white",

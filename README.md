@@ -23,3 +23,4 @@ project/
 3. `cd` to root folder and run `wp-env start`
 4. Login (`admin:password`) and navigate to <http://localhost:8888/wp-admin/import.php>
 5. At this point you can create content on your own, or import the [theme unit test data](https://codex.wordpress.org/Theme_Unit_Test) WordPress theme developers use.
+6. To reset your development environment (delete all content, update WordPress core), run `wp-env destroy`, then `wp-env start`.

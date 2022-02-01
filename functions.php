@@ -8,33 +8,13 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
      * support for post thumbnails.
      */
     function ucsc_theme_setup() {
-        /**
-         * Add default posts and comments RSS feed links to <head>.
-         */
-        add_theme_support( 'automatic-feed-links' );
 
-        /**
-         * Enable support for post thumbnails and featured images.
-         */
-        add_theme_support( 'post-thumbnails' );
-
-        add_theme_support( 'editor-styles' );
-
-<<<<<<< Updated upstream
-=======
         add_theme_support( 'wp-block-styles' );
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		add_editor_style( 'build/index.css' );
 
-        add_theme_support( 'wp-block-styles' );
-
-
 		/**
-    	 * Register Footer menu location
+    	 * Register primary navigation menu location
     	 */
     	register_nav_menus( array(
     	    'primary'   => __('Primary Navigation', 'theme-ucsc'),
@@ -89,14 +69,7 @@ wp_enqueue_script( 'ucsc-front' );
 
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 /**
  * Copyright shortcode
  * returns copyright symbol and current year
@@ -129,3 +102,15 @@ function ucsc_last_modified(){
 add_shortcode( 'last-modified', 'ucsc_last_modified' );
 
 
+// add_filter( 'astra_site_title_tag', 'astra_function_change_site_title' );
+
+/**
+* Function to replace h1 tag with span in site title.
+*
+* @param string $tag This contains the tag used for site titles.
+* @return string
+*/
+// function astra_function_change_site_title( $tag ) {
+//     $tag = 'span';
+//     return $tag;
+// }
