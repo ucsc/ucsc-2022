@@ -7,11 +7,11 @@
       "area": "header"
     },
     {
-      "name": "main-title",
+      "name": "title-mainsite",
       "area": "site-title"
     },
     {
-      "name": "division-title",
+      "name": "title-subsite",
       "area": "site-title"
     },
     {
@@ -364,15 +364,15 @@
   },
   "customTemplates": [
     {
-      "name": "front-page-campus",
+      "name": "front-page-mainsite",
       "title": "Campus Home Page",
       "postTypes": [
         "page"
       ]
     },
     {
-      "name": "front-page-division",
-      "title": "Division Home Page",
+      "name": "front-page-subsite",
+      "title": "Division or Department Home Page",
       "postTypes": [
         "page"
       ]
