@@ -2,7 +2,18 @@
 
 <!-- wp:group {"tagName":"main","className":"site-content","layout":{"inherit":true}} -->
 <main class="wp-block-group site-content">
-<!-- wp:template-part {"slug":"content-page", "className":"content-page","theme": "theme-ucsc"} /-->
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">
+	Archive Title (there is no block for that yet)
+</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query-loop -->
+
+<!-- wp:template-part {"slug":"content-home", "className":"content-archive","theme": "theme-ucsc"} /-->
+
+<!-- /wp:query-loop -->
 </main>
 <!-- /wp:group -->
+
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
