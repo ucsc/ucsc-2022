@@ -363,6 +363,26 @@
     }
   },
   "customTemplates": [
-
+    {
+      "name": "front-page-campus",
+      "title": "Campus Home Page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "front-page-division",
+      "title": "Division Home Page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "front-page-department",
+      "title": "Department Home Page",
+      "postTypes": [
+        "page"
+      ]
+    }
   ]
 }
