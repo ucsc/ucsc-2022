@@ -100,17 +100,3 @@ function ucsc_last_modified(){
 	return ob_get_clean();
 }
 add_shortcode( 'last-modified', 'ucsc_last_modified' );
-
-
-// add_filter( 'astra_site_title_tag', 'astra_function_change_site_title' );
-
-/**
-* Function to replace h1 tag with span in site title.
-*
-* @param string $tag This contains the tag used for site titles.
-* @return string
-*/
-// function astra_function_change_site_title( $tag ) {
-//     $tag = 'span';
-//     return $tag;
-// }
