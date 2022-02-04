@@ -372,14 +372,7 @@
     },
     {
       "name": "front-page-subsite",
-      "title": "Division or Department Home Page",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "front-page-department",
-      "title": "Department Home Page",
+      "title": "Subsite Home Page",
       "postTypes": [
         "page"
       ]
