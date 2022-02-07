@@ -28,7 +28,11 @@
   }
   .main-header {
     margin-bottom: 2em;
+    p.wp-block-site-title{
+      font-size:var(--wp--preset--font-size--huge);
+    }
     .wp-block-site-title {
+
       &>* .flourish {
         color: var(--wp--custom--color--flourish);
         font-family: Georgia,serif;

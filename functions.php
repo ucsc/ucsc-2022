@@ -100,3 +100,42 @@ function ucsc_last_modified(){
 	return ob_get_clean();
 }
 add_shortcode( 'last-modified', 'ucsc_last_modified' );
+
+/**
+ * Change title block element from H1 to P
+ * on subsite Home Page Templates
+ *
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_filter_subsite_title( $block_content = '', $block = [] ) {
+  if (is_page_template('front-page-subsite')){
+	if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
+		$html = str_replace(
+		'<h1 ',
+		'<p ' ,
+		$block_content
+		);
+		return $html;
+	}
+}
+  return $block_content;
+}
+add_filter( 'render_block', 'ucsc_filter_subsite_title', 10, 2 );
+
+
+/**Utility Function */
+
+function jc_test(){
+	// $blocks = parse_blocks( the_header() );
+	// var_dump($blocks);
+	// echo ($blocks[0]['innerHtml']);
+	$template = get_page_template_slug( get_queried_object_id() );
+	var_dump($template);
+}
+
+// add_action('wp_head','jc_test');
+
+
+
