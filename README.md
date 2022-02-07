@@ -1,9 +1,11 @@
 # Official WordPress theme for UC Santa Cruz
 
-## Requirements (as of 2021-12-16)
+A theme demo with official WordPress theme unit test data is here: <https://dev-ucsc-theme-demo.pantheonsite.io/>
 
--   Block theme editing requires the [Gutenberg plugin](https://github.com/WordPress/gutenberg).
--   We recommend the [CampusPress theme and plugin](https://github.com/igmoweb/theme-check) check as well.
+## Requirements (as of 2022-02-04)
+
+- Requires WordPress 5.9 or above
+- We recommend the [CampusPress theme and plugin](https://github.com/igmoweb/theme-check) check as well.
 
 ## Development workflow
 

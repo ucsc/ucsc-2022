@@ -2,4 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.1](https://github.com/ucsc/theme-ucsc/compare/v0.0.1...v1.0.0-beta.1) (2022-02-04)
+
+
+### Features
+
+* :art: Add custom templates for campus, dept, and div front pages; work on headers ([a21b5fe](https://github.com/ucsc/theme-ucsc/commit/a21b5fe172aecae204b99a638efc4cf797956fd7))
+* :art: Beginning of building php theme ([e5ac548](https://github.com/ucsc/theme-ucsc/commit/e5ac5484dbe716b3250f5f131e0ebaec308d43cc))
+* :art: Complete abstratcting content templates from primary templates ([6b7f929](https://github.com/ucsc/theme-ucsc/commit/6b7f9291c8a1ec23c5b174ecd87c8800e64be04d))
+* :art: Enqueue `Roboto Condensed` font, adjust `site-title` block accordingly ([07a8d7c](https://github.com/ucsc/theme-ucsc/commit/07a8d7c8f016b36dc1e98c5343daa90cca80232b))
+* :art: Style `.flourish` class added to title via javascript; add new custom color to `theme.json`; enqueue editor scripts and styles ([d3cac3b](https://github.com/ucsc/theme-ucsc/commit/d3cac3b3721a74b61ec3c2a5257365330f154605))
+* :art: Style fullWidth and wideWidth classes so front end matches back end. ([20ec276](https://github.com/ucsc/theme-ucsc/commit/20ec2768a92dbb923356f1adbdd77397dc83c335))
+* :art: Working on header Page Top. Basic structure. ([8cc88ca](https://github.com/ucsc/theme-ucsc/commit/8cc88cad553ceb87f0836cb401ab488f250866ee))
+* :art: Write basic query for `index.html`, which is the default `Posts` template ([9fac26b](https://github.com/ucsc/theme-ucsc/commit/9fac26b570453f73d27541c34254d719cbdc0120))
+* :construction: added page-left and page-right sidebar template stubs ([f200407](https://github.com/ucsc/theme-ucsc/commit/f200407761390d5c6eabc989ad2b792dd934517a))
+* :construction: WIP create "About Theme" page upon activation ([5bbacc2](https://github.com/ucsc/theme-ucsc/commit/5bbacc2ee3edb8e128cf33670df632d9c7a3aa30))
+* :sparkles: Add basic `front-page.html` template based on `page.html` ([d93538a](https://github.com/ucsc/theme-ucsc/commit/d93538a0615e832a2c70683ffaefb3cf5c555282))
+* :sparkles: Automatically generate footer menu upon theme activation ([529a834](https://github.com/ucsc/theme-ucsc/commit/529a834a949abb19acc002cb234b6b6f7f5bdc99))
+* :sparkles: create local `webpack.config.js` that splits the output into `css` and `js`; enqueued javascript ([5c73bd6](https://github.com/ucsc/theme-ucsc/commit/5c73bd64c3159cea3675f100f8d4b91a57cff88a))
+* :sparkles: Wrote "Last Modified" shortcode to be included in footer. WIP. ([dc26e4d](https://github.com/ucsc/theme-ucsc/commit/dc26e4dba52205385d417ece2fd4e9a6c70f8e78))
+
+
+### Bug Fixes
+
+* :bug: fix `clearfix`; did it wrong first time ([95fbf58](https://github.com/ucsc/theme-ucsc/commit/95fbf583d353accfc106d46beb8dbfe66dc2d6e4))
+* :bug: fix overflow ([c556fcd](https://github.com/ucsc/theme-ucsc/commit/c556fcd343df080d49c894d6efc7c6e653cb3d54))
+* 🐛 Fix broken Google Fonts URL for Roboto ([4b1a233](https://github.com/ucsc/theme-ucsc/commit/4b1a233c746d4f4d6dd054cbf51c3ce5d0b684ba))
+* 🐛 One more template part that needed 'theme-ucsc' folder declaration removed ([18671b2](https://github.com/ucsc/theme-ucsc/commit/18671b2c01562267c4dac58101082f07ae4376fd))
+* 🐛 Remove theme folder declaration from template files ([18f18d6](https://github.com/ucsc/theme-ucsc/commit/18f18d684e739f38457f3996328ca64c3b68d071))
+
 ### 0.0.1 (2021-11-18)
