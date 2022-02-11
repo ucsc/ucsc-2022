@@ -1,6 +1,9 @@
 //
 // Header Styles
 //===============================
+.page-template-front-page-mainsite {
+  .campus-logo {display:none!important}
+}
 .site-header {
   .page-top {
     .campus-logo {
@@ -53,7 +56,15 @@
       margin-top: 1.5em;
       margin-bottom: 1em;
       border-bottom: 2px solid var(--wp--preset--color--ucsc-primary-yellow)!important;
-
+      .mainsite-logo {
+       background: transparent url($campus-logo) no-repeat 0 0;
+       display: block;
+       height: auto;
+       overflow: hidden;
+       text-indent: -10000px;
+       width: 220px;
+       margin-bottom: 0.35em;
+      }
     }
     .main-navigation {
       margin-top:0!important;
@@ -61,5 +72,4 @@
     }
   }
 }
-
 
