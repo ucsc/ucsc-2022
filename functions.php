@@ -1,12 +1,15 @@
 <?php
+
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which runs
+ * before the init hook. The init hook is too late for some features, such as indicating
+ * support for post thumbnails.
+ */
+
 if (!function_exists('ucsc_theme_setup')) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which runs
-	 * before the init hook. The init hook is too late for some features, such as indicating
-	 * support for post thumbnails.
-	 */
+
 	function ucsc_theme_setup()
 	{
 
@@ -17,9 +20,11 @@ if (!function_exists('ucsc_theme_setup')) :
 		/**
 		 * Register primary navigation menu location
 		 */
-		register_nav_menus(array(
-			'primary'   => __('Primary Navigation', 'theme-ucsc'),
-		));
+		register_nav_menus(
+			array(
+				'primary'   => __('Primary Navigation', 'theme-ucsc'),
+			)
+		);
 	}
 endif;
 add_action('after_setup_theme', 'ucsc_theme_setup');
@@ -50,7 +55,6 @@ add_action('wp_head', 'ucsc_googleapi_scripts');
 
 function ucsc_add_admin_scripts()
 {
-
 	wp_register_script('ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true);
 	wp_enqueue_script('ucsc-admin-scripts');
 	wp_register_style('ucsc-admin-styles', get_template_directory_uri() . '/build/index.css', array(), '', false);
@@ -65,7 +69,6 @@ add_action('admin_enqueue_scripts', 'ucsc_add_admin_scripts');
 
 function ucsc_add_scripts()
 {
-
 	wp_enqueue_style('ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700&display=swap', false);
 	wp_register_script('ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), '', true);
 	wp_enqueue_script('ucsc-front');
@@ -87,84 +90,28 @@ function ucsc_copyright()
 add_shortcode('copyright', 'ucsc_copyright');
 
 /**
- * Last Modified shortcode
- * returns the date of the
- * last time the page was
- * updated
+ * Return the last page modification in a readable format
+ *
+ * This is called by a short code `last-modified`. It looks at the
+ * modified time and if that time is greater than zero it returns it
+ * as a formatted date. Otherwise, it returns the date the page was created.
+ *
+ * @return String
  */
 function ucsc_last_modified_helper()
 {
-	$ucsc_time = get_the_time('U');
 	$ucsc_modified_time = get_the_modified_time('U');
-	if ($ucsc_modified_time >= $ucsc_time + 86400) {
+	if ($ucsc_modified_time > 0) {
 		return the_modified_time('F jS, Y');
+	} else {
+		return the_time('F jS, Y');
 	}
 }
+
 function ucsc_last_modified()
 {
 	ob_start();
 	ucsc_last_modified_helper();
 	return ob_get_clean();
 }
-add_shortcode( 'last-modified', 'ucsc_last_modified' );
-
-/**
- * Change title block content
- * on Main Home Page Templates
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_mainsite_title( $block_content = '', $block = [] ) {
-  if (is_page_template('front-page-mainsite')){
-	if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-		$html = str_replace($block_content,'<h1>
-				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a>
-			</h1> ' ,
-		$block_content
-		);
-		return $html;
-	}
-}
-  return $block_content;
-}
-add_filter( 'render_block', 'ucsc_filter_mainsite_title', 10, 2 );
-
-/**
- * Change title block element from H1 to P
- * on subsite Home Page Templates
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_subsite_title( $block_content = '', $block = [] ) {
-  if (is_page_template('front-page-subsite')){
-	if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-		$html = str_replace(
-		'<h1 ',
-		'<p ' ,
-		$block_content
-		);
-		return $html;
-	}
-}
-  return $block_content;
-}
-add_filter( 'render_block', 'ucsc_filter_subsite_title', 10, 2 );
-
-/**Utility Function */
-
-function jc_test(){
-	// $blocks = parse_blocks( the_header() );
-	// var_dump($blocks);
-	// echo ($blocks[0]['innerHtml']);
-	$template = get_page_template_slug( get_queried_object_id() );
-	var_dump($template);
-}
-
-// add_action('wp_head','jc_test');
-
-
-
+add_shortcode('last-modified', 'ucsc_last_modified');
