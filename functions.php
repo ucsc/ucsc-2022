@@ -165,11 +165,40 @@ add_filter( 'render_block', 'ucsc_filter_subsite_title', 10, 2 );
 /**Utility Function */
 
 function jc_test(){
-	// $blocks = parse_blocks( the_header() );
+	if (!$post) {
+		global $post;
+	}
+	if (!$post) { return ''; }
+	$blocks = parse_blocks($post->post_content);
 	// var_dump($blocks);
 	// echo ($blocks[0]['innerHtml']);
-	$template = get_page_template_slug( get_queried_object_id() );
-	var_dump($template);
+	// $template = get_page_template_slug( get_queried_object_id() );
+	print_r($blocks);
 }
 
-// add_action('wp_head','jc_test');
+add_action('wp_head','jc_get_title');
+
+function jc_get_title($post=false) {
+	if (!$post) {
+		global $post;
+	}
+	if (!$post) { return ''; }
+	$postTitle = '';
+	$blocks = parse_blocks($post->post_content);
+	if (count($blocks) == 1 && $blocks[0]['blockName'] == null) {  // Non-Gutenberg posts
+		$postTitle = get_the_title($post->ID);
+	} else {
+		foreach ($blocks as $block) {
+			if ($block['blockName'] == 'core/post-title') {
+				// $postTitle = strip_tags($block['innerHTML']);
+				$postTitle = $block['innerHTML'];
+
+			}
+		}
+	}
+	// return "<div class='excerpt'>$excerpt</div>";
+	// return $postTitle;
+	var_dump($postTitle);
+	// print_r($postTitle);
+}
+
