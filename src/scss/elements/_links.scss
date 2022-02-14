@@ -1,10 +1,9 @@
  a {
-
-    text-decoration-color: var(--wp--custom--color--link-decoration)!important;
-    text-decoration-thickness: .14em!important;
-    text-underline-offset: .1em!important;
+    text-decoration-color: var(--wp--custom--color--link-decoration);
+    text-decoration-thickness: .14em;
+    text-underline-offset: .1em;
   &:hover, &:focus, &:active {
-    text-decoration-thickness: .1em!important;
+    text-decoration-thickness: .1em;
   }
 }
 
