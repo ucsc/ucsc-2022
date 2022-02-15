@@ -17,7 +17,7 @@ project/
     |---plugins/
 	|---mu-plugins/
     |---themes/
-		  |---[clone UCSC theme repo here]
+		|---[clone UCSC theme repo here]
 ```
 
 1. In your themes subfolder, `gh repo clone ucsc/theme-ucsc ucsc`.
