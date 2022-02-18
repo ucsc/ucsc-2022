@@ -1,9 +1,29 @@
+//
+// Base
+//===============================
+@import "base/normalize";
+@import "base/svg";
+@import "base/alignments";
+@import "base/layout";
 
 //
-// Styles
+// Elements
 //===============================
-@import 'base/style';
-@import 'elements/style';
-@import 'pages/style';
-@import 'components/style';
-@import 'regions/style';
+@import "elements/links";
+
+//
+// Pages
+//===============================
+@import "pages/posts-pages";
+
+//
+// Components
+//===============================
+@import "components/navigation";
+@import "components/buttons";
+
+//
+// Regions
+//===============================
+@import "regions/header";
+@import "regions/footer";

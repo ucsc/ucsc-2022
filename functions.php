@@ -15,7 +15,7 @@ if (!function_exists('ucsc_theme_setup')) :
 
 		add_theme_support('wp-block-styles');
 
-		add_editor_style('build/index.css');
+		add_editor_style('build/style-index.css');
 
 		/**
 		 * Register primary navigation menu location
@@ -57,8 +57,6 @@ function ucsc_add_admin_scripts()
 {
 	wp_register_script('ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true);
 	wp_enqueue_script('ucsc-admin-scripts');
-	wp_register_style('ucsc-admin-styles', get_template_directory_uri() . '/build/index.css', array(), '', false);
-	wp_enqueue_style('ucsc-admin-styles');
 }
 
 add_action('admin_enqueue_scripts', 'ucsc_add_admin_scripts');
@@ -124,20 +122,23 @@ add_shortcode('last-modified', 'ucsc_last_modified');
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_mainsite_title( $block_content = '', $block = [] ) {
-  if (is_page_template('front-page-mainsite')){
-	if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-		$html = str_replace($block_content,'<h1>
+function ucsc_filter_mainsite_title($block_content = '', $block = [])
+{
+	if (is_page_template('front-page-mainsite')) {
+		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
+			$html = str_replace(
+				$block_content,
+				'<h1>
 				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a>
-			</h1> ' ,
-		$block_content
-		);
-		return $html;
+			</h1> ',
+				$block_content
+			);
+			return $html;
+		}
 	}
+	return $block_content;
 }
-  return $block_content;
-}
-add_filter( 'render_block', 'ucsc_filter_mainsite_title', 10, 2 );
+add_filter('render_block', 'ucsc_filter_mainsite_title', 10, 2);
 
 /**
  * Change title block element from H1 to P
@@ -147,28 +148,32 @@ add_filter( 'render_block', 'ucsc_filter_mainsite_title', 10, 2 );
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_subsite_title( $block_content = '', $block = [] ) {
-  if (is_page_template('front-page-subsite')){
-	if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-		$html = str_replace(
-		'<h1 ',
-		'<p ' ,
-		$block_content
-		);
-		return $html;
+function ucsc_filter_subsite_title($block_content = '', $block = [])
+{
+	if (is_page_template('front-page-subsite')) {
+		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
+			$html = str_replace(
+				'<h1 ',
+				'<p ',
+				$block_content
+			);
+			return $html;
+		}
 	}
+	return $block_content;
 }
-  return $block_content;
-}
-add_filter( 'render_block', 'ucsc_filter_subsite_title', 10, 2 );
+add_filter('render_block', 'ucsc_filter_subsite_title', 10, 2);
 
 /**Utility Function */
 
-function jc_test(){
+function jc_test()
+{
 	if (!$post) {
 		global $post;
 	}
-	if (!$post) { return ''; }
+	if (!$post) {
+		return '';
+	}
 	$blocks = parse_blocks($post->post_content);
 	// var_dump($blocks);
 	// echo ($blocks[0]['innerHtml']);
@@ -176,13 +181,16 @@ function jc_test(){
 	print_r($blocks);
 }
 
-add_action('wp_head','jc_get_title');
+add_action('wp_head', 'jc_get_title');
 
-function jc_get_title($post=false) {
+function jc_get_title($post = false)
+{
 	if (!$post) {
 		global $post;
 	}
-	if (!$post) { return ''; }
+	if (!$post) {
+		return '';
+	}
 	$postTitle = '';
 	$blocks = parse_blocks($post->post_content);
 	if (count($blocks) == 1 && $blocks[0]['blockName'] == null) {  // Non-Gutenberg posts
@@ -192,13 +200,11 @@ function jc_get_title($post=false) {
 			if ($block['blockName'] == 'core/post-title') {
 				// $postTitle = strip_tags($block['innerHTML']);
 				$postTitle = $block['innerHTML'];
-
 			}
 		}
 	}
 	// return "<div class='excerpt'>$excerpt</div>";
 	// return $postTitle;
-	var_dump($postTitle);
+	//var_dump($postTitle);
 	// print_r($postTitle);
 }
-
