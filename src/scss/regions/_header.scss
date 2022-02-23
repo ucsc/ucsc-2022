@@ -2,9 +2,6 @@
 // Header Styles
 //===============================
 
-// [attribute*="value"] {
-//     // CSS property
-// }
 [class*="page-mainsite"] {
    .campus-logo {display:none!important}
     .campus-name {
@@ -15,9 +12,7 @@
         }
     }
 }
-// .page-template-front-page-mainsite, .page-template-page-mainsite {
-//   .campus-logo {display:none!important}
-// }
+
 .site-header {
   .page-top {
     .campus-logo {
