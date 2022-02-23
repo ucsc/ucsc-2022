@@ -1,9 +1,23 @@
 //
 // Header Styles
 //===============================
-.page-template-front-page-mainsite {
-  .campus-logo {display:none!important}
+
+// [attribute*="value"] {
+//     // CSS property
+// }
+[class*="page-mainsite"] {
+   .campus-logo {display:none!important}
+    .campus-name {
+      font-weight:600;
+      color: var(--wp--custom--color--heading-text);
+      > p {
+        font-size: var(--wp--preset--font-size--huge);
+        }
+    }
 }
+// .page-template-front-page-mainsite, .page-template-page-mainsite {
+//   .campus-logo {display:none!important}
+// }
 .site-header {
   .page-top {
     .campus-logo {

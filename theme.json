@@ -362,6 +362,20 @@
       "name": "front-page-subsite",
       "title": "Subsite Home Page",
       "postTypes": ["page"]
+    },
+    {
+      "name": "page-mainsite",
+      "title": "Campus Mainsite Single Page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-subsite",
+      "title": "Subsite Single Page",
+      "postTypes": [
+        "page"
+      ]
     }
   ]
 }
