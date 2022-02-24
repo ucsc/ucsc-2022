@@ -138,45 +138,19 @@ function ucsc_filter_mainsite_home_site_title($block_content = '', $block = [])
 	}
 	return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_mainsite_home_site_title', 10, 2);
-
-/**
- * Change site title block content
- * on Mainsite Page Template
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_mainsite_page_site_title($block_content = '', $block = [])
-{
-	if (is_page_template('page-mainsite')) {
-		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
-			$html = str_replace(
-				$block_content,
-				'<p>
-				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a>
-			</p> ',
-				$block_content
-			);
-			return $html;
-		}
-	}
-	return $block_content;
-}
-add_filter('render_block', 'ucsc_filter_mainsite_page_site_title', 10, 2);
+// add_filter('render_block', 'ucsc_filter_mainsite_home_site_title', 10, 2);
 
 /**
  * Change site title block element from H1 to P
- * on subsite Home Page Templates
+ * on Page Templates
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_subsite_site_title($block_content = '', $block = [])
+function ucsc_filter_page_site_title($block_content = '', $block = [])
 {
-	if (is_page_template(array('front-page-subsite','page-subsite'))) {
+	if (!is_front_page()) {
 		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
 			$html = str_replace(
 				'<h1 ',
@@ -188,11 +162,10 @@ function ucsc_filter_subsite_site_title($block_content = '', $block = [])
 	}
 	return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_subsite_site_title', 10, 2);
+add_filter('render_block', 'ucsc_filter_page_site_title', 10, 2);
 
 /**
- * Change page title block element from H2 to H1
- * on Main and Subsite Single Page Templates
+ * Change Page title block element from H2 to H1
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
@@ -200,7 +173,7 @@ add_filter('render_block', 'ucsc_filter_subsite_site_title', 10, 2);
  */
 function ucsc_filter_single_page_title($block_content = '', $block = [])
 {
-	if (is_page_template(array('page-mainsite','page-subsite'))) {
+	if (is_page()) {
 		if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
 			$html = str_replace(
 				'<h2 ',
@@ -228,11 +201,13 @@ function jc_test()
 
 	// echo ($blocks[0]['innerHtml']);
 	$template = get_page_template_slug( get_queried_object_id() );
-	var_dump($template);
+	$front = is_front_page();
+	$home = is_home();
+	var_dump($front);
 	// print_r($template);
 }
 
-// add_action('wp_head', 'jc_test');
+add_action('wp_head', 'jc_test');
 
 function jc_get_title($post = false)
 {
