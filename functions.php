@@ -205,6 +205,7 @@ function jc_test()
     $front = is_front_page();
     $home = is_home();
     var_dump($front);
+	var_dump($home);
     // print_r($template);
 }
 
