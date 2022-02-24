@@ -129,8 +129,7 @@ function ucsc_filter_mainsite_home_site_title($block_content = '', $block = [])
             $html = str_replace(
                 $block_content,
                 '<h1>
-				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a>
-			</h1> ',
+				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
                 $block_content
             );
             return $html;
@@ -188,7 +187,7 @@ function ucsc_filter_single_page_title($block_content = '', $block = [])
 add_filter('render_block', 'ucsc_filter_single_page_title', 10, 2);
 
 /**
- * Utility Function 
+ * Utility Function
  */
 
 function jc_test()
