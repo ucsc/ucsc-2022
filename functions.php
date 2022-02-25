@@ -204,8 +204,9 @@ function jc_test()
     $template = get_page_template_slug(get_queried_object_id());
     $front = is_front_page();
     $home = is_home();
-    var_dump($front);
-	var_dump($home);
+    echo var_dump($front);
+	echo var_dump($home);
+
     // print_r($template);
 }
 
