@@ -204,13 +204,14 @@ function jc_test()
     $template = get_page_template_slug(get_queried_object_id());
     $front = is_front_page();
     $home = is_home();
-    echo var_dump($front);
+    echo var_dump($template);
 	echo var_dump($home);
+ 	// print_r($template);
 
     // print_r($template);
 }
 
-add_action('wp_head', 'jc_test');
+// add_action('wp_head', 'jc_test');
 
 function jc_get_title($post = false)
 {
