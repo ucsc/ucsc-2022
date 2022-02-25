@@ -116,15 +116,18 @@ add_shortcode('last-modified', 'ucsc_last_modified');
 
 /**
  * Change site title block content
- * on Mainsite Home Page Template
+ * Main Site vs Subsite
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_mainsite_home_site_title($block_content = '', $block = [])
+function ucsc_filter_home_site_title($block_content = '', $block = [])
 {
-    if (is_page_template('front-page-mainsite')) {
+	$homeURL = "https://www.ucsc.edu";
+	$testURL = "localhost:8888/";
+	$myURL = get_site_url();
+    if ($myURL = $testURL) {
         if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
             $html = str_replace(
                 $block_content,
@@ -137,7 +140,35 @@ function ucsc_filter_mainsite_home_site_title($block_content = '', $block = [])
     }
     return $block_content;
 }
-// add_filter('render_block', 'ucsc_filter_mainsite_home_site_title', 10, 2);
+add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
+
+/**
+ * Change site Top Menu Logo Block
+ * Main Site vs Subsite
+ *
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_filter_home_site_logo($block_content = '', $block = [])
+{
+	$homeURL = "https://www.ucsc.edu";
+	$testURL = "localhost:8888/";
+	$myURL = get_site_url();
+    if ($myURL = $testURL) {
+        if (isset($block['blockName']) && 'core/column' === $block['blockName']) {
+            $html = str_replace(
+                $block_content,
+                '<h1>
+				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
+                $block_content
+            );
+            return $html;
+        }
+    }
+    return $block_content;
+}
+add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
 
 /**
  * Change site title block element from H1 to P
@@ -204,14 +235,16 @@ function jc_test()
     $template = get_page_template_slug(get_queried_object_id());
     $front = is_front_page();
     $home = is_home();
-    echo var_dump($template);
-	echo var_dump($home);
+	$url = get_site_url();
+    // echo var_dump($template);
+	// echo var_dump($home);
+	echo var_dump($url);
  	// print_r($template);
 
     // print_r($template);
 }
 
-// add_action('wp_head', 'jc_test');
+add_action('wp_head', 'jc_test');
 
 function jc_get_title($post = false)
 {

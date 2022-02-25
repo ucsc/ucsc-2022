@@ -7,14 +7,6 @@
       "area": "header"
     },
     {
-      "name": "title-mainsite",
-      "area": "site-title"
-    },
-    {
-      "name": "title-subsite",
-      "area": "site-title"
-    },
-    {
       "name": "footer",
       "area": "footer"
     }
@@ -352,30 +344,5 @@
       }
     }
   },
-  "customTemplates": [
-    {
-      "name": "front-page-mainsite",
-      "title": "Campus Home Page",
-      "postTypes": ["page"]
-    },
-    {
-      "name": "front-page-subsite",
-      "title": "Subsite Home Page",
-      "postTypes": ["page"]
-    },
-    {
-      "name": "page-mainsite",
-      "title": "Campus Mainsite Single Page",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "page-subsite",
-      "title": "Subsite Single Page",
-      "postTypes": [
-        "page"
-      ]
-    }
-  ]
+  "customTemplates": []
 }
