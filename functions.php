@@ -168,7 +168,7 @@ function ucsc_filter_home_site_logo($block_content = '', $block = [])
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
+// add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
 
 /**
  * Change site title block element from H1 to P
