@@ -2,26 +2,30 @@
 // Header Styles
 //===============================
 
-[class*="page-mainsite"] {
-   .campus-logo {display:none!important}
-    .campus-name {
-      font-weight:600;
-      color: var(--wp--custom--color--heading-text);
-      > p {
-        font-size: var(--wp--preset--font-size--huge);
-        }
-    }
-}
+// [class*="page-mainsite"] {
+//    .campus-logo {display:none!important}
+//     .campus-name {
+//       font-weight:600;
+//       color: var(--wp--custom--color--heading-text);
+//       > p {
+//         font-size: var(--wp--preset--font-size--huge);
+//         }
+//     }
+// }
 
 .site-header {
   .page-top {
     .campus-logo {
-      background: transparent url($campus-logo) no-repeat 0 0;
+      // background: transparent url($campus-logo) no-repeat 0 0;
       display: block;
       height: 26px;
       overflow: hidden;
-      text-indent: -10000px;
+      // text-indent: -10000px;
       width: 128px;
+      line-height: 1.5;
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+      margin-left: 0;
     }
     .page-top-right {
       .row{

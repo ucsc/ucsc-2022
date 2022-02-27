@@ -115,159 +115,111 @@ function ucsc_last_modified()
 add_shortcode('last-modified', 'ucsc_last_modified');
 
 /**
- * Change site title block content
+ * Change site Home Page
  * Main Site vs Subsite
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_home_site_title($block_content = '', $block = [])
+function ucsc_filter_main_home($block_content = '', $block = [])
 {
-	$homeURL = "https://www.ucsc.edu";
-	$testURL = "localhost:8888/";
-	$myURL = get_site_url();
-    if ($myURL = $testURL) {
+    if (is_front_page() && is_home() ) {
+        // Default homepage
         if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
-            $html = str_replace(
-                $block_content,
-                '<h1>
+            $ucscURL = "https://www.ucsc.edu";
+            $testURL = "localhost:8888";
+            $myURL = $_SERVER["REQUEST_URI"];
+            if ($ucscURL==$myURL) {
+                $html = str_replace(
+                    $block_content,
+                    '<h1>
 				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
+                    $block_content
+                );
+                return $html;
+            }
+        }
+    } elseif (is_front_page()) {
+        // Static homepage
+        if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
+            $html = str_replace(
+                '<h2 ',
+                '<h2 class="hidden" ',
                 $block_content
             );
-            return $html;
+                    return $html;
         }
-    }
-    return $block_content;
-}
-add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
 
-/**
- * Change site Top Menu Logo Block
- * Main Site vs Subsite
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_home_site_logo($block_content = '', $block = [])
-{
-	$homeURL = "https://www.ucsc.edu";
-	$testURL = "localhost:8888/";
-	$myURL = get_site_url();
-    if ($myURL = $testURL) {
-        if (isset($block['blockName']) && 'core/column' === $block['blockName']) {
-            $html = str_replace(
-                $block_content,
-                '<h1>
-				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
-                $block_content
-            );
-            return $html;
-        }
-    }
-    return $block_content;
-}
-// add_filter('render_block', 'ucsc_filter_home_site_title', 10, 2);
+    } elseif (is_home()) {
 
-/**
- * Change site title block element from H1 to P
- * on Page Templates
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_page_site_title($block_content = '', $block = [])
-{
-    if (!is_front_page()) {
+        // Blog page
+        $html = $block_content;
+        return $html;
+
+    } elseif (is_archive()) {
+
+        // Archive page
+        $html = $block_content;
+        return $html;
+
+    }  else {
+        // all other pages
         if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
             $html = str_replace(
                 '<h1 ',
                 '<p ',
                 $block_content
             );
-            return $html;
+                  return $html;
         }
-    }
-    return $block_content;
-}
-add_filter('render_block', 'ucsc_filter_page_site_title', 10, 2);
-
-/**
- * Change Page title block element from H2 to H1
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_filter_single_page_title($block_content = '', $block = [])
-{
-    if (is_page()) {
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
             $html = str_replace(
                 '<h2 ',
                 '<h1 ',
                 $block_content
             );
-            return $html;
+                   return $html;
         }
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_single_page_title', 10, 2);
+add_filter('render_block', 'ucsc_filter_main_home', 10, 2);
+
+
 
 /**
  * Utility Function
  */
 
-function jc_test()
+function jc_utility()
 {
-    if (!$post) {
-        global $post;
-    }
-    if (!$post) {
-        return '';
-    }
-    // $blocks = parse_blocks($post->post_content);
 
-    // echo ($blocks[0]['innerHtml']);
-    $template = get_page_template_slug(get_queried_object_id());
-    $front = is_front_page();
-    $home = is_home();
-	$url = get_site_url();
-    // echo var_dump($template);
-	// echo var_dump($home);
-	echo var_dump($url);
- 	// print_r($template);
+    if (is_front_page() && is_home() ) {
+        // Default homepage
+        echo "<pre>is_front_page() && is_home() = true</pre> Front and Home = Default Home Page";
 
-    // print_r($template);
-}
+    } elseif (is_front_page()) {
+        // Static homepage
+        echo "<pre>is_front_page() = true</pre> Front Page = Static Homepage";
 
-add_action('wp_head', 'jc_test');
+    } elseif (is_home()) {
 
-function jc_get_title($post = false)
-{
-    if (!$post) {
-        global $post;
-    }
-    if (!$post) {
-        return '';
-    }
-    $postTitle = '';
-    $blocks = parse_blocks($post->post_content);
-    if (count($blocks) == 1 && $blocks[0]['blockName'] == null) {  // Non-Gutenberg posts
-        $postTitle = get_the_title($post->ID);
+        // Blog page
+        echo "<pre>is_home() = true</pre> home = blog page";
+
+    } elseif (is_archive()) {
+
+        // Archive page: Category, Tag, Etc.
+        echo "<pre>is_archive() = true</pre> archive page";
+
     } else {
-        foreach ($blocks as $block) {
-            if ($block['blockName'] == 'core/post-title') {
-                // $postTitle = strip_tags($block['innerHTML']);
-                $postTitle = $block['innerHTML'];
-            }
-        }
+
+        // Everything else
+        echo "all other pages";
+
     }
-    // return "<div class='excerpt'>$excerpt</div>";
-    // return $postTitle;
-    //var_dump($postTitle);
-    // print_r($postTitle);
+
 }
+// add_action('wp_head', 'jc_utility');
+
