@@ -115,6 +115,57 @@ function ucsc_last_modified()
 add_shortcode('last-modified', 'ucsc_last_modified');
 
 /**
+ * Change site Title and Logo
+ * Main Site vs Subsite
+ *
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_logo_switch($block_content = '', $block = [])
+{
+    $siteURL = get_site_url();
+    // http://localhost:8888
+    if ($siteURL == '') {
+        if (isset($block['blockName']) && 'core/html' === $block['blockName']) {
+            $html = str_replace(
+                'class="campus-logo"',
+                'class="campus-logo hidden"',
+                $block_content
+            );
+                     return $html;
+        }
+        else if ((is_front_page() && is_home()) || is_front_page() || is_home()) {
+            if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
+                $html = str_replace(
+                    $block_content,
+                    '<h1>
+							<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
+                    $block_content
+                );
+                return $html;
+            }
+        }else  {
+            if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
+                $html = str_replace(
+                    $block_content,
+                    '<p>
+							<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
+                    $block_content
+                );
+                         return $html;
+            }
+
+        }
+
+    }
+         return $block_content;
+}
+
+
+add_filter('render_block', 'ucsc_logo_switch', 10, 2);
+
+/**
  * Change site Html Structure
  * Adjust templates to conform to UCSC semantics
  *
@@ -122,24 +173,12 @@ add_shortcode('last-modified', 'ucsc_last_modified');
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_adjust_structure($block_content = '', $block = [])
+function ucsc_adjust_structure($block_content = '', $block = [])
 {
     if (is_front_page() && is_home() ) {
         // Default homepage
-        if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
-            $ucscURL = "https://www.ucsc.edu";
-            $testURL = "localhost:8888";
-            $myURL = $_SERVER["REQUEST_URI"];
-            if ($ucscURL==$myURL) {
-                $html = str_replace(
-                    $block_content,
-                    '<h1>
-				<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
-                    $block_content
-                );
-                return $html;
-            }
-        }
+        $html = $block_content;
+        return $html;
     } elseif (is_front_page()) {
         // Static homepage
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
@@ -184,7 +223,7 @@ function ucsc_filter_adjust_structure($block_content = '', $block = [])
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_adjust_structure', 10, 2);
+add_filter('render_block', 'ucsc_adjust_structure', 10, 2);
 
 
 
