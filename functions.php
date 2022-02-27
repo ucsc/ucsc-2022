@@ -115,7 +115,7 @@ function ucsc_last_modified()
 add_shortcode('last-modified', 'ucsc_last_modified');
 
 /**
- * Change site Title and Logo
+ * Change Site Title and Logo
  * Main Site vs Subsite
  *
  * @param  string $block_content Block content to be rendered.
@@ -125,7 +125,7 @@ add_shortcode('last-modified', 'ucsc_last_modified');
 function ucsc_logo_switch($block_content = '', $block = [])
 {
     $siteURL = get_site_url();
-    // http://localhost:8888
+    // http://localhost:8888 == www
     if ($siteURL == '') {
         if (isset($block['blockName']) && 'core/html' === $block['blockName']) {
             $html = str_replace(
@@ -199,8 +199,14 @@ function ucsc_adjust_structure($block_content = '', $block = [])
     } elseif (is_archive()) {
 
         // Archive page
-        $html = $block_content;
-        return $html;
+        if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
+            $html = str_replace(
+                '<h1 ',
+                '<p ',
+                $block_content
+            );
+                  return $html;
+        }
 
     }  else {
         // all other pages
