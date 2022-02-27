@@ -115,14 +115,14 @@ function ucsc_last_modified()
 add_shortcode('last-modified', 'ucsc_last_modified');
 
 /**
- * Change site Home Page
- * Main Site vs Subsite
+ * Change site Html Structure
+ * Adjust templates to conform to UCSC semantics
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_filter_main_home($block_content = '', $block = [])
+function ucsc_filter_adjust_structure($block_content = '', $block = [])
 {
     if (is_front_page() && is_home() ) {
         // Default homepage
@@ -184,7 +184,7 @@ function ucsc_filter_main_home($block_content = '', $block = [])
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_filter_main_home', 10, 2);
+add_filter('render_block', 'ucsc_filter_adjust_structure', 10, 2);
 
 
 
