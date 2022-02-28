@@ -128,12 +128,8 @@ function ucsc_logo_switch($block_content = '', $block = [])
     // http://localhost:8888 == www
     if ($siteURL == '') {
         if (isset($block['blockName']) && 'core/html' === $block['blockName']) {
-            $html = str_replace(
-                'class="campus-logo"',
-                'class="campus-logo hidden"',
-                $block_content
-            );
-                     return $html;
+            $html = '';
+            return $html;
         }
         else if ((is_front_page() && is_home()) || is_front_page() || is_home()) {
             if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
@@ -182,12 +178,8 @@ function ucsc_adjust_structure($block_content = '', $block = [])
     } elseif (is_front_page()) {
         // Static homepage
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
-            $html = str_replace(
-                '<h2 ',
-                '<h2 class="hidden" ',
-                $block_content
-            );
-                    return $html;
+            $html = '';
+            return $html;
         }
 
     } elseif (is_home()) {
@@ -196,7 +188,7 @@ function ucsc_adjust_structure($block_content = '', $block = [])
         $html = $block_content;
         return $html;
 
-    } elseif (is_archive()) {
+    } elseif (is_archive() || is_search()) {
 
         // Archive page
         if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
@@ -205,7 +197,7 @@ function ucsc_adjust_structure($block_content = '', $block = [])
                 '<p ',
                 $block_content
             );
-                  return $html;
+            return $html;
         }
 
     }  else {
@@ -216,7 +208,7 @@ function ucsc_adjust_structure($block_content = '', $block = [])
                 '<p ',
                 $block_content
             );
-                  return $html;
+            return $html;
         }
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
             $html = str_replace(
@@ -224,7 +216,7 @@ function ucsc_adjust_structure($block_content = '', $block = [])
                 '<h1 ',
                 $block_content
             );
-                   return $html;
+            return $html;
         }
     }
     return $block_content;
@@ -258,6 +250,11 @@ function jc_utility()
         // Archive page: Category, Tag, Etc.
         echo "<pre>is_archive() = true</pre> archive page";
 
+    } elseif (is_search()) {
+
+        // Archive page: Category, Tag, Etc.
+        echo "<pre>is_search() = true</pre> search results page";
+
     } else {
 
         // Everything else
@@ -266,5 +263,5 @@ function jc_utility()
     }
 
 }
-// add_action('wp_head', 'jc_utility');
+add_action('wp_head', 'jc_utility');
 
