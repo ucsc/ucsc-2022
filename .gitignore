@@ -32,3 +32,6 @@ settings.json
 # Composer --- allows local config
 composer.json
 composer.lock
+
+# Misc
+utility.php

@@ -114,6 +114,7 @@ function ucsc_last_modified()
 }
 add_shortcode('last-modified', 'ucsc_last_modified');
 
+
 /**
  * Change Site Title and Logo
  * Main Site vs Subsite
@@ -136,7 +137,7 @@ function ucsc_logo_switch($block_content = '', $block = [])
                 $html = str_replace(
                     $block_content,
                     '<h1>
-							<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
+							<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
                     $block_content
                 );
                 return $html;
@@ -146,7 +147,7 @@ function ucsc_logo_switch($block_content = '', $block = [])
                 $html = str_replace(
                     $block_content,
                     '<p>
-							<a href="https://www.ucsc.edu/index.html" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
+							<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
                     $block_content
                 );
                          return $html;
@@ -223,45 +224,4 @@ function ucsc_adjust_structure($block_content = '', $block = [])
 }
 add_filter('render_block', 'ucsc_adjust_structure', 10, 2);
 
-
-
-/**
- * Utility Function
- */
-
-function jc_utility()
-{
-
-    if (is_front_page() && is_home() ) {
-        // Default homepage
-        echo "<pre>is_front_page() && is_home() = true</pre> Front and Home = Default Home Page";
-
-    } elseif (is_front_page()) {
-        // Static homepage
-        echo "<pre>is_front_page() = true</pre> Front Page = Static Homepage";
-
-    } elseif (is_home()) {
-
-        // Blog page
-        echo "<pre>is_home() = true</pre> home = blog page";
-
-    } elseif (is_archive()) {
-
-        // Archive page: Category, Tag, Etc.
-        echo "<pre>is_archive() = true</pre> archive page";
-
-    } elseif (is_search()) {
-
-        // Archive page: Category, Tag, Etc.
-        echo "<pre>is_search() = true</pre> search results page";
-
-    } else {
-
-        // Everything else
-        echo "all other pages";
-
-    }
-
-}
-add_action('wp_head', 'jc_utility');
 
