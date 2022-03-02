@@ -152,8 +152,9 @@ function ucsc_logo_switch($block_content = '', $block = [])
 add_filter('render_block', 'ucsc_logo_switch', 10, 2);
 
 /**
- * Change site Html Structure
- * Adjust templates to conform to UCSC semantics
+ * Set accessible HTML headers
+ * The site title is the `h1` on the home page and `p` on all other pages.
+ * The page title is the `h1` on all other pages.
  *
  * @param  string $block_content Block content to be rendered.
  * @param  array  $block         Block attributes.
@@ -161,46 +162,16 @@ add_filter('render_block', 'ucsc_logo_switch', 10, 2);
  */
 function ucsc_adjust_structure($block_content = '', $block = [])
 {
-	if (is_front_page() && is_home()) {
-		// Default homepage
+	if (is_front_page()) {
+		// On the home page, return the block as is
 		$html = $block_content;
 		return $html;
-	} elseif (is_front_page()) {
-		// Static homepage
-		if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
-			$html = '';
-			return $html;
-		}
-	} elseif (is_home()) {
-
-		// Blog page
-		$html = $block_content;
-		return $html;
-	} elseif (is_archive() || is_search()) {
-
-		// Archive page
-		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
-			$html = str_replace(
-				'<h1 ',
-				'<p ',
-				$block_content
-			);
-			return $html;
-		}
 	} else {
-		// all other pages
+		// On all other pages, the site title becomes `p` and page title becomes `h1`
 		if (isset($block['blockName']) && 'core/site-title' === $block['blockName']) {
 			$html = str_replace(
 				'<h1 ',
 				'<p ',
-				$block_content
-			);
-			return $html;
-		}
-		if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
-			$html = str_replace(
-				'<h2 ',
-				'<h1 ',
 				$block_content
 			);
 			return $html;
@@ -209,3 +180,6 @@ function ucsc_adjust_structure($block_content = '', $block = [])
 	return $block_content;
 }
 add_filter('render_block', 'ucsc_adjust_structure', 10, 2);
+
+
+
