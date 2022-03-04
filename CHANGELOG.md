@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.2](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-03-04)
+
+
+### Features
+
+* :art: Add Archive Title. New since `WP5.9` ([7e38929](https://github.com/ucsc/theme-ucsc/commit/7e389291e16b50a9ca47011321a094daf6f056b8))
+* :art: Add filter function to replace `site-title` `h1` element with `p` element ([11a8cea](https://github.com/ucsc/theme-ucsc/commit/11a8ceaee120c757c7f1edbf0d6f56671cf5aeaf))
+* ✨ Initial setup of custom block styles ([ffce7b9](https://github.com/ucsc/theme-ucsc/commit/ffce7b96773c03054f4919bf8f2cc2e330ae5dc3))
+
+
+### Bug Fixes
+
+* 🐛 Auto-formatting turned off ([9ebed16](https://github.com/ucsc/theme-ucsc/commit/9ebed165468a43ee8215e8b6457ece915a009218))
+* 🐛 Ensure all stylesheets are loaded in the editor; fix link styles ([099ae65](https://github.com/ucsc/theme-ucsc/commit/099ae6541098fa9644b635ccf963daad20adf90d))
+* 🐛 Last modified date shows created date if page is new ([afd67df](https://github.com/ucsc/theme-ucsc/commit/afd67dfb6944fd9b735b3bdda8b1263e15ddfd53))
+* 🐛 Remove right alignment class from search box ([51b4a3d](https://github.com/ucsc/theme-ucsc/commit/51b4a3dff4f6749aeed6a20c834c96a82e93e748))
+* 🐛 Set proper heading level on site title ([89459b3](https://github.com/ucsc/theme-ucsc/commit/89459b3a88b7929f78ddfdb272d1d379fd6d9aad))
+
 ## [1.0.0-beta.1](https://github.com/ucsc/theme-ucsc/compare/v0.0.1...v1.0.0-beta.1) (2022-02-04)
 
 
