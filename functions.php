@@ -17,6 +17,19 @@ if ( ! function_exists('ucsc_theme_setup') ) :
 				'primary'   => __('Primary Navigation', 'theme-ucsc'),
 			)
 		);
+
+		/*
+		* Load additional block styles.
+		*/
+		$styled_blocks = ['button'];
+		foreach ($styled_blocks as $block_name) {
+			$args = array(
+				'handle' => "ucsc-$block_name",
+				'src'    => get_theme_file_uri("src/scss/wp-blocks/$block_name.css"),
+				$args['path'] = get_theme_file_path("src/scss/wp-blocks/$block_name.css"),
+			);
+			wp_enqueue_block_style("core/$block_name", $args);
+		}
 	}
 endif;
 add_action('after_setup_theme', 'ucsc_theme_setup');
@@ -128,7 +141,7 @@ function ucsc_logo_switch($block_content = '', $block = [])
 				$html = str_replace(
 					$block_content,
 					'<h1>
-							<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
+						<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
 					$block_content
 				);
 				return $html;
@@ -138,7 +151,7 @@ function ucsc_logo_switch($block_content = '', $block = [])
 				$html = str_replace(
 					$block_content,
 					'<p>
-							<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
+						<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
 					$block_content
 				);
 				return $html;
@@ -180,6 +193,3 @@ function ucsc_adjust_structure($block_content = '', $block = [])
 	return $block_content;
 }
 add_filter('render_block', 'ucsc_adjust_structure', 10, 2);
-
-
-
