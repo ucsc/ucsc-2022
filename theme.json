@@ -258,9 +258,9 @@
         },
         "spacing": {
           "margin": {
-            "top": "1.15em!important",
+            "top": "1.15em",
             "right": "0",
-            "bottom": "0.5em!important",
+            "bottom": "0.5em",
             "left": "0"
           }
         }
