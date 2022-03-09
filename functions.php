@@ -193,3 +193,49 @@ function ucsc_adjust_structure($block_content = '', $block = [])
     return $block_content;
 }
 add_filter('render_block', 'ucsc_adjust_structure', 10, 2);
+
+/**
+ * Add author link to Post Author on
+ * Single Blog Post
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_post_author_link($block_content = '', $block = [])
+{
+		// Check for single post; use `global $post` to access data outide the Loop
+    if (is_single()) {
+				global $post;
+				$author_id = $post->post_author;
+				$author_nicename = get_the_author_meta('nicename', $author_id);
+				$author_email = get_the_author_meta('user_email', $author_id);
+        if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
+            $html = str_replace($block_content,'<p class="wp-block-post-author__name"><a href="mailto:'.$author_email.'">'.$author_nicename.'</a></p>',$block_content);
+                return $html;
+        }
+    }
+    return $block_content;
+}
+add_filter('render_block', 'ucsc_post_author_link', 10, 2);
+
+
+/**Utility Function
+ * TODO: Remove when done
+*/
+
+function jc_test(){
+if(is_single()){
+
+		global $post;
+				$author = get_the_author();
+				$author_id = $post->post_author;
+				$author_email = get_the_author_meta('user_email', $author_id);
+				$author_nicename = get_the_author_meta('display_name', $author_id);
+
+
+		}
+
+	var_dump($author_nicename);
+}
+
+// add_action('wp_head','jc_test');
