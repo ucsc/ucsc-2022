@@ -218,7 +218,6 @@ function ucsc_post_author_link($block_content = '', $block = [])
 }
 add_filter('render_block', 'ucsc_post_author_link', 10, 2);
 
-
 /**Utility Function
  * TODO: Remove when done
 */
