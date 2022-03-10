@@ -222,19 +222,31 @@ add_filter('render_block', 'ucsc_post_author_link', 10, 2);
  * TODO: Remove when done
 */
 
-function jc_test(){
-if(is_single()){
+function wpdocs_display_post_youtube_block() {
 
-		global $post;
-				$author = get_the_author();
-				$author_id = $post->post_author;
-				$author_email = get_the_author_meta('user_email', $author_id);
-				$author_nicename = get_the_author_meta('display_name', $author_id);
+    global $post;
+
+    $blocks = parse_blocks( $post->post_content );
+
+    foreach ( $blocks as $block ) {
 
 
-		}
 
-	var_dump($author_nicename);
+            echo apply_filters( 'the_content', render_block( $block ) );
+
+            break;
+
+
+
+    }
+
+}
+// wpdocs_display_post_youtube_block();
+// jc_test();
+// add_action('wp_head','wpdocs_display_post_youtube_block');
+
+function this_function() {
+echo "Hello World";
 }
 
-// add_action('wp_head','jc_test');
+// this_function();
