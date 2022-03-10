@@ -350,6 +350,14 @@
 				},
 				"color": {
 					"text": "var(--wp--custom--color--light-gray)"
+				},
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"right": "0",
+						"bottom": "0.5em",
+						"left": "0"
+					}
 				}
 			},
 			"core/post-title": {
@@ -372,6 +380,13 @@
 						"right": "0",
 						"bottom": "0.75em",
 						"left": "0"
+					}
+				}
+			},
+			"core/block-post": {
+				"spacing": {
+					"margin": {
+						"top": "0"
 					}
 				}
 			}
