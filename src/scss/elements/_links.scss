@@ -3,7 +3,12 @@
     text-decoration-thickness: .14em;
     text-underline-offset: .1em;
   &:hover, &:focus, &:active {
-    text-decoration-thickness: .1em;
+        color: var(--wp--preset--color--ucsc-primary-blue);
+        text-decoration: underline;
+        text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 0.18em;
+        text-underline-offset: 0.12em;
   }
 }
 
