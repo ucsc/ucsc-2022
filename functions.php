@@ -206,15 +206,94 @@ function ucsc_post_author_link($block_content = '', $block = [])
 		// Check for single post; use `global $post` to access data outide the Loop
     if (is_single()) {
 				global $post;
+				$post_id = $post->post_id;
 				$author_id = $post->post_author;
 				$author_nicename = get_the_author_meta('nicename', $author_id);
 				$author_email = get_the_author_meta('user_email', $author_id);
 				$author_archive = get_author_posts_url($author_id);
-        if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
-            $html = str_replace($block_content,'<p class="wp-block-post-author__name"><a href="'.$author_archive.'">'.$author_nicename.'</a></p>',$block_content);
+				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
+            $html = str_replace($block_content,'<p class="wp-block-post-author__name">By <a href="'.$author_archive.'">'.$author_nicename.'</a></p>',$block_content);
                 return $html;
         }
     }
     return $block_content;
 }
 add_filter('render_block', 'ucsc_post_author_link', 10, 2);
+
+/**
+ * Add Subtitle meta field
+ * Single Blog Post
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_post_subtitle($block_content = '', $block = [])
+{
+		// Check for single post; use `global $post` to access data outide the Loop
+    if (is_single()) {
+				global $post;
+				$post_id = $post->post_id;
+				$subtitle = $post->subtitle;
+        if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
+
+						if($subtitle) {
+							$html = str_replace($block_content, $block_content.'<p class="post-subtitle">'.$subtitle.'</p>',$block_content);
+                return $html;
+						}
+        }
+
+    }
+    return $block_content;
+}
+add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
+
+/**
+ * Add campus message meta field
+ * Single Blog Post
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_post_message($block_content = '', $block = [])
+{
+		// Check for single post; use `global $post` to access data outide the Loop
+    if (is_single()) {
+				global $post;
+				$post_id = $post->post_id;
+				$campus_message_to = $post->campus_message_to;
+				$campus_message_from = $post->campus_message_from;
+        if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
+
+						if($campus_message_to && $campus_message_from) {
+							$html = str_replace($block_content, $block_content.'<div class="campus-message"><p><span>To: </span>' . $campus_message_to.'</p><p><span>From: </span>'. $campus_message_from.'</p></div>',$block_content);
+                return $html;
+						}
+        }
+
+    }
+    return $block_content;
+}
+add_filter('render_block', 'ucsc_post_message', 10, 2);
+
+function jc_test(){
+
+	if (is_single()){
+		global $post;
+		$post_id = $post->post_id;
+		$meta = get_post_custom($post_id);
+		// $subtitle = get_post_meta($post_id, 'subtitle', false);
+		$subtitle = $post->subtitle;
+
+		if ($subtitle) {
+			echo $subtitle;
+			} else {echo "nope";}
+		// print_r($meta);
+		// $subtitle2 = $meta['subtitle'];
+		// foreach ($subtitle2 as $key => $value) {
+		// echo $key . "=>" . $value . "<br />";
+		// 	}
+	}
+
+}
+
+// add_action('wp_head','jc_test');
