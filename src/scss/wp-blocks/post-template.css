@@ -1,16 +1,5 @@
-.wp-block-post {
-margin-top: var( --wp--style--block-gap );
-}
-
-.wp-block-post-title {
-    margin-bottom: 0 !important;
-
-
-}
 .wp-block-post-title > a {
     text-decoration: none;
-
-
 }
 
 .wp-block-post-excerpt__excerpt {
