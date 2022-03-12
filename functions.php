@@ -209,44 +209,12 @@ function ucsc_post_author_link($block_content = '', $block = [])
 				$author_id = $post->post_author;
 				$author_nicename = get_the_author_meta('nicename', $author_id);
 				$author_email = get_the_author_meta('user_email', $author_id);
+				$author_archive = get_author_posts_url($author_id);
         if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
-            $html = str_replace($block_content,'<p class="wp-block-post-author__name"><a href="mailto:'.$author_email.'">'.$author_nicename.'</a></p>',$block_content);
+            $html = str_replace($block_content,'<p class="wp-block-post-author__name"><a href="'.$author_archive.'">'.$author_nicename.'</a></p>',$block_content);
                 return $html;
         }
     }
     return $block_content;
 }
 add_filter('render_block', 'ucsc_post_author_link', 10, 2);
-
-/**Utility Function
- * TODO: Remove when done
-*/
-
-function wpdocs_display_post_youtube_block() {
-
-    global $post;
-
-    $blocks = parse_blocks( $post->post_content );
-
-    foreach ( $blocks as $block ) {
-
-
-
-            echo apply_filters( 'the_content', render_block( $block ) );
-
-            break;
-
-
-
-    }
-
-}
-// wpdocs_display_post_youtube_block();
-// jc_test();
-// add_action('wp_head','wpdocs_display_post_youtube_block');
-
-function this_function() {
-echo "Hello World";
-}
-
-// this_function();
