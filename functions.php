@@ -275,25 +275,9 @@ function ucsc_post_message($block_content = '', $block = [])
 }
 add_filter('render_block', 'ucsc_post_message', 10, 2);
 
-function jc_test(){
-
-	if (is_single()){
-		global $post;
-		$post_id = $post->post_id;
-		$meta = get_post_custom($post_id);
-		// $subtitle = get_post_meta($post_id, 'subtitle', false);
-		$subtitle = $post->subtitle;
-
-		if ($subtitle) {
-			echo $subtitle;
-			} else {echo "nope";}
-		// print_r($meta);
-		// $subtitle2 = $meta['subtitle'];
-		// foreach ($subtitle2 as $key => $value) {
-		// echo $key . "=>" . $value . "<br />";
-		// 	}
-	}
-
+/**Enqueue developer functions */
+if(file_exists(get_theme_file_path( 'utility.php' ))) {
+	// include get_theme_file_path( '/subdir/filename.php' );
+	include get_theme_file_path( 'utility.php' );
 }
 
-// add_action('wp_head','jc_test');
