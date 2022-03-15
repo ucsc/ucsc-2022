@@ -30,6 +30,14 @@ if (! function_exists('ucsc_theme_setup') ) :
             );
             wp_enqueue_block_style("core/$block_name", $args);
         }
+				/**
+         * Include ThemeHybrid/HyridBreadcrumbs Class
+				 * see: https://github.com/themehybrid/hybrid-breadcrumbs
+				 * and https://themehybrid.com/weblog/integrating-hybrid-breadcrumbs-into-wordpress-themes
+         */
+				if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
+				require_once( get_parent_theme_file_path( 'vendor/autoload.php' ) );
+				}
     }
 endif;
 add_action('after_setup_theme', 'ucsc_theme_setup');
@@ -274,6 +282,44 @@ function ucsc_post_message($block_content = '', $block = [])
     return $block_content;
 }
 add_filter('render_block', 'ucsc_post_message', 10, 2);
+
+/**
+ * Breadcrumbs constructor callback helper
+ *
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_breadcrumbs_constructor(){
+		$labels = [
+		'title' => __( '', 'ucsc' ),
+		];
+		$args = [
+		'labels' => $labels,
+		'show_on_front' => true,
+		];
+		return Hybrid\Breadcrumbs\Trail::render($args);
+	}
+/**
+ * Add Breadcrumbs above Post Title.
+ *
+ * @param  string $block_content Block content to be rendered.
+ * @param  array  $block         Block attributes.
+ * @return string
+ */
+function ucsc_add_breadcrumbs($block_content = '', $block = []){
+		$breadcrumbs = ucsc_breadcrumbs_constructor();
+		if (!is_home()){
+		if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
+            $html = str_replace($block_content,$breadcrumbs.$block_content,$block_content);
+                return $html;
+        }
+		}
+    return $block_content;
+	}
+add_filter('render_block', 'ucsc_add_breadcrumbs', 10, 2);
+
+
 
 /**Enqueue developer functions */
 if(file_exists(get_theme_file_path( 'utility.php' ))) {

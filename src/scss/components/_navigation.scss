@@ -29,3 +29,50 @@
 
     color: var(--wp--preset--color--ucsc-primary-yellow);
 }
+
+//BREADCRUMBS
+
+// Wrapper element.
+.breadcrumbs {
+
+    // Title. Note that this is the heading that says "Browse:". The code
+    // puts it inline with the trail.
+    &__title {
+        display:   inline-block;
+        margin:    0 0 1.5rem;
+        font-size: inherit;
+    }
+
+    // List.
+    &__trail {
+        list-style: none;
+        display:    inline-block;
+        margin:     0 0 0.35em;
+				padding-inline-start: 0;
+    }
+
+    // Individual crumbs.
+    &__crumb {
+        display: inline-block;
+				& a {
+				font-size: var(--wp--preset--font-size--tiny);
+				border-bottom: 1px solid var(--wp--custom--color--flourish);
+				text-decoration: none;
+				color: var(--wp--custom--color--site-title);
+				&:active, &:focus, &:hover {
+				border-bottom: 1px solid var(--wp--preset--color--ucsc-secondary-blue);
+				text-decoration:none;}
+				}
+
+
+        // Add separators.
+        &::after {
+            content: "\002F";
+            padding: 0 0.25em;
+        }
+
+        &:last-of-type::after {
+            display: none;
+        }
+    }
+}
