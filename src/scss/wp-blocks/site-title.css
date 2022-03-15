@@ -1,10 +1,11 @@
-p.wp-block-site-title{
-      font-size:var(--wp--preset--font-size--huge);
-    }
 .wp-block-site-title > a {
 	color: var(--wp--custom--color--site-title);
 	text-decoration: none;
 }
+.wp-block-site-title > a:hover, .wp-block-site-title > a:focus, .wp-block-site-title > a:active {
+        color: var(--wp--preset--color--ucsc-primary-blue);
+        text-decoration: none;
+  }
 .wp-block-site-title >* .flourish {
         color: var(--wp--custom--color--flourish);
         font-family: Georgia,serif;

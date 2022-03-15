@@ -335,7 +335,8 @@
 					"fontFamily": "'Roboto Condensed', sans-serif",
 					"fontWeight": "600",
 					"lineHeight": "1.2",
-					"textTransform": "uppercase"
+					"textTransform": "uppercase",
+					"fontSize": "2.8rem"
 				}
 			},
 			"core/post-date": {
