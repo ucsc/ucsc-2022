@@ -1,18 +1,6 @@
 //
 // Header Styles
 //===============================
-
-// [class*="page-mainsite"] {
-//    .campus-logo {display:none!important}
-//     .campus-name {
-//       font-weight:600;
-//       color: var(--wp--custom--color--heading-text);
-//       > p {
-//         font-size: var(--wp--preset--font-size--huge);
-//         }
-//     }
-// }
-
 .site-header {
   .page-top {
     .campus-logo {
@@ -44,34 +32,12 @@
   }
   .main-header {
     margin-bottom: 2em;
-    p.wp-block-site-title{
-      font-size:var(--wp--preset--font-size--huge);
-    }
-    .wp-block-site-title {
 
-      &>* .flourish {
-        color: var(--wp--custom--color--flourish);
-        font-family: Georgia,serif;
-        font-size: .65em;
-        font-style: italic;
-        font-weight: 300;
-        line-height: 1.3;
-        margin: 0 -0.02em;
-        position: relative;
-        text-transform: lowercase;
-        top: -0.1em;
-      }
-      a {
-        text-decoration: none;
-      }
-    }
     .names{
       margin-top: 1.5em;
       margin-bottom: 1em;
       border-bottom: 2px solid var(--wp--preset--color--ucsc-primary-yellow)!important;
-      p {
-      font-size: var(--wp--preset--font-size--huge);
-      }
+
       .mainsite-logo {
        background: transparent url($campus-logo) no-repeat 0 0;
        display: block;
