@@ -21,7 +21,7 @@ if (! function_exists('ucsc_theme_setup') ) :
         /*
         * Load additional block styles.
         */
-        $styled_blocks = ['button','post-template'];
+        $styled_blocks = ['button','post-template', 'post-author'];
         foreach ($styled_blocks as $block_name) {
             $args = array(
              'handle' => "ucsc-$block_name",
