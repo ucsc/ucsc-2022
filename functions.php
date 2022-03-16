@@ -318,7 +318,9 @@ function ucsc_breadcrumbs_constructor(){
  * @return string
  */
 function ucsc_add_breadcrumbs($block_content = '', $block = []){
+		if (ucsc_breadcrumbs_constructor()) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
+		}
 		if (!is_home()){
 		if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
             $html = str_replace($block_content,$breadcrumbs.$block_content,$block_content);
