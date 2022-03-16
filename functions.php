@@ -217,10 +217,17 @@ function ucsc_post_author_link($block_content = '', $block = [])
 				$post_id = $post->post_id;
 				$author_id = $post->post_author;
 				$author_nicename = get_the_author_meta('nicename', $author_id);
+				$author_firstname = get_the_author_meta('first_name', $author_id);
+				$author_lastname = get_the_author_meta('last_name', $author_id);
+				if ($author_firstname && $author_lastname) {
+				$author_name = $author_firstname.' '.$author_lastname;
+				 } else {
+				$author_name = $author_nicename;
+				}
 				$author_email = get_the_author_meta('user_email', $author_id);
 				$author_archive = get_author_posts_url($author_id);
 				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
-            $html = str_replace($block_content,'<p class="wp-block-post-author__name">By <a href="'.$author_archive.'">'.$author_nicename.'</a></p>',$block_content);
+            $html = str_replace($block_content,'<p class="wp-block-post-author__name">By <a href="'.$author_archive.'">'.$author_name.'</a></p>',$block_content);
                 return $html;
         }
     }
@@ -277,6 +284,13 @@ function ucsc_post_message($block_content = '', $block = [])
                 return $html;
 						}
         }
+				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
+
+										if($campus_message_to && $campus_message_from) {
+											$html = str_replace($block_content, '',$block_content);
+				                return $html;
+										}
+				        }
 
     }
     return $block_content;
