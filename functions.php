@@ -269,7 +269,7 @@ add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_post_message($block_content = '', $block = [])
+function ucsc_campus_message($block_content = '', $block = [])
 {
 		// Check for single post; use `global $post` to access data outide the Loop
     if (is_single()) {
@@ -277,25 +277,21 @@ function ucsc_post_message($block_content = '', $block = [])
 				$post_id = $post->post_id;
 				$campus_message_to = $post->campus_message_to;
 				$campus_message_from = $post->campus_message_from;
+				if($campus_message_to && $campus_message_from) {
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
-
-						if($campus_message_to && $campus_message_from) {
 							$html = str_replace($block_content, $block_content.'<div class="campus-message"><p><span>To: </span>' . $campus_message_to.'</p><p><span>From: </span>'. $campus_message_from.'</p></div>',$block_content);
-                return $html;
-						}
+               return $html;
         }
 				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
-
-										if($campus_message_to && $campus_message_from) {
-											$html = str_replace($block_content, '',$block_content);
-				                return $html;
-										}
+								$html = str_replace($block_content, '',$block_content);
+								return $html;
 				        }
+				}
 
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_post_message', 10, 2);
+add_filter('render_block', 'ucsc_campus_message', 10, 2);
 
 /**
  * Breadcrumbs constructor callback helper
