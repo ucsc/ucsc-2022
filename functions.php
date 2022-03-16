@@ -217,10 +217,17 @@ function ucsc_post_author_link($block_content = '', $block = [])
 				$post_id = $post->post_id;
 				$author_id = $post->post_author;
 				$author_nicename = get_the_author_meta('nicename', $author_id);
+				$author_firstname = get_the_author_meta('first_name', $author_id);
+				$author_lastname = get_the_author_meta('last_name', $author_id);
+				if ($author_firstname && $author_lastname) {
+				$author_name = $author_firstname.' '.$author_lastname;
+				 } else {
+				$author_name = $author_nicename;
+				}
 				$author_email = get_the_author_meta('user_email', $author_id);
 				$author_archive = get_author_posts_url($author_id);
 				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
-            $html = str_replace($block_content,'<p class="wp-block-post-author__name">By <a href="'.$author_archive.'">'.$author_nicename.'</a></p>',$block_content);
+            $html = str_replace($block_content,'<p class="wp-block-post-author__name">By <a href="'.$author_archive.'">'.$author_name.'</a></p>',$block_content);
                 return $html;
         }
     }
@@ -262,7 +269,7 @@ add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
  * @param  array  $block         Block attributes.
  * @return string
  */
-function ucsc_post_message($block_content = '', $block = [])
+function ucsc_campus_message($block_content = '', $block = [])
 {
 		// Check for single post; use `global $post` to access data outide the Loop
     if (is_single()) {
@@ -270,18 +277,21 @@ function ucsc_post_message($block_content = '', $block = [])
 				$post_id = $post->post_id;
 				$campus_message_to = $post->campus_message_to;
 				$campus_message_from = $post->campus_message_from;
+				if($campus_message_to && $campus_message_from) {
         if (isset($block['blockName']) && 'core/post-title' === $block['blockName']) {
-
-						if($campus_message_to && $campus_message_from) {
 							$html = str_replace($block_content, $block_content.'<div class="campus-message"><p><span>To: </span>' . $campus_message_to.'</p><p><span>From: </span>'. $campus_message_from.'</p></div>',$block_content);
-                return $html;
-						}
+               return $html;
         }
+				if (isset($block['blockName']) && 'core/post-author' === $block['blockName']) {
+								$html = str_replace($block_content, '',$block_content);
+								return $html;
+				        }
+				}
 
     }
     return $block_content;
 }
-add_filter('render_block', 'ucsc_post_message', 10, 2);
+add_filter('render_block', 'ucsc_campus_message', 10, 2);
 
 /**
  * Breadcrumbs constructor callback helper
