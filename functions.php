@@ -335,7 +335,6 @@ add_filter('render_block', 'ucsc_add_breadcrumbs', 10, 2);
 
 /**Enqueue developer functions */
 if(file_exists(get_theme_file_path( 'utility.php' ))) {
-	// include get_theme_file_path( '/subdir/filename.php' );
 	include get_theme_file_path( 'utility.php' );
 }
 
