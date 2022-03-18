@@ -3,6 +3,9 @@
 //===============================
 .site-header {
   .page-top {
+		[class*="page-top-"] {
+			align-self:center;
+		}
     .campus-logo {
       // background: transparent url($campus-logo) no-repeat 0 0;
       display: block;
@@ -11,13 +14,18 @@
       // text-indent: -10000px;
       width: 128px;
       line-height: 1.5;
-      margin-top: 0.75em;
-      margin-bottom: 0.75em;
       margin-left: 0;
     }
+
     .page-top-right {
-      .row{
-        margin-top:0.45em;}}
+
+      .row {
+        .wp-block-columns {
+					margin: 0;}
+
+				}
+
+		}
     .top-menu {
       .wp-block-navigation__container {
         gap:0.8em!important;
