@@ -1,0 +1,5 @@
+{
+    "require": {
+        "justintadlock/hybrid-breadcrumbs": "^1.0"
+    }
+}
