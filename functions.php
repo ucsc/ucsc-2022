@@ -25,8 +25,8 @@ if (! function_exists('ucsc_theme_setup') ) :
         foreach ($styled_blocks as $block_name) {
             $args = array(
              'handle' => "ucsc-$block_name",
-             'src'    => get_theme_file_uri("src/scss/wp-blocks/$block_name.css"),
-             $args['path'] = get_theme_file_path("src/scss/wp-blocks/$block_name.css"),
+             'src'    => get_theme_file_uri("wp-blocks/$block_name.css"),
+             $args['path'] = get_theme_file_path("wp-blocks/$block_name.css"),
             );
             wp_enqueue_block_style("core/$block_name", $args);
         }
