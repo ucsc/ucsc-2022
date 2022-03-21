@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.3](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-03-21)
+
+
+### Features
+
+* :sparkles: Ad meta fields for subtitle, and campus messages; functions to render; styles ([c3e936d](https://github.com/ucsc/theme-ucsc/commit/c3e936d17930d59ae3d4fb22177e1ded87bef70a))
+* :sparkles: Added and styled breadcrumbs. First draft. ([d7e9660](https://github.com/ucsc/theme-ucsc/commit/d7e96606cd91408d9151597ab68f899ca40b776a))
+
+
+### Bug Fixes
+
+* :fire: Remove composer from `.gitignore` ([412ff96](https://github.com/ucsc/theme-ucsc/commit/412ff96536e4e7e04dba447a6ce65b96983132aa))
+* 🐛 Typo in front-page classes ([dd6d254](https://github.com/ucsc/theme-ucsc/commit/dd6d2549a55ee37e1a1a3f2cf5f44362545419c2))
+
 ## [1.0.0-beta.2](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-03-04)
 
 
