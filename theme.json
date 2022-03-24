@@ -338,17 +338,17 @@
 			},
 			"core/post-date": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
+					"fontSize": "var(--wp--preset--font-size--small)!important"
 				},
 				"color": {
 					"text": "var(--wp--custom--color--light-gray)"
 				},
 				"spacing": {
 					"margin": {
-						"top": "0",
-						"right": "0",
-						"bottom": "0.5em",
-						"left": "0"
+						"top": "0!important",
+						"right": "0!important",
+						"bottom": "0.5em!important",
+						"left": "0!important"
 					}
 				}
 			},
@@ -358,9 +358,9 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "0",
+						"top": "0!important",
 						"right": "0",
-						"bottom": ".25rem",
+						"bottom": ".25rem!important",
 						"left": "0"
 					}
 				}
