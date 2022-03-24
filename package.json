@@ -1,10 +1,11 @@
 {
-	"name": "theme-ucsc",
+	"name": "ucsc",
 	"version": "1.0.0-beta.3",
 	"description": "The offficial WordPress theme for UC Santa Cruz",
 	"main": "build/index.js",
 	"scripts": {
 		"release": "standard-version",
+		"zip": "wp-scripts build && wp-scripts plugin-zip",
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
 		"build": "wp-scripts build",
@@ -27,7 +28,22 @@
 	},
 	"homepage": "https://github.com/ucsc/theme-ucsc#readme",
 	"devDependencies": {
-		"@wordpress/scripts": "^19.2.2",
+		"@wordpress/scripts": "^22.3.0",
 		"standard-version": "^9.3.2"
-	}
+	},
+	"files": [
+		"build",
+		"wp-blocks",
+		"templates",
+		"parts",
+		"style.css",
+		"theme.json",
+		"screenshot.png",
+		"vendor",
+		"images",
+		"functions.php",
+		"index.php",
+		"README.md",
+		"CHANGELOG.md"
+	]
 }
