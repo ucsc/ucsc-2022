@@ -35,6 +35,8 @@
 // Wrapper element.
 .breadcrumbs {
 
+		font-size: var(--wp--preset--font-size--small);
+
     // Title. Note that this is the heading that says "Browse:". The code
     // puts it inline with the trail.
     &__title {
@@ -54,14 +56,15 @@
     // Individual crumbs.
     &__crumb {
         display: inline-block;
-				& a {
-				font-size: var(--wp--preset--font-size--tiny);
-				border-bottom: 1px solid var(--wp--custom--color--flourish);
-				text-decoration: none;
-				color: var(--wp--custom--color--site-title);
-				&:active, &:focus, &:hover {
-				border-bottom: 1px solid var(--wp--preset--color--ucsc-secondary-blue);
-				text-decoration:none;}
+				a {
+					border-bottom: 1px solid var(--wp--custom--color--flourish);
+					text-decoration: none;
+					color: var(--wp--custom--color--site-title);
+
+					&:active, &:focus, &:hover {
+						border-bottom: 1px solid var(--wp--preset--color--ucsc-secondary-blue);
+						text-decoration:none;
+					}
 				}
 
 
