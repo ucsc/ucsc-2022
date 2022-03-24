@@ -1,3 +1,6 @@
+
+.wp-block-post-author__name {
+	margin:0!important;}
 .wp-block-post-author__name > a {
 	text-decoration: none;
 }
