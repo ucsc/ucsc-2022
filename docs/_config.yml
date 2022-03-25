@@ -19,7 +19,7 @@ defaults:
       image: /assets/images/opengraph_image.png
 
 # Theme
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 aux_links:
   "UCSC on GitHub":
     - https://github.com/ucsc/indiekit
