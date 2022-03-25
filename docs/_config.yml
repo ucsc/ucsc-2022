@@ -22,8 +22,8 @@ defaults:
 remote_theme: just-the-docs/just-the-docs
 aux_links:
   "UCSC on GitHub":
-    - https://github.com/ucsc/indiekit
-logo: /assets/images/uc-santa-cruz.svg
+    - https://github.com/ucsc/
+logo: assets/images/uc-santa-cruz.svg
 color_scheme: ucsc
 
 # GitHub edit link
