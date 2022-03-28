@@ -6,6 +6,23 @@ nav_order: 4
 
 Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are here](https://github.com/ucsc/theme-ucsc/wiki/Goals-and-Milestones).
 
+## 2022-03-28
+
+### Tasks for this week
+
+- [ ] Pagination link styles
+- [ ] Advanced Custom Fields (available on CampusPress) to add meta data field for news articles
+- [x] FIX: breadcrumbs show up in any loop of posts.
+- [ ] RSS news block needs structural changes. It will get heavy use in the site
+- [ ] News front page structure: remove layout in the theme files
+- [ ] Commitlint research and linting
+
+### Notes
+
+- Advanced Custom Fields for news article metadata: **ACF Pro is a minimum requirement** because you can create blocks from ACF fields with the pro version. The user experience is better.
+- Still thinking about version bumping in various files when we do a release.
+- Pilot partners get their sites next week.
+
 ## 2022-03-24
 
 ### Notes
@@ -17,12 +34,6 @@ Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are
 - Still seeing pokey performance on CP WordPress sites.
 - We've found a nice, clean, scripted way to reliably generate the theme.zip folder required to make the theme portable using `wp-scripts plugin-zip`
 - Block Gap setup is seemingly fixed for now.
-
-### Tasks
-
-- [ ] Pagination link styles
-- [ ] Advanced Custom Fields (available on CampusPress) to add meta data fields for news articles
-- [ ] RSS news block needs structural changes. It will get heavy use in the site
 
 ## 2022-03-21
 
