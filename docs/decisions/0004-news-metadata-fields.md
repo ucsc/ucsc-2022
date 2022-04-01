@@ -12,7 +12,7 @@ Proposed and testing
 
 ## Context
 
-Our WCMS news articles have metadata fields such as subhed and byline that do not map to existing fields in a typical WordPress post. We can use native WordPress metadata fields to add this information to a post, but we cannot create those fields programatically and they are awkward to find in the editor despite being commonly-used and generally added along side the site title.
+Our WCMS news articles have metadata fields such as subhed and byline that do not map to existing fields in a typical WordPress post. We can use native WordPress metadata fields to add this information to a post, but we cannot create those fields programatically and they are awkward to find in the editor despite being commonly-used and generally added along side the post title.
 
 - ### Analysis
 
@@ -30,7 +30,7 @@ Our WCMS news articles have metadata fields such as subhed and byline that do no
 
 - ### The following options were considered
 
-  We tested WordPress core custom fields. We discovered that they need to be created on a site-by-site basis, and that the interface to add custom fields to a post was hidden by default. Additionally, we noted that the placement of the custom fields interface is separated from the block editor interface.
+  We tested WordPress core custom fields. We discovered that they need to be created on a site-by-site basis, and that the interface to add custom fields to a post was hidden by default. Additionally, we noted that the placement of the custom fields interface is separated from the block editor interface and not intuitive to find or use given the nature of the metadata fields we need.
 
 ## Decision
 
