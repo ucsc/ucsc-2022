@@ -10,8 +10,8 @@ Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are
 
 ### Tasks for this week
 
-- [ ] Pagination link styles
-- [ ] Advanced Custom Fields (available on CampusPress) to add meta data field for news articles
+- [x] Pagination link styles
+- [x] Advanced Custom Fields (available on CampusPress) to add meta data field for news articles
 - [x] FIX: breadcrumbs show up in any loop of posts.
 - [ ] RSS news block needs structural changes. It will get heavy use in the site
 - [x] News front page structure: remove layout in the theme files
