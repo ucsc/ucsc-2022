@@ -12,7 +12,7 @@ Proposed and testing
 
 ## Context
 
-Our WCMS news articles have metadata fields such as subhed and byline that do not map to existing fields in a typical WordPress post. We can use native WordPress metadata fields to add this information to a post, but we cannot create those fields programatically and they are awkward to find in the editor despite being commonly-used and generally added along side the post title.
+Our WCMS news articles have metadata fields such as subhead and byline that do not map to existing fields in a typical WordPress post. We can use native WordPress metadata fields to add this information to a post, but we cannot create those fields programatically and they are awkward to find in the editor despite being commonly-used and generally added along side the post title.
 
 - ### Analysis
 
