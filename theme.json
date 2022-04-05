@@ -14,6 +14,51 @@
 	"settings": {
 		"appearanceTools": true,
 		"blocks": {
+			"core/button": {
+				"color": {
+					"custom": false,
+					"palette": [
+						{
+							"slug": "white",
+							"color": "#fff",
+							"name": "White"
+						},
+						{
+							"slug": "black",
+							"color": "#000",
+							"name": "Black"
+						},
+						{
+							"slug": "ucsc-primary-blue",
+							"color": "#003c6c",
+							"name": "Primary blue"
+						},
+						{
+							"slug": "ucsc-primary-yellow",
+							"color": "#fdc700",
+							"name": "Primary yellow"
+						},
+						{
+							"slug": "ucsc-secondary-blue",
+							"color": "#006aad",
+							"name": "Secondary blue"
+						},
+						{
+							"slug": "ucsc-light-blue",
+							"color": "#13a5dc",
+							"name": "Light blue"
+						},
+						{
+							"slug": "ucsc-rubine-red",
+							"color": "#da216d",
+							"name": "UCSC rubine red"
+						}
+					]
+				},
+				"border": {
+					"radius": false
+				}
+			},
 			"core/paragraph": {
 				"color": {
 					"custom": false,
@@ -380,6 +425,11 @@
 					"margin": {
 						"top": "0"
 					}
+				}
+			},
+			"core/button": {
+				"border": {
+					"radius": "var(--wp--custom--spacing--baseline)"
 				}
 			}
 		}
