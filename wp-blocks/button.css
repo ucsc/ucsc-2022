@@ -2,3 +2,13 @@
 	text-align: center;
 }
 
+.wp-block-button > a {
+	text-decoration: none;
+}
+
+.wp-block-button > a:hover,
+.wp-block-button > a:focus,
+.wp-block-button > a:active {
+	text-decoration: none;
+	/* background: currentColor !important; */
+}
