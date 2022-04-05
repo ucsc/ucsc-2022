@@ -31,36 +31,3 @@
 	}
 	}
 
-.social-sharing {
-&.post-meta-social-sharing {
-		.wp-block-columns {
-			justify-content: right;
-
-			}
-	}
-&.post-footer {
-		.wp-block-columns {
-			justify-content: center;
-			margin-bottom:0;
-
-			}
-		.wp-block-outermost-social-sharing {
-		margin-top: 0;}
-	}
-		.wp-block-columns {
-			align-items: center;
-			}
-			.wp-block-column {
-				display:inline-flex;
-				flex-basis:auto!important;
-			}
-			.outermost-social-sharing-link {
-			color: var(--wp--custom--color--light-gray)!important;
-			}
-			.share-text {
-				font-family: var(--wp--preset--font-family--roboto-condensed);
-		    font-size: .9em;
-		    font-weight: 700;
-		    text-transform: uppercase;
-		}
-}
