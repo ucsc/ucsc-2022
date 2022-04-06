@@ -1,0 +1,13 @@
+.campus-message {
+	color: var(--wp--custom--color--light-gray);
+	margin: 0 0 1em!important;
+	line-height: 1.4;
+	}
+.campus-message-label {
+	font-weight:700
+	}
+
+.campus-message-text {
+	font-size: var(--wp--preset--font-size--large);
+	margin: 0;
+}

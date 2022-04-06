@@ -1,0 +1,6 @@
+.post-subtitle-text {
+	font-size: var(--wp--preset--font-size--large);
+	color: var(--wp--custom--color--light-gray);
+	margin: 0 0 1em;
+	line-height: 1.4;
+}

@@ -5,7 +5,6 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 	function ucsc_theme_setup() {
 
 		add_theme_support( 'wp-block-styles' );
-
 		add_editor_style( 'build/style-index.css' );
 
 		/**
@@ -29,13 +28,19 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 			);
 			wp_enqueue_block_style( "core/$block_name", $args );
 		}
-				/**
+		/**
 		 * Include ThemeHybrid/HyridBreadcrumbs Class
-				 * see: https://github.com/themehybrid/hybrid-breadcrumbs
-				 * and https://themehybrid.com/weblog/integrating-hybrid-breadcrumbs-into-wordpress-themes
+		 * see: https://github.com/themehybrid/hybrid-breadcrumbs
+		 * and https://themehybrid.com/weblog/integrating-hybrid-breadcrumbs-into-wordpress-themes
 		 */
 		if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
-			require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+			include_once get_parent_theme_file_path( 'vendor/autoload.php' );
+		}
+		/**
+		 * Enqueue Custom Advanced Custom Field Blocks
+		 */
+		if ( file_exists( get_parent_theme_file_path( 'acf-blocks/register-blocks.php' ) ) ) {
+			include_once get_parent_theme_file_path( 'acf-blocks/register-blocks.php' );
 		}
 	}
 endif;
@@ -45,7 +50,7 @@ add_action( 'after_setup_theme', 'ucsc_theme_setup' );
  * Enqueue theme scripts and styles.
  */
 function ucsc_theme_scripts() {
-	wp_enqueue_style( 'ucsc-theme-styles', get_stylesheet_uri() );
+	 wp_enqueue_style( 'ucsc-theme-styles', get_stylesheet_uri() );
 	wp_enqueue_style( 'ucsc-theme-styles-scss', get_template_directory_uri() . '/build/style-index.css' );
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_theme_scripts' );
@@ -54,7 +59,7 @@ add_action( 'wp_enqueue_scripts', 'ucsc_theme_scripts' );
  * Enqueue additional Google Font Scripts
  */
 function ucsc_googleapi_scripts() {
-	echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+	 echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 }
 add_action( 'wp_head', 'ucsc_googleapi_scripts' );
@@ -63,7 +68,7 @@ add_action( 'wp_head', 'ucsc_googleapi_scripts' );
  * Enqueue editor styles and scripts.
  */
 function ucsc_add_admin_scripts() {
-	wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
+	 wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
 	wp_enqueue_script( 'ucsc-admin-scripts' );
 }
 
@@ -86,18 +91,17 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  * returns copyright symbol and current year
  */
 function ucsc_copyright() {
-	$copyright = '&#169;';
-	$year      = date( 'Y' );
+	 $copyright = '&#169;';
+	$year       = date( 'Y' );
 	return $copyright . $year;
 }
 add_shortcode( 'copyright', 'ucsc_copyright' );
 
 /**
- * Return the last page modification in a readable format
+ * Last Modified Callback Function
  *
- * This is called by a short code `last-modified`. It looks at the
- * modified time and if that time is greater than zero it returns it
- * as a formatted date. Otherwise, it returns the date the page was created.
+ * Create a callback to build the last
+ * modified date
  *
  * @return String
  */
@@ -110,8 +114,17 @@ function ucsc_last_modified_helper() {
 	}
 }
 
+/**
+ * Return the last page modification in a readable format
+ *
+ * This is called by a short code `last-modified`. It looks at the
+ * modified time and if that time is greater than zero it returns it
+ * as a formatted date. Otherwise, it returns the date the page was created.
+ *
+ * @return String
+ */
 function ucsc_last_modified() {
-	ob_start();
+	 ob_start();
 	ucsc_last_modified_helper();
 	return ob_get_clean();
 }
@@ -172,7 +185,7 @@ add_filter( 'render_block', 'ucsc_logo_switch', 10, 2 );
  */
 function ucsc_adjust_structure( $block_content = '', $block = array() ) {
 	if ( is_front_page() ) {
-		// On the home page, return the block as is
+		// On the home page, return the block as is.
 		$html = $block_content;
 		return $html;
 	} else {
@@ -199,21 +212,21 @@ add_filter( 'render_block', 'ucsc_adjust_structure', 10, 2 );
  * @return string
  */
 function ucsc_post_author_link( $block_content = '', $block = array() ) {
-		// Check for single post; use `global $post` to access data outide the Loop.
+	// Check for single post; use `global $post` to access data outide the Loop.
 	if ( is_single() ) {
-				global $post;
-				$post_id          = $post->post_id;
-				$author_id        = $post->post_author;
-				$author_nicename  = get_the_author_meta( 'nicename', $author_id );
-				$author_firstname = get_the_author_meta( 'first_name', $author_id );
-				$author_lastname  = get_the_author_meta( 'last_name', $author_id );
+		global $post;
+		$post_id          = $post->post_id;
+		$author_id        = $post->post_author;
+		$author_nicename  = get_the_author_meta( 'nicename', $author_id );
+		$author_firstname = get_the_author_meta( 'first_name', $author_id );
+		$author_lastname  = get_the_author_meta( 'last_name', $author_id );
 		if ( $author_firstname && $author_lastname ) {
 			$author_name = $author_firstname . ' ' . $author_lastname;
 		} else {
 			$author_name = $author_nicename;
 		}
-				$author_email   = get_the_author_meta( 'user_email', $author_id );
-				$author_archive = get_author_posts_url( $author_id );
+		$author_email   = get_the_author_meta( 'user_email', $author_id );
+		$author_archive = get_author_posts_url( $author_id );
 		if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
 			$html = str_replace( $block_content, '<p class="wp-block-post-author__name">By <a href="' . $author_archive . '">' . $author_name . '</a></p>', $block_content );
 			return $html;
@@ -232,17 +245,22 @@ add_filter( 'render_block', 'ucsc_post_author_link', 10, 2 );
  * @return string
  */
 function ucsc_post_subtitle( $block_content = '', $block = array() ) {
-		// Check for single post; use `global $post` to access data outide the Loop
+	// Check for single post; use `global $post` to access data outide the Loop.
 	if ( is_single() ) {
-				global $post;
-				$post_id  = $post->post_id;
-				$subtitle = $post->subtitle;
-		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
+		global $post;
+		$post_id = get_the_id();
+		if ( function_exists( 'get_field' ) ) {
+			$subtitle = get_field( 'subtitle-copy' );
+		}
 
-			if ( $subtitle ) {
-				$html = str_replace( $block_content, $block_content . '<p class="post-subtitle">' . $subtitle . '</p>', $block_content );
-				return $html;
-			}
+		if ( $subtitle != '' && isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
+			$html = str_replace(
+				$block_content,
+				$block_content . '<div id="post-subtitle-' . $post_id . '" class="post-subtitle">
+					<p class="post-subtitle-text">' . $subtitle . '</p></div>',
+				$block_content
+			);
+			return $html;
 		}
 	}
 	return $block_content;
@@ -258,20 +276,29 @@ add_filter( 'render_block', 'ucsc_post_subtitle', 10, 2 );
  * @return string
  */
 function ucsc_campus_message( $block_content = '', $block = array() ) {
-		// Check for single post; use `global $post` to access data outide the Loop.
+	 // Check for single post; use `global $post` to access data outide the Loop.
 	if ( is_single() ) {
-				global $post;
-				$post_id             = $post->post_id;
-				$campus_message_to   = $post->campus_message_to;
-				$campus_message_from = $post->campus_message_from;
-		if ( $campus_message_to && $campus_message_from ) {
+		global $post;
+		$post_id = get_the_id();
+		if ( function_exists( 'get_field' ) ) {
+			$cm_select = get_field( 'cm-select' );
+		}
+
+		if ( $cm_select ) {
+			if ( function_exists( 'get_field' ) ) {
+				$cm_fields = get_field( 'cm-fields' );
+				$cm_to     = $cm_fields['cm-to'];
+				$cm_from   = $cm_fields['cm-from'];
+			}
+			$cm_class = 'campus-message';
+
 			if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-				$html = str_replace( $block_content, $block_content . '<div class="campus-message"><p><span>To: </span>' . $campus_message_to . '</p><p><span>From: </span>' . $campus_message_from . '</p></div>', $block_content );
+				$html = str_replace( $block_content, $block_content . '<div id="' . $cm_class . '-' . $post_id . '" class="' . $cm_class . '"><p class="campus-message-text cm-to"><span class="campus-message-label">To: </span>' . $cm_to . '</p><p class="campus-message-text cm-from"><span class="campus-message-label">From: </span>' . $cm_from . '</p></div>', $block_content );
 				return $html;
 			}
 			if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
-								$html = str_replace( $block_content, '', $block_content );
-								return $html;
+				 $html = str_replace( $block_content, '', $block_content );
+				 return $html;
 			}
 		}
 	}
@@ -287,14 +314,14 @@ add_filter( 'render_block', 'ucsc_campus_message', 10, 2 );
  * @return string
  */
 function ucsc_breadcrumbs_constructor() {
-		$labels = array(
-			'title' => __( '', 'ucsc' ),
-		);
-		$args   = array(
-			'labels'        => $labels,
-			'show_on_front' => true,
-		);
-		return Hybrid\Breadcrumbs\Trail::render( $args );
+	$labels = array(
+		'title' => __( '', 'ucsc' ),
+	);
+	$args   = array(
+		'labels'        => $labels,
+		'show_on_front' => true,
+	);
+	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
 /**
  * Add Breadcrumbs above Post Title.
@@ -310,17 +337,41 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( is_singular() ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
-				return $html;
+			return $html;
 		}
 	}
 	return $block_content;
 }
 add_filter( 'render_block', 'ucsc_add_breadcrumbs', 10, 2 );
 
+/**
+ *  Filter: link posts
+ *  Set link post permalinks to an external URL
+ *
+ * @param  string $link External link url
+ * @param  array  $post Post attributes
+ * @return string
+ */
+function ucsc_link_post_filter( $link, $post ) {
+	if ( has_post_format( 'link', $post ) ) {
+		if ( function_exists( 'get_field' ) ) {
+			$lp_fields  = get_field( 'lp-fields' );
+			$lp_source  = $lp_fields['lp-source'];
+			$lp_url     = $lp_fields['lp-url'];
+			$lp_url_esc = esc_url( $lp_url );
+		}
 
+		$link = $lp_url_esc;
+	}
+	return $link;
+}
+// add_filter( 'post_link', 'ucsc_link_post_filter', 10, 2 );
 
-/**Enqueue developer functions */
+/**
+* Enqueue developer functions
+*/
 if ( file_exists( get_theme_file_path( 'utility.php' ) ) ) {
 	include get_theme_file_path( 'utility.php' );
 }
+
 
