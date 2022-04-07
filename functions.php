@@ -268,45 +268,6 @@ function ucsc_post_subtitle( $block_content = '', $block = array() ) {
 add_filter( 'render_block', 'ucsc_post_subtitle', 10, 2 );
 
 /**
- * Add campus message meta field
- * Single Blog Post
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_campus_message( $block_content = '', $block = array() ) {
-	 // Check for single post; use `global $post` to access data outide the Loop.
-	if ( is_single() ) {
-		global $post;
-		$post_id = get_the_id();
-		if ( function_exists( 'get_field' ) ) {
-			$cm_select = get_field( 'cm-select' );
-		}
-
-		if ( $cm_select ) {
-			if ( function_exists( 'get_field' ) ) {
-				$cm_fields = get_field( 'cm-fields' );
-				$cm_to     = $cm_fields['cm-to'];
-				$cm_from   = $cm_fields['cm-from'];
-			}
-			$cm_class = 'campus-message';
-
-			if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-				$html = str_replace( $block_content, $block_content . '<div id="' . $cm_class . '-' . $post_id . '" class="' . $cm_class . '"><p class="campus-message-text cm-to"><span class="campus-message-label">To: </span>' . $cm_to . '</p><p class="campus-message-text cm-from"><span class="campus-message-label">From: </span>' . $cm_from . '</p></div>', $block_content );
-				return $html;
-			}
-			if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
-				 $html = str_replace( $block_content, '', $block_content );
-				 return $html;
-			}
-		}
-	}
-	return $block_content;
-}
-add_filter( 'render_block', 'ucsc_campus_message', 10, 2 );
-
-/**
  * Breadcrumbs constructor callback helper
  *
  * @param  string $block_content Block content to be rendered.
@@ -345,27 +306,11 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 add_filter( 'render_block', 'ucsc_add_breadcrumbs', 10, 2 );
 
 /**
- *  Filter: link posts
- *  Set link post permalinks to an external URL
- *
- * @param  string $link External link url
- * @param  array  $post Post attributes
- * @return string
- */
-function ucsc_link_post_filter( $link, $post ) {
-	if ( has_post_format( 'link', $post ) ) {
-		if ( function_exists( 'get_field' ) ) {
-			$lp_fields  = get_field( 'lp-fields' );
-			$lp_source  = $lp_fields['lp-source'];
-			$lp_url     = $lp_fields['lp-url'];
-			$lp_url_esc = esc_url( $lp_url );
-		}
-
-		$link = $lp_url_esc;
-	}
-	return $link;
+* Register Advanced Custom Fields
+*/
+if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
+	include get_theme_file_path( 'lib/acf.php' );
 }
-// add_filter( 'post_link', 'ucsc_link_post_filter', 10, 2 );
 
 /**
 * Enqueue developer functions
@@ -373,5 +318,6 @@ function ucsc_link_post_filter( $link, $post ) {
 if ( file_exists( get_theme_file_path( 'utility.php' ) ) ) {
 	include get_theme_file_path( 'utility.php' );
 }
+
 
 
