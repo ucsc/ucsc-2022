@@ -40,6 +40,7 @@
 		"theme.json",
 		"screenshot.png",
 		"vendor",
+		"lib/acf.php",
 		"images",
 		"functions.php",
 		"index.php",
