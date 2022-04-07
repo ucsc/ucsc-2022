@@ -6,6 +6,24 @@ nav_order: 4
 
 Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are here](https://github.com/ucsc/theme-ucsc/wiki/Goals-and-Milestones).
 
+## 2022-04-06
+
+### Tasks
+
+- [ ] Button width settings need to be fixed (they arent't applied)
+- [ ] Release beta.4 on Thursday.
+
+### Notes
+
+We feel ready for pilot partners. There will be plenty of feedback and changes to come. Now is the time to get people in there and using the theme.
+
+Looking at ways to limit the customization of buttons:
+
+- [x] Border radius
+- [ ] Color themes: need to limit what is possible or have preconfigured styles
+
+Customization of block settings seems to be possible with a [similar mechanism to block content filtering](https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/).
+
 ## 2022-03-28
 
 ### Tasks for this week
@@ -68,14 +86,14 @@ Deployment looks like this.
 - Individual story sharing to social: use a [plugin that modifies the core social links block](https://wordpress.org/plugins/social-sharing-block/). We'll table this for now and come back to it.
 - Breadcrumbs: using another plugin, [Hybrid Breadcrumbs](https://github.com/themehybrid/hybrid-breadcrumbs). Test to see if it will work with Truss.
 - Questions for the coming week:
-    - [ ] Should we cement multi-column layouts into the theme on listing pages like news front?
-    - [ ] Article layout and typography: line-length, image size (need docs for this)
-    - [ ] Site building and example for web users group
+  - [ ] Should we cement multi-column layouts into the theme on listing pages like news front?
+  - [ ] Article layout and typography: line-length, image size (need docs for this)
+  - [ ] Site building and example for web users group
 
 ## 2022-03-08
 
 - Reusable blocks are freaking crazy. They can be exported and imported (as json). Can we include them in the theme?
-    - Great for footers and headers and other repeated content.
+  - Great for footers and headers and other repeated content.
 
 ## 2022-03-02
 
@@ -128,23 +146,23 @@ Deployment looks like this.
 ## 2022-02-02
 
 - Jason organizing and abstracting templates and parts according to the latest block theme standards:
-    - Abstract parts out and create sub-templates only when need is obvious (logo display differences between campus home and subsites)
-    - Name template abstractions for widest use case
-        - ✅ `header-subsite.html` rather than
-        - 🛑 `header-department.html`
+  - Abstract parts out and create sub-templates only when need is obvious (logo display differences between campus home and subsites)
+  - Name template abstractions for widest use case
+    - ✅ `header-subsite.html` rather than
+    - 🛑 `header-department.html`
 - First release on 2022-02-04
 - Theme release process:
-    - `standard-version` locally to bump version and create/update the CHANGELOG
-    - Create a zipped folder of the built theme files for WordPress users to download
-    - Push to Github and include tags
-    - Create a pre-release (title is the tag) and attach working build
-    - Save the release (Slack will be notified 🎉)
+  - `standard-version` locally to bump version and create/update the CHANGELOG
+  - Create a zipped folder of the built theme files for WordPress users to download
+  - Push to Github and include tags
+  - Create a pre-release (title is the tag) and attach working build
+  - Save the release (Slack will be notified 🎉)
 
 ## 2022-01-31
 
 - **Pull content creation functions from theme**
-    - Include a `wordpress.xml` file _along with_ the theme that creates a couple of pages, posts, and menus, and puts them in the correct spots in the theme.
-    - Treat this as a first-run experience for new theme users who may or may not be in CampusPress.
+  - Include a `wordpress.xml` file _along with_ the theme that creates a couple of pages, posts, and menus, and puts them in the correct spots in the theme.
+  - Treat this as a first-run experience for new theme users who may or may not be in CampusPress.
 
 ## 2022-01-28
 
