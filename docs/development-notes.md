@@ -10,8 +10,11 @@ Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are
 
 ### Tasks
 
+- [x] Add subtitle field
+- [x] Release beta.4 on Friday.
 - [ ] Button width settings need to be fixed (they arent't applied)
-- [ ] Release beta.4 on Thursday.
+- [ ] Mobile Q/A needs to be done.
+- [ ] Look into the new [Block Lock UI](https://make.wordpress.org/core/tag/gutenberg-new/#highlight-1)
 
 ### Notes
 
