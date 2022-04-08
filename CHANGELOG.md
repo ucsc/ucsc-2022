@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.4](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-04-08)
+
+
+### Features
+
+* :art: Social Sharing on single blog post. Note: Requires plugin ([18e15e7](https://github.com/ucsc/theme-ucsc/commit/18e15e7f4a018bb1385f32c9917848a61cae6892))
+* :sparkles: add `acf`, create custom fields for `subtitle` and `campus-message`, filter query to display ([721157d](https://github.com/ucsc/theme-ucsc/commit/721157dfce84d8b6e6947504c541934c1371685a))
+* ✨ Add a new docs website to share with stakeholders ([3f245e5](https://github.com/ucsc/theme-ucsc/commit/3f245e599093389e674c2a6566017c1eada484ed))
+* ✨ Add subtitle field on posts ([2248e75](https://github.com/ucsc/theme-ucsc/commit/2248e7573fa7766aef782cfa59d253050aa3d7d0))
+* 📝 Add decision about custom metadata fields ([4769a28](https://github.com/ucsc/theme-ucsc/commit/4769a289ffadaa353ab4f482b18e672289455430))
+* 🚀 Scripts to generate the deployment zip file for the theme ([b5fb034](https://github.com/ucsc/theme-ucsc/commit/b5fb034ae5504412d74baa89b36c784dfaf9142a))
+
+
+### Bug Fixes
+
+* :art: revert `home` template to full width ([48754d8](https://github.com/ucsc/theme-ucsc/commit/48754d8ee22e9acbc08742a5dde20e92ecf93a76))
+* :bug: redo sharing on `single.html` ([0dba090](https://github.com/ucsc/theme-ucsc/commit/0dba0907a03e80317828ff0b70a8ba4a4bfe8e02))
+* :fire: update class in Las Modified in footer ([5254719](https://github.com/ucsc/theme-ucsc/commit/525471957563511f641551d6435ec64c28f614d5))
+* :lipstick: add `!important` to post title styles in `theme.json` ([d9cb0d9](https://github.com/ucsc/theme-ucsc/commit/d9cb0d96a478f4332f703599f4eb5fcb45bfa090))
+* :lipstick: add clearfix to left and right alignments ([ed9e5ce](https://github.com/ucsc/theme-ucsc/commit/ed9e5ce22263704f55617c7e14c5094d663ed259))
+* :lipstick: add css for `post-content`, style page pagination, adjust styles to each pagination type ([aba0693](https://github.com/ucsc/theme-ucsc/commit/aba06939ad75e4114bba9801154445d2eeac7a04))
+* :lipstick: Adjusting styles for meta fields ([cd2c8a4](https://github.com/ucsc/theme-ucsc/commit/cd2c8a4d12d2ff8448e5a6a8dd11154d900ebb81))
+* :lipstick: tighten styles on `single.html` added `!important` as an override ([b8c77f8](https://github.com/ucsc/theme-ucsc/commit/b8c77f8a61543b53c9e446ab0444fa9a656ff4ee))
+* :lipstick: WIP pagination styles ([6c1986a](https://github.com/ucsc/theme-ucsc/commit/6c1986a7f5de3472356d8c26271f598ab06877d7))
+* :lipstick: WIP.  adjust pagination styling ([6a62da9](https://github.com/ucsc/theme-ucsc/commit/6a62da91f45e3157218257786bb006203dfecd04))
+* 🎨 Update type sizes and section spacing to match WCMS templates ([a6eb0ea](https://github.com/ucsc/theme-ucsc/commit/a6eb0ea8ac997a14cc639491ee0914f368bc9c8f))
+* 🐛 Fix docs site theme settings for Github Pages ([ea53d91](https://github.com/ucsc/theme-ucsc/commit/ea53d91682cd41ef446a4cf06cd8dbaf558a75dc))
+* 🐛 Fix logo URL on docs site ([bdb7ad3](https://github.com/ucsc/theme-ucsc/commit/bdb7ad35ab123d50d67c8a07dabe3a1ea38ac9ec))
+* 🐛 Remove breadcrumbs from article list pages ([41f2090](https://github.com/ucsc/theme-ucsc/commit/41f20907937cef909ddf3c6b9f6fb4382b9d913b))
+* 🐛 Update package.json to include acf.php in theme build ([054e5c8](https://github.com/ucsc/theme-ucsc/commit/054e5c80fc4110cebdc22ea7b84980e8aefd61bd))
+* 🔥 Delete unused owl-carousel files ([073ee42](https://github.com/ucsc/theme-ucsc/commit/073ee42d8ff77d6d4b1cd824c4c78b1e2deb44ee))
+* 🔥 Move wp-blocks to project root. Change functions setting to match ([862c14a](https://github.com/ucsc/theme-ucsc/commit/862c14abcd711d01694dd15142f4f6022cb22e35))
+
 ## [1.0.0-beta.3](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-03-21)
 
 
