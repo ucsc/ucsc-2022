@@ -36,7 +36,7 @@ acf_add_local_field_group(array(
 		),
 	),
 	'menu_order' => 0,
-	'position' => 'acf_after_title',
+	'position' => 'side',
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
