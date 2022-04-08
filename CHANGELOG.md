@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.5](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-04-08)
+
+
+### Bug Fixes
+
+* 🐛 Move subtitle field to sidebar ([e4280ee](https://github.com/ucsc/theme-ucsc/commit/e4280eec64f0f7e743dba0a5176edbfaeee3e2b1))
+
 ## [1.0.0-beta.4](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-04-08)
 
 
