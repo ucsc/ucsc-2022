@@ -11,12 +11,18 @@ Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are
 ### Tasks
 
 - [x] Add subtitle field
-- [x] Release beta.4 on Friday.
+- [x] Release beta.5 on Friday.
 - [ ] Button width settings need to be fixed (they arent't applied)
 - [ ] Mobile Q/A needs to be done.
-- [ ] Look into the new [Block Lock UI](https://make.wordpress.org/core/tag/gutenberg-new/#highlight-1)
+- [ ] Look into the new [Block Lock UI](https://make.wordpress.org/core/tag/gutenberg-new/#highlight-1). Requires Gutenberg 12.9.0
 
 ### Notes
+
+- Released 1.0.0-beta.5. Beta 4 had a bug that we missed. Rather than undo what we did, we opted to release beta 5.
+- Beta 5 adds a subtitle field to posts and adds Advanced Custom Fields Pro as a dependency.
+- We are now in need of some testing. We might need to create a formal sprint to get testing setup.
+- We need automated testing to make sure the theme can be activated and that the front page returns HTML.
+- Local testing setup will be important too.
 
 We feel ready for pilot partners. There will be plenty of feedback and changes to come. Now is the time to get people in there and using the theme.
 
