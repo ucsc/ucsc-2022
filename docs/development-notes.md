@@ -6,15 +6,20 @@ nav_order: 4
 
 Contributors meet twice weekly. Meeting notes are below. [Goals & milestones are here](https://github.com/ucsc/theme-ucsc/wiki/Goals-and-Milestones).
 
+## Week of 2022-04-11
+
+## Tasks
+
+- [x] News front page structure: remove layout in the theme files
+
+## Notes
+
 ## 2022-04-06
 
 ### Tasks
 
 - [x] Add subtitle field
 - [x] Release beta.5 on Friday.
-- [ ] Button width settings need to be fixed (they arent't applied)
-- [ ] Mobile Q/A needs to be done.
-- [ ] Look into the new [Block Lock UI](https://make.wordpress.org/core/tag/gutenberg-new/#highlight-1). Requires Gutenberg 12.9.0
 
 ### Notes
 
@@ -40,9 +45,6 @@ Customization of block settings seems to be possible with a [similar mechanism t
 - [x] Pagination link styles
 - [x] Advanced Custom Fields (available on CampusPress) to add meta data field for news articles
 - [x] FIX: breadcrumbs show up in any loop of posts.
-- [ ] RSS news block needs structural changes. It will get heavy use in the site
-- [x] News front page structure: remove layout in the theme files
-- [ ] Commitlint research and linting
 
 ### Notes
 
@@ -86,18 +88,14 @@ Deployment looks like this.
 
 ### Tasks
 
-- [ ] Custom fields solution for site init
-- [ ] Pagination links
-- [ ] Research theme [patterns](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/) we might consider.
+- [x] Pagination links
 
 ## 2022-03-17
 
 - Individual story sharing to social: use a [plugin that modifies the core social links block](https://wordpress.org/plugins/social-sharing-block/). We'll table this for now and come back to it.
 - Breadcrumbs: using another plugin, [Hybrid Breadcrumbs](https://github.com/themehybrid/hybrid-breadcrumbs). Test to see if it will work with Truss.
 - Questions for the coming week:
-  - [ ] Should we cement multi-column layouts into the theme on listing pages like news front?
-  - [ ] Article layout and typography: line-length, image size (need docs for this)
-  - [ ] Site building and example for web users group
+  - [x] NO: Should we cement multi-column layouts into the theme on listing pages like news front?
 
 ## 2022-03-08
 
@@ -107,7 +105,7 @@ Deployment looks like this.
 ## 2022-03-02
 
 - [x] Rob: PR for setting site title and page titles
-- [ ] `.alignfull` class is shifted too far left
+- [x] `.alignfull` class is shifted too far left
 
 ## 2022-02-25
 
@@ -150,7 +148,7 @@ Deployment looks like this.
 ### Tasks
 
 - [x] The other header template parts can also be refactored to remove redundant parts
-- [ ] Need a build script to create the installable theme folder
+- [x] Need a build script to create the installable theme folder
 
 ## 2022-02-02
 
@@ -183,14 +181,12 @@ Deployment looks like this.
 
 ## 2022-01-26
 
-- [ ] Deployment strategy
-- [ ] Patterns workflow: how do we create/customize patterns for the block editor interface
-- [ ] Sample content (in a WordPress.xml file)
+- [x] Deployment strategy
+- [x] Sample content (in a WordPress.xml file)
 - [x] Individual block theming workflow
-- [ ] Add a folder for blocks
-- [ ] One CSS/SCSS file for each block
-- [ ] Enqueue block styles in functions.php once for each block, so WP knows which custom styles to load on a page.
-- [ ] Capturing feedback from team and from users (web form -> GH issues AND structured issue creation)
+- [x] Add a folder for blocks
+- [x] One CSS/SCSS file for each block
+- [x] Enqueue block styles in functions.php once for each block, so WP knows which custom styles to load on a page.
 
 ## 2022-01-21
 
