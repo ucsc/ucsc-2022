@@ -1,8 +1,23 @@
 <?php
+/**
+ * UCSC functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package UCSC
+ * @since UCSC 1.0.0
+ */
 
-if ( ! function_exists( 'ucsc_theme_setup' ) ) :
+if ( ! function_exists( 'ucsc_setup' ) ) :
 
-	function ucsc_theme_setup() {
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * @since UCSC 1.0.0
+	 *
+	 * @return void
+	 */
+	function ucsc_setup() {
 
 		add_theme_support( 'wp-block-styles' );
 		add_editor_style( 'build/style-index.css' );
@@ -12,7 +27,7 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 		 */
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Navigation', 'theme-ucsc' ),
+				'primary' => __( 'Primary Navigation', 'ucsc' ),
 			)
 		);
 
@@ -44,22 +59,22 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 		}
 	}
 endif;
-add_action( 'after_setup_theme', 'ucsc_theme_setup' );
+add_action( 'after_setup_theme', 'ucsc_setup' );
 
 /**
  * Enqueue theme scripts and styles.
  */
-function ucsc_theme_scripts() {
-	 wp_enqueue_style( 'ucsc-theme-styles', get_stylesheet_uri() );
-	wp_enqueue_style( 'ucsc-theme-styles-scss', get_template_directory_uri() . '/build/style-index.css' );
+function ucsc_scripts() {
+	wp_enqueue_style( 'ucsc-styles', get_stylesheet_uri() );
+	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css' );
 }
-add_action( 'wp_enqueue_scripts', 'ucsc_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'ucsc_scripts' );
 
 /**
  * Enqueue additional Google Font Scripts
  */
 function ucsc_googleapi_scripts() {
-	 echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+	echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 }
 add_action( 'wp_head', 'ucsc_googleapi_scripts' );
@@ -68,7 +83,7 @@ add_action( 'wp_head', 'ucsc_googleapi_scripts' );
  * Enqueue editor styles and scripts.
  */
 function ucsc_add_admin_scripts() {
-	 wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
+	wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
 	wp_enqueue_script( 'ucsc-admin-scripts' );
 }
 
@@ -91,8 +106,8 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  * returns copyright symbol and current year
  */
 function ucsc_copyright() {
-	 $copyright = '&#169;';
-	$year       = date( 'Y' );
+	$copyright = '&#169;';
+	$year      = gmdate( 'Y' );
 	return $copyright . $year;
 }
 add_shortcode( 'copyright', 'ucsc_copyright' );
@@ -124,7 +139,7 @@ function ucsc_last_modified_helper() {
  * @return String
  */
 function ucsc_last_modified() {
-	 ob_start();
+	ob_start();
 	ucsc_last_modified_helper();
 	return ob_get_clean();
 }
@@ -140,9 +155,8 @@ add_shortcode( 'last-modified', 'ucsc_last_modified' );
  * @return string
  */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
-	$siteURL = get_site_url();
-	// http://localhost:8888 == www
-	if ( $siteURL == '' ) {
+	$site_url = get_site_url();
+	if ( '' === $site_url ) {
 		if ( isset( $block['blockName'] ) && 'core/html' === $block['blockName'] ) {
 			$html = '';
 			return $html;
@@ -189,7 +203,7 @@ function ucsc_adjust_structure( $block_content = '', $block = array() ) {
 		$html = $block_content;
 		return $html;
 	} else {
-		// On all other pages, the site title becomes `p` and page title becomes `h1`
+		// On all other pages, the site title becomes `p` and page title becomes `h1`.
 		if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
 			$html = str_replace(
 				'<h1 ',
@@ -253,7 +267,7 @@ function ucsc_post_subtitle( $block_content = '', $block = array() ) {
 			$subtitle = get_field( 'subtitle-copy' );
 		}
 
-		if ( $subtitle != '' && isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
+		if ( '' !== $subtitle && isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			$html = str_replace(
 				$block_content,
 				$block_content . '<div id="post-subtitle-' . $post_id . '" class="post-subtitle">
@@ -270,13 +284,11 @@ add_filter( 'render_block', 'ucsc_post_subtitle', 10, 2 );
 /**
  * Breadcrumbs constructor callback helper
  *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
  * @return string
  */
 function ucsc_breadcrumbs_constructor() {
 	$labels = array(
-		'title' => __( '', 'ucsc' ),
+		'title' => '',
 	);
 	$args   = array(
 		'labels'        => $labels,
