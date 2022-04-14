@@ -1,5 +1,18 @@
 {
-    "require": {
-        "justintadlock/hybrid-breadcrumbs": "^1.0"
-    }
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.2",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
+	},
+	"scripts": {
+		"lint": "./vendor/bin/phpcs",
+		"lint-fix": "./vendor/bin/phpcbf --extensions=php ."
+	},
+	"require": {
+		"justintadlock/hybrid-breadcrumbs": "^1.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }
