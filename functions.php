@@ -19,7 +19,7 @@ if ( ! function_exists( 'ucsc_theme_setup' ) ) :
 		/*
 		* Load additional block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content' );
+		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss' );
 		foreach ( $styled_blocks as $block_name ) {
 			$args = array(
 				'handle' => "ucsc-$block_name",

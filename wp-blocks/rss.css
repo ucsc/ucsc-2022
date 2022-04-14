@@ -1,0 +1,41 @@
+/*
+	Custom styles for the core/rss block
+	so they match the UCSC design spec.
+
+	@since 1.0.0-beta.6
+*/
+.wp-block-rss__item  {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: calc(var(--wp--preset--font-size--small) / 1.5);
+}
+
+.wp-block-rss__item-title {
+	order: 3;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+	margin-top: calc(var(--wp--preset--font-size--normal) / 6);
+	margin-bottom: calc(var(--wp--preset--font-size--normal) / 5);
+}
+
+.wp-block-rss__item-title a {
+	text-decoration: none;
+	color: var(--wp--custom--color--link);
+    display: block;
+}
+
+.wp-block-rss__item-publish-date {
+	order: 1;
+	color: var(--wp--custom--color--light-gray);
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-rss__item-author {
+	order: 2;
+}
+
+.wp-block-rss__item-excerpt {
+	order: 4;
+	font-size: var(--wp--preset--font-size--small);
+	margin-bottom: calc(var(--wp--preset--font-size--normal) / 2);
+}
