@@ -1,3 +1,2 @@
 // front end scripts
-import './js/title-span.js';
-
+import "./js/title-span.js";
