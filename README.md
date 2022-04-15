@@ -2,27 +2,32 @@
 
 A theme demo with official WordPress theme unit test data is here: <https://dev-ucsc-theme-demo.pantheonsite.io/>
 
-## Requirements (as of 2022-02-04)
+## Requirements (as of 2022-04-15)
 
-- Requires WordPress 5.9 or above
-- We recommend the [CampusPress theme and plugin](https://github.com/igmoweb/theme-check) check as well.
+- WordPress 5.8 with the [Gutenberg plugin](https://wordpress.org/plugins/gutenberg/) installed, or WordPress 5.9.
+- [Docker](https://www.docker.com/) and [@WordPress/env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) installed.
+- [Composer](https://getcomposer.org/) and PHP 7.4
+- We also recommend the [CampusPress theme and plugin](https://github.com/igmoweb/theme-check) check as well.
 
 ## Development workflow
 
-This workflow assumes you have [Docker](https://www.docker.com/) running and [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) installed. This is by far the easiest way to run a local WordPress development environment. 🎉 If you are just getting started with wp-env, we provide a sample wp-env.json file in this respository. Rename that file from `example.wp-env.json` to `.wp-env.json` and move it to the root of your project directory, then follow the instructions below. Your project directory should look like this:
+Our workflow uses [Docker](https://www.docker.com/) and [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/). This is an easy way to run a local WordPress development environment. 🎉 If you are getting started with wp-env, create a file named, follow these steps to get started.
+
+1. Create a project folder, and clone this repository into it (see the file structure below)
+2. Create a file named `.wp-env.json` in your project folder and copy the code [from this page](https://github.com/ucsc/theme-ucsc/wiki/Example-.wp-env.json-file) into that file.
+3. Add any additional plugins and themes into the `wp-plugins` and the `wp-themes` folders then follow the instructions below. Your project directory should look like this:
 
 ```text
 project/
+	|---CLONE_THIS_REPO_HERE
     |---.wp-env.json
-    |---plugins/
+    |---wp-plugins/
 	|---mu-plugins/
-    |---themes/
-	  |---[clone UCSC theme repo here]
+    |---wp-themes/
 ```
 
-1. In your themes subfolder, `gh repo clone ucsc/theme-ucsc ucsc`.
-2. In the `ucsc` theme folder, run `npm install && npm run build` to compile theme files.
-3. `cd` to root folder and run `wp-env start`
-4. Login (`admin:password`) and navigate to <http://localhost:8888/wp-admin/import.php>
-5. At this point you can create content on your own, or import the [theme unit test data](https://codex.wordpress.org/Theme_Unit_Test) WordPress theme developers use.
-6. To reset your development environment (delete all content, update WordPress core), run `wp-env destroy`, then `wp-env start`.
+1. In the folder where you cloned this theme, run `npm install && npm run build`, followed by `composer install` to compile theme files and install dependencies.
+2. `cd` to project root and run `wp-env start`
+3. Login (`admin:password`) and navigate to <http://localhost:8888/wp-admin/import.php>
+4. At this point you can create content on your own, or import the [theme unit test data](https://codex.wordpress.org/Theme_Unit_Test) WordPress theme developers use.
+5. To reset your development environment (delete all content, update WordPress core), run `wp-env destroy`, then `wp-env start`.
