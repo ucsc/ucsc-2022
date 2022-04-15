@@ -6,9 +6,14 @@
 	text-decoration: none;
 }
 
-.wp-block-button > a:hover,
 .wp-block-button > a:focus,
+.wp-block-button > a:hover,
 .wp-block-button > a:active {
 	text-decoration: none;
-	/* background: currentColor !important; */
+}
+
+.wp-block-button {
+	cursor: pointer;
+	font-weight: 600;
+	letter-spacing: .08rem;
 }

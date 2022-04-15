@@ -51,12 +51,6 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 			include_once get_parent_theme_file_path( 'vendor/autoload.php' );
 		}
-		/**
-		 * Enqueue Custom Advanced Custom Field Blocks
-		 */
-		if ( file_exists( get_parent_theme_file_path( 'acf-blocks/register-blocks.php' ) ) ) {
-			include_once get_parent_theme_file_path( 'acf-blocks/register-blocks.php' );
-		}
 	}
 endif;
 add_action( 'after_setup_theme', 'ucsc_setup' );
@@ -83,10 +77,9 @@ add_action( 'wp_head', 'ucsc_googleapi_scripts' );
  * Enqueue editor styles and scripts.
  */
 function ucsc_add_admin_scripts() {
-	wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), '', true );
+	wp_register_script( 'ucsc-admin-scripts', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'ucsc-admin-scripts' );
 }
-
 add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
 
 /**
@@ -97,7 +90,6 @@ function ucsc_add_scripts() {
 	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), '', true );
 	wp_enqueue_script( 'ucsc-front' );
 }
-
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
 
@@ -115,8 +107,7 @@ add_shortcode( 'copyright', 'ucsc_copyright' );
 /**
  * Last Modified Callback Function
  *
- * Create a callback to build the last
- * modified date
+ * Create a callback to build the last modified date
  *
  * @return String
  */
@@ -184,7 +175,6 @@ function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	}
 	return $block_content;
 }
-
 
 add_filter( 'render_block', 'ucsc_logo_switch', 10, 2 );
 
@@ -296,6 +286,7 @@ function ucsc_breadcrumbs_constructor() {
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
+
 /**
  * Add Breadcrumbs above Post Title.
  *
@@ -325,11 +316,20 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 }
 
 /**
+ * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
+ */
+function ucsc_block_editor_scripts() {
+	$block_style_options = array( 'button');
+	foreach ( $block_style_options as $option ) {
+		wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( "/wp-blocks/editor-styles/$option.js" ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
+
+
+/**
 * Enqueue developer functions
 */
 if ( file_exists( get_theme_file_path( 'utility.php' ) ) ) {
 	include get_theme_file_path( 'utility.php' );
 }
-
-
-

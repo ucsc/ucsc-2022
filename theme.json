@@ -13,81 +13,14 @@
 	],
 	"settings": {
 		"appearanceTools": true,
-		"blocks": {
-			"core/button": {
-				"color": {
-					"custom": false,
-					"palette": [
-						{
-							"slug": "white",
-							"color": "#fff",
-							"name": "White"
-						},
-						{
-							"slug": "black",
-							"color": "#000",
-							"name": "Black"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"slug": "ucsc-secondary-blue",
-							"color": "#006aad",
-							"name": "Secondary blue"
-						},
-						{
-							"slug": "ucsc-light-blue",
-							"color": "#13a5dc",
-							"name": "Light blue"
-						},
-						{
-							"slug": "ucsc-rubine-red",
-							"color": "#da216d",
-							"name": "UCSC rubine red"
-						}
-					]
-				},
-				"border": {
-					"radius": false
-				}
-			},
-			"core/paragraph": {
-				"color": {
-					"custom": false,
-					"background": false,
-					"text": true,
-					"link": false
-				},
-				"typography": {
-					"customFontSize": true
-				}
-			},
-			"core/navigation": {
-				"typography": {
-					"customFontSize": true
-				}
-			},
-			"core/heading": {
-				"typography": {
-					"customFontSize": false
-				},
-				"color": {
-					"custom": false
-				}
-			}
-		},
 		"color": {
 			"custom": false,
-			"link": true,
+			"link": false,
 			"defaultPalette": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"customDuotone": false,
+			"customGradient": false,
 			"duotone": [],
 			"gradients": [],
 			"palette": [
@@ -156,14 +89,7 @@
 			"blockGap": false,
 			"padding": true,
 			"margin": true,
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"lineHeight": true,
@@ -222,6 +148,41 @@
 					"name": "Roboto Condensed"
 				}
 			]
+		},
+		"blocks": {
+			"core/button": {
+				"color": {
+					"custom": false,
+					"palette": []
+				},
+				"border": {
+					"radius": false
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"custom": false,
+					"background": false,
+					"text": true,
+					"link": false
+				},
+				"typography": {
+					"customFontSize": true
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"customFontSize": true
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"customFontSize": false
+				},
+				"color": {
+					"custom": false
+				}
+			}
 		},
 		"custom": {
 			"line-height": {
