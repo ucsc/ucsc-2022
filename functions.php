@@ -59,8 +59,8 @@ add_action( 'after_setup_theme', 'ucsc_setup' );
  * Enqueue theme scripts and styles.
  */
 function ucsc_scripts() {
-	wp_enqueue_style( 'ucsc-styles', get_stylesheet_uri() );
-	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css' );
+	wp_enqueue_style( 'ucsc-styles', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_scripts' );
 
@@ -87,7 +87,7 @@ add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
  */
 function ucsc_add_scripts() {
 	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700&display=swap', false );
-	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), '', true );
+	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'ucsc-front' );
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
@@ -319,7 +319,7 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
  * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
  */
 function ucsc_block_editor_scripts() {
-	$block_style_options = array( 'button');
+	$block_style_options = array( 'button' );
 	foreach ( $block_style_options as $option ) {
 		wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( "/wp-blocks/editor-styles/$option.js" ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 	}
