@@ -19,11 +19,11 @@ Our workflow uses [Docker](https://www.docker.com/) and [wp-env](https://develop
 
 ```text
 project/
-	|---CLONE_THIS_REPO_HERE
-    |---.wp-env.json
-    |---wp-plugins/
-	|---mu-plugins/
-    |---wp-themes/
+  |---CLONE_THIS_REPO_HERE
+  |---.wp-env.json
+  |---wp-plugins/
+  |---mu-plugins/
+  |---wp-themes/
 ```
 
 1. In the folder where you cloned this theme, run `npm install && npm run build`, followed by `composer install` to compile theme files and install dependencies.
