@@ -145,6 +145,7 @@ add_shortcode( 'last-modified', 'ucsc_last_modified' );
  * @param  array  $block         Block attributes.
  * @return string
  */
+TODO #24 Replace hard-coded links
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	$site_url = get_site_url();
 	if ( '' === $site_url ) {
