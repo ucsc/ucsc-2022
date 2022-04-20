@@ -2,12 +2,17 @@
 
 A theme demo with official WordPress theme unit test data is here: <https://dev-ucsc-theme-demo.pantheonsite.io/>
 
-## Requirements (as of 2022-04-15)
+## Theme Requirements
 
 - WordPress 5.8 with the [Gutenberg plugin](https://wordpress.org/plugins/gutenberg/) installed, or WordPress 5.9.
+- This theme **requires** the [UCSC Custom Functionality plugin](https://github.com/ucsc/ucsc-custom-functionality), which adds custom shortcodes and the "UCSC Site Manager" role.
+- Install the [WordPress Theme Check](https://wordpress.org/plugins/theme-check/) plugin for testing.
+
+## Development Requirements
+
+- Node and NPM
 - [Docker](https://www.docker.com/) and [@WordPress/env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) installed.
 - [Composer](https://getcomposer.org/) and PHP 7.4
-- We also recommend the [CampusPress theme and plugin](https://github.com/igmoweb/theme-check) check as well.
 
 ## Development workflow
 
@@ -27,10 +32,10 @@ project/
 ```
 
 1. In the folder where you cloned this theme, run `npm install && npm run build`, followed by `composer install` to compile theme files and install dependencies.
-2. `cd` to project root and run `wp-env start`
-3. Login (`admin:password`) and navigate to <http://localhost:8888/wp-admin/import.php>
+2. `cd` to project root and run `wp-env start`.
+3. Navigate to <http://localhost:8888/wp-admin/> and login with (`admin:password`).
 4. At this point you can create content on your own, or import the [theme unit test data](https://codex.wordpress.org/Theme_Unit_Test) WordPress theme developers use.
-5. To reset your development environment (delete all content, update WordPress core), run `wp-env destroy`, then `wp-env start`.
+5. To reset your development environment (delete all content), run `wp-env destroy`, then `wp-env start`.
 
 ## Contributors
 
