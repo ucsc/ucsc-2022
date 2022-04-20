@@ -27,7 +27,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		 */
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Navigation', 'ucsc' ),
+				'primary' => __( 'Primary Navigation', 'ucsc-2022' ),
 			)
 		);
 
@@ -103,8 +103,8 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
 /** TODO #24 Replace hard-coded links */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
-	$site_url = get_site_url();
-	if ( '' === $site_url ) {
+	$site_location = home_url();
+	if ( 'https://www.ucsc.edu' === $site_location ) {
 		if ( isset( $block['blockName'] ) && 'core/html' === $block['blockName'] ) {
 			$html = '';
 			return $html;
