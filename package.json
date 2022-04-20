@@ -1,5 +1,5 @@
 {
-	"name": "ucsc",
+	"name": "ucsc-2022",
 	"version": "1.0.0-beta.5",
 	"description": "The offficial WordPress theme for UC Santa Cruz",
 	"main": "build/index.js",
