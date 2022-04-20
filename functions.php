@@ -92,51 +92,6 @@ function ucsc_add_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
-
-/**
- * Copyright shortcode
- * returns copyright symbol and current year
- */
-function ucsc_copyright() {
-	$copyright = '&#169;';
-	$year      = gmdate( 'Y' );
-	return $copyright . $year;
-}
-add_shortcode( 'copyright', 'ucsc_copyright' );
-
-/**
- * Last Modified Callback Function
- *
- * Create a callback to build the last modified date
- *
- * @return String
- */
-function ucsc_last_modified_helper() {
-	$ucsc_modified_time = get_the_modified_time( 'U' );
-	if ( $ucsc_modified_time > 0 ) {
-		return the_modified_time( 'F jS, Y' );
-	} else {
-		return the_time( 'F jS, Y' );
-	}
-}
-
-/**
- * Return the last page modification in a readable format
- *
- * This is called by a short code `last-modified`. It looks at the
- * modified time and if that time is greater than zero it returns it
- * as a formatted date. Otherwise, it returns the date the page was created.
- *
- * @return String
- */
-function ucsc_last_modified() {
-	ob_start();
-	ucsc_last_modified_helper();
-	return ob_get_clean();
-}
-add_shortcode( 'last-modified', 'ucsc_last_modified' );
-
-
 /**
  * Change Site Title and Logo
  * Main Site vs Subsite
