@@ -19,11 +19,11 @@ Our workflow uses [Docker](https://www.docker.com/) and [wp-env](https://develop
 
 ```text
 project/
-	|---CLONE_THIS_REPO_HERE
-    |---.wp-env.json
-    |---wp-plugins/
-	|---mu-plugins/
-    |---wp-themes/
+  |---CLONE_THIS_REPO_HERE
+  |---.wp-env.json
+  |---wp-plugins/
+  |---mu-plugins/
+  |---wp-themes/
 ```
 
 1. In the folder where you cloned this theme, run `npm install && npm run build`, followed by `composer install` to compile theme files and install dependencies.
@@ -31,3 +31,7 @@ project/
 3. Login (`admin:password`) and navigate to <http://localhost:8888/wp-admin/import.php>
 4. At this point you can create content on your own, or import the [theme unit test data](https://codex.wordpress.org/Theme_Unit_Test) WordPress theme developers use.
 5. To reset your development environment (delete all content, update WordPress core), run `wp-env destroy`, then `wp-env start`.
+
+## Contributors
+
+The UCSC WordPress theme is maintained by the Digital Strategies team in the campus [Communications & Marketing](https://communications.ucsc.edu) office. If you have any questions about this project, you can contact [Rob Knight](https://campusdirectory.ucsc.edu/cd_detail?uid=raknight), [Jason Chafin](https://campusdirectory.ucsc.edu/cd_detail?uid=jchafin), or [submit an issue](https://github.com/ucsc/theme-ucsc/issues) here on Github.
