@@ -100,7 +100,8 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  * @param  array  $block         Block attributes.
  * @return string
  */
-TODO #24 Replace hard-coded links
+
+/** TODO #24 Replace hard-coded links */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	$site_url = get_site_url();
 	if ( '' === $site_url ) {
