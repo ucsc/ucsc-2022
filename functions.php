@@ -327,10 +327,3 @@ function ucsc_block_editor_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
-
-/**
-* Enqueue developer functions
-*/
-if ( file_exists( get_theme_file_path( 'utility.php' ) ) ) {
-	include get_theme_file_path( 'utility.php' );
-}
