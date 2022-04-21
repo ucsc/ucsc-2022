@@ -16,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ucsc/theme-ucsc.git"
+		"url": "git+https://github.com/ucsc/ucsc-2022.git"
 	},
 	"keywords": [
 		"WordPress"
