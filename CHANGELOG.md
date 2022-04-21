@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.1](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.5...v1.0.0-rc.1) (2022-04-21)
+
+
+### Features
+
+* ✨ Buttons now have preset styles for UCSC color combinations ([45a7a7c](https://github.com/ucsc/theme-ucsc/commit/45a7a7c82996d1588552937f4ddd8021bd934261))
+* ✨ News feed blocks match campus design standard ([c5b863f](https://github.com/ucsc/theme-ucsc/commit/c5b863f3edce73802f149d5f83955d2553cb5bef))
+* 🎨 Add PHP/WP coding standards check to the project ([89fbba1](https://github.com/ucsc/theme-ucsc/commit/89fbba12829a4cb153151771de8763e59e5d1949))
+
+
+### Bug Fixes
+
+* :art: Compress screenshot, per WordPress Theme Check ([e0f8b7b](https://github.com/ucsc/theme-ucsc/commit/e0f8b7bd0a0ee0e5dcfd7ddcc7aac223bc40da6b))
+* :bug: Crop `screenshot.jpg` to 4:3 per WP Theme Check ([bd5181a](https://github.com/ucsc/theme-ucsc/commit/bd5181a3adeaabdc83d87a44c8b2d67c9516b326))
+* :bug: Fixes based on WordPress Theme Check. ([df05325](https://github.com/ucsc/theme-ucsc/commit/df053257877c656a4f8b9fe792052a39072a8ee0))
+* :bug: update Text Domain in `style.css` to match WP Theme Check requirements ([d31f5d5](https://github.com/ucsc/theme-ucsc/commit/d31f5d54bf1ec5dd0911716be4385969166f8650))
+* :fire: removed shortcodes from `functions.php`, moved to functionality plugin. WP does not allow `add_shortcode()` to themes ([970dc32](https://github.com/ucsc/theme-ucsc/commit/970dc3233f49513f74061253a01a1c153904fd7b))
+* :lipstick: re-add `important` to `post-author.css`. It's being overridden highter up in the cascade ([3ead8d6](https://github.com/ucsc/theme-ucsc/commit/3ead8d64f886b05c876d69e8587e06e8e244e61e))
+* :lipstick: Remove `!important` from `.wp-block-post-author__name` ([4d81bc3](https://github.com/ucsc/theme-ucsc/commit/4d81bc3760cf03148b8334b39838bf4674565fea))
+* :memo: fix: :memo: update text domain to `ucsc-2022` in `style.css` per [#26](https://github.com/ucsc/theme-ucsc/issues/26) ([2bb268c](https://github.com/ucsc/theme-ucsc/commit/2bb268c0c08c9ee1c89fb7eac45d23cf1d98a415))
+* 🐛 Do not alter site title flourishes if the site title hasn't loaded ([877ebed](https://github.com/ucsc/theme-ucsc/commit/877ebed7c9b6c8bc5babeb9b94583cf6615fed8d))
+* 🐛 Fix incorrect text domain in function and use home_url() in switching function ([53ad1ae](https://github.com/ucsc/theme-ucsc/commit/53ad1ae706645551c05efbb9dc50255c2d1fa3b5))
+
 ## [1.0.0-beta.5](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-04-08)
 
 
