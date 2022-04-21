@@ -1,5 +1,5 @@
 === Theme Name ===
-Contributors: robknight
+Contributors: herm71, robknight
 Requires at least: 5.8
 Tested up to: 5.8
 Requires PHP: 7.0
