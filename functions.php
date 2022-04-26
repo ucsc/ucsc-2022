@@ -240,6 +240,7 @@ function ucsc_breadcrumbs_constructor() {
 	$args   = array(
 		'labels'        => $labels,
 		'show_on_front' => true,
+		'show_trail_end' => false
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
