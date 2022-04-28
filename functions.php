@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss' );
+		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title' );
 		foreach ( $styled_blocks as $block_name ) {
 			$args = array(
 				'handle' => "ucsc-$block_name",
@@ -258,8 +258,10 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	}
 	if ( is_singular() ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
-			return $html;
+			if ( isset( $block['attrs']['level'] ) and $block['attrs']['className'] === 'primary-post-title' ) {
+				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
+				return $html;
+			}
 		}
 	}
 	return $block_content;
