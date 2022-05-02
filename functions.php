@@ -258,7 +258,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	}
 	if ( is_singular() ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['level'] ) and $block['attrs']['className'] === 'primary-post-title' ) {
+			if ( isset( $block['attrs']['level'] ) and isset($block['attrs']['className']) and $block['attrs']['className'] === 'primary-post-title' ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
 				return $html;
 			}
