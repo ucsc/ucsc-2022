@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.2](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2022-05-02)
+
+
+### Features
+
+* ✨ Add customizable regions to the theme ([#33](https://github.com/ucsc/ucsc-2022/issues/33)) ([da46f38](https://github.com/ucsc/ucsc-2022/commit/da46f3835f9eeaec08963028880ea1d78afe5cd7)), closes [#29](https://github.com/ucsc/ucsc-2022/issues/29)
+* ✨ Add SVG support (logos) with The Icon Block plugin ([1b5ad3d](https://github.com/ucsc/ucsc-2022/commit/1b5ad3d7814273d8072b7bdf71ab0a79c1ca18d7))
+
+
+### Bug Fixes
+
+* :art: Remove last segment from breadcrumbs (page/post title)  Fixes [#30](https://github.com/ucsc/ucsc-2022/issues/30) ([9375577](https://github.com/ucsc/ucsc-2022/commit/93755774a8802400a66454465db96ae68c586269))
+* :bug: Adjust `post-title` filter function to taget first occurrence on page. Adjust CSS accordingly Fixes [#27](https://github.com/ucsc/ucsc-2022/issues/27) ([8f41f04](https://github.com/ucsc/ucsc-2022/commit/8f41f043ee7383df9212371b31df85d091caab41))
+* :bug: update  `url` in `repository` object of package.json to new theme's git rep ([f3bcd76](https://github.com/ucsc/ucsc-2022/commit/f3bcd760912c33820d1365959c4e9e30690d095d))
+* 🐛 Remove existing link from footer navigation block ([ccd0cfe](https://github.com/ucsc/ucsc-2022/commit/ccd0cfe42edc1c0be0ff9c73124ede21e94831fc))
+* 🤦‍♂️ Fix the real menu that needed to change in last commit ([aa3555b](https://github.com/ucsc/ucsc-2022/commit/aa3555bf7b26804f9433b8820717c47e21ea6b08))
+
 ## [1.0.0-rc.1](https://github.com/ucsc/theme-ucsc/compare/v1.0.0-beta.5...v1.0.0-rc.1) (2022-04-21)
 
 
