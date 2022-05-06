@@ -86,7 +86,7 @@ add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
  * Enqueue fonts, styles and scripts.
  */
 function ucsc_add_scripts() {
-	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700&display=swap', false );
+	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600;8..144,700;8..144,900&display=swap', false );
 	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'ucsc-front' );
 }
