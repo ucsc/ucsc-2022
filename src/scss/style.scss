@@ -1,4 +1,9 @@
 //
+// Utilities
+//===============================
+@import "utilities/mixins";
+@import "utilities/variables";
+//
 // Base
 //===============================
 @import "base/normalize";
@@ -25,5 +30,5 @@
 //
 // Regions
 //===============================
-@import "regions/header";
-@import "regions/footer";
+@import "theme-regions/header";
+@import "theme-regions/footer";
