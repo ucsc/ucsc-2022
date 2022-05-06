@@ -137,7 +137,7 @@
 					"name": "System Font"
 				},
 				{
-					"fontFamily": "\"Roboto Flex\", sans-serif",
+					"fontFamily": "\"Roboto\", sans-serif",
 					"slug": "roboto",
 					"name": "Roboto"
 				},
