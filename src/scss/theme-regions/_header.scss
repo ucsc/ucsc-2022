@@ -1,0 +1,92 @@
+//
+// Header Styles
+//===============================
+.site-header {
+	.page-top {
+		[class*="page-top-"] {
+			align-self: center;
+		}
+
+		.campus-logo {
+			// background: transparent url($campus-logo) no-repeat 0 0;
+			display: block;
+			height: 26px;
+			overflow: hidden;
+			// text-indent: -10000px;
+			width: 128px;
+			line-height: 1.5;
+			margin-left: 0;
+		}
+
+		.page-top-left {
+			@media screen and (max-width: $breakpoint-small) {
+				flex-basis: 25% !important;
+				}
+		}
+
+		.page-top-right {
+			@media screen and (max-width: $breakpoint-small) {
+				flex-basis: 75% !important;
+			}
+
+			.row {
+				.wp-container-6 {
+					margin: 0;
+					@media screen and (max-width: $breakpoint-navigation) {
+						flex-direction: row-reverse
+						}
+						}
+			}
+
+		}
+
+		.top-menu {
+			@media screen and (max-width: $breakpoint-navigation) {
+				flex-basis: 15% !important;
+			}
+			.wp-block-navigation__container {
+				gap: 0.8em !important;
+				}
+
+		}
+
+		.top-search {
+
+			.wp-block-search__input {
+				padding: 0.4em 0.5em !important;
+				}
+
+				@media screen and (max-width: $breakpoint-navigation) {
+					flex-basis: 85% !important;
+				}
+				}
+				}
+
+	.main-header {
+
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+
+		.names {
+			margin-top: 1.5em;
+			margin-bottom: 1em;
+			border-bottom: 2px solid var(--wp--preset--color--ucsc-primary-yellow) !important;
+
+			.mainsite-logo {
+				background: transparent url($campus-logo) no-repeat 0 0;
+				display: block;
+				height: auto;
+				overflow: hidden;
+				text-indent: -10000px;
+				width: 220px;
+				margin-bottom: 0.35em;
+
+			}
+			}
+
+		.main-navigation {
+			margin-top: 0 !important;
+			margin-bottom: 1.2em !important; //TODO: Only for Home Page, rest, 0px
+			}
+			}
+}
