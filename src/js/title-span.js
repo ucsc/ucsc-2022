@@ -1,5 +1,5 @@
 (function () {
-	var heading = document.querySelector(".main-header .wp-block-site-title a");
+	var heading = document.querySelector(".site-header .wp-block-site-title a");
 	if (heading !== null) {
 		var split = heading.innerHTML.split(" ");
 		var words = ["of", "Of", "and", "And", "is", "Is", "&"];
@@ -14,7 +14,7 @@
 
 		var newHeading = split.join(" ");
 
-		document.querySelector(".main-header .wp-block-site-title a").innerHTML =
+		document.querySelector(".site-header .wp-block-site-title a").innerHTML =
 			newHeading;
 	}
 })();
