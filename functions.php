@@ -279,10 +279,8 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
  * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
  */
 function ucsc_block_editor_scripts() {
-	$block_style_options = array( 'button' );
-	foreach ( $block_style_options as $option ) {
-		wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( "/wp-blocks/editor-styles/$option.js" ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
-	}
+	wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( "/wp-blocks/styles.js" ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
+
 
