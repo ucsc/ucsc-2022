@@ -63,7 +63,7 @@
 
 		.legal {
 
-			margin-top: calc(var(--wp--style--block-gap)*2);
+			margin: calc(var(--wp--style--block-gap)*2) 0;
 			.wp-block-navigation-item {
 				&:first-child:after {
 					display: none;
@@ -78,7 +78,7 @@
 					display: block;
 					position: absolute;
 					top: 38%;
-					left: -1.125em;
+					left: -.6rem;
 				}
 			}
 
