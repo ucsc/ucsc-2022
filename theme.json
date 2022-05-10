@@ -192,8 +192,8 @@
 				"large": 1.88
 			},
 			"spacing": {
+				"small": ".85rem",
 				"baseline": "1.25rem",
-				"small": "max(1.25rem, 5vw)",
 				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
 				"large": "clamp(4rem, 10vw, 8rem)",
 				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
