@@ -179,7 +179,10 @@
 					"customFontSize": false
 				},
 				"color": {
-					"custom": false
+					"custom": false,
+					"background": false,
+					"text": false,
+					"link": false
 				}
 			}
 		},
@@ -204,7 +207,7 @@
 			"color": {
 				"link": "#01589d",
 				"link-decoration": "#ffc500",
-				"heading-text": "#003662",
+				"heading-text": "#3e474a",
 				"site-title": "#00458c",
 				"default-text": "#222222",
 				"flourish": "#a2a09c",
@@ -214,7 +217,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--custom--spacing--baseline, 1.25rem)"
+			"blockGap": "var(--wp--custom--spacing--small)"
 		},
 		"color": {
 			"background": "var(--wp--preset--color--white)",
@@ -232,123 +235,62 @@
 				}
 			},
 			"h1": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)",
-					"fontWeight": "600"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1em",
-						"right": "0",
-						"bottom": "0.5em",
-						"left": "0"
-					}
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"fontWeight": "600",
+					"lineHeight": "var(--wp--custom--line-height--small)"
 				}
 			},
 			"h2": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "600"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1em",
-						"right": "0",
-						"bottom": "0.5em",
-						"left": "0"
-					}
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "600",
+					"lineHeight": "var(--wp--custom--line-height--small)"
 				}
 			},
 			"h3": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"fontWeight": "600"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1.15em",
-						"right": "0",
-						"bottom": "0.5em",
-						"left": "0"
-					}
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontWeight": "600",
+					"lineHeight": "var(--wp--custom--line-height--small)"
 				}
 			},
 			"h4": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--base)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontWeight": "600"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1.25em",
-						"right": "0",
-						"bottom": "0.5em",
-						"left": "0"
-					}
 				}
 			},
 			"h5": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"fontWeight": "600",
+					"lineHeight": "var(--wp--custom--line-height--tiny)"
+				}
+			},
+			"h6": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--base)",
 					"fontWeight": "400",
 					"lineHeight": "var(--wp--custom--line-height--tiny)"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1.5em",
-						"right": "0",
-						"bottom": "0.25em",
-						"left": "0"
-					}
-				}
-			},
-			"h6": {
-				"color": {
-					"text": "var(--wp--custom--color--heading-text)"
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
-					"fontWeight": "400",
-					"lineHeight": "var(--wp--custom--line-height--tiny)"
-				},
-				"spacing": {
-					"margin": {
-						"top": "1.7em",
-						"right": "0",
-						"bottom": "0.15em",
-						"left": "0"
-					}
 				}
 			}
 		},
 		"blocks": {
-			"core/paragraph": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--roboto-condensed)"
+				},
+				"color": {
+					"text": "var(--wp--custom--color--heading-text)"
+				},
 				"spacing": {
 					"margin": {
-						"top": "0.75em",
+						"top": ".12em",
 						"right": "0",
-						"bottom": "0.75em",
+						"bottom": "0.25em",
 						"left": "0"
 					}
-				},
-				"typography": {
-					"lineHeight": "var(--wp--custom--line-height--baseline)",
-					"fontSize": "var(--wp--preset--font-size--base)"
 				}
 			},
 			"core/site-title": {
