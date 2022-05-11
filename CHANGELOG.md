@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.3](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-05-11)
+
+
+### Features
+
+* ✨ Enqueue a CSS file for lists ([1dfa955](https://github.com/ucsc/ucsc-2022/commit/1dfa9550fcb2f1e608e655137a98dff8e64db39c))
+* ✨ Normalize header spacing/color; remove redundancies ([def75f3](https://github.com/ucsc/ucsc-2022/commit/def75f3128fede1f970f53c9f43cefb479668b25))
+
+
+### Bug Fixes
+
+* :lipstick: Responsive work on Header and Footer. Fixes [#35](https://github.com/ucsc/ucsc-2022/issues/35) ([6f6deb2](https://github.com/ucsc/ucsc-2022/commit/6f6deb2acacc6ae475a07527194518df7bcf7079))
+* 🐛 Add missing a curly brace ([6400c25](https://github.com/ucsc/ucsc-2022/commit/6400c25b17fbdd60b02aa2caa067dab4d4c22ad0))
+* 🐛 Flourish on site titles is back ([b90e51b](https://github.com/ucsc/ucsc-2022/commit/b90e51b533fde7ac45f12d0aaf96b8af8cebb5fb))
+
 ## [1.0.0-rc.2](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2022-05-02)
 
 
