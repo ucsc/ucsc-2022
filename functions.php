@@ -92,6 +92,9 @@ function ucsc_add_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
 
+
+/** TODO #24 Replace hard-coded links */
+
 /**
  * Change Site Title and Logo
  * Main Site vs Subsite
@@ -100,8 +103,6 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  * @param  array  $block         Block attributes.
  * @return string
  */
-
-/** TODO #24 Replace hard-coded links */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	$site_location = home_url();
 	if ( 'https://www.ucsc.edu' === $site_location ) {
@@ -258,7 +259,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	}
 	if ( is_singular() ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['level'] ) and isset($block['attrs']['className']) and $block['attrs']['className'] === 'primary-post-title' ) {
+			if ( isset( $block['attrs']['level'] ) && isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'primary-post-title' ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
 				return $html;
 			}
@@ -279,8 +280,13 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
  * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
  */
 function ucsc_block_editor_scripts() {
-	wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( "/wp-blocks/styles.js" ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'ucsc-editor', get_theme_file_uri( '/wp-blocks/styles.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
-
+/**
+ * Include block patterns
+ */
+if ( file_exists( get_theme_file_path( 'lib/patterns.php' ) ) ) {
+	include get_theme_file_path( 'lib/patterns.php' );
+}
