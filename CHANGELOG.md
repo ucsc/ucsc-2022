@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.4](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2022-05-15)
+
+
+### Features
+
+* ✨ First UCSC block pattern: hero ([76d1240](https://github.com/ucsc/ucsc-2022/commit/76d1240a6ad6035ecd9f7cf2054d23f4c8be5ec4))
+
+
+### Bug Fixes
+
+* 🐛 Set proper text domain in phpcs config ([957754f](https://github.com/ucsc/ucsc-2022/commit/957754f2146525e576d7f29d07e517a5962b1b8f))
+
 ## [1.0.0-rc.3](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-05-11)
 
 
