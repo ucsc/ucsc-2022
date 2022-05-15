@@ -43,7 +43,7 @@
 		"!vendor/squizlabs/php_codesniffer",
 		"!vendor/dealerdirect",
 		"!vendor/wp-coding-standards",
-		"lib/acf.php",
+		"lib",
 		"images",
 		"functions.php",
 		"index.php",
