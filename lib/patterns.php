@@ -9,6 +9,16 @@
  */
 
 /**
+ *  Remove core block patterns
+ */
+add_action(
+	'init',
+	function() {
+		remove_theme_support( 'core-block-patterns' );
+	}
+);
+
+/**
  * Register block pattern category 'UCSC Patterns'
  *
  * @return void
