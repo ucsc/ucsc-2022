@@ -105,10 +105,12 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	$site_location = home_url();
-	if ( 'https://www.ucsc.edu' === $site_location ) {
-		if ( isset( $block['blockName'] ) && 'core/html' === $block['blockName'] ) {
-			$html = '';
-			return $html;
+	if ( 'http://localhost:8888' === $site_location ) {
+		if ( isset( $block['blockName'] ) && 'outermost/icon-block' === $block['blockName'] ) {
+			if (isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'global-header-logo' ) {
+					$html = '';
+					return $html;
+			}
 		} elseif ( ( is_front_page() && is_home() ) || is_front_page() || is_home() ) {
 			if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
 				$html = str_replace(
@@ -123,7 +125,7 @@ function ucsc_logo_switch( $block_content = '', $block = array() ) {
 			if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
 				$html = str_replace(
 					$block_content,
-					'<p>
+					'<p class="mainsite-logo" style="font-size: var(--wp--preset--font-size--xx-large); font-weight: 600;line-height: var(--wp--custom--line-height--small);margin-top: .12em; margin-bottom: .12em;">
 						<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
 					$block_content
 				);
