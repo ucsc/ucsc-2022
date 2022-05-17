@@ -57,14 +57,15 @@ add_action( 'after_setup_theme', 'ucsc_setup' );
 
 /**
  * Add Favicons
+ * See: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
  */
+
 function ucsc_favicons() { ?>
-	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-16x16.png" type="image/png" sizes="16x16">
-	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
-	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-96x96.png" type="image/png" sizes="96x96">
-	<link rel="apple-touch-icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/apple-icon.png" type="image/png">
-	<link rel="apple-touch-icon-precomposed" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/apple-icon-precomposed.png" type="image/png">
-	<meta name="msapplication-config" content="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/ieconfig.xml" />
+
+	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
+	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/ucsc-favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/apple-icon.png"">
+	<link rel="manifest" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/manifest.webmanifest"">
 	<?php
 }
 add_action( 'wp_head', 'ucsc_favicons' );
@@ -119,9 +120,9 @@ add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
  */
 function ucsc_logo_switch( $block_content = '', $block = array() ) {
 	$site_location = home_url();
-	if ( 'http://localhost:8888' === $site_location ) {
+	if ( '' === $site_location ) {
 		if ( isset( $block['blockName'] ) && 'outermost/icon-block' === $block['blockName'] ) {
-			if (isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'global-header-logo' ) {
+			if ( isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'global-header-logo' ) {
 					$html = '';
 					return $html;
 			}
