@@ -56,6 +56,20 @@ endif;
 add_action( 'after_setup_theme', 'ucsc_setup' );
 
 /**
+ * Add Favicons
+ */
+function ucsc_favicons() { ?>
+	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-16x16.png" type="image/png" sizes="16x16">
+	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+	<link rel="shortcut icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/favicon-96x96.png" type="image/png" sizes="96x96">
+	<link rel="apple-touch-icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/apple-icon.png" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/apple-icon-precomposed.png" type="image/png">
+	<meta name="msapplication-config" content="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/favicons/ieconfig.xml" />
+	<?php
+}
+add_action( 'wp_head', 'ucsc_favicons' );
+
+/**
  * Enqueue theme scripts and styles.
  */
 function ucsc_scripts() {
