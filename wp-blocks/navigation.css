@@ -1,6 +1,6 @@
 @media screen and (min-width: 782px) {
 	.wp-block-navigation .has-child :where(.wp-block-navigation__submenu-container) .wp-block-navigation__submenu-container {
 		left: 10%;
-		top: 42.5px;
+		top: 47.0px;
 	}
 }
