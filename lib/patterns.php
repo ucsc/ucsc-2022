@@ -9,6 +9,7 @@
  */
 
 /**
+
  *  Remove core block patterns
  */
 add_action(

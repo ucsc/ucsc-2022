@@ -199,7 +199,8 @@
 				"baseline": "1.25rem",
 				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
 				"large": "clamp(4rem, 10vw, 8rem)",
-				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
+				"outer": "var(--wp--custom--spacing--small, 1.25rem)",
+				"wrap": "80rem"
 			},
 			"border": {
 				"radius": "0.25rem"

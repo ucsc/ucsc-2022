@@ -59,7 +59,6 @@ add_action( 'after_setup_theme', 'ucsc_setup' );
  * Add Favicons
  * See: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
  */
-
 function ucsc_favicons() { ?>
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
@@ -74,8 +73,13 @@ add_action( 'wp_head', 'ucsc_favicons' );
  * Enqueue theme scripts and styles.
  */
 function ucsc_scripts() {
+
 	wp_enqueue_style( 'ucsc-styles', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700&display=swap', false );
+	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'ucsc-front' );
+
 }
 add_action( 'wp_enqueue_scripts', 'ucsc_scripts' );
 
@@ -97,15 +101,10 @@ function ucsc_add_admin_scripts() {
 }
 add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
 
-/**
- * Enqueue fonts, styles and scripts.
- */
-function ucsc_add_scripts() {
-	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700&display=swap', false );
-	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
-	wp_enqueue_script( 'ucsc-front' );
-}
-add_action( 'wp_enqueue_scripts', 'ucsc_add_scripts' );
+/** TODO #24 Replace hard-coded links */
+
+
+/** TODO #24 Replace hard-coded links */
 
 
 /** TODO #24 Replace hard-coded links */
