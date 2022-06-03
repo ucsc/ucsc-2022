@@ -27,7 +27,7 @@
 }
 
 .wp-block-query-pagination-numbers > .page-numbers.current  {
-	background-color: var(--wp--preset--color--ucsc-rubine-red);
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
 	color: var(--wp--preset--color--white);
 	font-weight:700;
 }

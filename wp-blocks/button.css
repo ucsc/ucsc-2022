@@ -31,7 +31,7 @@
 }
 
 .is-style-ucsc-gold .wp-block-button__link {
-	color: var(--wp--preset--color--ucsc-rubine-red);
+	color: var(--wp--preset--color--ucsc-primary-blue);
 	background-color: var(--wp--preset--color--ucsc-primary-yellow);
 }
 
@@ -39,18 +39,6 @@
 .is-style-ucsc-gold .wp-block-button__link:hover,
 .is-style-ucsc-gold .wp-block-button__link:active {
 	background-color: #ffe599;
-}
-
-.is-style-ucsc-red .wp-block-button__link {
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-rubine-red);
-}
-
-.is-style-ucsc-red .wp-block-button__link:focus,
-.is-style-ucsc-red .wp-block-button__link:hover,
-.is-style-ucsc-red .wp-block-button__link:active {
-	color: var(--wp--preset--color--ucsc-rubine-red);
-	background-color: #f6c8db;
 }
 
 .wp-block-button__link:focus,

@@ -14,11 +14,7 @@ wp.domReady(() => {
 		label: "Gold",
 		style_handle: "ucsc-button",
 	});
-	wp.blocks.registerBlockStyle("core/button", {
-		name: "ucsc-red",
-		label: "Red",
-		style_handle: "ucsc-button",
-	});
 	wp.blocks.unregisterBlockStyle("core/button", "outline");
 	wp.blocks.unregisterBlockStyle("core/button", "fill");
+	wp.blocks.unregisterBlockStyle("core/separator", "dots");
 });
