@@ -13,13 +13,13 @@
 }
 .sidebar-navigation {
   ul {
-    margin-bottom:2em!important;
+		margin-bottom: 2em;
     li:first-child>a {
-      border-top: 1px solid #ddd!important;
+			border-top: 1px solid #ddd;
     }
     li>a {
-      border-bottom: 1px solid #ddd!important;
-      padding: 0.5em 0 0.5em 1em!important;
+			border-bottom: 1px solid #ddd;
+				padding: 0.5em 0 0.5em 1em;
     }
   }
 
@@ -27,7 +27,7 @@
 
 .wp-block-navigation .wp-block-navigation__submenu-icon {
 
-		color: var(--wp--preset--color--ucsc-primary-yellow) !important;
+		color: var(--wp--preset--color--ucsc-primary-yellow);
 }
 
 //BREADCRUMBS
