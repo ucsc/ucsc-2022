@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.5](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2022-06-09)
+
+
+### Features
+
+* :lipstick: ([9693a27](https://github.com/ucsc/ucsc-2022/commit/9693a277a95b267b7f0b71c9ad47ab8815bcd45d)), closes [#50](https://github.com/ucsc/ucsc-2022/issues/50)
+* :sparkles: Create PHP template for dynamic content ([0c8c710](https://github.com/ucsc/ucsc-2022/commit/0c8c710cd9b5f68f39a41218da79fde91d318191)), closes [#47](https://github.com/ucsc/ucsc-2022/issues/47)
+
+
+### Bug Fixes
+
+* :art: refactored Favicons to utilize manifest; ran `lint-fix` ([032e3f3](https://github.com/ucsc/ucsc-2022/commit/032e3f31819ed9f21c8dd25b51c783cd1317a727))
+* :bug: `theme.json` and `webpack.config.js` ([cc94cb1](https://github.com/ucsc/ucsc-2022/commit/cc94cb1cc67fa4b5e262af4c61b269312f4e7693))
+* :bug: Adjust `functions.php` and template files to account for global logo. Adjust CSS. Fixes [#36](https://github.com/ucsc/ucsc-2022/issues/36) ([390cecf](https://github.com/ucsc/ucsc-2022/commit/390cecfe992dfd3e5b0ffdb5201e05581b1f0a0f))
+* :fire: Remove errant `!important`s from `_buttons.scss` and `_navigation.scss` ([6184492](https://github.com/ucsc/ucsc-2022/commit/6184492f96a70aa7dc44a659da9167a292236178))
+* 🐛 Fix color name slug for light blue ([810b0c7](https://github.com/ucsc/ucsc-2022/commit/810b0c7e4bb87c3cb98a70aeab4d62e526ec92e2))
+* 🔥 Remove core block patterns from the editor ([4dbbf6b](https://github.com/ucsc/ucsc-2022/commit/4dbbf6b73a8b87739fe986f4c3f2ff8f58a5820b))
+
 ## [1.0.0-rc.4](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2022-05-15)
 
 
