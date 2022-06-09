@@ -32,23 +32,23 @@
 		"standard-version": "^9.3.2"
 	},
 	"files": [
-		"build",
-		"wp-blocks",
-		"templates",
-		"parts",
-		"style.css",
-		"theme.json",
 		"screenshot.png",
 		"vendor",
+		"!vendor/bin",
 		"!vendor/squizlabs/php_codesniffer",
 		"!vendor/dealerdirect",
 		"!vendor/wp-coding-standards",
 		"lib",
-		"images",
-		"functions.php",
-		"index.php",
 		"README.md",
 		"readme.txt",
-		"CHANGELOG.md"
+		"CHANGELOG.md",
+		"build",
+		"theme.json",
+		"templates",
+		"parts",
+		"wp-blocks",
+		"images",
+		"style.css",
+		"*.php"
 	]
 }
