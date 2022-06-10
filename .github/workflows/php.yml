@@ -1,4 +1,4 @@
-name: Install Composer dependencies
+name: Install dependencies and build
 
 on:
   push:
@@ -35,3 +35,6 @@ jobs:
     
     - name: Install node dependencies
       run: npm install
+      
+    - name: Build theme
+      run: npm run build     
