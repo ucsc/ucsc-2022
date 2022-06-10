@@ -17,6 +17,7 @@ jobs:
     - uses: actions/setup-node@v3.3.0
       with:
         node-version: 14
+        cache: 'npm'
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -38,3 +39,6 @@ jobs:
       
     - name: Build theme
       run: npm run build     
+
+    - name: Package theme
+      run: wp-scripts plugin-zip     
