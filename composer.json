@@ -1,4 +1,7 @@
 {
+	"name": "ucsantacruz/ucsc-2022",
+	"description": "2022 WordPress theme for UC Santa Cruz websites",
+	"license": "MIT",
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^2.2",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
