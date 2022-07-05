@@ -1,0 +1,22 @@
+//
+// Site Header
+//
+
+.site-header {
+
+		.site-header__title {
+
+			.mainsite-logo {
+				background: transparent url($campus-logo) no-repeat 0 0;
+				display: block;
+				height: auto;
+				overflow: hidden;
+				text-indent: -10000px;
+				width: 220px;
+				margin-bottom: 0.35em;
+
+			}
+		}
+
+	}
+

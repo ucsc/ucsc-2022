@@ -1,0 +1,26 @@
+//
+// UCSC Header
+//
+
+.ucsc-header {
+
+	background: linear-gradient(90deg, #003c6c 40%, #006aad 40%);
+
+	[class*="ucsc-header__inner-"] {
+		align-self: center;
+	}
+
+	.ucsc-header__inner {
+		background: linear-gradient(128deg, #003c6c 12rem, #006aad 12rem);
+	}
+
+	.ucsc-header__logo {
+			display: block;
+			height: 38px;
+			overflow: hidden;
+			width: 160px;
+			line-height: 1;
+			margin-left: 0;
+	}
+
+}
