@@ -6,6 +6,8 @@
 
 		.site-header__title {
 
+			margin-top: .2em;
+
 			.mainsite-logo {
 				background: transparent url($campus-logo) no-repeat 0 0;
 				display: block;
@@ -16,6 +18,10 @@
 				margin-bottom: 0.35em;
 
 			}
+		}
+
+		.site-header__separator {
+			margin: calc(var(--wp--style--block-gap)*1.25) 0 calc(var(--wp--style--block-gap)/2) 0;
 		}
 
 	}
