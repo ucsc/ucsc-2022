@@ -21,7 +21,11 @@
 		}
 
 		.site-header__separator {
-			margin: calc(var(--wp--style--block-gap)*1.25) 0 calc(var(--wp--style--block-gap)/2) 0;
+			margin: calc(var(--wp--custom--spacing--baseline)*0.75) 0 var(--wp--custom--spacing--small) 0;
+		}
+
+		.site-header__inner {
+			margin-top: 0;
 		}
 
 	}
