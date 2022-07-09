@@ -1,6 +1,3 @@
-@media screen and (min-width: 782px) {
-	.wp-block-navigation .has-child :where(.wp-block-navigation__submenu-container) .wp-block-navigation__submenu-container {
-		left: 10%;
-		top: 47.0px;
-	}
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+		color: var(--wp--preset--color--dark-gray);
 }
