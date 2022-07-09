@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-rc.6](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2022-07-09)
+
+
+### Features
+
+* ⚡️ UCSC header and site header, draft 1 ([18513ed](https://github.com/ucsc/ucsc-2022/commit/18513eda6c870f43960e0706bfad27d2fffb0c7a))
+* ✨ UCSC header and site header refactored for 6/2022 design ([57a342b](https://github.com/ucsc/ucsc-2022/commit/57a342b1a8d66100511bdd284bc500bee9aa2563))
+
+
+### Bug Fixes
+
+* 🐛 Fix permissions issue in workflow ([852916b](https://github.com/ucsc/ucsc-2022/commit/852916bb897f899aa751784046f61ea9080ef1a5))
+* 🐛 Remove flourish CSS styles ([329ee94](https://github.com/ucsc/ucsc-2022/commit/329ee947663b345c692e8dcbee243dea6aedc0dd))
+* 💄 Remove layout wrap padding while we figure out full-bleed bg colors ([83d2729](https://github.com/ucsc/ucsc-2022/commit/83d27297fc6f1a8da25cf573ca21b93a31012777))
+
 ## [1.0.0-rc.5](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2022-06-09)
 
 
