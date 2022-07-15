@@ -1,36 +1,28 @@
-<!-- wp:group {"backgroundColor":"ucsc-primary-blue","textColor":"white","className":"site-footer__inner","layout":{"inherit":true},"fontSize":"small"} -->
+<!-- wp:group {"backgroundColor":"ucsc-primary-blue","textColor":"white","className":"ucsc-footer__inner","layout":{"inherit":true},"fontSize":"small"} -->
 <div
-	class="wp-block-group site-footer__inner has-white-color has-ucsc-primary-blue-background-color has-text-color has-background has-small-font-size">
-	<!-- wp:columns {"isStackedOnMobile":false,"style":{"spacing":{"padding":{"top":".7rem","bottom":".7rem"}}}} -->
-	<div class="wp-block-columns is-not-stacked-on-mobile" style="padding-top:.7rem;padding-bottom:.7rem">
-		<!-- wp:column {"width":"15%","className":"ucsc-footer__inner-left"} -->
-		<div class="wp-block-column ucsc-footer__inner-left" style="flex-basis:15%">
+	class="wp-block-group ucsc-footer__inner has-white-color has-ucsc-primary-blue-background-color has-text-color has-background has-small-font-size">
+	<!-- wp:columns {"verticalAlignment":"center","isStackedOnMobile":false,"style":{"spacing":{"padding":{"top":".7rem","bottom":".7rem"}}}} -->
+	<div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile"
+		style="padding-top:.7rem;padding-bottom:.7rem">
+		<!-- wp:column {"verticalAlignment":"center","width":"15%","className":"ucsc-footer__inner-left"} -->
+		<div class="wp-block-column is-vertically-aligned-center ucsc-footer__inner-left" style="flex-basis:15%">
 			<!-- wp:template-part {"slug":"ucsc-logo","theme":"ucsc-2022","className":"ucsc-footer__logo"} /-->
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"85%","className":"ucsc-footer__inner-right"} -->
-		<div class="wp-block-column ucsc-footer__inner-right" style="flex-basis:85%">
-			<!-- wp:navigation {"textColor":"white","showSubmenuIcon":false,"layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"fontSize":"small"} -->
-			<!-- wp:navigation-link {"label":"MyUCSC","url":"https://my.ucsc.edu/","isTopLevelLink":true} /-->
-
-			<!-- wp:navigation-link {"label":"People","url":"https://www.ucsc.edu/tools/people.html","isTopLevelLink":true} /-->
-			<!-- /wp:navigation -->
+		<!-- wp:column {"verticalAlignment":"center","width":"85%","className":"ucsc-footer__inner-right"} -->
+		<div class="wp-block-column is-vertically-aligned-center ucsc-footer__inner-right" style="flex-basis:85%">
+			<!-- wp:paragraph {"align":"right","textColor":"white","fontSize":"small","className":"ucsc-footer__links"} -->
+			<p class="has-text-align-right has-white-color has-text-color has-small-font-size ucsc-footer__links">
+				<a href="https://academicaffairs.ucsc.edu/accreditation/">Accreditation</a>
+				<a href="https://www.ucsc.edu/about/employment.html">Employment</a>
+				<a href="https://its.ucsc.edu/terms/">Privacy&nbsp;Policy&nbsp;&amp;&nbsp;Terms</a>
+				[copyright] UC Regents
+			</p>
+			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
 	</div>
 	<!-- /wp:columns -->
-
-	<!-- wp:paragraph {"align":"center","textColor":"white","className":"page-meta","fontSize":"small"} -->
-	<p class="has-text-align-center page-meta has-white-color has-text-color has-small-font-size">
-		Last modified: [last-modified]
-	</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:paragraph {"textColor":"white","className":"has-text-align-center has-small-font-size"} -->
-	<p class="has-text-align-center has-small-font-size has-white-color has-text-color">
-		[copyright] UC Regents
-	</p>
-	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
