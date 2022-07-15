@@ -4,6 +4,24 @@
 
 .site-footer {
 
+ &:before {
+	background: transparent url(/images/waves-flat-bottom.svg) no-repeat center top;
+	height: 10rem;
+	display:block;
+	content: '';
+	margin: 3rem auto 2rem auto;
+	background-size: cover;
+	border-bottom: 1px solid var(--wp--preset--color--ucsc-primary-blue);
+	opacity: .5;
+ }
+
+ .site-footer__social-links {
+	justify-content: flex-start;
+
+	@include media-query($small) {
+		justify-content: flex-end;
+	}
+ }
 
 }
 
