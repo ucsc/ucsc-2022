@@ -1,0 +1,17 @@
+/**
+	UCSC footer
+*/
+
+.ucsc-footer {
+
+	&:before {
+		background: transparent url(/images/banana-slug.svg) no-repeat right top;
+		height: 3.5rem;
+		display:block;
+		content: '';
+		max-width: 72rem;
+		margin: 3rem auto 0 auto;
+	}
+
+
+}
