@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.6...v1.0.0) (2022-07-16)
+
+
+### Features
+
+* ⚡️ Add custom palettes for horizontal lines and buttons ([ac8bc84](https://github.com/ucsc/ucsc-2022/commit/ac8bc8427812a635b683e1fb4367cd17a6e3041a))
+* ⚡️ Add stylesheet partials for site and ucsc footers ([81e7ea6](https://github.com/ucsc/ucsc-2022/commit/81e7ea60f997cf432480d52ba5af97959aedad51))
+* ⚡️ Finalize footer region structure and layout ([9f3bdde](https://github.com/ucsc/ucsc-2022/commit/9f3bdde958f69e27dccd58ac85b54e15c967bdbc))
+* ⚡️ New structure for the footer ([a7b12c2](https://github.com/ucsc/ucsc-2022/commit/a7b12c2cf2e9bafd4e130ede7d4938eb60c4d713))
+* ✨ Finalize class names, structure, and blocks in the footer region ([e6e69ce](https://github.com/ucsc/ucsc-2022/commit/e6e69cefb4d12765dc550c20e980598014cd6907))
+* ✨ Styles and images for footer region ([2ee9d7b](https://github.com/ucsc/ucsc-2022/commit/2ee9d7b38ab30cbb60675fc2f77e195d7b7b84cc))
+
 ## [1.0.0-rc.6](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2022-07-09)
 
 
