@@ -1,0 +1,55 @@
+/**
+	UCSC footer
+*/
+
+.ucsc-footer {
+
+	&:before {
+		background: transparent url(/images/banana-slug.svg) no-repeat right top;
+		height: 3.5rem;
+		display:block;
+		content: '';
+		max-width: 72rem;
+		margin: 3rem auto 0 auto;
+	}
+
+	.ucsc-footer__inner {
+    padding: 0.25rem 0;
+	}
+
+	.ucsc-footer__logo {
+
+	}
+
+	.ucsc-footer__links {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: var(--wp--preset--font-size--medium);
+
+		@include media-query($small) {
+			flex-direction: row;
+			justify-content: right;
+		}
+
+		a {
+			color: var(--wp--preset--color--white);
+			text-decoration: none;
+
+			&:focus,
+			&:hover,
+			&:active {
+				color: var(--wp--preset--color--white);
+        text-decoration: underline;
+        text-decoration-color: var(--wp--preset--color--white);
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 0.12rem;
+        text-underline-offset: 0.12em;
+			}
+		}
+
+	}
+
+
+}

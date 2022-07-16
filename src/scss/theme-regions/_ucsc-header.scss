@@ -9,8 +9,13 @@
 	.ucsc-header__inner {
 		background: linear-gradient(128deg, #003c6c 12rem, #006aad 12rem);
 
-		@media screen and (min-width: 782px) {
-			background: linear-gradient(128deg, #003c6c 16rem, #006aad 16rem);
+		@include media-query($small) {
+			background-image: linear-gradient(128deg, #003c6c 14rem, #006aad 14rem);
+			// TODO: Create SVG with BG colors for this image
+			// background-image: url(/images/waves-transition.svg), linear-gradient(128deg, #003c6c 16rem, #006aad 16rem);
+			// background-repeat: no-repeat;
+			// background-position: center center, center top;
+			// background-size: 100%, cover;
 		}
 	}
 

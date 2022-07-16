@@ -1,17 +1,21 @@
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query-min($size) {
-	@media screen and (min-width: $size) {
-		@content;
-	}
-}
+//
+// 		Breakpoint mixin
+//
 
-@mixin media-query-max($size) {
+// 		Screen width breakpoints
+//
+// 		Styles will take effect 1px above these sizes
+$small: 780px;
+$medium: 1080px;
+$large: 1200px;
+
+// 		Use media queries like this:
+//
+// 		@include media-query($on-palm) {
+//   		[Write your selectors and style rules in here]
+// 		}
+//
+@mixin media-query($size) {
 	@media screen and (min-width: $size) {
 		@content;
 	}

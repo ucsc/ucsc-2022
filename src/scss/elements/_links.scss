@@ -1,9 +1,10 @@
  a {
-    text-decoration-color: var(--wp--custom--color--link-decoration);
-    text-decoration-thickness: .14em;
-    text-underline-offset: .1em;
+	color: var(--wp--preset--color--ucsc-primary-blue);
+	text-decoration-color: var(--wp--custom--color--link-decoration);
+	text-decoration-thickness: .12rem;
+	text-underline-offset: .12em;
   &:hover, &:focus, &:active {
-        color: var(--wp--preset--color--ucsc-primary-blue);
+        color: var(--wp--preset--color--ucsc-secondary-blue);
         text-decoration: underline;
         text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
         text-decoration-skip-ink: auto;
