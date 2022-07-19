@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/ucsc/ucsc-2022/compare/v1.0.0...v1.0.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* 🐛 Fix broken search results (redundant query loops) ([c605fb4](https://github.com/ucsc/ucsc-2022/commit/c605fb413575380d4cea86068ea606a9c29ed77c))
+
 ## [1.0.0](https://github.com/ucsc/ucsc-2022/compare/v1.0.0-rc.6...v1.0.0) (2022-07-16)
 
 
