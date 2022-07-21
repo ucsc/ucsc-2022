@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/ucsc/ucsc-2022/compare/v1.0.1...v1.0.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* 🎨 Cover image does not have an overlay in UCSC pattern. Fixes [#62](https://github.com/ucsc/ucsc-2022/issues/62) ([#64](https://github.com/ucsc/ucsc-2022/issues/64)) ([4d5fb88](https://github.com/ucsc/ucsc-2022/commit/4d5fb88f494a6b22065c7bf15498933d64e1ef01))
+* 🎨 Footer adheres to the bottom of the window ([#67](https://github.com/ucsc/ucsc-2022/issues/67)) ([b80801e](https://github.com/ucsc/ucsc-2022/commit/b80801ec4bc214885fa17626b037091490be2fa8))
+* 🎨 Update dropdown menu styles and fix responsive menu.  Fixes [#34](https://github.com/ucsc/ucsc-2022/issues/34) ([#65](https://github.com/ucsc/ucsc-2022/issues/65)) ([dadacfc](https://github.com/ucsc/ucsc-2022/commit/dadacfc2c74332a11abe89552e4c42a7a586a443))
+* 🐛 Remove deprecated wp:query-loop wrapper block from template files ([46f8acc](https://github.com/ucsc/ucsc-2022/commit/46f8acc37c8b73aa269feb844eedb8e01d8de6f8))
+
 ### [1.0.2](https://github.com/ucsc/ucsc-2022/compare/v1.0.1...v1.0.2) (2022-07-21)
 
 
