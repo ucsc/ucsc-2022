@@ -26,17 +26,8 @@ jobs:
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
       - name: Install PHP dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install --no-progress
 
       - name: Build theme
         run: npm run build
@@ -48,3 +39,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ucsc-2022.zip
+          generate_release_notes: true
