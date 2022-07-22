@@ -303,6 +303,6 @@ add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 /**
  * Include block patterns
  */
-if ( file_exists( get_theme_file_path( 'lib/patterns.php' ) ) ) {
-	include get_theme_file_path( 'lib/patterns.php' );
+if ( file_exists( get_theme_file_path( 'lib/block-patterns.php' ) ) ) {
+	include get_theme_file_path( 'lib/block-patterns.php' );
 }
