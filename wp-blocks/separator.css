@@ -1,0 +1,15 @@
+.wp-block-separator.has-background:not(.is-style-dots) {
+	height: 2px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-small {
+	width: 20%;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-medium {
+	width: 45%;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-large {
+	width: 66%;
+}
