@@ -144,6 +144,222 @@
 			]
 		},
 		"blocks": {
+			"core/group": {
+				"color": {
+					"background": true,
+					"palette": [
+						{
+							"slug": "white",
+							"color": "#fff",
+							"name": "White"
+						},
+						{
+							"slug": "lightest-gray",
+							"color": "#f5f5f5",
+							"name": "Lightest Gray"
+						},
+						{
+							"slug": "light-gray",
+							"color": "#e3e3e3",
+							"name": "Light Gray"
+						},
+						{
+							"slug": "gray",
+							"color": "#c1c4ca",
+							"name": "Gray"
+						},
+						{
+							"slug": "medium-gray",
+							"color": "#9999a0",
+							"name": "Medium Gray"
+						},
+						{
+							"slug": "dark-gray",
+							"color": "#555555",
+							"name": "Dark Gray"
+						},
+						{
+							"slug": "black",
+							"color": "#000",
+							"name": "Black"
+						},
+						{
+							"slug": "ucsc-primary-blue",
+							"color": "#003c6c",
+							"name": "Primary blue"
+						},
+						{
+							"slug": "ucsc-primary-yellow",
+							"color": "#fdc700",
+							"name": "Primary yellow"
+						},
+						{
+							"slug": "ucsc-secondary-blue",
+							"color": "#006aad",
+							"name": "Secondary blue"
+						},
+						{
+							"slug": "ucsc-light-blue",
+							"color": "#d2e7f4",
+							"name": "Light Blue"
+						},
+						{
+							"slug": "ucsc-green",
+							"color": "#93C02D",
+							"name": "Green"
+						},
+						{
+							"slug": "ucsc-rubine-red",
+							"color": "#DA216D",
+							"name": "Rubine red"
+						}
+					]
+				}
+			},
+			"core/column": {
+				"color": {
+					"background": true,
+					"palette": [
+						{
+							"slug": "white",
+							"color": "#fff",
+							"name": "White"
+						},
+						{
+							"slug": "lightest-gray",
+							"color": "#f5f5f5",
+							"name": "Lightest Gray"
+						},
+						{
+							"slug": "light-gray",
+							"color": "#e3e3e3",
+							"name": "Light Gray"
+						},
+						{
+							"slug": "gray",
+							"color": "#c1c4ca",
+							"name": "Gray"
+						},
+						{
+							"slug": "medium-gray",
+							"color": "#9999a0",
+							"name": "Medium Gray"
+						},
+						{
+							"slug": "dark-gray",
+							"color": "#555555",
+							"name": "Dark Gray"
+						},
+						{
+							"slug": "black",
+							"color": "#000",
+							"name": "Black"
+						},
+						{
+							"slug": "ucsc-primary-blue",
+							"color": "#003c6c",
+							"name": "Primary blue"
+						},
+						{
+							"slug": "ucsc-primary-yellow",
+							"color": "#fdc700",
+							"name": "Primary yellow"
+						},
+						{
+							"slug": "ucsc-secondary-blue",
+							"color": "#006aad",
+							"name": "Secondary blue"
+						},
+						{
+							"slug": "ucsc-light-blue",
+							"color": "#d2e7f4",
+							"name": "Light Blue"
+						},
+						{
+							"slug": "ucsc-green",
+							"color": "#93C02D",
+							"name": "Green"
+						},
+						{
+							"slug": "ucsc-rubine-red",
+							"color": "#DA216D",
+							"name": "Rubine red"
+						}
+					]
+				}
+			},
+			"core/columns": {
+				"color": {
+					"background": true,
+					"palette": [
+						{
+							"slug": "white",
+							"color": "#fff",
+							"name": "White"
+						},
+						{
+							"slug": "lightest-gray",
+							"color": "#f5f5f5",
+							"name": "Lightest Gray"
+						},
+						{
+							"slug": "light-gray",
+							"color": "#e3e3e3",
+							"name": "Light Gray"
+						},
+						{
+							"slug": "gray",
+							"color": "#c1c4ca",
+							"name": "Gray"
+						},
+						{
+							"slug": "medium-gray",
+							"color": "#9999a0",
+							"name": "Medium Gray"
+						},
+						{
+							"slug": "dark-gray",
+							"color": "#555555",
+							"name": "Dark Gray"
+						},
+						{
+							"slug": "black",
+							"color": "#000",
+							"name": "Black"
+						},
+						{
+							"slug": "ucsc-primary-blue",
+							"color": "#003c6c",
+							"name": "Primary blue"
+						},
+						{
+							"slug": "ucsc-primary-yellow",
+							"color": "#fdc700",
+							"name": "Primary yellow"
+						},
+						{
+							"slug": "ucsc-secondary-blue",
+							"color": "#006aad",
+							"name": "Secondary blue"
+						},
+						{
+							"slug": "ucsc-light-blue",
+							"color": "#d2e7f4",
+							"name": "Light Blue"
+						},
+						{
+							"slug": "ucsc-green",
+							"color": "#93C02D",
+							"name": "Green"
+						},
+						{
+							"slug": "ucsc-rubine-red",
+							"color": "#DA216D",
+							"name": "Rubine red"
+						}
+					]
+				}
+			},
 			"core/separator": {
 				"color": {
 					"background": true,
