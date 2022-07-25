@@ -23,12 +23,6 @@ jobs:
       - name: Install Node dependencies
         run: npm install
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate --strict
-
-      - name: Install PHP dependencies
-        run: composer install --no-progress
-
       - name: Build theme
         run: npm run build
 
