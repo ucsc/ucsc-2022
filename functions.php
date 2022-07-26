@@ -237,16 +237,6 @@ function ucsc_post_subtitle( $block_content = '', $block = array() ) {
 }
 add_filter( 'render_block', 'ucsc_post_subtitle', 10, 2 );
 
-/**
- * Breadcrumbs constructor callback helper
- *
- * @return string
- */
-function ucsc_breadcrumbs_constructor() {
-	if (shortcode_exists('[breadcrumb]')) {
-		return do_shortcode( '[breadcrumb]' );
-	}
-}
 
 /**
  * Add Breadcrumbs above Post Title.
@@ -256,10 +246,10 @@ function ucsc_breadcrumbs_constructor() {
  * @return string
  */
 function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
-	if ( ucsc_breadcrumbs_constructor() ) {
-		$breadcrumbs = ucsc_breadcrumbs_constructor();
+	if (shortcode_exists('[breadcrumb]')) {
+		$breadcrumbs = do_shortcode( '[breadcrumb]' );
 	}
-	if ( is_singular() ) {
+	if ( is_singular() && isset($breadcrumbs) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			if ( isset( $block['attrs']['level'] ) && isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'primary-post-title' ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
