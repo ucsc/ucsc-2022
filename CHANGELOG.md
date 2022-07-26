@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ucsc/ucsc-2022/compare/v1.1.0...v1.2.0) (2022-07-26)
+
+
+### Features
+
+* 🎨 Add editor styles for width of separator block. Fixes [#87](https://github.com/ucsc/ucsc-2022/issues/87) ([#89](https://github.com/ucsc/ucsc-2022/issues/89)) ([588ca25](https://github.com/ucsc/ucsc-2022/commit/588ca2566182a2391c05dbe4fe779fc53e042616))
+* 🎨 Allow green and pink as a background color in columns block. Fixes [#77](https://github.com/ucsc/ucsc-2022/issues/77) ([37cf965](https://github.com/ucsc/ucsc-2022/commit/37cf9656489a389dcede71a02966862ca304a2a4))
+
+
+### Bug Fixes
+
+* :lipstick: Stub out styles for `<details>` element ([6f85016](https://github.com/ucsc/ucsc-2022/commit/6f85016b54c49392f0f128e9814927313eb84958))
+* 🎨 Make the default font weight 400 on all headings  Fixes [#80](https://github.com/ucsc/ucsc-2022/issues/80) ([44e330c](https://github.com/ucsc/ucsc-2022/commit/44e330c640825d07150c66ce73ce65ee183b6598))
+* 🐛 Do not filter page title block unless there is a breadcrumb shortcode ([#92](https://github.com/ucsc/ucsc-2022/issues/92)) ([6ca01e7](https://github.com/ucsc/ucsc-2022/commit/6ca01e74938a4121f43d0faf31525bea8a9067ad))
+
 ## [1.1.0](https://github.com/ucsc/ucsc-2022/compare/v1.0.1...v1.1.0) (2022-07-22)
 
 
