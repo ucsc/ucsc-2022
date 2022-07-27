@@ -12,9 +12,9 @@
  */
 
 /** See: https://github.com/WordPress/gutenberg/issues/39207#issuecomment-1087347901 */
-$ucsc_header = do_blocks( '<!-- wp:template-part {"slug":"header","theme":"ucsc-2022","tagName":"header","className":"site-header"} /-->' );
+$ucsc_header = do_blocks( '<!-- wp:template-part {"slug":"ucsc-header","theme":"ucsc-2022","className":"ucsc-header"} /-->' . '<!-- wp:template-part {"slug":"site-header","theme":"ucsc-2022","className":"site-header"} /-->' );
 $GLOBALS['ucsc_plugin_content'] = do_blocks( '<!-- wp:template-part {"className":"plugin-content","slug":"content-plugin","theme":"ucsc-2022"} /-->' );
-$GLOBALS['ucsc_footer'] = do_blocks( '<!-- wp:template-part {"slug":"footer","theme":"ucsc-2022","tagName":"footer","className":"site-footer"} /-->' );
+$GLOBALS['ucsc_footer'] = do_blocks( '<!-- wp:template-part {"slug":"site-footer","theme":"ucsc-2022","className":"site-footer"} /-->' . '<!-- wp:template-part {"slug":"ucsc-footer","theme":"ucsc-2022","className":"ucsc-footer"} /-->' );
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
