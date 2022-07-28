@@ -12,8 +12,8 @@
 
 .wp-block-rss__item-title {
 	order: 3;
-	font-size: var(--wp--preset--font-size--medium);
-	font-weight: 600;
+	font-size: var(--wp--preset--font-size--base);
+		font-weight: 400;
 	margin-top: calc(var(--wp--preset--font-size--normal) / 6);
 	margin-bottom: calc(var(--wp--preset--font-size--normal) / 5);
 }
