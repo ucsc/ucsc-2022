@@ -35,6 +35,12 @@ wp.domReady(() => {
 		label: "Large",
 		style_handle: "ucsc-separator",
 	});
+	wp.blocks.registerBlockStyle("core/separator", {
+		name: "ucsc-full",
+		label: "Content",
+		style_handle: "ucsc-separator",
+	});
 	wp.blocks.unregisterBlockStyle("core/separator", "default");
 	wp.blocks.unregisterBlockStyle("core/separator", "dots");
+	wp.blocks.unregisterBlockStyle("core/separator", "wide");
 });

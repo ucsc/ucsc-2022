@@ -7,9 +7,13 @@
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-medium {
-	width: 45%;
+	width: 40%;
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-large {
-	width: 66%;
+	width: 60%;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-full {
+	width: 100%;
 }
