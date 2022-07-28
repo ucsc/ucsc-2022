@@ -11,7 +11,7 @@
 }
 
 .wp-block-rss__item-title {
-	order: 3;
+	order: 1;
 	font-size: var(--wp--preset--font-size--base);
 		font-weight: 400;
 	margin-top: calc(var(--wp--preset--font-size--normal) / 6);
@@ -25,7 +25,7 @@
 }
 
 .wp-block-rss__item-publish-date {
-	order: 1;
+	order: 3;
 	color: var(--wp--custom--color--light-gray);
 	font-size: var(--wp--preset--font-size--small);
 }
@@ -36,6 +36,6 @@
 
 .wp-block-rss__item-excerpt {
 	order: 4;
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--base);
 	margin-bottom: calc(var(--wp--preset--font-size--normal) / 2);
 }
