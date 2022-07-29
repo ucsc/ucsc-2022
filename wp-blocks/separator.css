@@ -1,19 +1,4 @@
-.wp-block-separator.has-background:not(.is-style-dots) {
-	height: 2px;
-}
-
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-small {
-	width: 20%;
-}
-
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-medium {
-	width: 40%;
-}
-
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-large {
-	width: 60%;
-}
-
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-ucsc-full {
+/* core/separator is always 100% of it's parent */
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	width: 100%;
 }
