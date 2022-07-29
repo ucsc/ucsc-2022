@@ -25,59 +25,79 @@
 			"gradients": [],
 			"palette": [
 				{
-					"slug": "white",
-					"color": "#fff",
-					"name": "White"
+					"name": "Black",
+					"color": "#000000",
+					"slug": "black"
 				},
 				{
-					"slug": "lightest-gray",
-					"color": "#f5f5f5",
-					"name": "Lightest Gray"
-				},
-				{
-					"slug": "light-gray",
-					"color": "#e3e3e3",
-					"name": "Light Gray"
-				},
-				{
-					"slug": "gray",
-					"color": "#c1c4ca",
-					"name": "Gray"
-				},
-				{
-					"slug": "medium-gray",
-					"color": "#9999a0",
-					"name": "Medium Gray"
-				},
-				{
-					"slug": "dark-gray",
+					"name": "Dark Gray",
 					"color": "#555555",
-					"name": "Dark Gray"
+					"slug": "dark-gray"
 				},
 				{
-					"slug": "black",
-					"color": "#000",
-					"name": "Black"
+					"name": "Medium Gray",
+					"color": "#9999a0",
+					"slug": "medium-gray"
 				},
 				{
-					"slug": "ucsc-primary-blue",
+					"name": "Gray",
+					"color": "#c1c4ca",
+					"slug": "gray"
+				},
+				{
+					"name": "Light Gray",
+					"color": "#e3e3e3",
+					"slug": "light-gray"
+				},
+				{
+					"name": "Lightest Gray",
+					"color": "#f5f5f5",
+					"slug": "lightest-gray"
+				},
+				{
+					"name": "White",
+					"color": "#ffffff",
+					"slug": "white"
+				},
+				{
+					"name": "Primary blue",
 					"color": "#003c6c",
-					"name": "Primary blue"
+					"slug": "ucsc-primary-blue"
 				},
 				{
-					"slug": "ucsc-primary-yellow",
+					"name": "Primary Yellow",
 					"color": "#fdc700",
-					"name": "Primary yellow"
+					"slug": "ucsc-primary-yellow"
 				},
 				{
-					"slug": "ucsc-secondary-blue",
+					"name": "Secondary blue",
 					"color": "#006aad",
-					"name": "Secondary blue"
+					"slug": "ucsc-secondary-blue"
 				},
 				{
-					"slug": "ucsc-light-blue",
-					"color": "#d2e7f4",
-					"name": "Light Blue"
+					"name": "Pacific Blue",
+					"color": "#13a5dc",
+					"slug": "ucsc-pacific-blue"
+				},
+				{
+					"name": "Ocean Blue",
+					"color": "#007988",
+					"slug": "ucsc-ocean-blue"
+				},
+				{
+					"name": "Orange",
+					"color": "#f29813",
+					"slug": "ucsc-orange"
+				},
+				{
+					"name": "Green",
+					"color": "#93c02d",
+					"slug": "ucsc-green"
+				},
+				{
+					"name": "Rubine Red",
+					"color": "#da216d",
+					"slug": "ucsc-rubine-red"
 				}
 			]
 		},
@@ -146,250 +166,22 @@
 		"blocks": {
 			"core/group": {
 				"color": {
-					"background": true,
-					"palette": [
-						{
-							"slug": "white",
-							"color": "#fff",
-							"name": "White"
-						},
-						{
-							"slug": "lightest-gray",
-							"color": "#f5f5f5",
-							"name": "Lightest Gray"
-						},
-						{
-							"slug": "light-gray",
-							"color": "#e3e3e3",
-							"name": "Light Gray"
-						},
-						{
-							"slug": "gray",
-							"color": "#c1c4ca",
-							"name": "Gray"
-						},
-						{
-							"slug": "medium-gray",
-							"color": "#9999a0",
-							"name": "Medium Gray"
-						},
-						{
-							"slug": "dark-gray",
-							"color": "#555555",
-							"name": "Dark Gray"
-						},
-						{
-							"slug": "black",
-							"color": "#000",
-							"name": "Black"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"slug": "ucsc-secondary-blue",
-							"color": "#006aad",
-							"name": "Secondary blue"
-						},
-						{
-							"slug": "ucsc-light-blue",
-							"color": "#d2e7f4",
-							"name": "Light Blue"
-						},
-						{
-							"slug": "ucsc-green",
-							"color": "#93C02D",
-							"name": "Green"
-						},
-						{
-							"slug": "ucsc-rubine-red",
-							"color": "#DA216D",
-							"name": "Rubine red"
-						}
-					]
+					"background": true
 				}
 			},
 			"core/column": {
 				"color": {
-					"background": true,
-					"palette": [
-						{
-							"slug": "white",
-							"color": "#fff",
-							"name": "White"
-						},
-						{
-							"slug": "lightest-gray",
-							"color": "#f5f5f5",
-							"name": "Lightest Gray"
-						},
-						{
-							"slug": "light-gray",
-							"color": "#e3e3e3",
-							"name": "Light Gray"
-						},
-						{
-							"slug": "gray",
-							"color": "#c1c4ca",
-							"name": "Gray"
-						},
-						{
-							"slug": "medium-gray",
-							"color": "#9999a0",
-							"name": "Medium Gray"
-						},
-						{
-							"slug": "dark-gray",
-							"color": "#555555",
-							"name": "Dark Gray"
-						},
-						{
-							"slug": "black",
-							"color": "#000",
-							"name": "Black"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"slug": "ucsc-secondary-blue",
-							"color": "#006aad",
-							"name": "Secondary blue"
-						},
-						{
-							"slug": "ucsc-light-blue",
-							"color": "#d2e7f4",
-							"name": "Light Blue"
-						},
-						{
-							"slug": "ucsc-green",
-							"color": "#93C02D",
-							"name": "Green"
-						},
-						{
-							"slug": "ucsc-rubine-red",
-							"color": "#DA216D",
-							"name": "Rubine red"
-						}
-					]
+					"background": true
 				}
 			},
 			"core/columns": {
 				"color": {
-					"background": true,
-					"palette": [
-						{
-							"slug": "white",
-							"color": "#fff",
-							"name": "White"
-						},
-						{
-							"slug": "lightest-gray",
-							"color": "#f5f5f5",
-							"name": "Lightest Gray"
-						},
-						{
-							"slug": "light-gray",
-							"color": "#e3e3e3",
-							"name": "Light Gray"
-						},
-						{
-							"slug": "gray",
-							"color": "#c1c4ca",
-							"name": "Gray"
-						},
-						{
-							"slug": "medium-gray",
-							"color": "#9999a0",
-							"name": "Medium Gray"
-						},
-						{
-							"slug": "dark-gray",
-							"color": "#555555",
-							"name": "Dark Gray"
-						},
-						{
-							"slug": "black",
-							"color": "#000",
-							"name": "Black"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"slug": "ucsc-secondary-blue",
-							"color": "#006aad",
-							"name": "Secondary blue"
-						},
-						{
-							"slug": "ucsc-light-blue",
-							"color": "#d2e7f4",
-							"name": "Light Blue"
-						},
-						{
-							"slug": "ucsc-green",
-							"color": "#93C02D",
-							"name": "Green"
-						},
-						{
-							"slug": "ucsc-rubine-red",
-							"color": "#DA216D",
-							"name": "Rubine red"
-						}
-					]
+					"background": true
 				}
 			},
 			"core/separator": {
 				"color": {
-					"background": true,
-					"palette": [
-						{
-							"slug": "ucsc-pacific-blue",
-							"color": "#13A5DC",
-							"name": "Pacific blue"
-						},
-						{
-							"slug": "ucsc-green",
-							"color": "#93C02D",
-							"name": "Green"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-rubine-red",
-							"color": "#DA216D",
-							"name": "Rubine red"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						}
-					]
+					"background": true
 				}
 			},
 			"core/button": {
@@ -402,31 +194,6 @@
 							"name": "White"
 						},
 						{
-							"slug": "lightest-gray",
-							"color": "#f5f5f5",
-							"name": "Lightest Gray"
-						},
-						{
-							"slug": "light-gray",
-							"color": "#e3e3e3",
-							"name": "Light Gray"
-						},
-						{
-							"slug": "gray",
-							"color": "#c1c4ca",
-							"name": "Gray"
-						},
-						{
-							"slug": "medium-gray",
-							"color": "#9999a0",
-							"name": "Medium Gray"
-						},
-						{
-							"slug": "dark-gray",
-							"color": "#555555",
-							"name": "Dark Gray"
-						},
-						{
 							"slug": "black",
 							"color": "#000",
 							"name": "Black"
@@ -437,34 +204,29 @@
 							"name": "Primary blue"
 						},
 						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"slug": "ucsc-secondary-blue",
-							"color": "#006aad",
-							"name": "Secondary blue"
-						},
-						{
-							"slug": "ucsc-light-blue",
-							"color": "#d2e7f4",
-							"name": "Light Blue"
-						},
-						{
-							"slug": "ucsc-pacific-blue",
-							"color": "#13A5DC",
-							"name": "Pacific blue"
-						},
-						{
 							"slug": "ucsc-green",
 							"color": "#93C02D",
 							"name": "Green"
 						},
 						{
-							"slug": "ucsc-rubine-red",
-							"color": "#DA216D",
-							"name": "Rubine red"
+							"slug": "ucsc-primary-yellow",
+							"color": "#fdc700",
+							"name": "Primary yellow"
+						},
+						{
+							"name": "Orange",
+							"color": "#f29813",
+							"slug": "ucsc-orange"
+						},
+						{
+							"name": "Danger Red",
+							"color": "#bb2f2f",
+							"slug": "ucsc-danger-red"
+						},
+						{
+							"name": "Success Green",
+							"color": "#417b14",
+							"slug": "ucsc-success-green"
 						}
 					]
 				},
@@ -475,7 +237,7 @@
 			"core/paragraph": {
 				"color": {
 					"custom": false,
-					"background": false,
+					"background": true,
 					"text": true,
 					"link": true
 				},
@@ -518,13 +280,9 @@
 				"radius": "0"
 			},
 			"color": {
-				"link": "#01589d",
-				"link-decoration": "#ffc500",
-				"heading-text": "#3e474a",
-				"site-title": "var(--wp--preset--color--black)",
-				"default-text": "#222222",
-				"flourish": "#a2a09c",
-				"light-gray": "#555"
+				"link": "var(--wp--preset--color--ucsc-primary-blue)",
+				"link-decoration": "var(--wp--preset--color--ucsc-primary-yellow)",
+				"site-title": "var(--wp--preset--color--black)"
 			}
 		}
 	},
@@ -614,7 +372,7 @@
 					"fontSize": "var(--wp--preset--font-size--small)"
 				},
 				"color": {
-					"text": "var(--wp--custom--color--light-gray)"
+					"text": "var(--wp--preset--color--light-gray)"
 				},
 				"spacing": {
 					"margin": {
