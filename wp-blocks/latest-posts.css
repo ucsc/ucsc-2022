@@ -1,40 +1,34 @@
 /*
-	Custom styles for the core/rss block
+	Custom styles for the latest posts block
 	so they match the UCSC design spec.
 
-	@since 1.0.0-beta.6
+	@since 1.2.0
 */
-.wp-block-rss__item {
-	display: flex;
-	flex-direction: column;
+.wp-block-latest-posts__list {
 	margin-bottom: calc(var(--wp--preset--font-size--small) / 1.5);
 }
 
-.wp-block-rss__item-title {
-	order: 1;
+.wp-block-latest-posts__post-title {
 	font-size: var(--wp--preset--font-size--base);
 	font-weight: 400;
 	margin-top: calc(var(--wp--preset--font-size--normal) / 6);
-}
-
-.wp-block-rss__item-title a {
+	margin-bottom: calc(var(--wp--preset--font-size--normal) / 5);
 	text-decoration: none;
 	color: var(--wp--custom--color--link);
 	display: block;
 }
 
-.wp-block-rss__item-publish-date {
-	order: 3;
+.wp-block-latest-posts__post-date {
 	color: var(--wp--custom--color--light-gray);
 	font-size: var(--wp--preset--font-size--small);
 }
 
-.wp-block-rss__item-author {
-	order: 2;
+.wp-block-latest-posts__post-excerpt {
+	font-size: var(--wp--preset--font-size--base);
+	margin-top: 0;
+	margin-bottom: calc(var(--wp--preset--font-size--normal) / 2);
 }
 
-.wp-block-rss__item-excerpt {
-	order: 4;
-	font-size: var(--wp--preset--font-size--base);
-	margin-bottom: calc(var(--wp--preset--font-size--normal) / 2);
+.wp-block-latest-posts__post-author {
+	margin-bottom: calc(var(--wp--preset--font-size--normal) / 5);
 }
