@@ -5,6 +5,7 @@
 .ucsc-footer {
 
 	&:before {
+		position: relative;
 		background: transparent url(/images/banana-slug.svg) no-repeat right 1px;
 		height: 3rem;
 		display:block;
