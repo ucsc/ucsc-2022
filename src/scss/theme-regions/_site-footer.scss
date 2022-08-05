@@ -5,6 +5,7 @@
 .site-footer {
 
  &:before {
+	position: relative;
 	background: transparent url(/images/waves-flat-bottom.svg) no-repeat center 30px;
 	height: 6rem;
 	display:block;
