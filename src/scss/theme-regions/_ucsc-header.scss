@@ -7,15 +7,15 @@
 	background: linear-gradient(90deg, #003c6c 40%, #006aad 40%);
 
 	.ucsc-header__inner {
-		background: linear-gradient(128deg, #003c6c 12rem, #006aad 12rem);
+		background-image: url(/images/waves-transition.svg), linear-gradient(120deg, #003c6c 12rem, #006aad 12rem);
+			background-repeat: no-repeat;
+			background-position: 54px center, center top;
+			background-size: cover, cover;
 
 		@include media-query($small) {
-			background-image: linear-gradient(128deg, #003c6c 14rem, #006aad 14rem);
-			// TODO: Create SVG with BG colors for this image
-			// background-image: url(/images/waves-transition.svg), linear-gradient(128deg, #003c6c 16rem, #006aad 16rem);
-			// background-repeat: no-repeat;
-			// background-position: center center, center top;
-			// background-size: 100%, cover;
+			// background-image: linear-gradient(128deg, #003c6c 14rem, #006aad 14rem);
+			background-position: 80px center, center top;
+			background-size: contain, cover;
 		}
 	}
 
@@ -24,7 +24,7 @@
 		align-items: center;
 	}
 
-	.ucsc-header__search {
+	.ucsc-header__search form > div {
 		background-color: var(--wp--preset--color--white);
 	}
 
