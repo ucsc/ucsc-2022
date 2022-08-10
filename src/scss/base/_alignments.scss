@@ -1,12 +1,6 @@
 /*--------------------------------------------------------------
 # - Alignments
 --------------------------------------------------------------*/
-.alignleft,
-.alignright,
-.aligncenter {
-	display: block;
-}
-
 .alignleft {
 	clear: left;
 }
@@ -14,8 +8,8 @@
 .alignright {
 	clear: right;
 }
+
 .aligncenter {
 	clear: both;
-	margin-right: auto;
-	margin-left: auto;
+	display: table;
 }
