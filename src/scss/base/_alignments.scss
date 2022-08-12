@@ -2,10 +2,12 @@
 # - Alignments
 --------------------------------------------------------------*/
 .alignleft {
+	float: left;
 	clear: left;
 }
 
 .alignright {
+	float: right;
 	clear: right;
 }
 
@@ -13,3 +15,4 @@
 	clear: both;
 	display: table;
 }
+

@@ -157,9 +157,9 @@
 					"name": "Roboto"
 				},
 				{
-					"fontFamily": "\"Roboto Condensed\", sans-serif",
-					"slug": "roboto-condensed",
-					"name": "Roboto Condensed"
+					"fontFamily": "\"Roboto Serif\", serif",
+					"slug": "roboto-serif",
+					"name": "Roboto Serif"
 				}
 			]
 		},
