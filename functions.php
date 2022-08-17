@@ -263,6 +263,23 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 add_filter( 'render_block', 'ucsc_add_breadcrumbs', 10, 2 );
 
 /**
+* Only administrators can move/remove UCSC header and footer regions
+* Note: this does not prevent editing of blocks. Only moving/removing
+*/
+add_filter(
+    'block_editor_settings_all',
+    function( $settings, $context ) {
+        // Allow for the Administrator role and above
+				// https://wordpress.org/support/article/roles-and-capabilities/.
+        $settings['canLockBlocks'] = current_user_can( 'switch_themes' );
+
+        return $settings;
+    },
+    10,
+    2
+);
+
+/**
 * Register Advanced Custom Fields
 */
 if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
