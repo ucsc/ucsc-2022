@@ -1,0 +1,5 @@
+.wp-block-image figcaption {
+	text-align: left;
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--dark-gray);
+}
