@@ -25,4 +25,8 @@ wp.domReady(() => {
 	// Styles for core/quote
 	wp.blocks.unregisterBlockStyle("core/quote", "default");
 	wp.blocks.unregisterBlockStyle("core/quote", "plain");
+
+	// Styles for core/image
+	wp.blocks.unregisterBlockStyle("core/image", "default");
+	wp.blocks.unregisterBlockStyle("core/image", "rounded");
 });
