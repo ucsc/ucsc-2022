@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/ucsc/ucsc-2022/compare/v1.2.1...v1.4.0) (2022-08-18)
+
+
+### Features
+
+* ✅ Theme filter to prevent site managers from moving or removing global blocks. Fixes [#19](https://github.com/ucsc/ucsc-2022/issues/19) ([#118](https://github.com/ucsc/ucsc-2022/issues/118)) ([6c8d619](https://github.com/ucsc/ucsc-2022/commit/6c8d619f00714bcd1801b99929b6a31eca65c12e))
+* 🎨 Add wave transition; Condense menu; Fix search box bg issues. Fixes [#84](https://github.com/ucsc/ucsc-2022/issues/84) ([#116](https://github.com/ucsc/ucsc-2022/issues/116)) ([df71416](https://github.com/ucsc/ucsc-2022/commit/df714167cfad7ebc8ad2232264fbcf3550728e18))
+* 🎨 MVP implementation of quote styles. Fixes [#82](https://github.com/ucsc/ucsc-2022/issues/82) ([234205a](https://github.com/ucsc/ucsc-2022/commit/234205a365339b6a3a04e8ed5eface0983dac514))
+* 🎨 Replace the banana slug above the UCSC footer ([#106](https://github.com/ucsc/ucsc-2022/issues/106))  ([7475894](https://github.com/ucsc/ucsc-2022/commit/7475894ee7b44806dcda6fc416ccfaf86a763783)), closes [#79](https://github.com/ucsc/ucsc-2022/issues/79)
+
+
+### Bug Fixes
+
+* :art: Adjust `header-plugin.php` to incorporate recently added `regions` classes Fixes [#68](https://github.com/ucsc/ucsc-2022/issues/68) ([#94](https://github.com/ucsc/ucsc-2022/issues/94)) ([f4a1729](https://github.com/ucsc/ucsc-2022/commit/f4a172909b122ee841da68b7c98d0b895258d81b))
+* :art: edits to `.gitignore` ([ad79240](https://github.com/ucsc/ucsc-2022/commit/ad79240ea002653f42a2de85b22f2f9d2c9d1d13))
+* :art: Minor edits to `ucsc-footer.html` edited Privacy text and added stub for Accessibility. Fixes [#85](https://github.com/ucsc/ucsc-2022/issues/85) ([#97](https://github.com/ucsc/ucsc-2022/issues/97)) ([9bb66d2](https://github.com/ucsc/ucsc-2022/commit/9bb66d2c53f180789c3955f219a02b0144c344ae))
+* :art: Remove plugin template code Fixes [#93](https://github.com/ucsc/ucsc-2022/issues/93) ([6271b81](https://github.com/ucsc/ucsc-2022/commit/6271b817af83336ab222ef97d255dc2fb880b0a1))
+* :art: RSS Feed block adjustments  Fixes [#83](https://github.com/ucsc/ucsc-2022/issues/83) ([#98](https://github.com/ucsc/ucsc-2022/issues/98)) ([b215c71](https://github.com/ucsc/ucsc-2022/commit/b215c71a43c1d34d2ef3153d33d871387b26c9de))
+* 🎨 Fixed misplacement of footer graphics in the site editor ([#113](https://github.com/ucsc/ucsc-2022/issues/113)) ([885b9a4](https://github.com/ucsc/ucsc-2022/commit/885b9a461b5864afb420489778095426e40d9bb2))
+* 🎨 Footer clearing and wave pattern adjustments ([#104](https://github.com/ucsc/ucsc-2022/issues/104)) ([851ad85](https://github.com/ucsc/ucsc-2022/commit/851ad852ea18239cb639a011693b155b6df22ee2))
+* 🎨 Full palette is available in most blocks for text, border, and background ([#107](https://github.com/ucsc/ucsc-2022/issues/107))  ([9065500](https://github.com/ucsc/ucsc-2022/commit/90655005efc2f01b5224971ecf87b8c9b054ef00)), closes [#105](https://github.com/ucsc/ucsc-2022/issues/105)
+* 🎨 Image block stylesheet and caption styles; remove rounded block style. Fixes [#101](https://github.com/ucsc/ucsc-2022/issues/101) ([#119](https://github.com/ucsc/ucsc-2022/issues/119)) ([7565cac](https://github.com/ucsc/ucsc-2022/commit/7565cac596ee29bae40dcdf782cf3b433d938a18))
+* 🎨 Lighten the opacity of the wave above the footer and reduce height  Fixes [#78](https://github.com/ucsc/ucsc-2022/issues/78) ([#95](https://github.com/ucsc/ucsc-2022/issues/95)) ([0a73295](https://github.com/ucsc/ucsc-2022/commit/0a73295f7c4dffe1b7eb16b97e3842e4cbe11ea8))
+* 🎨 Remove full width separator setting ([#99](https://github.com/ucsc/ucsc-2022/issues/99)) ([175f886](https://github.com/ucsc/ucsc-2022/commit/175f8866e47d729d91fb263b2f356dc9e731663d))
+* 🎨 Separator block width is always 100% of its parent element ([#102](https://github.com/ucsc/ucsc-2022/issues/102)) ([dfd4851](https://github.com/ucsc/ucsc-2022/commit/dfd4851cc073c1d3f39f71190acfb500ced01cf5))
+* 🐛 Alignments settings and body padding on small screens.  Fixes [#110](https://github.com/ucsc/ucsc-2022/issues/110) and Fixes [#66](https://github.com/ucsc/ucsc-2022/issues/66) ([#115](https://github.com/ucsc/ucsc-2022/issues/115)) ([60a317b](https://github.com/ucsc/ucsc-2022/commit/60a317baa81b7db43bb4dccda65d5517edbec2b6))
+
 ## [1.3.0](https://github.com/ucsc/ucsc-2022/compare/v1.2.1...v1.3.0) (2022-07-29)
 
 
