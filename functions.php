@@ -295,8 +295,11 @@ function ucsc_block_editor_scripts() {
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
 /**
- * Include block patterns
+ * Remove core block patterns
  */
-if ( file_exists( get_theme_file_path( 'lib/block-patterns.php' ) ) ) {
-	include get_theme_file_path( 'lib/block-patterns.php' );
-}
+add_action(
+	'init',
+	function() {
+		remove_theme_support( 'core-block-patterns' );
+	}
+);
