@@ -2,7 +2,7 @@
  /**
   * Title: 3 columns with images and buttons
   * Slug: ucsc-2022/columns-3-with-images-buttons
-  * Categories: featured, columns
+  * Categories: featured, columns, buttons, headers
   */
 ?>
 <!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"}}},"backgroundColor":"white"} -->
