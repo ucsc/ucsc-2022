@@ -33,6 +33,11 @@
 	},
 	"files": [
 		"screenshot.png",
+		"vendor",
+		"!vendor/bin",
+		"!vendor/squizlabs/php_codesniffer",
+		"!vendor/dealerdirect",
+		"!vendor/wp-coding-standards",
 		"lib",
 		"README.md",
 		"readme.txt",
