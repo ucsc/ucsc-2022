@@ -10,6 +10,9 @@
 		"lint": "./vendor/bin/phpcs",
 		"lint-fix": "./vendor/bin/phpcbf --extensions=php ."
 	},
+	"require": {
+		"justintadlock/hybrid-breadcrumbs": "^1.0"
+	},
 	"config": {
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
