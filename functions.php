@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image');
+		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image', 'search');
 		foreach ( $styled_blocks as $block_name ) {
 			$args = array(
 				'handle' => "ucsc-$block_name",
