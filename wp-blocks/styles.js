@@ -21,17 +21,12 @@ wp.domReady(() => {
 	});
 	wp.blocks.registerBlockStyle("core/button", {
 		name: "ucsc-red",
-		label: "Red",
+		label: "Rubine Red",
 		style_handle: "ucsc-button",
 	});
 	wp.blocks.registerBlockStyle("core/button", {
 		name: "ucsc-ocean",
 		label: "Ocean",
-		style_handle: "ucsc-button",
-	});
-	wp.blocks.registerBlockStyle("core/button", {
-		name: "ucsc-pacific",
-		label: "Pacific",
 		style_handle: "ucsc-button",
 	});
 	wp.blocks.unregisterBlockStyle("core/button", "outline");
