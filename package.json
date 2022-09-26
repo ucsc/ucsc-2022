@@ -9,10 +9,14 @@
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
 		"build": "wp-scripts build",
-		"lint:style": "wp-scripts lint-style 'src/scss/**/*.scss'",
+		"format": "wp-scripts format",
+		"lint:style": "wp-scripts lint-style",
 		"packages-update": "wp-scripts packages-update",
 		"postpackages-update": "npm run build",
-		"format:src": "wp-scripts format ./src"
+		"lint-php": "vendor/bin/phpcs --standard=WordPress functions.php",
+		"format:src": "wp-scripts format ./src",
+		"test": "npx lint-staged",
+		"postinstall": "npx husky install"
 	},
 	"repository": {
 		"type": "git",
@@ -29,6 +33,8 @@
 	"homepage": "https://github.com/ucsc/theme-ucsc#readme",
 	"devDependencies": {
 		"@wordpress/scripts": "^22.3.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
 		"standard-version": "^9.3.2"
 	},
 	"files": [
