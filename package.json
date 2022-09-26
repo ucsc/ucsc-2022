@@ -18,7 +18,7 @@
 		"lint-php": "vendor/bin/phpcs --standard=WordPress functions.php",
 		"format:src": "wp-scripts format ./src",
 		"test": "npx lint-staged",
-		"postinstall": "npx husky install"
+		"postinstall": "npx husky-init"
 	},
 	"repository": {
 		"type": "git",
