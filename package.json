@@ -11,6 +11,8 @@
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"lint:style": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postpackages-update": "npm run build",
 		"lint-php": "vendor/bin/phpcs --standard=WordPress functions.php",
