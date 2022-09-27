@@ -19,7 +19,9 @@
 		"format:src": "wp-scripts format ./src",
 		"test": "npx lint-staged",
 		"postinstall": "npx husky-init",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"prettier": "prettier",
+		"prettier:write": "prettier --write"
 	},
 	"repository": {
 		"type": "git",
