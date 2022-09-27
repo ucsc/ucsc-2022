@@ -1,67 +1,65 @@
 // The main navigation bar on every page
 
 .sidebar-navigation {
-  ul {
+	ul {
 		margin-bottom: 2em;
-    li:first-child>a {
+		li:first-child > a {
 			border-top: 1px solid #ddd;
-    }
-    li>a {
+		}
+		li > a {
 			border-bottom: 1px solid #ddd;
-				padding: 0.5em 0 0.5em 1em;
-    }
-  }
-
+			padding: 0.5em 0 0.5em 1em;
+		}
+	}
 }
-
-
 
 //BREADCRUMBS
 
 // Wrapper element.
 .breadcrumbs {
+	font-size: calc(var(--wp--preset--font-size--small) * 0.85);
 
-		font-size: calc(var(--wp--preset--font-size--small)*.85);
+	// Title. Note that this is the heading that says "Browse:". The code
+	// puts it inline with the trail.
+	&__title {
+		display: inline-block;
+		margin: 0 0 1.5rem;
+		font-size: inherit;
+	}
 
-    // Title. Note that this is the heading that says "Browse:". The code
-    // puts it inline with the trail.
-    &__title {
-        display:   inline-block;
-        margin:    0 0 1.5rem;
-        font-size: inherit;
-    }
+	// List.
+	&__trail {
+		list-style: none;
+		display: inline-block;
+		margin: 0 0 0.35em;
+		padding-inline-start: 0;
+	}
 
-    // List.
-    &__trail {
-        list-style: none;
-        display:    inline-block;
-        margin:     0 0 0.35em;
-				padding-inline-start: 0;
-    }
+	// Individual crumbs.
+	&__crumb {
+		display: inline-block;
+		a {
+			border-bottom: 1px solid var(--wp--custom--color--flourish);
+			text-decoration: none;
+			color: var(--wp--custom--color--site-title);
 
-    // Individual crumbs.
-    &__crumb {
-        display: inline-block;
-				a {
-					border-bottom: 1px solid var(--wp--custom--color--flourish);
-					text-decoration: none;
-					color: var(--wp--custom--color--site-title);
+			&:active,
+			&:focus,
+			&:hover {
+				border-bottom: 1px solid
+					var(--wp--preset--color--ucsc-secondary-blue);
+				text-decoration: none;
+			}
+		}
 
-					&:active, &:focus, &:hover {
-						border-bottom: 1px solid var(--wp--preset--color--ucsc-secondary-blue);
-						text-decoration:none;
-					}
-				}
+		// Add separators.
+		&::after {
+			content: "\002F";
+			padding: 0 0.25em;
+		}
 
-
-        // Add separators.
-        &::after {
-            content: "\002F";
-            padding: 0 0.25em;
-        }
-
-        &:last-of-type::after {
-            display: none;
-        }
-    }
+		&:last-of-type::after {
+			display: none;
+		}
+	}
 }
