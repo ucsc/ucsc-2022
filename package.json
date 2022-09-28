@@ -5,7 +5,6 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
-		"release": "standard-version",
 		"format": "wp-scripts format",
 		"format:src": "wp-scripts format ./src",
 		"lint:style": "wp-scripts lint-style",
@@ -14,6 +13,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "npx husky install",
 		"postpackages-update": "npm run build",
+		"release": "standard-version",
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
 		"test": "npx lint-staged",
