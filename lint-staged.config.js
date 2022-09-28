@@ -1,5 +1,4 @@
 module.exports = {
-	'*.{css,scss}': 'npm run prettier:write',
+	'*.{css,scss}': 'npm run lint:style',
 	'*.js': 'npm run format',
-	'*.php': 'composer lint-fix',
 };

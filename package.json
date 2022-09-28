@@ -15,13 +15,9 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"postpackages-update": "npm run build",
-		"lint-php": "vendor/bin/phpcs --standard=WordPress functions.php",
 		"format:src": "wp-scripts format ./src",
 		"test": "npx lint-staged",
-		"postinstall": "npx husky-init",
-		"prepare": "husky install",
-		"prettier": "prettier",
-		"prettier:write": "prettier --write"
+		"postinstall": "npx husky install"
 	},
 	"repository": {
 		"type": "git",
