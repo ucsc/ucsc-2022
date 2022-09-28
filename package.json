@@ -11,12 +11,12 @@
 		"lint:js": "wp-scripts lint-js",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
-		"postinstall": "npx husky install",
+		"postinstall": "husky install",
 		"postpackages-update": "npm run build",
 		"release": "standard-version",
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
-		"test": "npx lint-staged",
+		"test": "lint-staged",
 		"zip": "wp-scripts build && wp-scripts plugin-zip"
 	},
 	"repository": {
