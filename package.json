@@ -32,7 +32,7 @@
 		"url": "https://github.com/ucsc/theme-ucsc/issues"
 	},
 	"prettier": "@wordpress/prettier-config",
-	"homepage": "https://github.com/ucsc/theme-ucsc#readme",
+	"homepage": "https://github.com/ucsc/ucsc-2022#readme",
 	"devDependencies": {
 		"@wordpress/prettier-config": "^2.1.0",
 		"@wordpress/scripts": "^22.3.0",
