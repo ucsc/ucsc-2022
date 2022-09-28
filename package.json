@@ -29,7 +29,7 @@
 	"author": "UC Santa Cruz",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/ucsc/theme-ucsc/issues"
+		"url": "https://github.com/ucsc/ucsc-2022/issues"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"homepage": "https://github.com/ucsc/ucsc-2022#readme",
