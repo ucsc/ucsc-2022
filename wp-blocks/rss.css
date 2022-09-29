@@ -10,12 +10,24 @@
 	margin-bottom: var(--wp--custom--spacing--medium);
 }
 
+.is-style-ucsc-rss-list .wp-block-rss__item {
+	margin-bottom: var(--wp--custom--spacing--small);
+}
+
 .wp-block-rss__item-title {
 	font-size: var(--wp--preset--font-size--medium);
 	font-weight: 400;
-	margin-bottom: var(--wp--custom--spacing--small);
+	margin-bottom: 0.5em;
 	line-height: var(--wp--custom--line-height--small);
 	order: 1;
+}
+
+.is-style-ucsc-rss-list .wp-block-rss__item-title {
+	font-size: var(--wp--preset--font-size--base);
+}
+
+.is-style-ucsc-rss-block .wp-block-rss__item-title {
+	font-size: var(--wp--preset--font-size--medium);
 }
 
 .wp-block-rss__item-title a {

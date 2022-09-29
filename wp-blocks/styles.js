@@ -44,4 +44,17 @@ wp.domReady(() => {
 	// Styles for core/image
 	wp.blocks.unregisterBlockStyle('core/image', 'default');
 	wp.blocks.unregisterBlockStyle('core/image', 'rounded');
+
+	// Styles for core/rss
+	wp.blocks.registerBlockStyle('core/rss', {
+		name: 'ucsc-rss-block',
+		label: 'Home Block',
+		style_handle: 'ucsc-rss',
+	});
+	wp.blocks.registerBlockStyle('core/rss', {
+		name: 'ucsc-rss-list',
+		label: 'Simple List',
+		isDefault: true,
+		style_handle: 'ucsc-rss',
+	});
 });
