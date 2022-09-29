@@ -126,13 +126,11 @@
 	background-color: var(--wp--preset--color--ucsc-ocean-blue);
 }
 
-
-
 /*
 	All button state changes are animated
 */
 .wp-block-button__link:focus,
 .wp-block-button__link:hover,
 .wp-block-button__link:active {
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }

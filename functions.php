@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image', 'search');
+		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image', 'search' );
 		foreach ( $styled_blocks as $block_name ) {
 			$args = array(
 				'handle' => "ucsc-$block_name",
@@ -274,7 +274,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset($breadcrumbs) ) {
+	if ( is_singular() && isset( $breadcrumbs ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			if ( isset( $block['attrs']['level'] ) && isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'primary-post-title' ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
@@ -291,16 +291,16 @@ add_filter( 'render_block', 'ucsc_add_breadcrumbs', 10, 2 );
 * Note: this does not prevent editing of blocks. Only moving/removing
 */
 add_filter(
-    'block_editor_settings_all',
-    function( $settings, $context ) {
-        // Allow for the Administrator role and above
+	'block_editor_settings_all',
+	function( $settings, $context ) {
+		// Allow for the Administrator role and above
 				// https://wordpress.org/support/article/roles-and-capabilities/.
-        $settings['canLockBlocks'] = current_user_can( 'switch_themes' );
+		$settings['canLockBlocks'] = current_user_can( 'switch_themes' );
 
-        return $settings;
-    },
-    10,
-    2
+		return $settings;
+	},
+	10,
+	2
 );
 
 /**
