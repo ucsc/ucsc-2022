@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/ucsc/ucsc-2022/compare/v1.5.0...v1.6.0) (2022-10-03)
+
+
+### Features
+
+* ✨ White, black, and blue button styles and standardized shape ([#139](https://github.com/ucsc/ucsc-2022/issues/139)) ([03c2103](https://github.com/ucsc/ucsc-2022/commit/03c21033b101d263bcf32a9511f60af1ec3e1fd6))
+* 🎨 Add block styles for RSS block (list and home page block)  Fixes [#135](https://github.com/ucsc/ucsc-2022/issues/135) ([#143](https://github.com/ucsc/ucsc-2022/issues/143)) ([de1809d](https://github.com/ucsc/ucsc-2022/commit/de1809d464040b901a6fb1d155cbe4b5a935cfea))
+* 🎨 Add final button colors and style options. Resolves [#86](https://github.com/ucsc/ucsc-2022/issues/86) ([#141](https://github.com/ucsc/ucsc-2022/issues/141)) ([4a67732](https://github.com/ucsc/ucsc-2022/commit/4a67732ed9b34a1a8f877e6b4ef6d37b0cf21655))
+
+
+### Bug Fixes
+
+* :bug: added missing bracket in `_ucsc-header.scss` ([#137](https://github.com/ucsc/ucsc-2022/issues/137)) ([cb8de2e](https://github.com/ucsc/ucsc-2022/commit/cb8de2e7d03413196ac0e0e79f548bccaa87f996))
+* :bug: re-add Composer artifacts and breadcrumbs ([#133](https://github.com/ucsc/ucsc-2022/issues/133))  ([a4a6d80](https://github.com/ucsc/ucsc-2022/commit/a4a6d800327da34a424997e8cc254389e469cfd1)), closes [#71](https://github.com/ucsc/ucsc-2022/issues/71)
+* :bug: Remove Safari/Webkit search form magnifying glass [#132](https://github.com/ucsc/ucsc-2022/issues/132) ([#136](https://github.com/ucsc/ucsc-2022/issues/136)) ([b0b7c67](https://github.com/ucsc/ucsc-2022/commit/b0b7c675d10732ab62e39b55fd1604eb3312102f))
+* 🐛 Add patterns folder to theme zip function ([2abf984](https://github.com/ucsc/ucsc-2022/commit/2abf98468a4ba59dde8fc3b0b658a63598e5f949))
+
 ## [1.5.0](https://github.com/ucsc/ucsc-2022/compare/v1.4.0...v1.5.0) (2022-08-29)
 
 ## [1.4.0](https://github.com/ucsc/ucsc-2022/compare/v1.2.1...v1.4.0) (2022-08-18)
