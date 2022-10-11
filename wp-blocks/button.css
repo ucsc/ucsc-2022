@@ -3,7 +3,17 @@
 }
 
 .wp-block-button__link {
-	padding: calc(0.5em + 2px) calc(1.75em + 2px);
+	padding: calc(0.55em + 2px) calc(2.5em + 2px);
+	font-size: var(--wp--preset--font-size--base);
+}
+
+/*
+	All button state changes are animated
+*/
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:active {
+	transition: all 0.3s ease-in-out;
 }
 
 .wp-block-button > a {
@@ -27,7 +37,7 @@
 }
 
 /*
-	White button styles
+	Button link colors
 */
 .is-style-ucsc-white .wp-block-button__link {
 	border: 2px solid var(--wp--preset--color--black);
@@ -35,22 +45,36 @@
 	background-color: var(--wp--preset--color--white);
 }
 
-.is-style-ucsc-white .wp-block-button__link:focus,
-.is-style-ucsc-white .wp-block-button__link:hover {
+.is-style-ucsc-black .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--black);
 	color: var(--wp--preset--color--white);
 	background-color: var(--wp--preset--color--black);
 }
 
-.is-style-ucsc-white .wp-block-button__link:active {
-	color: var(--wp--preset--color--black);
-	background-color: var(--wp--preset--color--white);
+.is-style-ucsc-blue .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--ucsc-secondary-blue);
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-secondary-blue);
 }
 
+.is-style-ucsc-red .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--ucsc-rubine-red);
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-rubine-red);
+}
+
+.is-style-ucsc-ocean .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--ucsc-ocean-blue);
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-ocean-blue);
+}
+
+
 /*
-	Black button styles
+	Button :focus and :hover colors
 */
-.is-style-ucsc-black .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--black);
+.is-style-ucsc-white .wp-block-button__link:focus,
+.is-style-ucsc-white .wp-block-button__link:hover {
 	color: var(--wp--preset--color--white);
 	background-color: var(--wp--preset--color--black);
 }
@@ -61,38 +85,10 @@
 	background-color: var(--wp--preset--color--white);
 }
 
-.is-style-ucsc-black .wp-block-button__link:active {
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--black);
-}
-
-/*
-	Blue button styles
-*/
-.is-style-ucsc-blue .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--ucsc-secondary-blue);
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-secondary-blue);
-}
-
 .is-style-ucsc-blue .wp-block-button__link:focus,
 .is-style-ucsc-blue .wp-block-button__link:hover {
 	color: var(--wp--preset--color--ucsc-secondary-blue);
 	background-color: var(--wp--preset--color--white);
-}
-
-.is-style-ucsc-blue .wp-block-button__link:active {
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-secondary-blue);
-}
-
-/*
-	Red button styles
-*/
-.is-style-ucsc-red .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--ucsc-rubine-red);
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-rubine-red);
 }
 
 .is-style-ucsc-red .wp-block-button__link:focus,
@@ -101,36 +97,36 @@
 	background-color: var(--wp--preset--color--white);
 }
 
-.is-style-ucsc-red .wp-block-button__link:active {
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-rubine-red);
-}
-
-/*
-	Ocean button styles
-*/
-.is-style-ucsc-ocean .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--ucsc-ocean-blue);
-	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-ocean-blue);
-}
-
 .is-style-ucsc-ocean .wp-block-button__link:focus,
 .is-style-ucsc-ocean .wp-block-button__link:hover {
 	color: var(--wp--preset--color--ucsc-ocean-blue);
 	background-color: var(--wp--preset--color--white);
 }
 
+/*
+	Button :active colors
+*/
+.is-style-ucsc-white .wp-block-button__link:active {
+	color: var(--wp--preset--color--black);
+	background-color: var(--wp--preset--color--white);
+}
+
+.is-style-ucsc-black .wp-block-button__link:active {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--black);
+}
+
+.is-style-ucsc-blue .wp-block-button__link:active {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-secondary-blue);
+}
+
+.is-style-ucsc-red .wp-block-button__link:active {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-rubine-red);
+}
+
 .is-style-ucsc-ocean .wp-block-button__link:active {
 	color: var(--wp--preset--color--white);
 	background-color: var(--wp--preset--color--ucsc-ocean-blue);
-}
-
-/*
-	All button state changes are animated
-*/
-.wp-block-button__link:focus,
-.wp-block-button__link:hover,
-.wp-block-button__link:active {
-	transition: all 0.3s ease-in-out;
 }
