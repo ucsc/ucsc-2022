@@ -187,48 +187,7 @@
 			"core/button": {
 				"color": {
 					"custom": false,
-					"palette": [
-						{
-							"slug": "white",
-							"color": "#fff",
-							"name": "White"
-						},
-						{
-							"slug": "black",
-							"color": "#000",
-							"name": "Black"
-						},
-						{
-							"slug": "ucsc-primary-blue",
-							"color": "#003c6c",
-							"name": "Primary blue"
-						},
-						{
-							"slug": "ucsc-green",
-							"color": "#93C02D",
-							"name": "Green"
-						},
-						{
-							"slug": "ucsc-primary-yellow",
-							"color": "#fdc700",
-							"name": "Primary yellow"
-						},
-						{
-							"name": "Orange",
-							"color": "#f29813",
-							"slug": "ucsc-orange"
-						},
-						{
-							"name": "Danger Red",
-							"color": "#bb2f2f",
-							"slug": "ucsc-danger-red"
-						},
-						{
-							"name": "Success Green",
-							"color": "#417b14",
-							"slug": "ucsc-success-green"
-						}
-					]
+					"palette": []
 				},
 				"border": {
 					"radius": false
@@ -281,8 +240,7 @@
 			},
 			"color": {
 				"link": "var(--wp--preset--color--ucsc-primary-blue)",
-				"link-decoration": "var(--wp--preset--color--ucsc-primary-yellow)",
-				"site-title": "var(--wp--preset--color--black)"
+				"link-decoration": "var(--wp--preset--color--ucsc-primary-yellow)"
 			}
 		}
 	},
@@ -292,7 +250,7 @@
 		},
 		"color": {
 			"background": "var(--wp--preset--color--white)",
-			"text": "var(--wp--custom--color--default-text)"
+			"text": "var(--wp--preset--color--black)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--roboto)",
