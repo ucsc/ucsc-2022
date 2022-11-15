@@ -2,7 +2,7 @@
  /**
   * Title: 2 columns with images
   * Slug: ucsc-2022/columns-2-with-images
-  * Categories: featured, columns, gallery, text
+  * Categories: columns
   */
 ?>
 <!-- wp:columns -->
@@ -12,7 +12,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"fontSize":"medium"} -->
-<h2 class="has-medium-font-size">First Column Heading</h2>
+<h2 class="has-medium-font-size">Column One</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -26,7 +26,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"fontSize":"medium"} -->
-<h2 class="has-medium-font-size">Second Column Heading</h2>
+<h2 class="has-medium-font-size">Column Two</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
