@@ -1,59 +1,45 @@
-//
 // Site Header
-//
 
 .site-header {
+	margin: calc(var(--wp--preset--font-size--medium) * 2.25) 0 var(--wp--preset--font-size--small) 0;
 
-		.site-header__title {
+	@include media-query($small) {
+		margin: calc(var(--wp--preset--font-size--x-large) * 2.25) 0 var(--wp--preset--font-size--small) 0;
+	}
 
-			margin-top: .2em;
+	.site-header__separator {
+		margin: var(--wp--custom--spacing--small) 0 var(--wp--custom--spacing--small) 0;
+	}
 
-			.mainsite-logo {
-				background: transparent url($campus-logo) no-repeat 0 0;
-				display: block;
-				height: auto;
-				overflow: hidden;
-				text-indent: -10000px;
-				width: 220px;
-				margin-bottom: 0.35em;
+	.site-header__inner {
+		margin-top: 0;
+	}
 
-			}
-		}
+	.current-menu-item > a {
+		font-weight: 500;
+	}
 
-		.site-header__separator {
-			margin: calc(var(--wp--custom--spacing--baseline)*0.75) 0 var(--wp--custom--spacing--small) 0;
-		}
+	li.has-child > a {
+		text-decoration: none;
+	}
 
-		.site-header__inner {
-			margin-top: 0;
-		}
+	@include media-query($small) {
 
-		.current-menu-item > a {
-			font-weight: 600;
-		}
+		.wp-block-navigation__submenu-container {
+			box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+			border-color: var(--wp--preset--color--dark-gray);
 
-		li.has-child > a {
-			text-decoration: none;
-		}
+			a {
+				font-size: var(--wp--preset--font-size--small);
+				padding: 0.75em 1em;
 
-		@include media-query($small) {
-			.wp-block-navigation__submenu-container {
-				box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
-				border-color: var(--wp--preset--color--dark-gray);
-
-				a {
-					font-size: var(--wp--preset--font-size--small);
-					padding: .75em 1em;
-
-					&:focus,
-					&:hover,
-					&:active {
-						text-decoration: none;
-						background-color: var(--wp--preset--color--lightest-gray);
-					}
+				&:focus,
+				&:hover,
+				&:active {
+					text-decoration: none;
+					background-color: var(--wp--preset--color--lightest-gray);
 				}
 			}
 		}
-
 	}
-
+}

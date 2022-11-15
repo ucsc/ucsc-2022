@@ -1,6 +1,6 @@
-//
-// UCSC Header
-//
+/**
+ * UCSC Header Region
+ */
 
 .ucsc-header {
 
@@ -8,9 +8,9 @@
 
 	.ucsc-header__inner {
 		background-image: url(/images/waves-transition.svg), linear-gradient(120deg, #003c6c 12rem, #006aad 12rem);
-			background-repeat: no-repeat;
-			background-position: 54px center, center top;
-			background-size: cover, cover;
+		background-repeat: no-repeat;
+		background-position: 54px center, center top;
+		background-size: cover, cover;
 
 		@include media-query($small) {
 			// background-image: linear-gradient(128deg, #003c6c 14rem, #006aad 14rem);
@@ -32,6 +32,7 @@
 		background-color: transparent;
 		border: none;
 		color: var(--wp--preset--color--ucsc-primary-blue);
+		padding: var(--wp--preset--spacing--x-small);
 
 		&:focus,
 		&:active {
