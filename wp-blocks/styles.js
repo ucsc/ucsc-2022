@@ -1,5 +1,5 @@
 /**
- *  Block styles
+ *  Block styles and variations
  */
 wp.domReady(() => {
 	// Styles for core/button
@@ -56,5 +56,15 @@ wp.domReady(() => {
 		label: 'Simple List',
 		isDefault: true,
 		style_handle: 'ucsc-rss',
+	});
+
+	// Variation for core/spacer
+	wp.blocks.registerBlockVariation('core/spacer', {
+		isDefault: true,
+		name: 'empty-space',
+		title: 'Empty Space',
+		attributes: {
+			height: '4rem',
+		},
 	});
 });
