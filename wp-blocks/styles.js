@@ -1,5 +1,5 @@
 /**
- *  Block styles and variations
+ *  Block styles and variations and variations
  */
 wp.domReady(() => {
 	// Styles for core/button
@@ -61,8 +61,8 @@ wp.domReady(() => {
 	// Variation for core/spacer
 	wp.blocks.registerBlockVariation('core/spacer', {
 		isDefault: true,
-		name: 'empty-space',
-		title: 'Empty Space',
+		name: 'spacer',
+		title: 'Spacer',
 		attributes: {
 			height: '4rem',
 		},
