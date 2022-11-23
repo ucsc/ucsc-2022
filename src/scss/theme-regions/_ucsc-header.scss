@@ -7,9 +7,9 @@
 	background: linear-gradient(90deg, #003c6c 40%, #006aad 40%);
 
 	.ucsc-header__inner {
-		background-image: url(/images/waves-transition.svg), linear-gradient(120deg, #003c6c 12rem, #006aad 12rem);
+		background-image: linear-gradient(130deg, #003c6c 4rem, #006aad 18rem);
 		background-repeat: no-repeat;
-		background-position: 54px center, center top;
+		background-position: 48px center, center top;
 		background-size: cover, cover;
 
 		@include media-query($small) {
