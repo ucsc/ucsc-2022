@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/ucsc/ucsc-2022/compare/v1.6.0...v1.7.0) (2022-11-23)
+
+
+### Features
+
+* ✨ Spacer block: rename to "empty space" and set default height when inserted to 4rem ([5467971](https://github.com/ucsc/ucsc-2022/commit/546797159dfb5c67fff791e158d25d721dda014e))
+* ✨ Spacer block: set 4rem default height when inserted ([f30d031](https://github.com/ucsc/ucsc-2022/commit/f30d0313e25f675fcec66868a7f9689b9e64de27))
+* 🎨 Global header: smaller logo, shorter search box, and remove the waveform from the background ([078aa1a](https://github.com/ucsc/ucsc-2022/commit/078aa1a7cde20a23d996588aa2c4a498d6f05d08))
+* 🎨 Remove extra button palette ([#147](https://github.com/ucsc/ucsc-2022/issues/147)) ([f72937d](https://github.com/ucsc/ucsc-2022/commit/f72937d318bcf2e369b432499b451a691a569a41))
+* 🎨 Set vertical rhythm and modular scale for all font sizes and vertical spacing; add serif theme style ([ddbd5b3](https://github.com/ucsc/ucsc-2022/commit/ddbd5b3a9f6f1ebfb57d52345ee866b545688424))
+* 🎨 Site header: Increase font-size and font weight of site title; make main nav links blue ([d044b80](https://github.com/ucsc/ucsc-2022/commit/d044b80616c5555b882f844cb46f01000322e960))
+* 📝 Patterns: remove redundant patterns and add two from www project work ([1d94dbe](https://github.com/ucsc/ucsc-2022/commit/1d94dbeb31404eaf6d0050ee54504320a40fcc7d))
+
+
+### Bug Fixes
+
+* 🎨 Sets proportion of buttons to match Figma design ([#146](https://github.com/ucsc/ucsc-2022/issues/146)) Resolves [#86](https://github.com/ucsc/ucsc-2022/issues/86) ([d02cecd](https://github.com/ucsc/ucsc-2022/commit/d02cecdc00303314131a9077dec98579e543d615))
+* 🎨 Spacing and size of elements in the ucsc-header and ucsc-footer regions ([b6f7b50](https://github.com/ucsc/ucsc-2022/commit/b6f7b5004609eeb9a360392a7eec5a792c92fdf5))
+
 ## [1.6.0](https://github.com/ucsc/ucsc-2022/compare/v1.5.0...v1.6.0) (2022-10-03)
 
 
