@@ -4,9 +4,9 @@
 wp.domReady(() => {
 	// Styles for core/button
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'ucsc-white',
-		label: 'White',
+		name: 'ucsc-blue',
 		isDefault: true,
+		label: 'Blue',
 		style_handle: 'ucsc-button',
 	});
 	wp.blocks.registerBlockStyle('core/button', {
@@ -15,13 +15,8 @@ wp.domReady(() => {
 		style_handle: 'ucsc-button',
 	});
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'ucsc-blue',
-		label: 'Blue',
-		style_handle: 'ucsc-button',
-	});
-	wp.blocks.registerBlockStyle('core/button', {
-		name: 'ucsc-red',
-		label: 'Rubine Red',
+		name: 'ucsc-gold',
+		label: 'Gold',
 		style_handle: 'ucsc-button',
 	});
 	wp.blocks.registerBlockStyle('core/button', {
