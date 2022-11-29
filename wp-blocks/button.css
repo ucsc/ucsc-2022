@@ -3,6 +3,7 @@
 }
 
 .wp-block-button .wp-block-button__link {
+	transition: 0.5s;
 	padding: calc(0.32em + 2px) calc(2.5em + 2px);
 	font-size: var(--wp--preset--font-size--base);
 }
@@ -34,6 +35,13 @@
 .wp-block-button {
 	cursor: pointer;
 	font-weight: 400;
+	transition: 0.5s;
+}
+
+.wp-block-button:focus,
+.wp-block-button:hover,
+.wp-block-button:active {
+	transition: 0.3s;
 }
 
 /*
