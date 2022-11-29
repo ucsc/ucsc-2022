@@ -2,6 +2,12 @@
  *  Block styles and variations and variations
  */
 wp.domReady(() => {
+	// Styles for core/group
+	wp.blocks.registerBlockStyle('core/group', {
+		name: 'ucsc-waveform',
+		label: 'Waves',
+		style_handle: 'ucsc-group',
+	});
 	// Styles for core/button
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'ucsc-blue',

@@ -1,0 +1,6 @@
+.wp-block-group.is-style-ucsc-waveform {
+	background-image: url(../images/waves-full.svg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	padding: 6rem 0;
+}
