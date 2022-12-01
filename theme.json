@@ -15,7 +15,7 @@
 		"appearanceTools": true,
 		"color": {
 			"custom": false,
-			"link": false,
+			"link": true,
 			"defaultPalette": false,
 			"defaultDuotone": false,
 			"defaultGradients": false,
