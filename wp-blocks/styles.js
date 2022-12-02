@@ -11,7 +11,6 @@ wp.domReady(() => {
 	// Styles for core/button
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'ucsc-blue',
-		isDefault: true,
 		label: 'Blue',
 		style_handle: 'ucsc-button',
 	});
