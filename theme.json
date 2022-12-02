@@ -20,7 +20,7 @@
 			"defaultDuotone": false,
 			"defaultGradients": false,
 			"customDuotone": false,
-			"customGradient": false,
+			"customGradient": true,
 			"duotone": [],
 			"gradients": [],
 			"palette": [
@@ -30,9 +30,9 @@
 					"slug": "black"
 				},
 				{
-					"name": "Text",
+					"name": "Darkest Gray",
 					"color": "#222222",
-					"slug": "text-gray"
+					"slug": "darkest-gray"
 				},
 				{
 					"name": "Dark Gray",
@@ -191,11 +191,7 @@
 			},
 			"core/button": {
 				"color": {
-					"custom": false,
-					"palette": []
-				},
-				"border": {
-					"radius": false
+					"custom": false
 				}
 			},
 			"core/paragraph": {
@@ -241,7 +237,7 @@
 				"outer": "var(--wp--custom--spacing--small, 1.802rem)"
 			},
 			"border": {
-				"radius": "0"
+				"radius": "10px"
 			},
 			"color": {
 				"link": "var(--wp--preset--color--ucsc-primary-blue)",
