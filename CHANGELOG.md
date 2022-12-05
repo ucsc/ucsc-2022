@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/ucsc/ucsc-2022/compare/v1.7.0...v1.8.0) (2022-12-05)
+
+
+### Features
+
+* :art: re-add "Last modified" date to `ucsc-footer.html`. Style. [#160](https://github.com/ucsc/ucsc-2022/issues/160) ([#163](https://github.com/ucsc/ucsc-2022/issues/163)) ([a2c288a](https://github.com/ucsc/ucsc-2022/commit/a2c288a982bdaee525822e179471c0bfedb0f5c9))
+* ✨ "Text gray" to "Darkest Gray" and open up color tools for blocks that support them ([86dedab](https://github.com/ucsc/ucsc-2022/commit/86dedab6706003bd71972b2b1cc22354ef9987c7))
+* ✨ New Sammy the slug in the footer ([b005d9b](https://github.com/ucsc/ucsc-2022/commit/b005d9b5351f77061579cca931d0deb413d5b0af))
+* 🎨 Button block: update animation timing ([cf870f4](https://github.com/ucsc/ucsc-2022/commit/cf870f48b4249333a50317628d42d729fbed9d13))
+* 🎨 New color preset 'text-gray' used for site title ([3de1611](https://github.com/ucsc/ucsc-2022/commit/3de1611a94bbefb9e700805edd45d84c5c17dc3f))
+* 🎨 Provide "default" option for buttons to reset styles ([b7272bb](https://github.com/ucsc/ucsc-2022/commit/b7272bb2a103eacc4db7ae3264be4bc8d60a6aa2))
+* 🎨 Reduce spacing between global header and site title ([c1f5375](https://github.com/ucsc/ucsc-2022/commit/c1f5375f032325e2fdf262fec6d204254cc0bdfd))
+* 🚑️ Add issue template with form fields so bug reports ([179fa67](https://github.com/ucsc/ucsc-2022/commit/179fa6737443e8ebb8b309fe3341ee265f7086bf))
+* **Blocks:** ✨ Initialize group block style with waveform background ([c6e263d](https://github.com/ucsc/ucsc-2022/commit/c6e263d8c2ab429fc5e0e11db63b81884b558d24))
+* **Blocks:** 🎨 Group: background image is full waveform, centered, and 65% opacity ([295f3be](https://github.com/ucsc/ucsc-2022/commit/295f3bea5d4b87dc52b45f0f1872b0eef3ea3dc2))
+
+
+### Bug Fixes
+
+* 🎨 Button Block: remove red and white; add gold button option; reduce vertical padding ([57fa025](https://github.com/ucsc/ucsc-2022/commit/57fa0255aa325ba3b882b306fc8c46f029968620))
+
 ## [1.7.0](https://github.com/ucsc/ucsc-2022/compare/v1.6.0...v1.7.0) (2022-11-23)
 
 
