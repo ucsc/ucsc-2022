@@ -1,5 +1,44 @@
 details {
-	summary > * {
-			display: inline;
+	position: relative;
+
+	summary {
+		width: 100%;
+		padding: var(--wp--preset--font-size--small);
+		padding-left: 1.5rem;
+		list-style: none;
+		cursor: pointer;
+		transition: font-weight 0.2s ease-in-out;
+
+		&::-webkit-details-marker {
+			display: none;
 		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			background: transparent url(/images/arrow.svg) no-repeat 50% 50% / 1em 1em;
+			width: 1.5em;
+			height: 1.5em;
+			transition: transform 0.1s linear;
+		}
+
+		&:focus,
+		&:hover {
+			outline: none;
+			color: var(--wp--preset--color--ucsc-primary-blue);
+		}
+
+
 	}
+}
+
+details[open] > summary {
+	color: var(--wp--preset--color--ucsc-primary-blue);
+	font-weight: 600;
+	border-bottom: 1px solid var(--wp--preset--color--ucsc-primary-yellow);
+}
+
+details[open] summary::before {
+	transform: rotate(90deg);
+}
