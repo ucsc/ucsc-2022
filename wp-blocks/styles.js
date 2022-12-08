@@ -5,7 +5,7 @@ wp.domReady(() => {
 	// Styles for core/group
 	wp.blocks.registerBlockStyle('core/group', {
 		name: 'ucsc-waveform',
-		label: 'Waves',
+		label: 'Waveform',
 		style_handle: 'ucsc-group',
 	});
 	// Styles for core/button
