@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/ucsc/ucsc-2022/compare/v1.8.0...v1.9.0) (2022-12-09)
+
+
+### Features
+
+* 🎨 [Experimental] Alter waveform background for groups and add two additional options ([#170](https://github.com/ucsc/ucsc-2022/issues/170)) ([b064db3](https://github.com/ucsc/ucsc-2022/commit/b064db33ea2010c93badc1efc2792af2ee9753ff))
+* 🎨 Set styles for accordion blocks (`details` element) ([#168](https://github.com/ucsc/ucsc-2022/issues/168)) ([3b49a1b](https://github.com/ucsc/ucsc-2022/commit/3b49a1be957ff88bb6ab1ea416d612a63fca1274)), closes [#128](https://github.com/ucsc/ucsc-2022/issues/128)
+
 ## [1.8.0](https://github.com/ucsc/ucsc-2022/compare/v1.7.0...v1.8.0) (2022-12-05)
 
 
