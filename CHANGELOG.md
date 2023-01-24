@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/ucsc/ucsc-2022/compare/v1.9.0...v1.9.1) (2023-01-24)
+
+
+### Bug Fixes
+
+* 🐛 Remove a11y link. Page doesn't exist yet ([#176](https://github.com/ucsc/ucsc-2022/issues/176)) ([fee679a](https://github.com/ucsc/ucsc-2022/commit/fee679a82b21cbcee2881d0167070afe54178ab6))
+* **Blocks:** 🐛 Set proper `box-sizing` on details > summary (accordion) Fixes [#174](https://github.com/ucsc/ucsc-2022/issues/174) ([#177](https://github.com/ucsc/ucsc-2022/issues/177)) ([b0a11a4](https://github.com/ucsc/ucsc-2022/commit/b0a11a45adbfb8506a223cbc4d6509d612d8d530))
+
 ## [1.9.0](https://github.com/ucsc/ucsc-2022/compare/v1.8.0...v1.9.0) (2022-12-09)
 
 
