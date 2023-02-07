@@ -63,8 +63,13 @@ function ucsc_favicons() { ?>
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
 	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/ucsc-favicon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/apple-icon.png"">
-	<link rel="manifest" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/manifest.webmanifest"">
+	<link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/apple-icon.png">
+	<link rel="manifest" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/manifest.webmanifest">
+
+	<!-- Script and style to include our components library, Truss.  -->
+	<script type="module" src="<?php echo esc_url( get_template_directory_uri() ); ?>/build/truss.js"></script>
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/build/truss.css">
+
 	<?php
 }
 add_action( 'wp_head', 'ucsc_favicons' );
@@ -327,3 +332,12 @@ add_action(
 		remove_theme_support( 'core-block-patterns' );
 	}
 );
+
+/**
+ * Add Truss global header and global footer components
+ */
+add_action( 'wp_body_open', 'ucsc_add_custom_body_open_code' );
+
+function ucsc_add_custom_body_open_code() {
+	echo '<trss-ucsc-header use-logo="true" search-action="/" search-query="s" style="--trss-content-width:72rem;"></trss-ucsc-header>';
+}
