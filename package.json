@@ -34,12 +34,10 @@
 	"prettier": "@wordpress/prettier-config",
 	"homepage": "https://github.com/ucsc/ucsc-2022#readme",
 	"devDependencies": {
-		"@wordpress/prettier-config": "^2.1.0",
-		"@wordpress/scripts": "^22.3.0",
+		"@wordpress/prettier-config": "^2.9.0",
+		"@wordpress/scripts": "^25.3.0",
 		"husky": "^8.0.0",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"standard-version": "^9.3.2"
+		"lint-staged": "^13.0.3"
 	},
 	"files": [
 		"screenshot.png",
@@ -61,5 +59,8 @@
 		"style.css",
 		"patterns",
 		"*.php"
-	]
+	],
+	"dependencies": {
+		"@ucsantacruz/truss": "^0.7.2"
+	}
 }
