@@ -2,6 +2,7 @@
  * External Dependencies
  */
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 /**
  * WordPress Dependencies
  */
@@ -13,6 +14,7 @@ module.exports = {
 		entry: {
 			index: path.resolve(process.cwd(), 'src', 'index.js'),
 			theme: path.resolve(process.cwd(), 'src', 'theme.js'),
+			truss: path.resolve(process.cwd(), 'src', 'truss.js'),
 		},
 	},
 };
