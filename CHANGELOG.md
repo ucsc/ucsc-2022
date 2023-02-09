@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ucsc/ucsc-2022/compare/v1.9.1...v2.0.0) (2023-02-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* This change replaces the UCSC global header in the theme with a web component from our [Truss component library](https://github.com/ucsc/truss/). The ucsc-header part is removed and the header part no longer includes that part.
+
+Please run `npm install` prior to testing this update locally.
+
+### Features
+
+* ⚡️ Add UCSC global footer from Truss ([72b047f](https://github.com/ucsc/ucsc-2022/commit/72b047fba9bf2bf1eb63f8ba5b63adde8d379e6f))
+* 🚀 Add Truss global header ([#181](https://github.com/ucsc/ucsc-2022/issues/181)) ([78b0dc8](https://github.com/ucsc/ucsc-2022/commit/78b0dc8e4a2bdfb19d5c41ac68abaa95bf924e04))
+
 ### [1.9.1](https://github.com/ucsc/ucsc-2022/compare/v1.9.0...v1.9.1) (2023-01-24)
 
 
