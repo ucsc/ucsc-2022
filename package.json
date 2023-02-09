@@ -61,6 +61,6 @@
 		"*.php"
 	],
 	"dependencies": {
-		"@ucsantacruz/truss": "^0.7.2"
+		"@ucsantacruz/truss": "^0.7.5"
 	}
 }

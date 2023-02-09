@@ -341,3 +341,11 @@ add_action( 'wp_body_open', 'ucsc_add_custom_body_open_code' );
 function ucsc_add_custom_body_open_code() {
 	echo '<trss-ucsc-header use-logo="true" search-action="/" search-query="s" style="--trss-content-width:72rem;"></trss-ucsc-header>';
 }
+
+add_action( 'wp_footer', 'ucsc_add_custom_body_close_code' );
+
+function ucsc_add_custom_body_close_code() {
+	echo '<trss-ucsc-footer></trss-ucsc-footer>';
+}
+
+
