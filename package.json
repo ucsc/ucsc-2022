@@ -59,8 +59,5 @@
 		"style.css",
 		"patterns",
 		"*.php"
-	],
-	"dependencies": {
-		"@ucsantacruz/truss": "^0.7.5"
-	}
+	]
 }
