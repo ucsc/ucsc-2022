@@ -66,10 +66,6 @@ function ucsc_favicons() { ?>
 	<link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/apple-icon.png">
 	<link rel="manifest" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/images/favicons/manifest.webmanifest">
 
-	<!-- Script and style to include our components library, Truss.  -->
-	<script type="module" src="<?php echo esc_url( get_template_directory_uri() ); ?>/build/truss.js"></script>
-	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/build/truss.css">
-
 	<?php
 }
 add_action( 'wp_head', 'ucsc_favicons' );
@@ -349,3 +345,13 @@ function ucsc_add_custom_body_close_code() {
 }
 
 
+add_action( 'wp_footer', 'ucsc_truss_assets' );
+
+function ucsc_truss_assets() { ?>
+
+<!-- Script and style to include our components library, Truss.  -->
+<script type="module" src="https://unpkg.com/@ucsantacruz/truss@latest/dist/ucsc-trss/ucsc-trss.esm.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@latest/dist/ucsc-trss/ucsc-trss.css">
+
+<?php
+}
