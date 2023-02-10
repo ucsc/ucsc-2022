@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/ucsc/ucsc-2022/compare/v2.0.0...v2.0.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* 🐛 Load Truss components from an external CDN ([cc7814d](https://github.com/ucsc/ucsc-2022/commit/cc7814de42a2cbe4ab36add5319ad188558bc869))
+* 🐛 Load Truss components from an external CDN ([963dd13](https://github.com/ucsc/ucsc-2022/commit/963dd131d7182fc9de03218b32a413cd40cfab0f))
+
 ## [2.0.0](https://github.com/ucsc/ucsc-2022/compare/v1.9.1...v2.0.0) (2023-02-09)
 
 
