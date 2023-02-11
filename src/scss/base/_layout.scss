@@ -3,8 +3,15 @@ body {
 	height: 100%;
 }
 
-.content-region {
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.wp-site-blocks {
 	flex: 1 0 auto;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 }
 
 .ucsc-layout-row {
@@ -36,6 +43,7 @@ with the .alignfull class
 .block-editor-block-list__layout.is-root-container > .alignfull {
 	margin-left: calc(-1 * var(--wp--custom--spacing--baseline)) !important;
 	margin-right: calc(-1 * var(--wp--custom--spacing--baseline)) !important;
+
 	width: calc(100% + var(--wp--custom--spacing--baseline) + var(--wp--custom--spacing--baseline)) !important;
 }
 
@@ -46,7 +54,7 @@ with the .alignfull class
 	}
 
 	.is-root-container,
-	.content-region {
+	.wp-site-blocks {
 		padding-left: 0;
 		padding-right: 0;
 	}
