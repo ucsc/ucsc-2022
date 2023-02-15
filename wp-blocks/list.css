@@ -1,5 +1,36 @@
+.is-style-ucsc-side-navigation {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.is-style-ucsc-side-navigation li {
+	margin: 0;
+}
+
+.is-style-ucsc-side-navigation a {
+	transition: all 0.2s ease-in-out;
+	text-decoration: none !important;
+	display: block;
+	padding: 0.65em 0.5em;
+	letter-spacing: 0.012em;
+	border-bottom: 1px solid rgba(104, 104, 104, 0.25);
+}
+
+.is-style-ucsc-side-navigation a:focus,
+.is-style-ucsc-side-navigation a:hover,
+.is-style-ucsc-side-navigation a:active {
+	color: var(--wp--preset--color--white) !important;
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
+	text-decoration: none;
+}
+
+.is-style-ucsc-side-navigation > li:last-child a {
+	border-bottom: none;
+}
+
 .site-content ul li,
 .site-content ol li {
-	margin: calc(var(--wp--style--block-gap)/2) 0;
+	margin: calc(var(--wp--style--block-gap) / 2) 0;
 	line-height: var(--wp--custom--line-height--baseline);
 }

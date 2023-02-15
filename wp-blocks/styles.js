@@ -8,6 +8,12 @@ wp.domReady(() => {
 		label: 'Waveform',
 		style_handle: 'ucsc-group',
 	});
+	// Styles for core/list
+	wp.blocks.registerBlockStyle('core/list', {
+		name: 'ucsc-side-navigation',
+		label: 'Side Navigation',
+		style_handle: 'ucsc-list',
+	});
 	// Styles for core/button
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'ucsc-blue',
