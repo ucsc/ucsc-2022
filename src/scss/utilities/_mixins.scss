@@ -1,22 +1,18 @@
-//
-// 		Breakpoint mixin
-//
+// Screen width breakpoints
+// Styles will take effect 1px above these sizes
+$small: 602px;
+$medium: 1082px;
+$large: 1282px;
+$content-size: 80rem;
 
-// 		Screen width breakpoints
-//
-// 		Styles will take effect 1px above these sizes
-$small: 601px;
-$medium: 1081px;
-$large: 1201px;
-
-// 		Use media queries like this:
-//
-// 		@include media-query($on-palm) {
-//   		[Write your selectors and style rules in here]
-// 		}
-//
+//	Use media queries like this:
+//	@include media-query($on-palm) {
+// 		[Write your selectors and style rules in here]
+//	}
 @mixin media-query($size) {
+
 	@media screen and (min-width: $size) {
 		@content;
 	}
+
 }

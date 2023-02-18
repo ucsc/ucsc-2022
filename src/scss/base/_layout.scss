@@ -15,7 +15,7 @@ body {
 }
 
 .ucsc-layout-row {
-	max-width: 72rem;
+	max-width: $content-size;
 	margin: 0 auto;
 	padding: 0 1rem;
 }
@@ -28,7 +28,7 @@ body {
 with the .alignfull class
 */
 .is-root-container {
-	max-width: 72rem;
+	max-width: $content-size;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -47,7 +47,7 @@ with the .alignfull class
 	width: calc(100% + var(--wp--custom--spacing--baseline) + var(--wp--custom--spacing--baseline)) !important;
 }
 
-@media screen and (min-width: 74rem) {
+@media screen and (min-width: 84rem) {
 
 	.ucsc-layout-row {
 		padding: 0;

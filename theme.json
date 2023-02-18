@@ -107,7 +107,7 @@
 			]
 		},
 		"layout": {
-			"contentSize": "72rem"
+			"contentSize": "80rem"
 		},
 		"spacing": {
 			"blockGap": true,
