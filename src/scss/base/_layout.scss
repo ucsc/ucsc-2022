@@ -14,10 +14,9 @@ body {
 	grid-template-rows: auto 1fr auto;
 }
 
-.ucsc-layout-row {
-	max-width: $content-size;
-	margin: 0 auto;
-	padding: 0 1rem;
+.ucsc-layout-row,
+.is-layout-constrained {
+	padding: 0 2rem;
 }
 
 /**
@@ -31,12 +30,6 @@ with the .alignfull class
 	max-width: $content-size;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.is-root-container,
-.content-region {
-	padding-left: var(--wp--custom--spacing--baseline);
-	padding-right: var(--wp--custom--spacing--baseline);
 }
 
 .wp-block-post-content > .alignfull,
