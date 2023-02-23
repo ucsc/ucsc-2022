@@ -12,8 +12,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/ucsc/ucsc-2022/compare/v1.9.1...v2.0.0) (2023-02-09)
 
-
 ### ⚠ BREAKING CHANGES
+
+* **NOTE**: If you see two UCSC headers at the top of your site, follow these instructions:
+  1. [Go into the Appearance editor > Template Parts](https://share.cleanshot.com/091HGTh5WLMZ1HrnKnnL/download)
+  2. [Clear customizations for the "header" template part](https://share.cleanshot.com/vR0n6WScpzHFpbF1wCKh/download)
 
 * This change replaces the UCSC global header in the theme with a web component from our [Truss component library](https://github.com/ucsc/truss/). The ucsc-header part is removed and the header part no longer includes that part.
 
