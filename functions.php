@@ -260,6 +260,7 @@ function ucsc_breadcrumbs_constructor() {
 		'labels'         => $labels,
 		'show_on_front'  => true,
 		'show_trail_end' => false,
+		'container_class'=> 'breadcrumbs alignwide'
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
@@ -335,7 +336,7 @@ add_action(
 add_action( 'wp_body_open', 'ucsc_add_custom_body_open_code' );
 
 function ucsc_add_custom_body_open_code() {
-	echo '<trss-ucsc-header use-logo="true" search-action="/" search-query="s" style="--trss-content-width:72rem;"></trss-ucsc-header>';
+	echo '<trss-ucsc-header use-logo="true" search-action="/" search-query="s" style="--trss-content-width:80rem;"></trss-ucsc-header>';
 }
 
 add_action( 'wp_footer', 'ucsc_add_custom_body_close_code' );
