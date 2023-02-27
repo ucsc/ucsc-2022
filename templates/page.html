@@ -1,9 +1,16 @@
 <!-- wp:template-part {"slug":"header","theme":"ucsc-2022","tagName":"header","className":"header-region"} /-->
 
-<!-- wp:group {"layout":{"inherit":true},"tagName":"main", "className":"content-region"} -->
+<!-- wp:group {"tagName":"main", "className":"content-region"} -->
 <main class="wp-block-group content-region">
-	<!-- wp:post-title {"level":1, "className":"primary-post-title" } /-->
-	<!-- wp:post-content /-->
+
+	<!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group">
+		<!-- wp:post-title {"level":1, "className":"primary-post-title" } /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
 </main>
 <!-- /wp:group -->
 
