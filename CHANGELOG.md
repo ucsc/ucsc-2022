@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/ucsc/ucsc-2022/compare/v2.0.1...v2.1.0) (2023-02-27)
+
+
+### Features
+
+* **Blocks:** ✨ Add intro text paragraph style ([3da48d5](https://github.com/ucsc/ucsc-2022/commit/3da48d5061ec968dd01fcc01119a5cc1a5fa7023))
+* **Blocks:** ✨ Add upper and lower alpha list styles for list block ([d3bf182](https://github.com/ucsc/ucsc-2022/commit/d3bf182489e35d84ee50bd8e079e291a018178fb))
+* **Blocks:** 🎨 Add side navigation style option to list block ([#190](https://github.com/ucsc/ucsc-2022/issues/190)) ([8f9027e](https://github.com/ucsc/ucsc-2022/commit/8f9027ee8ecb166e811f488d9e9d6132f173e35a))
+* **Patterns:** ✨ Add content with sidebar navigation pattern ([349a4e0](https://github.com/ucsc/ucsc-2022/commit/349a4e062e142e6313a5e67cc14581e6b5788442))
+
+
+### Bug Fixes
+
+* ⚡️ Adds flex to body tag and grid to the blocks container to stick both footers to the page bottom ([#184](https://github.com/ucsc/ucsc-2022/issues/184)) ([6ca0318](https://github.com/ucsc/ucsc-2022/commit/6ca0318df89a95f0bf4eec4973d058da004fb616))
+
 ### [2.0.1](https://github.com/ucsc/ucsc-2022/compare/v2.0.0...v2.0.1) (2023-02-10)
 
 
