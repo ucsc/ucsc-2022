@@ -3,10 +3,10 @@
  */
 wp.domReady(() => {
 	// Styles for core/group
-	wp.blocks.registerBlockStyle('core/group', {
-		name: 'ucsc-waveform',
-		label: 'Waveform',
-		style_handle: 'ucsc-group',
+	wp.blocks.registerBlockStyle('core/paragraph', {
+		name: 'ucsc-intro-text',
+		label: 'Intro text',
+		style_handle: 'ucsc-paragraph',
 	});
 	// Styles for core/list
 	wp.blocks.registerBlockStyle('core/list', {
