@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/ucsc/ucsc-2022/compare/v2.1.1...v2.1.2) (2023-02-28)
+
+
+### Bug Fixes
+
+* **Blocks:** 🐛 "Intro text" paragraph style font is size 2, not 3 ([f59fcf2](https://github.com/ucsc/ucsc-2022/commit/f59fcf217d713addac4d5ef57b2cf1e79d878086))
+
 ### [2.1.1](https://github.com/ucsc/ucsc-2022/compare/v2.1.0...v2.1.1) (2023-02-28)
 
 
