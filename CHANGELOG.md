@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/ucsc/ucsc-2022/compare/v2.1.0...v2.1.1) (2023-02-28)
+
+
+### Bug Fixes
+
+* **Blocks:** 🎨 Change color of "intro text" paragraph style to ocean blue ([a0ea505](https://github.com/ucsc/ucsc-2022/commit/a0ea505091956d87e1dd88b7ff622990b5db99a8))
+
 ## [2.1.0](https://github.com/ucsc/ucsc-2022/compare/v2.0.1...v2.1.0) (2023-02-27)
 
 
