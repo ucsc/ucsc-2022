@@ -402,7 +402,7 @@
 					"fontSize": "var(--wp--preset--font-size--one)"
 				},
 				"spacing": {
-					"blockGap": "var:preset|spacing|60"
+					"blockGap": "var(--wp--preset--spacing--40)"
 				}
 			},
 			"core/post-date": {
