@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/ucsc/ucsc-2022/compare/v2.1.2...v2.1.3) (2023-03-01)
+
+
+### Bug Fixes
+
+* **Blocks:** 🎨 Reduce spacing between main navigation links  Fixes [#195](https://github.com/ucsc/ucsc-2022/issues/195) ([#196](https://github.com/ucsc/ucsc-2022/issues/196)) ([3098fdb](https://github.com/ucsc/ucsc-2022/commit/3098fdbf1f729bae1b7f5da9e991abaace8fd8f0))
+
 ### [2.1.2](https://github.com/ucsc/ucsc-2022/compare/v2.1.1...v2.1.2) (2023-02-28)
 
 
