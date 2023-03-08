@@ -342,7 +342,7 @@ function ucsc_add_custom_body_open_code() {
 add_action( 'wp_footer', 'ucsc_add_custom_body_close_code' );
 
 function ucsc_add_custom_body_close_code() {
-	echo '<trss-ucsc-footer></trss-ucsc-footer>';
+	echo '<trss-ucsc-footer style="--trss-content-width:80rem;"></trss-ucsc-footer>';
 }
 
 
