@@ -328,6 +328,21 @@
 			"lineHeight": "var(--wp--custom--line-height--baseline)"
 		},
 		"elements": {
+			"caption": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "500",
+					"lineHeight": "var(--wp--custom--line-height--baseline)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.5em",
+						"bottom": "0",
+						"left": "0",
+						"right": "0.5em"
+					}
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--five)",

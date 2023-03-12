@@ -73,7 +73,11 @@ wp.domReady(() => {
 		isDefault: true,
 		style_handle: 'ucsc-rss',
 	});
-
+	// Gallery
+	wp.blocks.registerBlockStyle('core/gallery', {
+		isDefault: true,
+		style_handle: 'ucsc-gallery',
+	});
 	// Variation for core/spacer
 	wp.blocks.registerBlockVariation('core/spacer', {
 		isDefault: true,
