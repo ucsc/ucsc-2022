@@ -24,6 +24,11 @@ wp.domReady(() => {
 		label: 'Lower alpha',
 		style_handle: 'ucsc-list',
 	});
+	wp.blocks.registerBlockStyle('core/list', {
+		name: 'ucsc-horizontal-list',
+		label: 'Horizontal list',
+		style_handle: 'ucsc-list',
+	});
 	// Styles for core/button
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'ucsc-blue',
