@@ -17,6 +17,17 @@
 	border-bottom: 1px solid rgba(104, 104, 104, 0.25);
 }
 
+.is-style-ucsc-horizontal-list li a {
+	background: #006aad;
+	color: #fff;
+	display: block;
+	padding: 9px 0;
+	width: 100%;
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
 .is-style-ucsc-side-navigation a:focus,
 .is-style-ucsc-side-navigation a:hover,
 .is-style-ucsc-side-navigation a:active {
@@ -27,6 +38,16 @@
 
 .is-style-ucsc-side-navigation > li:last-child a {
 	border-bottom: none;
+}
+
+.is-style-ucsc-horizontal-list li {
+	display: block;
+	box-sizing: border-box;
+	border-right: 1px solid #fff;
+	text-align: center;
+	width: 3.84%;
+	margin: 0;
+	padding: 0;
 }
 
 .site-content ul li,
@@ -41,4 +62,49 @@
 
 .is-style-ucsc-lower-alpha-list {
 	list-style-type: lower-alpha;
+}
+
+/* Horizontal styles */
+.is-style-ucsc-horizontal-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	list-style-type: none;
+	padding: 0 !important;
+}
+
+.menu-alpha-menu-container {
+	padding: 0 0 10px;
+}
+
+@media screen and (max-width: 480px) {
+
+	.menu-alpha-menu-container {
+		display: none;
+	}
+}
+
+.is-style-ucsc-horizontal-list li a:hover {
+	background: #003c6c;
+}
+
+.menu-alpha-menu-mobile-container {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.menu-alpha-menu-mobile-container {
+		display: block;
+	}
+}
+
+.menu-alpha-menu-mobile-container button {
+	padding: 8px 12px;
+}
+
+#menu-alpha-menu {
+	padding-left: 0;
+	padding-bottom: 10px;
 }
