@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
-if [ $APP_NAME -eq 'ucsc-dev' ]
-then
-echo "Skip husky"
-else
+echo "$HUSKY"
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm test
-fi

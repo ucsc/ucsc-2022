@@ -50,7 +50,7 @@ jobs:
 
       - name: Set shell vars
         run: |
-          echo ::set-output name=APP_NAME::${{ inputs.app_name }}
+          echo ::set-output name=HUSKY::"0"
 
       - name: Setup SSH
         uses: moderntribe/actions/utils/ssh-agent@v1
