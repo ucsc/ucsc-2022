@@ -86,7 +86,7 @@ jobs:
         working-directory: ${{ inputs.theme_folder }}
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-          
+
       - name: Define app to deploy
         id: define_app
         run: |
@@ -94,8 +94,8 @@ jobs:
             echo ::set-output name=deploy_app::${{ env.REVIEW_APP }}
           else
             echo ::set-output name=deploy_app::${{ inputs.app_name }}
-          fi             
-          
+          fi
+
       - name: Setup Temporary Git for deploy
         working-directory: .deploy
         run: |
@@ -103,9 +103,9 @@ jobs:
           git config --global user.email "devops@tri.be"
           git config --global init.defaultBranch master
           git init
-          ssh-keyscan {{ inputs.server }} >> /home/runner/.ssh/known_hosts
+          ssh-keyscan ${{ inputs.server }} >> /home/runner/.ssh/known_hosts
           git remote add dokku dokku@${{ inputs.server }}:${{ steps.define_app.outputs.deploy_app }}
-          
+
       - name: Deploy
         env:
           HUSKY: "0"
@@ -113,7 +113,7 @@ jobs:
         run: |
           git add . --all --force
           git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
-          git push dokku master --force          
+          git push dokku master --force
 
 
       - name: Slack Notification
