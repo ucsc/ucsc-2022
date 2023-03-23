@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "864429b53d9226d6aefcf16aa68d0521",
+    "content-hash": "945de5442fc0316754f0aff1ab1a8eb3",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v2.1.1",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "af93ba6e52236418f07a278033eba6959ee5b983"
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/af93ba6e52236418f07a278033eba6959ee5b983",
-                "reference": "af93ba6e52236418f07a278033eba6959ee5b983",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
                 "shasum": ""
             },
             "require": {
@@ -105,6 +105,7 @@
                 "magento",
                 "majima",
                 "mako",
+                "matomo",
                 "mediawiki",
                 "miaoxing",
                 "modulework",
@@ -132,7 +133,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.1.1"
+                "source": "https://github.com/composer/installers/tree/v2.2.0"
             },
             "funding": [
                 {
@@ -148,24 +149,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-13T09:13:00+00:00"
+            "time": "2022-08-20T06:45:11+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.9.3",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "8d0788bd5553c897b12bbf0e122c2fc5c4129914"
+                "reference": "d9ee7d6193781c9ee6288be6ca5681ee0c3f85b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/8d0788bd5553c897b12bbf0e122c2fc5c4129914",
-                "reference": "8d0788bd5553c897b12bbf0e122c2fc5c4129914",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/d9ee7d6193781c9ee6288be6ca5681ee0c3f85b8",
+                "reference": "d9ee7d6193781c9ee6288be6ca5681ee0c3f85b8",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.9.3",
+                "johnpbloch/wordpress-core": "6.1.1",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=5.6.20"
             },
@@ -194,20 +195,20 @@
                 "issues": "https://core.trac.wordpress.org/",
                 "source": "https://core.trac.wordpress.org/browser"
             },
-            "time": "2022-04-05T19:23:54+00:00"
+            "time": "2022-11-15T19:12:03+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.9.3",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "455d38c7b7bcdce3e0a1c6108eccca8de1860361"
+                "reference": "c9688597721b8579f3c29028e572a7b9753db893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/455d38c7b7bcdce3e0a1c6108eccca8de1860361",
-                "reference": "455d38c7b7bcdce3e0a1c6108eccca8de1860361",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/c9688597721b8579f3c29028e572a7b9753db893",
+                "reference": "c9688597721b8579f3c29028e572a7b9753db893",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +216,7 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.9.3"
+                "wordpress/core-implementation": "6.1.1"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -242,7 +243,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2022-04-05T19:23:48+00:00"
+            "time": "2022-11-15T19:11:58+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -300,15 +301,15 @@
         },
         {
             "name": "wpackagist-theme/twentytwentyone",
-            "version": "1.5",
+            "version": "1.7",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/twentytwentyone/",
-                "reference": "1.5"
+                "reference": "1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentytwentyone.1.5.zip"
+                "url": "https://downloads.wordpress.org/theme/twentytwentyone.1.7.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
