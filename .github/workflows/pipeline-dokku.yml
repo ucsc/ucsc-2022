@@ -47,8 +47,8 @@ jobs:
           app_name: ${{ inputs.app_name }}
           base_branch: ${{ inputs.branch }}
           pr_number: ${{ inputs.pr_number }}
+
       - name: Set shell vars
-        id: define_app
         run: |
           echo ::set-output APP_NAME=deploy_app::${{ inputs.app_name }}
 
