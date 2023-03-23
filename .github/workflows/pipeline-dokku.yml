@@ -6,6 +6,14 @@ on:
         required: true
         type: string
         description: Dokku Original App Name
+      theme_folder:
+        required: true
+        type: string
+        description: Dokku Theme Path
+      plugin_folder:
+        required: true
+        type: string
+        description: Dokku Plugin Path
       branch:
         required: true
         type: string
@@ -41,6 +49,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.branch }}
 
+      - name: Extract branch name
+        id: vars
+        run: echo ::set-output name=branch::${GITHUB_REF#refs/*/}
+
       - name: Set common variables
         uses: moderntribe/actions/utils/common-variables@v1
         with:
@@ -54,9 +66,8 @@ jobs:
           ssh_private_key: ${{ secrets.ssh_private_key }}
           server: ${{ inputs.server }}
 
-      - name: Create local config
-        run: |
-          mv .deploy/config/local-config-dokku.php local-config.php
+      - name: Composer
+        uses: moderntribe/actions/square1/composer@v1
 
       - name: Setup node version
         uses: actions/setup-node@v2
@@ -69,24 +80,66 @@ jobs:
       - name: NPM Build
         run: npm run build
 
-      - name: Commit Files
-        uses: moderntribe/actions/utils/commit-files@v1
+      - name: Prepare deploy
+        run: |
+          mkdir -p ${{ inputs.theme_folder }}
+          mkdir -p ${{ inputs.plugin_folder }}
+          cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
+
+      - name: Install Theme composer
+        working-directory: ${{ inputs.theme_folder }}
+        run: |
+          composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+
+      - name: Cloning Plugin
+        uses: actions/checkout@v3
+        with:
+          repository: ucsc/ucsc-custom-functionality
+          fetch-depth: 1
+          token: ${{ secrets.PAT }}
+          path: .deploy/wp-content/plugins/ucsc-custom-functionality
+
+      - name: Install Plugin composer
+        working-directory: ${{ inputs.plugin_folder }}
+        run: |
+          composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+
+      - name: Remove Git folder from plugin
+        run: |
+          rm -rf .deploy/wp-content/plugins/ucsc-custom-functionality/.git
+
+      - name: Setup SSH key for deploy environment
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{secrets.DEPLOY_PRIVATE_SSH_KEY}}
+
+      - name: Setup Temporary Git for deploy
+        working-directory: .deploy
+        run: |
+          git config --global user.name "github actions modern tribe"
+          git config --global user.email "devops@tri.be"
+          git config --global init.defaultBranch master
+          git init
+          ssh-keyscan ${{ env.SERVER }} >> /home/runner/.ssh/known_hosts
+          git remote add dokku dokku@${{ env.SERVER }}:${{ env.APPNAME }}
+
+      - name: Deploy
+        working-directory: .deploy
         env:
           HUSKY: "0"
-
-      - name: Define app to deploy
-        id: define_app
         run: |
-          if [[ ${{ inputs.is_review_app }} == "true" ]]; then
-            echo ::set-output name=deploy_app::${{ env.REVIEW_APP }}
-          else
-            echo ::set-output name=deploy_app::${{ inputs.app_name }}
-          fi
+          git add . --all --force
+          git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
+          git push dokku master --force
 
-      - name: Deploy to ${{ steps.define_app.outputs.deploy_app }}
-        uses: moderntribe/actions/deploy/gitdeploy@v1
+      - name: Slack Notification
+        if: success() || failure() || cancelled()
+        uses: moderntribe/actions/utils/slack-message-deploy@v1
         with:
-          git_url: "dokku@${{ inputs.server }}:${{ steps.define_app.outputs.deploy_app }}"
           branch: ${{ env.BRANCH }}
-
+          environment: ${{ env.APPNAME }}
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          app_url: "${{ env.APPNAME }}.${{ secrets.server }}"
+          gha_url: ${{ env.GHA_URL }}
+          status: ${{ job.status }}
 

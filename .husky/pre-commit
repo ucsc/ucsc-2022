@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-echo "husky is $HUSKY"
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm test
