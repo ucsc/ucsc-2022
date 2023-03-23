@@ -48,10 +48,6 @@ jobs:
           base_branch: ${{ inputs.branch }}
           pr_number: ${{ inputs.pr_number }}
 
-      - name: Set shell vars
-        run: |
-          echo ::set-output name=HUSKY::"0"
-
       - name: Setup SSH
         uses: moderntribe/actions/utils/ssh-agent@v1
         with:
@@ -75,6 +71,8 @@ jobs:
 
       - name: Commit Files
         uses: moderntribe/actions/utils/commit-files@v1
+        env:
+          HUSKY: "0"
 
       - name: Define app to deploy
         id: define_app
