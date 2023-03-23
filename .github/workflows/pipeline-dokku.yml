@@ -92,9 +92,9 @@ jobs:
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       - name: Cloning Plugin
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
-          repository: ucsc/ucsc-custom-functionality
+          repository: 'https://github.com/ucsc/ucsc-custom-functionality.git'
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
           path: .deploy/wp-content/plugins/ucsc-custom-functionality
