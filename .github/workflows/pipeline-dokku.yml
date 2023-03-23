@@ -47,6 +47,10 @@ jobs:
           app_name: ${{ inputs.app_name }}
           base_branch: ${{ inputs.branch }}
           pr_number: ${{ inputs.pr_number }}
+      - name: Set shell vars
+        id: define_app
+        run: |
+          echo ::set-output APP_NAME=deploy_app::${{ inputs.app_name }}
 
       - name: Setup SSH
         uses: moderntribe/actions/utils/ssh-agent@v1
@@ -69,18 +73,8 @@ jobs:
       - name: NPM Build
         run: npm run build
 
-      - name: Config Git
-        shell: bash
-        run: |
-          git config --global user.name "github actions modern tribe"
-          git config --global user.email "devops@tri.be"
-
-      - name: Commit files
-        shell: bash
-        working-directory: ${{ inputs.folder }}
-        run: |
-          git add . --force
-          HUSKY_SKIP_HOOKS=true git commit --allow-empty -m "Commiting Deploy files"
+      - name: Commit Files
+        uses: moderntribe/actions/utils/commit-files@v1
 
       - name: Define app to deploy
         id: define_app
@@ -97,14 +91,4 @@ jobs:
           git_url: "dokku@${{ inputs.server }}:${{ steps.define_app.outputs.deploy_app }}"
           branch: ${{ env.BRANCH }}
 
-      - name: Slack Notification
-        if: success()|| failure() || cancelled()
-        uses: moderntribe/actions/utils/slack-message-deploy@v1
-        with:
-          branch: ${{ env.BRANCH }}
-          environment: ${{ steps.define_app.outputs.deploy_app }}
-          slack_webhook_url: ${{ secrets.slack_webhook }}
-          app_url: "${{ steps.define_app.outputs.deploy_app }}.${{ inputs.server }}"
-          gha_url: ${{ env.GHA_URL }}
-          status: ${{ job.status }}
 
