@@ -16,7 +16,6 @@ jobs:
       server: d1.moderntribe.qa
       is_review_app: false
       theme_folder: ".deploy/wp-content/themes/ucsc-2022"
-      plugin_folder: ".deploy/wp-content/themes/ucsc-custom-functionality"
     secrets:
       github_pat_token: ${{ secrets.PAT }}
       ssh_private_key: ${{ secrets.DOKKU_DEPLOY_KEY }}

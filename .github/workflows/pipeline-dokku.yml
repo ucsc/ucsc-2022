@@ -10,10 +10,7 @@ on:
         required: true
         type: string
         description: Dokku Theme Path
-      plugin_folder:
-        required: true
-        type: string
-        description: Dokku Plugin Path
+
       branch:
         required: true
         type: string
@@ -83,26 +80,12 @@ jobs:
       - name: Prepare deploy
         run: |
           mkdir -p ${{ inputs.theme_folder }}
-          mkdir -p ${{ inputs.plugin_folder }}
           cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
 
       - name: Install Theme composer
         working-directory: ${{ inputs.theme_folder }}
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-
-      - name: Cloning Plugin
-        uses: actions/checkout@v2
-        with:
-          repository: 'https://github.com/ucsc/ucsc-custom-functionality.git'
-          fetch-depth: 1
-          token: ${{ secrets.github_pat_token }}
-          path: .deploy/wp-content/plugins/ucsc-custom-functionality
-          ref: '1.3.0'
-
-      - name: Remove Git folder from plugin
-        run: |
-          rm -rf .deploy/wp-content/plugins/ucsc-custom-functionality/.git
 
       - name: Setup SSH key for deploy environment
         uses: webfactory/ssh-agent@v0.4.1
