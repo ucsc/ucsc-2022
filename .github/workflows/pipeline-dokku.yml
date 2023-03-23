@@ -57,6 +57,12 @@ jobs:
           base_branch: ${{ inputs.branch }}
           pr_number: ${{ inputs.pr_number }}
 
+      - name: Setup SSH
+        uses: moderntribe/actions/utils/ssh-agent@v1
+        with:
+          ssh_private_key: ${{ secrets.ssh_private_key }}
+          server: ${{ inputs.server }}
+
       - name: Composer
         uses: moderntribe/actions/square1/composer@v1
 
@@ -80,11 +86,6 @@ jobs:
         working-directory: ${{ inputs.theme_folder }}
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-
-      - name: Setup SSH key for deploy environment
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{inputs.ssh_private_key}}
 
       - name: Setup Temporary Git for deploy
         working-directory: .deploy
