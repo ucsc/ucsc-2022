@@ -96,7 +96,7 @@ jobs:
         with:
           repository: ucsc/ucsc-custom-functionality
           fetch-depth: 1
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.github_pat_token }}
           path: .deploy/wp-content/plugins/ucsc-custom-functionality
 
       - name: Install Plugin composer
