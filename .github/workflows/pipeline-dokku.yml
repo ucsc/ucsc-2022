@@ -91,6 +91,8 @@ jobs:
         env:
           HUSKY: "0"
         uses: moderntribe/actions/utils/commit-files@v1
+        with:
+          folder: .deploy
 
       - name: Define app to deploy
         id: define_app
@@ -106,6 +108,7 @@ jobs:
         with:
           git_url: "dokku@${{ inputs.server }}:${{ steps.define_app.outputs.deploy_app }}"
           branch: ${{ env.BRANCH }}
+          folder: .deploy
 
       - name: Slack Notification
         if: success() || failure() || cancelled()

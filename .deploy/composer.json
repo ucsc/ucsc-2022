@@ -10,7 +10,7 @@
 	},
 	"require": {
 		"php": "^7.4",
-		"johnpbloch/wordpress": "^5.8",
+		"johnpbloch/wordpress": "^6.1.1",
 		"wpackagist-theme/twentytwentyone": "^1.5"
 	},
 	"extra": {
