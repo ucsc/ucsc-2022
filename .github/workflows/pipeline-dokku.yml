@@ -67,7 +67,7 @@ jobs:
         run: npm install
 
       - name: NPM Build
-        run: npm run dist
+        run: npm run build
 
       - name: Commit Files
         uses: moderntribe/actions/utils/commit-files@v1
