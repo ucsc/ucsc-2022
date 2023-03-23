@@ -69,8 +69,18 @@ jobs:
       - name: NPM Build
         run: npm run build
 
-      - name: Commit Files
-        uses: moderntribe/actions/utils/commit-files@v1
+      - name: Config Git
+        shell: bash
+        run: |
+          git config --global user.name "github actions modern tribe"
+          git config --global user.email "devops@tri.be"
+
+      - name: Commit files
+        shell: bash
+        working-directory: ${{ inputs.folder }}
+        run: |
+          git add . --force
+          HUSKY_SKIP_HOOKS=true git commit --allow-empty -m "Commiting Deploy files"
 
       - name: Define app to deploy
         id: define_app
