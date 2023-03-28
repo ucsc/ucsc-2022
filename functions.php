@@ -34,28 +34,18 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image', 'search', 'paragraph' );
-		foreach ( $styled_blocks as $block_name ) {
+		$styled_blocks = array( 'core/button', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
+		foreach ( $styled_blocks as $block ) {
+
+			$name = explode('/', $block);
 			$args = array(
-				'handle' => "ucsc-$block_name",
-				'src'    => get_theme_file_uri( "wp-blocks/$block_name.css" ),
-				$args['path'] = get_theme_file_path( "wp-blocks/$block_name.css" ),
+				'handle' => "ucsc-$name[1]",
+				'src'    => get_theme_file_uri( "wp-blocks/$name[1].css" ),
+				$args['path'] = get_theme_file_path( "wp-blocks/$name[1].css" ),
 			);
-			wp_enqueue_block_style( "core/$block_name", $args );
+			wp_enqueue_block_style( $block, $args );
 		}
 
-		/*
-		* Load additional UCSC block styles.
-		*/
-		$ucsc_styled_blocks = array( 'accordion',  );
-		foreach ( $ucsc_styled_blocks as $ucsc_block_name ) {
-			$args = array(
-				'handle' => "ucsc-$ucsc_block_name",
-				'src'    => get_theme_file_uri( "ucsc-blocks/$ucsc_block_name.css" ),
-				$args['path'] = get_theme_file_path( "ucsc-blocks/$ucsc_block_name.css" ),
-			);
-			wp_enqueue_block_style( "ucscblocks/$ucsc_block_name", $args );
-		}
 		/**
 		 * Include ThemeHybrid/HyridBreadcrumbs Class
 		 * see: https://github.com/themehybrid/hybrid-breadcrumbs
