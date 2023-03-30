@@ -96,7 +96,6 @@ jobs:
         working-directory: ${{ inputs.theme_folder }}
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-          pwd
 
       # Need specific version, thus cloning plugin here
       - name: Cloning UCSC Custom Functionality Plugin
@@ -116,6 +115,7 @@ jobs:
         run: |
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+          ls -la
 
       - name: Define app to deploy
         id: define_app
@@ -141,7 +141,9 @@ jobs:
           HUSKY: "0"
         working-directory: .deploy
         run: |
+          ls -la ${{ inputs.plugin_folder }}
           git add . --all --force
+          git status
           git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
           git push dokku master --force
 
