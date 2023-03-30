@@ -87,6 +87,16 @@ jobs:
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
+      # Need specific version, thus cloning plugin here
+      - name: Cloning UCSC custom functionality Plugin
+        uses: actions/checkout@v3
+        with:
+          repository: ucsc/ucsc-custom-functionality
+          fetch-depth: 1
+          token: ${{ secrets.github_pat_token }}
+          path: .deploy/wp-content/plugins/ucsc-custom-functionality
+          ref: 'v1.3.0'
+
       - name: Define app to deploy
         id: define_app
         run: |
@@ -121,8 +131,8 @@ jobs:
         uses: moderntribe/actions/utils/slack-message-deploy@v1
         with:
           branch: ${{ env.BRANCH }}
-          environment: ${{ env.APPNAME }}
+          environment: ${{ inputs.app_name }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-          app_url: "${{ env.APPNAME }}.${{ secrets.server }}"
+          app_url: "${{ inputs.app_name }}.${{ secrets.server }}"
           gha_url: ${{ env.GHA_URL }}
           status: ${{ job.status }}
