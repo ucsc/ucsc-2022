@@ -90,6 +90,9 @@ jobs:
           mkdir -p ${{ inputs.theme_folder }}
           mkdir -p ${{ inputs.plugin_folder }}
           cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
+          cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.plugin_folder }}
+          ls -la ".deploy/wp-content/plugins"
+          ls -la ".deploy/wp-content/themes"
 
       - name: Install Theme composer
         working-directory: ${{ inputs.theme_folder }}
