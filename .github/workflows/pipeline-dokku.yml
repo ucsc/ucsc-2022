@@ -106,13 +106,13 @@ jobs:
           rm -rf .deploy/wp-content/plugins/ucsc-custom-functionality/.git
 
       - name: Install Plugin composer
-        working-directory: ${{ inputs.plugin_folder }}
         run: |
+          cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       - name: Install Plugin npm packages
-        working-directory: ${{ inputs.plugin_folder }}
         run: |
+          cd ${{ inputs.plugin_folder }}
           npm install && npm run build
 
       - name: Define app to deploy
