@@ -115,7 +115,11 @@ jobs:
         run: |
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-          ls -la
+          ls -la && pwd
+          ls -la ..
+          ls -la ../..
+          ls -la ../../..
+          ls -la ../../../..
 
       - name: Define app to deploy
         id: define_app
@@ -141,7 +145,7 @@ jobs:
           HUSKY: "0"
         working-directory: .deploy
         run: |
-          ls -la ${{ inputs.plugin_folder }}
+          ls -la wp-content/plugins
           git add . --all --force
           git status
           git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
