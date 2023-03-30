@@ -110,21 +110,12 @@ jobs:
 
       - name: Remove Git folder from UCSC Custom Functionality plugin
         run: |
-          pwd
-          ls -la
           rm -rf ${{ github.workspace }}.deploy/wp-content/plugins/ucsc-custom-functionality/.git
 
       - name: Install Plugin composer
         run: |
-          ls -la && pwd
-          ls -la ${{ inputs.plugin_folder }}
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
-
-      - name: Install Plugin npm packages
-        run: |
-          cd ${{ inputs.plugin_folder }}
-          npm install && npm run build
 
       - name: Define app to deploy
         id: define_app
