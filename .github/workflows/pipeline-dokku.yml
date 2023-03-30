@@ -105,7 +105,7 @@ jobs:
           repository: ucsc/ucsc-custom-functionality
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
-          path: ${{ github.workspace }}.deploy/wp-content/plugins/ucsc-custom-functionality
+          path: .deploy/wp-content/plugins/ucsc-custom-functionality
           ref: ${{ inputs.plugin_branch }}
 
       - name: Remove Git folder from UCSC Custom Functionality plugin
