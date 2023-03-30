@@ -2,6 +2,10 @@ name: Reusable Workflow - Deploy Dokku
 on:
   workflow_call:
     inputs:
+      plugin_branch:
+        required: true
+        type: string
+        description: Plugin branch
       app_name:
         required: true
         type: string
@@ -100,6 +104,7 @@ jobs:
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
           path: ${{ secrets.plugin_folder }}
+          ref: ${{ inputs.plugin_branch }}
 
       - name: Remove Git folder from UCSC Custom Functionality plugin
         run: |
