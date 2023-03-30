@@ -100,7 +100,6 @@ jobs:
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
           path: ${{ secrets.plugin_folder }}
-          ref: 'v1.3.0'
 
       - name: Remove Git folder from UCSC Custom Functionality plugin
         run: |
