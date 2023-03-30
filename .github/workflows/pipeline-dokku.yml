@@ -96,6 +96,7 @@ jobs:
         working-directory: ${{ inputs.theme_folder }}
         run: |
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+          pwd
 
       # Need specific version, thus cloning plugin here
       - name: Cloning UCSC Custom Functionality Plugin
