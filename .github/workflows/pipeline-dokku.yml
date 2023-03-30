@@ -10,6 +10,10 @@ on:
         required: true
         type: string
         description: Dokku Theme Path
+      plugin_folder:
+        required: true
+        type: string
+        description: Dokku Theme Path
 
       branch:
         required: true
@@ -80,6 +84,7 @@ jobs:
       - name: Prepare deploy
         run: |
           mkdir -p ${{ inputs.theme_folder }}
+          mkdir -p ${{ inputs.plugin_folder }}
           cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
 
       - name: Install Theme composer
@@ -88,14 +93,28 @@ jobs:
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       # Need specific version, thus cloning plugin here
-      - name: Cloning UCSC custom functionality Plugin
+      - name: Cloning UCSC Custom Functionality Plugin
         uses: actions/checkout@v3
         with:
           repository: ucsc/ucsc-custom-functionality
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
-          path: .deploy/wp-content/plugins/ucsc-custom-functionality
+          path: ${{ secrets.plugin_folder }}
           ref: 'v1.3.0'
+
+      - name: Remove Git folder from UCSC Custom Functionality plugin
+        run: |
+          rm -rf .deploy/wp-content/plugins/ucsc-custom-functionality/.git
+
+      - name: Install Plugin composer
+        working-directory: ${{ inputs.plugin_folder }}
+        run: |
+          composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+
+      - name: Install Plugin npm packages
+        working-directory: ${{ inputs.plugin_folder }}
+        run: |
+          npm install && npm run build
 
       - name: Define app to deploy
         id: define_app
