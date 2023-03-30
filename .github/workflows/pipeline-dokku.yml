@@ -104,7 +104,7 @@ jobs:
           repository: ucsc/ucsc-custom-functionality
           fetch-depth: 1
           token: ${{ secrets.github_pat_token }}
-          path: ${{ secrets.plugin_folder }}
+          path: .deploy/wp-content/plugins/ucsc-custom-functionality
           ref: ${{ inputs.plugin_branch }}
 
       - name: Remove Git folder from UCSC Custom Functionality plugin
@@ -113,6 +113,8 @@ jobs:
 
       - name: Install Plugin composer
         run: |
+          ls -la && pwd
+          ls -la ${{ inputs.plugin_folder }}
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
