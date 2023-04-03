@@ -110,8 +110,6 @@ jobs:
       - name: Remove Git folder from UCSC Custom Functionality plugin
         working-directory: .deploy
         run: |
-          ls -la wp-content/plugins/ucsc-custom-functionality/
-          ls -la wp-content/plugins/ucsc-custom-functionality/.git
           rm -rf wp-content/plugins/ucsc-custom-functionality/.git
 
       - name: Install Plugin composer
@@ -144,7 +142,6 @@ jobs:
         working-directory: .deploy
         run: |
           git add . --all --force
-          git status
           git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
           git push dokku master --force
 
