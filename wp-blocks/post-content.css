@@ -1,23 +1,28 @@
 .post-nav-links {
-	padding:0.75rem 0;
+	padding: 0.75rem 0;
 
-	}
-.post-nav-links a, .post-nav-links > .post-page-numbers.current {
-	padding: 0.75rem;
-	margin: 0 0 0.75rem;
-	}
-
-.post-nav-links a, .post-nav-links a:hover, .post-nav-links a:active  {
-	text-decoration:none;
 }
 
-.post-nav-links a:hover, .post-nav-links a:active  {
+.post-nav-links a,
+.post-nav-links > .post-page-numbers.current {
+	padding: 0.75rem;
+	margin: 0 0 0.75rem;
+}
+
+.post-nav-links a,
+.post-nav-links a:hover,
+.post-nav-links a:active {
+	text-decoration: none;
+}
+
+.post-nav-links a:hover,
+.post-nav-links a:active {
 	background-color: var(--wp--custom--color--link);
 	color: var(--wp--preset--color--white);
 }
 
-.post-nav-links > .post-page-numbers.current  {
+.post-nav-links > .post-page-numbers.current {
 	background-color: var(--wp--preset--color--ucsc-primary-blue);
 	color: var(--wp--preset--color--white);
-	font-weight:700;
+	font-weight: 700;
 }
