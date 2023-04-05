@@ -23,7 +23,18 @@
 			"customDuotone": false,
 			"customGradient": true,
 			"duotone": [],
-			"gradients": [],
+			"gradients": [
+				{
+					"name": "UCSC Headline Gradient",
+					"gradient": "linear-gradient(90deg, #3e34b2 0%, #1569a9 50%, #79b9ad 100%)",
+					"slug": "ucsc-headline-gradient"
+				},
+				{
+					"name": "UCSC Header Gradient",
+					"gradient": "linear-gradient(90deg, #003c6c 29%, #1569a9 100%)",
+					"slug": "ucsc-header-gradient"
+				}
+			],
 			"palette": [
 				{
 					"name": "Black",
@@ -31,28 +42,8 @@
 					"slug": "black"
 				},
 				{
-					"name": "Darkest Gray",
-					"color": "#222222",
-					"slug": "darkest-gray"
-				},
-				{
-					"name": "Dark Gray",
-					"color": "#555555",
-					"slug": "dark-gray"
-				},
-				{
-					"name": "Medium Gray",
-					"color": "#9999a0",
-					"slug": "medium-gray"
-				},
-				{
-					"name": "Gray",
-					"color": "#c1c4ca",
-					"slug": "gray"
-				},
-				{
 					"name": "Light Gray",
-					"color": "#e3e3e3",
+					"color": "#d9d9d9",
 					"slug": "light-gray"
 				},
 				{
@@ -66,7 +57,7 @@
 					"slug": "white"
 				},
 				{
-					"name": "Primary blue",
+					"name": "Primary Blue",
 					"color": "#003c6c",
 					"slug": "ucsc-primary-blue"
 				},
@@ -91,6 +82,11 @@
 					"slug": "ucsc-ocean-blue"
 				},
 				{
+					"name": "University Yellow",
+					"color": "#ffbf00",
+					"slug": "ucsc-university-yellow"
+				},
+				{
 					"name": "Orange",
 					"color": "#f29813",
 					"slug": "ucsc-orange"
@@ -101,9 +97,44 @@
 					"slug": "ucsc-green"
 				},
 				{
+					"name": "Persimmon",
+					"color": "#ff6666",
+					"slug": "ucsc-persimmon"
+				},
+				{
 					"name": "Rubine Red",
 					"color": "#da216d",
 					"slug": "ucsc-rubine-red"
+				},
+				{
+					"name": "Violator Gold",
+					"color": "#997404",
+					"slug": "ucsc-violator-gold"
+				},
+				{
+					"name": "Violator Yellow",
+					"color": "#fdf3d1",
+					"slug": "ucsc-violator-yellow"
+				},
+				{
+					"name": "Violator Pink",
+					"color": "#f3d8da",
+					"slug": "ucsc-violator-pink"
+				},
+				{
+					"name": "Violator Green",
+					"color": "#d5e6de",
+					"slug": "ucsc-violator-green"
+				},
+				{
+					"name": "UCSC Royal Blue",
+					"color": "#1569a9",
+					"slug": "ucsc-royal-blue"
+				},
+				{
+					"name": "UCSC Rubine Blue",
+					"color": "#0a3355",
+					"slug": "ucsc-rubine-blue"
 				}
 			]
 		},
