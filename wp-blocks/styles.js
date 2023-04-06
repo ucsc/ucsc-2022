@@ -73,13 +73,6 @@ wp.domReady(() => {
 		isDefault: true,
 		style_handle: 'ucsc-rss',
 	});
-	wp.blocks.registerBlockStyle('ucscblocks/accordion', {
-		name: 'ucsc-accordion-custom',
-		label: 'Custom accordion',
-		isDefault: false,
-		style_handle: 'ucsc-accordion',
-	});
-
 	// Variation for core/spacer
 	wp.blocks.registerBlockVariation('core/spacer', {
 		isDefault: true,
