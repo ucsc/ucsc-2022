@@ -12,7 +12,8 @@
 		"php": "^7.4",
 		"johnpbloch/wordpress": "^6.2",
 		"wpackagist-theme/twentytwentyone": "^1.5",
-	    "vlucas/phpdotenv": "^5.5"
+	    "vlucas/phpdotenv": "^5.5",
+	  	"advanced-custom-fields/advanced-custom-fields-pro": "6.0.7"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
