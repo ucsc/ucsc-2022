@@ -3,6 +3,11 @@ name: Dokku Deploy Dev
 
 on:
   workflow_dispatch:
+    inputs:
+      plugin_branch:
+        description: 'The ucsc-custom-functionality plugin branch to deploy'
+        default: 'main'
+        required: true
   push:
     branches:
       - develop
@@ -11,12 +16,14 @@ jobs:
   deploy_app:
     uses: ./.github/workflows/pipeline-dokku.yml
     with:
+      plugin_branch: ${{ github.event.inputs.deploy_environment }}
       app_name: ucsc-dev
       branch: ${{ github.ref }}
       server: d1.moderntribe.qa
       is_review_app: false
       theme_folder: ".deploy/wp-content/themes/ucsc-2022"
+      plugin_folder: ".deploy/wp-content/plugins/ucsc-custom-functionality"
     secrets:
-      github_pat_token: ${{ secrets.PAT }}
+      github_pat_token: ${{ secrets.REPO_ACCESS }}
       ssh_private_key: ${{ secrets.DOKKU_DEPLOY_KEY }}
       slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
