@@ -1,0 +1,28 @@
+{
+	"config": {
+		"platform": {
+			"php": "7.4.7"
+		},
+		"allow-plugins": {
+			"composer/installers": true,
+			"johnpbloch/wordpress-core-installer": true
+		}
+	},
+	"require": {
+		"php": "^7.4",
+		"johnpbloch/wordpress": "^6.1.1",
+		"wpackagist-theme/twentytwentyone": "^1.5"
+	},
+	"extra": {
+		"wordpress-install-dir": "wp",
+		"installer-paths": {
+			"wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"wp-content/themes/{$name}/": ["type:wordpress-theme"],
+			"wp-content/plugins/s3-uploads": ["humanmade/S3-Uploads"]
+		}
+	},
+	"repositories": [{
+		"type": "composer",
+		"url": "https://wpackagist.org"
+	}]
+}
