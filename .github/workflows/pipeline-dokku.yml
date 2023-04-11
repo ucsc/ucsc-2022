@@ -2,11 +2,19 @@ name: Reusable Workflow - Deploy Dokku
 on:
   workflow_call:
     inputs:
+      plugin_branch:
+        required: true
+        type: string
+        description: Plugin branch
       app_name:
         required: true
         type: string
         description: Dokku Original App Name
       theme_folder:
+        required: true
+        type: string
+        description: Dokku Theme Path
+      plugin_folder:
         required: true
         type: string
         description: Dokku Theme Path
@@ -80,11 +88,33 @@ jobs:
       - name: Prepare deploy
         run: |
           mkdir -p ${{ inputs.theme_folder }}
+          mkdir -p ${{ inputs.plugin_folder }}
           cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
+          cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.plugin_folder }}
 
       - name: Install Theme composer
         working-directory: ${{ inputs.theme_folder }}
         run: |
+          composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+
+      # Need specific version, thus cloning plugin here
+      - name: Cloning UCSC Custom Functionality Plugin
+        uses: actions/checkout@v3
+        with:
+          repository: ucsc/ucsc-custom-functionality
+          fetch-depth: 1
+          token: ${{ secrets.github_pat_token }}
+          path: .deploy/wp-content/plugins/ucsc-custom-functionality
+          ref: ${{ inputs.plugin_branch }}
+
+      - name: Remove Git folder from UCSC Custom Functionality plugin
+        working-directory: .deploy
+        run: |
+          rm -rf wp-content/plugins/ucsc-custom-functionality/.git
+
+      - name: Install Plugin composer
+        run: |
+          cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       - name: Define app to deploy
@@ -121,8 +151,8 @@ jobs:
         uses: moderntribe/actions/utils/slack-message-deploy@v1
         with:
           branch: ${{ env.BRANCH }}
-          environment: ${{ env.APPNAME }}
+          environment: ${{ inputs.app_name }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-          app_url: "${{ env.APPNAME }}.${{ secrets.server }}"
+          app_url: "${{ inputs.app_name }}.${{ inputs.server }}"
           gha_url: ${{ env.GHA_URL }}
           status: ${{ job.status }}
