@@ -43,6 +43,8 @@ on:
         required: true
       slack_webhook:
         required: true
+      composer_env:
+        required: true
 
 jobs:
   deploy_dokku:
@@ -70,6 +72,10 @@ jobs:
         with:
           ssh_private_key: ${{ secrets.ssh_private_key }}
           server: ${{ inputs.server }}
+
+      - name: Configure composer
+        run: |
+          echo "${{ secrets.composer_env }}" > .env
 
       - name: Composer
         uses: moderntribe/actions/square1/composer@v1
