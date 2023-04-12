@@ -5,13 +5,16 @@
 		},
 		"allow-plugins": {
 			"composer/installers": true,
+		  	"ffraenz/private-composer-installer": true,
 			"johnpbloch/wordpress-core-installer": true
 		}
 	},
 	"require": {
 		"php": "^7.4",
 		"johnpbloch/wordpress": "^6.2",
-		"wpackagist-theme/twentytwentyone": "^1.5"
+		"wpackagist-theme/twentytwentyone": "^1.5",
+	    "vlucas/phpdotenv": "^5.5",
+	  	"advanced-custom-fields/advanced-custom-fields-pro": "6.0.7"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
@@ -21,8 +24,25 @@
 			"wp-content/plugins/s3-uploads": ["humanmade/S3-Uploads"]
 		}
 	},
-	"repositories": [{
+	"repositories": [
+	  {
 		"type": "composer",
 		"url": "https://wpackagist.org"
-	}]
+	  },
+	  {
+		"type": "package",
+		"package": {
+		  "name": "advanced-custom-fields/advanced-custom-fields-pro",
+		  "version": "6.0.7",
+		  "type": "wordpress-plugin",
+		  "dist": {
+			"type": "zip",
+			"url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%WP_PLUGIN_ACF_KEY}&t={%VERSION}"
+		  },
+		  "require": {
+			"ffraenz/private-composer-installer": "^5.0"
+		  }
+		}
+	  }
+	]
 }
