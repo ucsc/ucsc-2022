@@ -302,8 +302,7 @@
 					"customFontSize": false
 				},
 				"color": {
-					"custom": false,
-					"background": false
+					"custom": false
 				}
 			}
 		},
