@@ -73,7 +73,6 @@ wp.domReady(() => {
 		isDefault: true,
 		style_handle: 'ucsc-rss',
 	});
-
 	// Variation for core/spacer
 	wp.blocks.registerBlockVariation('core/spacer', {
 		isDefault: true,
