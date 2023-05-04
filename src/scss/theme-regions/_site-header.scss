@@ -1,5 +1,16 @@
 // Site Header
 
+.header-region {
+	position: sticky;
+	top: 0;
+	background-color: var(--wp--preset--color--white);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+
+	.admin-bar & {
+		top: 32px;
+	}
+}
+
 .site-header__separator {
 	margin: 0;
 }
@@ -8,6 +19,7 @@
 	margin-top: 0;
 }
 
+// Main menu.
 .site-header__navigation {
 	background-color: transparent !important;
 
