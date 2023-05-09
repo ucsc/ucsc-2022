@@ -8,4 +8,12 @@
 			display: list-item;
 		}
 	}
+
+	.wp-block-navigation__container {
+		margin-left: 1rem;
+
+		@include media-query($medium) {
+			margin-left: 0;
+		}
+	}
 }
