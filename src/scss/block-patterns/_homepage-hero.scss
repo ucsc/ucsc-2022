@@ -1,0 +1,41 @@
+/* BLOCK PATTERN: Homepage Hero */
+
+.ucsc__homepage-hero--bottom {
+	margin-top: calc(var(--wp--preset--spacing--60) * -1);
+}
+
+.ucsc__homepage-hero-card {
+	position: relative;
+
+	&::after {
+		content: "";
+		height: 110%;
+		width: 1px;
+		background: #ccc;
+		position: absolute;
+		right: -34px;
+		transform: translateX(50%);
+		top: -18%;
+	}
+
+	&:last-child {
+
+		&::after {
+			content: none;
+		}
+	}
+}
+
+.ucsc__homepage-hero-card-title {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 100%;
+	padding: 0;
+	transform: translate3d(-50%, -50%, 0);
+
+	> mark {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
