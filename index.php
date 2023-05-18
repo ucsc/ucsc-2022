@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-<?php var_dump(__DIR__);?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
