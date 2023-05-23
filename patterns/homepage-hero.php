@@ -45,7 +45,7 @@
 
 					<!-- wp:column {"width":"31%","style":{"border":{"width":"4px"},"spacing":{"padding":{"right":"var:preset|spacing|20","bottom":"var:preset|spacing|30","left":"var:preset|spacing|20","top":"var:preset|spacing|40"}}},"borderColor":"ucsc-primary-yellow","className":"ucsc__homepage-hero-card"} -->
 					<div class="wp-block-column ucsc__homepage-hero-card has-border-color has-ucsc-primary-yellow-border-color" style="border-width:4px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--20);flex-basis:31%"><!-- wp:paragraph {"align":"center","lock":{"move":true,"remove":true},"style":{"typography":{"fontStyle":"normal","fontWeight":"700"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"ucsc__homepage-hero-card-title","fontSize":"eight"} -->
-						<p class="has-text-align-center ucsc__homepage-hero-card-title has-eight-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:700"><mark style="background-color:#ffffff" class="has-inline-color has-ucsc-primary-blue-color">#3</mark></p>
+						<p class="has-text-align-center ucsc__homepage-hero-card-title has-eight-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:700"><mark style="background-color:#ffffff" class="has-inline-color has-ucsc-primary-blue-color">#2</mark></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":1.6,"fontStyle":"normal","fontWeight":"500"}},"fontSize":"three"} -->
