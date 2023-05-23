@@ -6,93 +6,149 @@
 	background-color: var(--wp--preset--color--white);
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 
-	.admin-bar & {
-		top: 32px;
+	// At this breakpoint, the WP admin bar is also sticky.
+	@media (min-width: 783px) {
+		top: var(--wp-admin--admin-bar--height, 0);
+	}
+}
+
+.site-header {
+	position: relative;
+
+	// Tagline
+	.wp-block-site-tagline {
+		font-size: 16px;
 	}
 }
 
 .site-header__separator {
 	margin: 0;
+	height: 2px !important;
 }
 
 .site-header__inner {
 	margin-top: 0;
+	padding: 0;
+
+	@include media-query($medium) {
+		padding-right: var(--wp--style--root--padding-right);
+		padding-left: var(--wp--style--root--padding-left);
+	}
 }
 
-// Main menu.
+
+// Main menu
 .site-header__navigation {
-	background-color: transparent !important;
+	padding-right: var(--wp--style--root--padding-right);
+	padding-left: var(--wp--style--root--padding-left);
+	color: var(--wp--preset--color--white);
 
-	.wp-block-navigation-submenu__toggle {
-		display: none;
+	.menu-item {
+		list-style: none;
 	}
 
-	.wp-block-navigation-item__content {
+	a,
+	.sub-menu-toggle {
+		display: block;
+		line-height: 24px;
+		font-size: 16px;
+		padding: 16px 18px;
 		text-decoration: none;
+		letter-spacing: 0.02em;
+		color: var(--wp--preset--color--white);
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--wp--preset--color--white);
+			color: var(--wp--preset--color--ucsc-primary-blue);
+		}
 	}
 
-	// Sub-menus.
-	.wp-block-navigation__submenu-container {
+	// Top-level menu
+	.menu {
+		margin: 0;
 		padding: 0;
+		display: flex;
+		flex-direction: column;
 
-		// Sub-menu links.
-		a.wp-block-navigation-item__content {
-			padding: 12px 18px;
-
-			&:hover,
-			&:focus-visible {
-				background-color: var(--wp--preset--color--white);
-				color: var(--wp--preset--color--ucsc-primary-blue);
-			}
+		@include media-query($medium) {
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 
-		// Sub-sub-menus
-		.wp-block-navigation__submenu-container {
-			display: none;
+		// Top-level menu items
+		> .menu-item {
+			display: flex;
+			flex-wrap: wrap;
+			background-color: var(--wp--preset--color--ucsc-secondary-blue);
+
+			@include media-query($medium) {
+				width: calc(100% / 7);
+				color: var(--wp--preset--color--ucsc-primary-blue);
+			}
+
+			> a,
+			.sub-menu-toggle {
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+
+			> a {
+				flex: 1;
+			}
+
+			.sub-menu-toggle {
+				border: 0 none;
+				width: 56px;
+				cursor: pointer;
+				position: relative;
+				background-color: transparent;
+
+				&::after {
+					content: "";
+					display: block;
+					box-sizing: border-box;
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					border-bottom: 2px solid;
+					border-right: 2px solid;
+					transform: translate(50%, -50%) rotate(45deg);
+					right: 50%;
+					top: 50%;
+					transition: transform 0.25s ease;
+				}
+			}
+
+			&.menu-item--expanded {
+
+				.sub-menu-toggle::after {
+					transform: translate(50%, -50%) rotate(-135deg);
+				}
+			}
 		}
 	}
 
-	// Top level menu.
-	.wp-block-navigation__responsive-container-content > .wp-block-navigation__container {
-		--navigation-layout-align: stretch;
-		flex-wrap: nowrap;
+	// Sub-menus
+	.sub-menu {
+		display: none;
+		overflow: hidden;
+		padding: 0;
+		background-color: var(--wp--preset--color--ucsc-primary-blue);
+	}
 
-		// Top level menu items.
-		> .wp-block-navigation-item {
-			background-color: transparent !important;
-			width: calc(100% / 7);
+	.sub-menu-wrapper {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 0.25s ease;
+		width: 100%;
 
-			// Top level links.
-			> .wp-block-navigation-item__content {
-				color: var(--wp--preset--color--ucsc-primary-blue);
-				text-transform: uppercase;
-				font-weight: 600;
-				font-size: 15px;
-				letter-spacing: 0.02em;
-				line-height: 16px;
-				padding: 12px 18px;
-				width: 100%;
-				height: 100%;
-			}
+		&[aria-hidden="false"] {
+			grid-template-rows: 1fr;
+		}
 
-			// Top level menu item is being hovered or focused.
-			&:focus-within,
-			&:hover {
-
-				> .wp-block-navigation-item__content {
-					background-color: var(--wp--preset--color--ucsc-primary-blue);
-					color: var(--wp--preset--color--white);
-				}
-
-				> .wp-block-navigation__submenu-container {
-					width: 100%;
-					height: auto;
-					opacity: 1;
-					overflow: visible;
-					visibility: visible;
-					min-width: 0;
-				}
-			}
+		.sub-menu {
+			display: block;
 		}
 	}
 }

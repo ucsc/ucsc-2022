@@ -1,22 +1,16 @@
 {
-  "name": "acf/main-nav",
-  "title": "Main Navigation",
-  "description": "Custom block for displaying main navigation.",
-  "category": "theme",
-  "icon": "text",
-  "keywords": [
-	"navigation",
-	"main"
-  ],
-  "acf": {
-	"mode": "preview",
-	"renderTemplate": "index.php"
-  },
-  "supports": {
-	"jsx": true
-  },
-  "editorStyle": "file:./index.css",
-  "style": [
-	"acf/main-nav-styles"
-  ]
+	"name": "acf/main-nav",
+	"title": "Main Navigation",
+	"description": "Custom block for displaying main navigation.",
+	"category": "theme",
+	"icon": "text",
+	"keywords": ["navigation", "main"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "index.php"
+	},
+	"supports": {
+		"jsx": true
+	},
+	"style": ["acf/main-nav-styles"]
 }
