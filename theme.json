@@ -396,7 +396,7 @@
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--five)",
-					"fontWeight": "500",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--line-height--small)"
 				}
 			},
