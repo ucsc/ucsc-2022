@@ -1,7 +1,35 @@
 /* BLOCK PATTERN: Homepage Hero */
 
+.ucsc__homepage-hero-header {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+
+	> .wp-block-heading {
+		justify-self: flex-start;
+	}
+}
+
 .ucsc__homepage-hero--bottom {
 	margin-top: calc(var(--wp--preset--spacing--60) * -1);
+}
+
+.ucsc__homepage-hero-cards {
+
+	&.is-not-stacked-on-mobile {
+		flex-wrap: wrap !important;
+		align-items: center !important;
+		gap: 160px 60px;
+
+		> .wp-block-column {
+			flex-basis: 100% !important;
+		}
+
+		@include media-query($medium) {
+			flex-wrap: inherit !important;
+		}
+	}
 }
 
 .ucsc__homepage-hero-card {
@@ -9,13 +37,23 @@
 
 	&::after {
 		content: "";
-		height: 110%;
-		width: 1px;
+		height: 1px;
+		width: 90%;
 		background: #ccc;
 		position: absolute;
-		right: -34px;
-		transform: translateX(50%);
-		top: -18%;
+		right: 5%;
+		bottom: -80px;
+
+		@include media-query($medium) {
+			height: 110%;
+			width: 1px;
+			background: #ccc;
+			position: absolute;
+			right: -34px;
+			transform: translateX(50%);
+			top: -18%;
+		}
+
 	}
 
 	&:last-child {
