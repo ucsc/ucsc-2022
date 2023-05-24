@@ -3,6 +3,11 @@
 .header-region {
 	position: sticky;
 	top: 0;
+	z-index: 1;
+	width: 100%;
+	max-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
 	background-color: var(--wp--preset--color--white);
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 
@@ -36,9 +41,56 @@
 	}
 }
 
+// Main navigation toggle
+.site-header__navigation-toggle {
+	position: absolute;
+	top: 13px;
+	right: 0.5rem;
+	width: 46px;
+	height: 46px;
+	background-color: transparent;
+	border: 0 none;
+	cursor: pointer;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 0;
+		border-top: 2px solid var(--wp--preset--color--white);
+		width: 30px;
+		left: 8px;
+		transform-origin: center center;
+		top: 50%;
+		transition: 0.25s ease;
+
+		&:nth-child(1) {
+			transform: translateY(-12px);
+		}
+
+		&:nth-child(3) {
+			transform: translateY(12px);
+		}
+
+		.main-nav--is-open & {
+
+			&:nth-child(1) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
 
 // Main menu
 .site-header__navigation {
+	margin-top: 0 !important;
 	padding-right: var(--wp--style--root--padding-right);
 	padding-left: var(--wp--style--root--padding-left);
 	color: var(--wp--preset--color--white);
@@ -56,6 +108,7 @@
 		text-decoration: none;
 		letter-spacing: 0.02em;
 		color: var(--wp--preset--color--white);
+		background-color: transparent;
 
 		&:hover,
 		&:focus-visible {
@@ -68,8 +121,12 @@
 	.menu {
 		margin: 0;
 		padding: 0;
-		display: flex;
+		display: none;
 		flex-direction: column;
+
+		.main-nav--is-open & {
+			display: flex;
+		}
 
 		@include media-query($medium) {
 			flex-direction: row;
@@ -102,7 +159,6 @@
 				width: 56px;
 				cursor: pointer;
 				position: relative;
-				background-color: transparent;
 
 				&::after {
 					content: "";
