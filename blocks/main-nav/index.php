@@ -8,6 +8,7 @@
 	<?php echo wp_nav_menu(
 		array(
 			'theme_location' => 'primary',
+			'depth'          => 2,
 		)
 	);?>
 </nav>
