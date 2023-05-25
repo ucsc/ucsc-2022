@@ -23,10 +23,24 @@
 	.site-footer__social-links {
 		justify-content: flex-start;
 
-		@include media-query($small) {
+		@include media-query($medium) {
 			justify-content: flex-end;
 		}
 	}
 
+}
+
+.site-footer__columns {
+
+	&.is-layout-flex {
+		flex-flow: column nowrap;
+		gap: var(--wp--preset--spacing--40);
+
+		@include media-query($medium) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr auto;
+			flex-wrap: nowrap !important;
+		}
+	}
 }
 

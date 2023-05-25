@@ -24,6 +24,7 @@
 // Components
 //===============================
 @import "components/navigation";
+@import "components/footer-navigation";
 @import "components/breadbrumbs";
 
 // Regions
@@ -31,3 +32,7 @@
 @import "theme-regions/footer";
 @import "theme-regions/site-header";
 @import "theme-regions/site-footer";
+
+// Blocks and Block Patterns
+//===============================
+@import "block-patterns/homepage-hero";

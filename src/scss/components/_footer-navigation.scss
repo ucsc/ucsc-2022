@@ -1,0 +1,19 @@
+.site-footer {
+
+	.wp-block-navigation {
+		gap: 1rem;
+
+		.wp-block-navigation-item {
+			list-style: disc;
+			display: list-item;
+		}
+	}
+
+	.wp-block-navigation__container {
+		margin-left: 1rem;
+
+		@include media-query($medium) {
+			margin-left: 0;
+		}
+	}
+}
