@@ -45,6 +45,11 @@ wp.domReady(() => {
 		label: 'Ocean',
 		style_handle: 'ucsc-button',
 	});
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'ucsc-white',
+		label: 'White',
+		style_handle: 'ucsc-button',
+	});
 	wp.blocks.unregisterBlockStyle('core/button', 'outline');
 	wp.blocks.unregisterBlockStyle('core/button', 'fill');
 
