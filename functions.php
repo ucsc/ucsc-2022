@@ -315,6 +315,8 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 	include get_theme_file_path( 'lib/acf.php' );
 }
 
+include get_theme_file_path( 'lib/blocks.php' );
+
 /**
  * Register Block Pattern Customizations
  */
