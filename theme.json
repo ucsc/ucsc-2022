@@ -23,7 +23,18 @@
 			"customDuotone": false,
 			"customGradient": true,
 			"duotone": [],
-			"gradients": [],
+			"gradients": [
+				{
+					"name": "UCSC Headline Gradient",
+					"gradient": "linear-gradient(90deg, #3e34b2 0%, #1569a9 50%, #79b9ad 100%)",
+					"slug": "ucsc-headline-gradient"
+				},
+				{
+					"name": "UCSC Header Gradient",
+					"gradient": "linear-gradient(90deg, #003c6c 29%, #1569a9 100%)",
+					"slug": "ucsc-header-gradient"
+				}
+			],
 			"palette": [
 				{
 					"name": "Black",
@@ -31,28 +42,8 @@
 					"slug": "black"
 				},
 				{
-					"name": "Darkest Gray",
-					"color": "#222222",
-					"slug": "darkest-gray"
-				},
-				{
-					"name": "Dark Gray",
-					"color": "#555555",
-					"slug": "dark-gray"
-				},
-				{
-					"name": "Medium Gray",
-					"color": "#9999a0",
-					"slug": "medium-gray"
-				},
-				{
-					"name": "Gray",
-					"color": "#c1c4ca",
-					"slug": "gray"
-				},
-				{
 					"name": "Light Gray",
-					"color": "#e3e3e3",
+					"color": "#d9d9d9",
 					"slug": "light-gray"
 				},
 				{
@@ -66,7 +57,7 @@
 					"slug": "white"
 				},
 				{
-					"name": "Primary blue",
+					"name": "Primary Blue",
 					"color": "#003c6c",
 					"slug": "ucsc-primary-blue"
 				},
@@ -91,6 +82,11 @@
 					"slug": "ucsc-ocean-blue"
 				},
 				{
+					"name": "University Yellow",
+					"color": "#ffbf00",
+					"slug": "ucsc-university-yellow"
+				},
+				{
 					"name": "Orange",
 					"color": "#f29813",
 					"slug": "ucsc-orange"
@@ -101,9 +97,44 @@
 					"slug": "ucsc-green"
 				},
 				{
+					"name": "Persimmon",
+					"color": "#ff6666",
+					"slug": "ucsc-persimmon"
+				},
+				{
 					"name": "Rubine Red",
 					"color": "#da216d",
 					"slug": "ucsc-rubine-red"
+				},
+				{
+					"name": "Violator Gold",
+					"color": "#997404",
+					"slug": "ucsc-violator-gold"
+				},
+				{
+					"name": "Violator Yellow",
+					"color": "#fdf3d1",
+					"slug": "ucsc-violator-yellow"
+				},
+				{
+					"name": "Violator Pink",
+					"color": "#f3d8da",
+					"slug": "ucsc-violator-pink"
+				},
+				{
+					"name": "Violator Green",
+					"color": "#d5e6de",
+					"slug": "ucsc-violator-green"
+				},
+				{
+					"name": "UCSC Royal Blue",
+					"color": "#1569a9",
+					"slug": "ucsc-royal-blue"
+				},
+				{
+					"name": "UCSC Rubine Blue",
+					"color": "#0a3355",
+					"slug": "ucsc-rubine-blue"
 				}
 			]
 		},
@@ -151,68 +182,102 @@
 					"name": "7"
 				}
 			],
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
+			"fluid": true,
 			"lineHeight": true,
 			"customFontSize": false,
 			"fontSizes": [
 				{
 					"slug": "small",
 					"size": ".833rem",
-					"name": "Small"
+					"name": "Small",
+					"fluid": {
+						"min": ".79rem",
+						"max": ".833rem"
+					}
 				},
 				{
 					"slug": "base",
 					"size": "1rem",
-					"name": "Base"
+					"name": "Base",
+					"fluid": {
+						"min": ".889rem",
+						"max": "1rem"
+					}
 				},
 				{
 					"slug": "one",
 					"size": "1.2rem",
-					"name": "1"
+					"name": "1",
+					"fluid": {
+						"min": "1rem",
+						"max": "1.2rem"
+					}
 				},
 				{
 					"slug": "two",
 					"size": "1.44rem",
-					"name": "2"
+					"name": "2",
+					"fluid": {
+						"min": "1.125rem",
+						"max": "1.44rem"
+					}
 				},
 				{
 					"slug": "three",
 					"size": "1.728rem",
-					"name": "3"
+					"name": "3",
+					"fluid": {
+						"min": "1.266rem",
+						"max": "1.728rem"
+					}
 				},
 				{
 					"slug": "four",
 					"size": "2.074rem",
-					"name": "4"
+					"name": "4",
+					"fluid": {
+						"min": "1.424rem",
+						"max": "2.074rem"
+					}
 				},
 				{
 					"slug": "five",
 					"size": "2.488rem",
-					"name": "5"
+					"name": "5",
+					"fluid": {
+						"min": "1.602rem",
+						"max": "2.488rem"
+					}
 				},
 				{
 					"slug": "six",
 					"size": "2.986rem",
-					"name": "6"
+					"name": "6",
+					"fluid": {
+						"min": "1.802rem",
+						"max": "2.986rem"
+					}
 				},
 				{
 					"slug": "seven",
 					"size": "3.583rem",
-					"name": "7"
+					"name": "7",
+					"fluid": {
+						"min": "2.027rem",
+						"max": "3.583rem"
+					}
 				},
 				{
 					"slug": "eight",
 					"size": "5.16rem",
-					"name": "8"
+					"name": "8",
+					"fluid": {
+						"min": "2.566rem",
+						"max": "5.16rem"
+					}
 				}
 			],
 			"fontFamilies": [
@@ -278,18 +343,18 @@
 					"customFontSize": false
 				},
 				"color": {
-					"custom": false,
-					"background": false
+					"custom": false
 				}
 			}
 		},
 		"custom": {
 			"line-height": {
-				"tiny": 1.125,
-				"small": 1.266,
-				"baseline": 1.602,
-				"medium": 1.802,
-				"large": 2.027
+				"baseline": 1,
+				"small": 1.1,
+				"medium": 1.2,
+				"large": 1.3,
+				"x-large": 1.4,
+				"xx-large": 1.5
 			},
 			"spacing": {
 				"x-small": ".555rem",
@@ -325,48 +390,49 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--roboto)",
 			"fontSize": "var(--wp--preset--font-size--base)",
-			"lineHeight": "var(--wp--custom--line-height--baseline)"
+			"lineHeight": "var(--wp--custom--line-height--xx-large)"
 		},
 		"elements": {
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--five)",
-					"fontWeight": "500"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--small)"
 				}
 			},
 			"h2": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--four)",
-					"fontWeight": "500",
-					"lineHeight": "var(--wp--custom--line-height--small)"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--x-large)"
 				}
 			},
 			"h3": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--three)",
-					"fontWeight": "500",
-					"lineHeight": "var(--wp--custom--line-height--small)"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--x-large)"
 				}
 			},
 			"h4": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--two)",
-					"fontWeight": "500",
-					"lineHeight": "var(--wp--custom--line-height--small)"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--xx-large)"
 				}
 			},
 			"h5": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--one)",
-					"fontWeight": "500",
-					"lineHeight": "var(--wp--custom--line-height--small)"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--xx-large)"
 				}
 			},
 			"h6": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--base)",
-					"fontWeight": "500",
-					"lineHeight": "var(--wp--custom--line-height--small)"
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--line-height--xx-large)"
 				}
 			}
 		},
@@ -454,15 +520,7 @@
 			},
 			"core/button": {
 				"border": {
-					"radius": "980px"
-				},
-				"spacing": {
-					"padding": {
-						"top": "var(--wp--preset--spacing--20)",
-						"right": "var(--wp--preset--spacing--30)",
-						"bottom": "var(--wp--preset--spacing--20)",
-						"left": "var(--wp--preset--spacing--30)"
-					}
+					"radius": "100px"
 				}
 			}
 		}

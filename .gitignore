@@ -31,6 +31,9 @@ vendor/
 # Build
 build/
 
+# OS Settings
+.DS_Store
+
 # VS Code Local Settings
 settings.json
 

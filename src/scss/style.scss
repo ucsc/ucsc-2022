@@ -9,6 +9,10 @@
 @import "base/svg";
 @import "base/layout";
 
+// Theme
+//===============================
+@import "color/variables";
+
 // Elements
 //===============================
 @import "elements/links";
@@ -20,6 +24,7 @@
 // Components
 //===============================
 @import "components/navigation";
+@import "components/breadbrumbs";
 
 // Regions
 //===============================
