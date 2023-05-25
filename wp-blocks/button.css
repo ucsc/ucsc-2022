@@ -2,7 +2,8 @@
 	text-align: center;
 }
 
-.wp-block-button .wp-block-button__link {
+.wp-block-button .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button .wp-block-button__link {
 	transition: 0.5s;
 	padding: calc(0.32em + 2px) calc(2.5em + 2px);
 	font-size: var(--wp--preset--font-size--base);
@@ -54,9 +55,9 @@
 }
 
 .wp-block-button.is-style-ucsc-blue .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--ucsc-secondary-blue);
+	border: 2px solid var(--wp--preset--color--ucsc-primary-blue);
 	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-secondary-blue);
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
 }
 
 .wp-block-button.is-style-ucsc-gold .wp-block-button__link {
@@ -71,6 +72,12 @@
 	background-color: var(--wp--preset--color--ucsc-ocean-blue);
 }
 
+.wp-block-button.is-style-ucsc-white .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--ucsc-primary-blue);
+	color: var(--wp--preset--color--ucsc-primary-blue);
+	background-color: var(--wp--preset--color--white);
+}
+
 
 /*
 	Button :focus and :hover colors
@@ -83,7 +90,7 @@
 
 .is-style-ucsc-blue .wp-block-button__link:focus,
 .is-style-ucsc-blue .wp-block-button__link:hover {
-	color: var(--wp--preset--color--ucsc-secondary-blue);
+	color: var(--wp--preset--color--ucsc-primary-blue);
 	background-color: var(--wp--preset--color--white);
 }
 
@@ -99,6 +106,12 @@
 	background-color: var(--wp--preset--color--white);
 }
 
+.is-style-ucsc-white .wp-block-button__link:focus,
+.is-style-ucsc-white .wp-block-button__link:hover {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
+}
+
 /*
 	Button :active colors
 */
@@ -109,7 +122,7 @@
 
 .is-style-ucsc-blue .wp-block-button__link:active {
 	color: var(--wp--preset--color--white);
-	background-color: var(--wp--preset--color--ucsc-secondary-blue);
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
 }
 
 .is-style-ucsc-gold .wp-block-button__link:active {
@@ -120,4 +133,9 @@
 .is-style-ucsc-ocean .wp-block-button__link:active {
 	color: var(--wp--preset--color--white);
 	background-color: var(--wp--preset--color--ucsc-ocean-blue);
+}
+
+.is-style-ucsc-white .wp-block-button__link:active {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
 }

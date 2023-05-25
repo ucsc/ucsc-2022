@@ -318,6 +318,13 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 include get_theme_file_path( 'lib/blocks.php' );
 
 /**
+ * Register Block Pattern Customizations
+ */
+if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
+	include get_theme_file_path( 'lib/blocks.php' );
+}
+
+/**
  * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
  */
 function ucsc_block_editor_scripts() {
