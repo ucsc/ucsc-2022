@@ -24,12 +24,12 @@
 .site-header {
 	position: relative;
 
-	// From where Wodpress activates layout columns to where we switch the main
-	// nav to desktop mode, leave space for the main nav toggle button.
+	// Leave room for the main nav menu toggle button.
 	> .wp-block-group:first-child {
+		padding-right: 60px;
 
-		@media (min-width: 782px) and (max-width: #{$desktop-menu - 1}) {
-			padding-right: 55px;
+		@include media-query($desktop-menu) {
+			padding-right: 0;
 		}
 	}
 
