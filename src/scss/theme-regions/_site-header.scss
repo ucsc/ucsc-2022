@@ -24,12 +24,24 @@
 .site-header {
 	position: relative;
 
+	// From where Wodpress activates layout columns to where we switch the main
+	// nav to desktop mode, leave space for the main nav toggle button.
+	> .wp-block-group:first-child {
+
+		@media (min-width: 782px) and (max-width: #{$desktop-menu - 1}) {
+			padding-right: 55px;
+		}
+	}
+
 	//////////////////////////////////////////////////////////////////////////////
 	// Tagline
 	//////////////////////////////////////////////////////////////////////////////
 
 	.wp-block-site-tagline {
 		font-size: 16px;
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
 }
 
