@@ -1,7 +1,5 @@
 // Site Header
 
-$menu-breakpoint: $medium;
-
 .header-region {
 	position: sticky;
 	top: 0;
@@ -18,7 +16,7 @@ $menu-breakpoint: $medium;
 		top: var(--wp-admin--admin-bar--height, 0);
 	}
 
-	@include media-query($menu-breakpoint) {
+	@include media-query($desktop-menu) {
 		overflow: visible;
 	}
 }
@@ -52,7 +50,7 @@ $menu-breakpoint: $medium;
 	margin-top: 0;
 	padding: 0;
 
-	@include media-query($menu-breakpoint) {
+	@include media-query($desktop-menu) {
 		padding-right: var(--wp--style--root--padding-right);
 		padding-left: var(--wp--style--root--padding-left);
 	}
@@ -107,7 +105,7 @@ $menu-breakpoint: $medium;
 		}
 	}
 
-	@include media-query($menu-breakpoint) {
+	@include media-query($desktop-menu) {
 		display: none;
 	}
 }
@@ -118,7 +116,7 @@ $menu-breakpoint: $medium;
 
 .site-header__navigation {
 	// This lets our JS know where the breakpoint between mobile and desktop is.
-	--desktop-breakpoint: #{$menu-breakpoint};
+	--desktop-breakpoint: #{$desktop-menu};
 
 	margin-top: 0 !important;
 	padding-right: var(--wp--style--root--padding-right);
@@ -154,8 +152,8 @@ $menu-breakpoint: $medium;
 			transition: transform 0.25s ease;
 		}
 
-		@include media-query($menu-breakpoint) {
-			display: none;
+		@include media-query($desktop-menu) {
+			display: none !important;
 		}
 	}
 
@@ -191,7 +189,7 @@ $menu-breakpoint: $medium;
 		display: none;
 		flex-direction: column;
 
-		@include media-query($menu-breakpoint) {
+		@include media-query($desktop-menu) {
 			flex-direction: row;
 			flex-wrap: wrap;
 			display: flex;
@@ -214,7 +212,7 @@ $menu-breakpoint: $medium;
 		flex-wrap: wrap;
 		background-color: var(--wp--preset--color--ucsc-royal-blue);
 
-		@include media-query($menu-breakpoint) {
+		@include media-query($desktop-menu) {
 			width: calc(100% / 7);
 			background-color: transparent;
 			position: relative;
@@ -230,7 +228,7 @@ $menu-breakpoint: $medium;
 		font-weight: 600;
 		text-transform: uppercase;
 
-		@include media-query($menu-breakpoint) {
+		@include media-query($desktop-menu) {
 			color: var(--wp--preset--color--ucsc-primary-blue);
 			font-size: 15px;
 			line-height: 16px;
@@ -239,7 +237,7 @@ $menu-breakpoint: $medium;
 		}
 	}
 
-	@include media-query($menu-breakpoint) {
+	@include media-query($desktop-menu) {
 
 		.menu > .menu-item--is-active > a {
 			background-color: var(--wp--preset--color--ucsc-royal-blue);
@@ -257,7 +255,7 @@ $menu-breakpoint: $medium;
 		padding: 0;
 		background-color: var(--wp--preset--color--ucsc-primary-blue);
 
-		@include media-query($menu-breakpoint) {
+		@include media-query($desktop-menu) {
 			mix-blend-mode: multiply;
 		}
 
@@ -273,7 +271,7 @@ $menu-breakpoint: $medium;
 		transition: grid-template-rows 0.25s ease;
 		width: 100%;
 
-		@include media-query($menu-breakpoint) {
+		@include media-query($desktop-menu) {
 			position: absolute;
 			top: 100%;
 			transition-duration: 0.2s;

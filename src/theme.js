@@ -24,7 +24,7 @@ function initMainNav() {
 	// Get our mobile-to-desktop breakpoint.
 	const breakpoint = window
 		.getComputedStyle(cache.nav)
-		.getPropertyValue('--desktop-breakpointxx')
+		.getPropertyValue('--desktop-breakpoint')
 		.replace('px', '');
 	if (breakpoint) {
 		cache.desktopBreakpoint = parseInt(breakpoint);
