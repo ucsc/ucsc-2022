@@ -177,6 +177,10 @@
 		letter-spacing: 0.02em;
 		color: var(--wp--preset--color--white);
 		background-color: transparent;
+		transition: 0.2s ease;
+	}
+
+	a {
 
 		&:hover,
 		&:focus-visible {
