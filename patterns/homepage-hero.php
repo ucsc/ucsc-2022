@@ -20,7 +20,7 @@
 
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"top":"var:preset|spacing|50"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)"><!-- wp:button {"className":"is-style-ucsc-white"} -->
-					<div class="wp-block-button is-style-ucsc-white"><a class="wp-block-button__link wp-element-button">Call to Action</a></div>
+					<div class="wp-block-button is-style-ucsc-white"><a class="wp-block-button__link wp-element-button" href="#">Call to Action</a></div>
 					<!-- /wp:button --></div>
 				<!-- /wp:buttons --></div>
 			<!-- /wp:group --></div></div>
