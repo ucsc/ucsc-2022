@@ -1,0 +1,28 @@
+/* BLOCK PATTERN: Homepage Hero */
+
+.uscs-page-header {
+	margin: 0;
+}
+
+.ucsc-page-header__content {
+
+	.page-template-page-no-title-with-breadcrumbs & {
+		padding-top: var(--wp--preset--spacing--20) !important;
+	}
+
+	.wp-block-cover__inner-container {
+		align-self: flex-start;
+
+		@include content-width;
+
+		.page-template-page-no-title-with-breadcrumbs & {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: var(--wp--preset--spacing--20);
+		}
+	}
+}
+
+.ucsc-page-header__title {
+	display: inline-block;
+}
