@@ -6,22 +6,18 @@
  * Categories: ucsc, buttons, call-to-action, headers, text
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"backgroundColor":"white","textColor":"black","className":"ucsc__interstitial","layout":{"type":"constrained"}} -->
-<div class="wp-block-group ucsc__interstitial has-black-color has-white-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:group {"lock":{"move":true,"remove":true},"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap","justifyContent":"center"}} -->
-<div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:heading {"textAlign":"left","style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"textColor":"ucsc-primary-blue","fontSize":"four"} -->
-<h2 class="wp-block-heading has-text-align-left has-ucsc-primary-blue-color has-text-color has-four-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Interstitial Heading</h2>
+<!-- wp:group {"lock":{"move":false,"remove":false},"align":"full","backgroundColor":"white","textColor":"black","className":"ucsc__interstitial","layout":{"type":"constrained","contentSize":"1280px","justifyContent":"center"},"fontSize":"two"} -->
+<div class="wp-block-group alignfull ucsc__interstitial has-black-color has-white-background-color has-text-color has-background has-two-font-size"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"textColor":"ucsc-primary-blue","fontSize":"four"} -->
+<h2 class="wp-block-heading has-text-align-center has-ucsc-primary-blue-color has-text-color has-four-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Interstitial Heading</h2>
 <!-- /wp:heading -->
 
-<!-- wp:group {"lock":{"move":true,"remove":true},"className":"ucsc__interstitial-content","layout":{"type":"constrained"},"fontSize":"two"} -->
-<div class="wp-block-group ucsc__interstitial-content has-two-font-size"><!-- wp:paragraph -->
-<p>Add your interstitial body content here.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Add your interstitial body content here.</p>
+<!-- /wp:paragraph -->
 
-<!-- wp:buttons -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-ucsc-blue"} -->
-<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button">Button Text</a></div>
+<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button" href="/">Button Text</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:group --></div>
 <!-- /wp:group -->
