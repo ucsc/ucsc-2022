@@ -81,12 +81,13 @@
 	background-color: transparent;
 	border: 0 none;
 	cursor: pointer;
+	color: var(--wp--preset--color--white);
 
 	span {
 		display: block;
 		position: absolute;
 		height: 0;
-		border-top: 2px solid var(--wp--preset--color--white);
+		border-top: 2px solid;
 		width: 30px;
 		left: 8px;
 		transform-origin: center center;
@@ -117,6 +118,11 @@
 		}
 	}
 
+	&:hover,
+	&:focus-visible {
+		color: var(--wp--preset--color--ucsc-primary-yellow);
+	}
+
 	@include media-query($desktop-menu) {
 		display: none;
 	}
@@ -135,6 +141,28 @@
 
 	.menu-item {
 		list-style: none;
+	}
+
+	a,
+	.sub-menu-toggle {
+		display: block;
+		line-height: 24px;
+		font-size: 16px;
+		padding: 16px 18px;
+		text-decoration: none;
+		letter-spacing: 0.02em;
+		color: var(--wp--preset--color--white);
+		background-color: transparent;
+		transition: 0.2s ease;
+	}
+
+	a {
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--wp--preset--color--white);
+			color: var(--wp--preset--color--ucsc-primary-blue);
+		}
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -162,30 +190,13 @@
 			transition: transform 0.25s ease;
 		}
 
-		@include media-query($desktop-menu) {
-			display: none !important;
-		}
-	}
-
-	a,
-	.sub-menu-toggle {
-		display: block;
-		line-height: 24px;
-		font-size: 16px;
-		padding: 16px 18px;
-		text-decoration: none;
-		letter-spacing: 0.02em;
-		color: var(--wp--preset--color--white);
-		background-color: transparent;
-		transition: 0.2s ease;
-	}
-
-	a {
-
 		&:hover,
 		&:focus-visible {
-			background-color: var(--wp--preset--color--white);
-			color: var(--wp--preset--color--ucsc-primary-blue);
+			color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+
+		@include media-query($desktop-menu) {
+			display: none !important;
 		}
 	}
 
