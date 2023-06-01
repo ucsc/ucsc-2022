@@ -82,7 +82,7 @@
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-ucsc-blue"} -->
-				<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button">Call to Action</a></div>
+				<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button" href="#">Call to Action</a></div>
 				<!-- /wp:button --></div>
 			<!-- /wp:buttons --></div>
 		<!-- /wp:group --></div>
