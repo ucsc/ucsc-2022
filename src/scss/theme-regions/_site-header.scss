@@ -245,9 +245,9 @@
 		@include media-query($desktop-menu) {
 			color: var(--wp--preset--color--ucsc-primary-blue);
 			font-size: 15px;
-			line-height: 16px;
-			padding-top: 14px;
-			padding-bottom: 14px;
+			line-height: 18px;
+			padding-top: 12px;
+			padding-bottom: 12px;
 		}
 	}
 
