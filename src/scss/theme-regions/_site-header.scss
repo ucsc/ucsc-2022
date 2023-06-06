@@ -43,23 +43,6 @@
 		display: flex;
 		align-items: center;
 	}
-
-	//////////////////////////////////////////////////////////////////////////////
-	// Logo
-	//////////////////////////////////////////////////////////////////////////////
-
-	.site-header .ucsc__logo {
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	.ucsc__logo__link {
-		display: block;
-
-		svg {
-			max-width: 100%;
-		}
-	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -153,7 +136,7 @@
 	// This lets our JS know where the breakpoint between mobile and desktop is.
 	--desktop-breakpoint: #{$desktop-menu};
 
-	margin-top: 0 !important;
+	margin: 0 !important;
 	color: var(--wp--preset--color--white);
 
 	.menu-item {
@@ -181,151 +164,159 @@
 			color: var(--wp--preset--color--ucsc-primary-blue);
 		}
 	}
+}
 
-	//////////////////////////////////////////////////////////////////////////////
-	// Submenu toggle buttons
-	//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Logo
+////////////////////////////////////////////////////////////////////////////////
 
-	.sub-menu-toggle {
-		border: 0 none;
-		width: 56px;
-		cursor: pointer;
-		position: relative;
+.ucsc__logo a:hover {
+	transform: none;
+}
 
-		&::after {
-			content: "";
-			display: block;
-			box-sizing: border-box;
-			position: absolute;
-			width: 12px;
-			height: 12px;
-			border-bottom: 2px solid;
-			border-right: 2px solid;
-			transform: translate(50%, -50%) rotate(45deg);
-			right: 50%;
-			top: 50%;
-			transition: transform 0.25s ease;
-		}
+////////////////////////////////////////////////////////////////////////////////
+// Submenu toggle buttons
+////////////////////////////////////////////////////////////////////////////////
 
-		&:hover,
-		&:focus-visible {
-			color: var(--wp--preset--color--ucsc-primary-yellow);
-		}
+.site-header__navigation .sub-menu-toggle {
+	border: 0 none;
+	width: 56px;
+	cursor: pointer;
+	position: relative;
 
-		@include media-query($desktop-menu) {
-			display: none !important;
-		}
+	&::after {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border-bottom: 2px solid;
+		border-right: 2px solid;
+		transform: translate(50%, -50%) rotate(45deg);
+		right: 50%;
+		top: 50%;
+		transition: transform 0.25s ease;
 	}
 
-	.menu-item--is-active .sub-menu-toggle::after {
-		transform: translate(50%, -50%) rotate(-135deg);
-	}
-
-	//////////////////////////////////////////////////////////////////////////////
-	// Top-level menu
-	//////////////////////////////////////////////////////////////////////////////
-
-	.menu {
-		margin: 0;
-		padding: 0;
-		display: none;
-		flex-direction: column;
-
-		@include media-query($desktop-menu) {
-			flex-direction: row;
-			flex-wrap: wrap;
-			display: flex;
-			max-width: var(--wp--style--global--content-size);
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.main-nav--is-open & {
-			display: flex;
-		}
-	}
-
-	//////////////////////////////////////////////////////////////////////////////
-	// Top-level menu items
-	//////////////////////////////////////////////////////////////////////////////
-
-	.menu > .menu-item {
-		display: flex;
-		flex-wrap: wrap;
-		background-color: var(--wp--preset--color--ucsc-royal-blue);
-
-		@include media-query($desktop-menu) {
-			width: calc(100% / 7);
-			background-color: transparent;
-			position: relative;
-		}
-	}
-
-	//////////////////////////////////////////////////////////////////////////////
-	// Top-level menu links
-	//////////////////////////////////////////////////////////////////////////////
-
-	.menu > .menu-item > a {
-		flex: 1;
-		font-weight: 600;
-		text-transform: uppercase;
-
-		@include media-query($desktop-menu) {
-			color: var(--wp--preset--color--ucsc-primary-blue);
-			font-size: 15px;
-			line-height: 18px;
-			padding-top: 12px;
-			padding-bottom: 12px;
-		}
+	&:hover,
+	&:focus-visible {
+		color: var(--wp--preset--color--ucsc-primary-yellow);
 	}
 
 	@include media-query($desktop-menu) {
+		display: none !important;
+	}
+}
 
-		.menu > .menu-item--is-active > a {
-			background-color: var(--wp--preset--color--ucsc-royal-blue);
-			color: var(--wp--preset--color--white);
-		}
+.site-header__navigation .menu-item--is-active .sub-menu-toggle::after {
+	transform: translate(50%, -50%) rotate(-135deg);
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Top-level menu
+//////////////////////////////////////////////////////////////////////////////
+
+.site-header__navigation .menu {
+	margin: 0;
+	padding: 0;
+	display: none;
+	flex-direction: column;
+
+	@include media-query($desktop-menu) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		display: flex;
+		max-width: var(--wp--style--global--content-size);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	//////////////////////////////////////////////////////////////////////////////
-	// Sub-menus
-	//////////////////////////////////////////////////////////////////////////////
+	.main-nav--is-open & {
+		display: flex;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Top-level menu items
+//////////////////////////////////////////////////////////////////////////////
+
+.site-header__navigation .menu > .menu-item {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--wp--preset--color--ucsc-royal-blue);
+
+	@include media-query($desktop-menu) {
+		width: calc(100% / 7);
+		background-color: transparent;
+		position: relative;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Top-level menu links
+//////////////////////////////////////////////////////////////////////////////
+
+.site-header__navigation .menu > .menu-item > a {
+	flex: 1;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	@include media-query($desktop-menu) {
+		color: var(--wp--preset--color--ucsc-primary-blue);
+		font-size: 15px;
+		line-height: 18px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+@include media-query($desktop-menu) {
+
+	.site-header__navigation .menu > .menu-item--is-active > a {
+		background-color: var(--wp--preset--color--ucsc-royal-blue);
+		color: var(--wp--preset--color--white);
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Sub-menus
+//////////////////////////////////////////////////////////////////////////////
+
+.site-header__navigation .sub-menu {
+	display: none;
+	overflow: hidden;
+	padding: 0;
+	background-color: var(--wp--preset--color--ucsc-primary-blue);
+
+	@include media-query($desktop-menu) {
+		mix-blend-mode: multiply;
+	}
+
+	// Restrict to two levels; no sub-sub-menus
+	.sub-menu {
+		display: none !important;
+	}
+}
+
+.site-header__navigation .sub-menu-wrapper {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.25s ease;
+	width: 100%;
+
+	@include media-query($desktop-menu) {
+		position: absolute;
+		top: 100%;
+		transition-duration: 0.2s;
+		z-index: 1;
+	}
 
 	.sub-menu {
-		display: none;
-		overflow: hidden;
-		padding: 0;
-		background-color: var(--wp--preset--color--ucsc-primary-blue);
-
-		@include media-query($desktop-menu) {
-			mix-blend-mode: multiply;
-		}
-
-		// Restrict to two levels; no sub-sub-menus
-		.sub-menu {
-			display: none !important;
-		}
+		display: block;
 	}
+}
 
-	.sub-menu-wrapper {
-		display: grid;
-		grid-template-rows: 0fr;
-		transition: grid-template-rows 0.25s ease;
-		width: 100%;
-
-		@include media-query($desktop-menu) {
-			position: absolute;
-			top: 100%;
-			transition-duration: 0.2s;
-			z-index: 1;
-		}
-
-		.sub-menu {
-			display: block;
-		}
-	}
-
-	.menu-item--is-active .sub-menu-wrapper {
-		grid-template-rows: 1fr;
-	}
+.site-header__navigation .menu-item--is-active .sub-menu-wrapper {
+	grid-template-rows: 1fr;
 }
