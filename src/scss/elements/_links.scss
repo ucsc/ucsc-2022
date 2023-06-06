@@ -16,3 +16,21 @@ a {
 	}
 }
 
+// When a link is on a dark background, provide a legible inverse color
+// alternative.
+.has-white-color,
+.has-ucsc-lightest-gray,
+.has-ucsc-light-gray,
+.has-ucsc-violator-yellow-color,
+.has-ucsc-violator-pink-color {
+
+	a {
+		color: var(--wp--preset--color--white);
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+	}
+}

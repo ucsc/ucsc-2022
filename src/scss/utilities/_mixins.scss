@@ -1,6 +1,9 @@
 // Screen width breakpoints
 // Styles will take effect 1px above these sizes
 $small: 602px;
+// The breakpoint where WP block columns switch from being stacked for mobile to
+// being actual columns.
+$wp-columns-unstack: 782px;
 $medium: 960px;
 $desktop-menu: 1060px; // This one needs to be in pixels.
 $large: 1282px;
