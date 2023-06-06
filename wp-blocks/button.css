@@ -82,6 +82,11 @@
 /*
 	Button :focus and :hover colors
 */
+
+.wp-block-button .wp-block-button__link:focus-visible {
+	outline: none;
+}
+
 .is-style-ucsc-black .wp-block-button__link:focus,
 .is-style-ucsc-black .wp-block-button__link:hover {
 	color: var(--wp--preset--color--black);
