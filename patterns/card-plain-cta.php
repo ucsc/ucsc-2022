@@ -7,9 +7,9 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"className":"ucsc__card ucsc__card-plain-cta","layout":{"type":"default"}} -->
-<div class="wp-block-group ucsc__card ucsc__card-plain"><!-- wp:image {"id":770,"sizeSlug":"sixteen-nine","linkDestination":"none"} -->
-	<figure class="wp-block-image size-sixteen-nine"><img src="https://ucsc.local/wp-content/uploads/2008/06/img_0767-800x496.jpg" alt="Huatulco Coastline" class="wp-image-770"/></figure>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"className":"ucsc__card ucsc__card-plain","layout":{"type":"default"}} -->
+<div class="wp-block-group ucsc__card ucsc__card-plain"><!-- wp:image -->
+	<figure class="wp-block-image"><img alt=""/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->

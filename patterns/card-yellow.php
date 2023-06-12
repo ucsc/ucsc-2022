@@ -8,8 +8,8 @@
 ?>
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"ucsc-primary-yellow","className":"ucsc__card ucsc__card-yellow","layout":{"type":"default"}} -->
-<div class="wp-block-group ucsc__card ucsc__card-yellow has-ucsc-primary-yellow-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"id":770,"sizeSlug":"sixteen-nine","linkDestination":"none"} -->
-	<figure class="wp-block-image size-sixteen-nine"><img src="https://ucsc.local/wp-content/uploads/2008/06/img_0767-800x496.jpg" alt="Huatulco Coastline" class="wp-image-770"/></figure>
+<div class="wp-block-group ucsc__card ucsc__card-yellow has-ucsc-primary-yellow-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image -->
+	<figure class="wp-block-image"><img alt=""/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"40px","right":"var:preset|spacing|20","bottom":"var:preset|spacing|40","left":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__card-inner","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
