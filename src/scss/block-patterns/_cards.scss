@@ -1,0 +1,24 @@
+/* BLOCK PATTERN: Cards */
+
+.ucsc__card {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+	gap: var(--wp--preset--spacing--20);
+
+	.ucsc__card-grid & {
+		height: 100%;
+	}
+}
+
+.ucsc__card-inner {
+	height: 100%;
+}
+
+.ucsc__card-cta {
+
+	.ucsc__card-grid & {
+		margin-top: auto !important;
+		margin-bottom: 0 !important;
+	}
+}
