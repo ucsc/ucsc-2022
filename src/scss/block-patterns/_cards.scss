@@ -3,8 +3,31 @@
 .ucsc__card {
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: flex-start;
+	align-items: stretch;
 	gap: var(--wp--preset--spacing--20);
+
+	a {
+		color: var(--wp--preset--color--black);
+		font-weight: 700;
+
+		&:hover,
+		&:focus {
+			color: var(--wp--preset--color--ucsc-primary-blue);
+		}
+	}
+
+	&.ucsc__card-yellow {
+
+		a {
+			text-decoration-color: var(--wp--preset--color--black);
+
+			&:hover,
+			&:focus {
+				color: var(--wp--preset--color--ucsc-primary-blue);
+				text-decoration-color: var(--wp--preset--color--ucsc-primary-blue);
+			}
+		}
+	}
 
 	.ucsc__card-grid & {
 		height: 100%;
