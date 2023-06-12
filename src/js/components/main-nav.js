@@ -6,6 +6,7 @@
 import { on } from '../utils/events';
 import state from '../config/state';
 import { NAVIGATION_BREAKPOINT } from '../config/options';
+import * as bodyLock from '../utils/body-lock';
 
 // Cache some elements.
 const cache = {
@@ -113,6 +114,7 @@ function initMainNav() {
  * Show the main-nav menu on mobile.
  */
 function showMenu() {
+	bodyLock.lock();
 	document.body.classList.add( 'main-nav--is-open' );
 	cache.nav.setAttribute( 'aria-hidden', false );
 	cache.navToggle.setAttribute( 'aria-label', 'Hide main navigation menu' );
@@ -122,6 +124,7 @@ function showMenu() {
  * Hide the main-nav menu on mobile.
  */
 function hideMenu() {
+	bodyLock.unlock();
 	document.body.classList.remove( 'main-nav--is-open' );
 	cache.nav.setAttribute( 'aria-hidden', true );
 	cache.navToggle.setAttribute( 'aria-label', 'Show main navigation menu' );
