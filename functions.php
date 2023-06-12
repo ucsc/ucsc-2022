@@ -263,7 +263,7 @@ function ucsc_breadcrumbs_constructor() {
 		'labels'         => $labels,
 		'show_on_front'  => true,
 		'show_trail_end' => false,
-		'container_class'=> 'breadcrumbs alignwide'
+		'container_class'=> 'ucsc-page-header__breadcrumbs alignwide'
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
@@ -279,9 +279,9 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset( $breadcrumbs ) ) {
+	if ( is_singular() && isset( $breadcrumbs ) && is_page_template( 'page-no-title-with-breadcrumbs' ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['level'] ) && isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'primary-post-title' ) {
+			if ( isset( $block['attrs']['level'] ) ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
 				return $html;
 			}
