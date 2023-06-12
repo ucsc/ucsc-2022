@@ -23,7 +23,7 @@
 
 		<!-- wp:buttons {"className":"ucsc__card-cta"} -->
 		<div class="wp-block-buttons ucsc__card-cta"><!-- wp:button {"className":"is-style-ucsc-blue"} -->
-			<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button">Call To Action</a></div>
+			<div class="wp-block-button is-style-ucsc-blue"><a class="wp-block-button__link wp-element-button" href="#">Call To Action</a></div>
 			<!-- /wp:button --></div>
 		<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
