@@ -7,6 +7,7 @@
 }
 
 .ucsc__statistics-item-value {
-	text-decoration: underline var(--wp--preset--color--ucsc-primary-yellow);
+	text-decoration: underline;
+	text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
 	text-underline-offset: 8px;
 }
