@@ -1,27 +1,23 @@
-<!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"main","displayLayout":{"type":"list","columns":3},"layout":{"type":"constrained"}} -->
-<main class="wp-block-query"><!-- wp:post-template -->
-	<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
-	<div class="wp-block-group"><!-- wp:post-title {"isLink":true,"align":"wide"} /-->
+<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"main","displayLayout":{"type":"flex","columns":3},"className":"ucsc__post-query-loop","layout":{"type":"constrained"}} -->
+<main class="wp-block-query ucsc__post-query-loop"><!-- wp:post-template -->
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__card\u002d\u002dquery-loop","layout":{"type":"default"}} -->
+	<div class="wp-block-group ucsc__card--query-loop" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:post-featured-image {"isLink":true,"width":"","height":"","sizeSlug":"sixteen-nine","className":"ucsc-query-loop__image"} /-->
 
-		<!-- wp:post-date {"format":"F j, Y","isLink":true} /-->
+		<!-- wp:post-terms {"term":"category","style":{"spacing":{"margin":{"top":"var:preset|spacing|20","right":"0","bottom":"8px","left":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|black"}}}},"textColor":"black","className":"ucsc-query-loop__category","fontSize":"small"} /-->
 
-		<!-- wp:post-featured-image {"isLink":true,"align":"wide"} /-->
+		<!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"top":"0","right":"0","left":"0","bottom":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|black"}}}}} /-->
 
-		<!-- wp:post-excerpt /-->
+		<!-- wp:post-date {"style":{"spacing":{"margin":{"bottom":"0"}}},"textColor":"black","className":"ucsc-query-loop__post-date","fontSize":"base"} /-->
 
-		<!-- wp:spacer {"height":"112px"} -->
-		<div style="height:112px" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
-	</div>
+		<!-- wp:post-excerpt {"className":"ucsc-query-loop__excerpt"} /--></div>
 	<!-- /wp:group -->
 	<!-- /wp:post-template -->
 
-	<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
-	<!-- wp:query-pagination-previous {"fontSize":"small"} /-->
+	<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+	<!-- wp:query-pagination-previous /-->
 
 	<!-- wp:query-pagination-numbers /-->
 
-	<!-- wp:query-pagination-next {"fontSize":"small"} /-->
-	<!-- /wp:query-pagination -->
-</main>
+	<!-- wp:query-pagination-next /-->
+	<!-- /wp:query-pagination --></main>
 <!-- /wp:query -->

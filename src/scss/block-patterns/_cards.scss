@@ -1,0 +1,24 @@
+/* BLOCK PATTERN: Cards */
+.ucsc__card--query-loop {
+
+	.ucsc-query-loop__category > a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+	}
+
+	/* CASE: Query Loop Card does not have a featured image */
+	&:not(&:has(figure)) {
+
+		&::before {
+			content: "";
+			display: block;
+			aspect-ratio: 16 / 9;
+			background-image: var(--wp--preset--gradient--ucsc-headline-gradient);
+		}
+	}
+}
