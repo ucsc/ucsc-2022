@@ -23,3 +23,9 @@ $content-size: 80rem;
 	}
 
 }
+
+@mixin content-width($size: var(--max-container-1280)) {
+	width: 100%;
+	max-width: $size;
+	margin: 0 auto !important;
+}
