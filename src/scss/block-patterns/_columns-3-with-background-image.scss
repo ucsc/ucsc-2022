@@ -1,0 +1,23 @@
+/* BLOCK PATTERN: 3 columns with background image */
+
+.ucsc__columns-3-with-background-image {
+
+	.wp-block-column {
+		position: relative;
+
+		&:where(:not(:last-child)) {
+
+			&::after {
+				content: "";
+				position: absolute;
+				height: 66%;
+				width: 2px;
+				background-color: currentcolor;
+				top: 50%;
+				right: calc(var(--wp--preset--spacing--60) / -2);
+				transform: translate(100%, -50%);
+				opacity: 0.5;
+			}
+		}
+	}
+}
