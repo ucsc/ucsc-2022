@@ -1,2 +1,4 @@
 // front end scripts
-import './js/components/main-nav.js';
+import ready from './js/core/ready';
+
+ready();

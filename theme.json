@@ -33,6 +33,11 @@
 					"name": "UCSC Header Gradient",
 					"gradient": "linear-gradient(90deg, #003c6c 29%, #1569a9 100%)",
 					"slug": "ucsc-header-gradient"
+				},
+				{
+					"name": "UCSC Light Gradient",
+					"gradient": "linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%)",
+					"slug": "ucsc-light-gradient"
 				}
 			],
 			"palette": [

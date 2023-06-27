@@ -8,6 +8,8 @@
  * @since UCSC 1.0.0
  */
 
+use Image_Sizes;
+
 if ( ! function_exists( 'ucsc_setup' ) ) :
 
 	/**
@@ -315,13 +317,25 @@ if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 	include get_theme_file_path( 'lib/acf.php' );
 }
 
-include get_theme_file_path( 'lib/blocks.php' );
-
 /**
  * Register Block Pattern Customizations
  */
 if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
 	include get_theme_file_path( 'lib/blocks.php' );
+}
+
+/**
+ * Register Image Sizes
+ */
+if ( file_exists( get_theme_file_path( 'lib/image_sizes.php' ) ) ) {
+	include get_theme_file_path( 'lib/image_sizes.php' );
+
+	add_action( 'after_setup_theme', function () {
+		$images = new Image_Sizes();
+		$images->register_sizes();
+		$images->register_size_names();
+		$images->get_sizes();
+	});
 }
 
 /**

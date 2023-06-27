@@ -20,6 +20,7 @@
 // Pages
 //===============================
 @import "pages/posts-pages";
+@import "pages/archives";
 
 // Components
 //===============================
@@ -35,8 +36,11 @@
 
 // Blocks and Block Patterns
 //===============================
+@import "block-patterns/columns-3-with-background-image";
 @import "block-patterns/homepage-hero";
 @import "block-patterns/link-list";
+@import "block-patterns/media-with-text-featured";
 @import "block-patterns/statistics";
 @import "block-patterns/page-header-breadcrumbs";
+@import "block-patterns/cards";
 @import "block-patterns/three-columns-text";

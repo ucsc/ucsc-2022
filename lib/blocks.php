@@ -14,4 +14,9 @@ add_action( 'init', function () {
 		'hero',
 		array( 'label' => __( 'Hero', 'ucsc' ) )
 	);
+
+	register_block_pattern_category(
+		'cards',
+		array( 'label' => __( 'Cards', 'ucsc' ) )
+	);
 } );
