@@ -334,6 +334,7 @@ if ( file_exists( get_theme_file_path( 'lib/image_sizes.php' ) ) ) {
 		$images = new Image_Sizes();
 		$images->register_sizes();
 		$images->register_size_names();
+		$images->get_sizes();
 	});
 }
 

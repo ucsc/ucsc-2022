@@ -1,0 +1,28 @@
+.ucsc__post-query-loop {
+
+	.wp-block-post-template.is-flex-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: var(--wp--preset--spacing--40);
+
+		> li {
+			width: auto !important;
+		}
+
+		.wp-block-post-featured-image {
+
+			img {
+				aspect-ratio: 16 / 9;
+				object-fit: cover;
+			}
+		}
+
+		@include media-query($wp-columns-unstack) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-query($large) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

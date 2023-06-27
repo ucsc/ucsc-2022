@@ -46,6 +46,13 @@ class Image_Sizes {
 	];
 
 	/**
+	 * @return mixed
+	 */
+	public function get_sizes(): mixed {
+		return apply_filters('ucsc/image/sizes', $this->sizes);
+	}
+
+	/**
 	 * @action after_setup_theme
 	 */
 	public function register_sizes(): void {
