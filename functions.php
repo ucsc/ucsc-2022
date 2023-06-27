@@ -359,3 +359,8 @@ function ucsc_truss_assets() { ?>
 
 <?php
 }
+
+/**
+ * Add Excerpts to Pages
+ */
+add_post_type_support( 'page', 'excerpt' );
