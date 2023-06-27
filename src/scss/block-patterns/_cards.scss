@@ -1,6 +1,54 @@
 /* BLOCK PATTERN: Cards */
+
+.ucsc__card {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: var(--wp--preset--spacing--20);
+
+	a {
+		color: var(--wp--preset--color--black);
+		font-weight: 700;
+
+		&:hover,
+		&:focus {
+			color: var(--wp--preset--color--ucsc-primary-blue);
+		}
+	}
+
+	&.ucsc__card-yellow {
+
+		a {
+			text-decoration-color: var(--wp--preset--color--black);
+
+			&:hover,
+			&:focus {
+				color: var(--wp--preset--color--ucsc-primary-blue);
+				text-decoration-color: var(--wp--preset--color--ucsc-primary-blue);
+			}
+		}
+	}
+
+	.ucsc__card-grid & {
+		height: 100%;
+	}
+}
+
+.ucsc__card-inner {
+	height: 100%;
+}
+
+.ucsc__card-cta {
+
+	.ucsc__card-grid & {
+		margin-top: auto !important;
+		margin-bottom: 0 !important;
+	}
+}
+
 .ucsc__card--query-loop {
 
+	/* stylelint-disable no-descending-specificity */
 	.ucsc-query-loop__category > a {
 		text-decoration: none;
 

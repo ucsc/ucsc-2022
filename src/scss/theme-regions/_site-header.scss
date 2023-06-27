@@ -29,7 +29,7 @@
 		padding-right: 60px;
 
 		@include media-query($desktop-menu) {
-			padding-right: 0;
+			padding-right: var(--wp--style--root--padding-right);
 		}
 	}
 
@@ -42,6 +42,10 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
+
+		@include media-query($desktop-menu) {
+			justify-content: end;
+		}
 	}
 }
 
