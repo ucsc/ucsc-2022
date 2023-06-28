@@ -46,9 +46,9 @@ class Image_Sizes {
 	];
 
 	/**
-	 * @return mixed
+	 * @return array
 	 */
-	public function get_sizes(): mixed {
+	public function get_sizes(): array {
 		return apply_filters('ucsc/image/sizes', $this->sizes);
 	}
 
