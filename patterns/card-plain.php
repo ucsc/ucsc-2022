@@ -7,7 +7,7 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"className":"ucsc__card ucsc__card-plain","layout":{"type":"default"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"className":"ucsc__card ucsc__card-plain","layout":{"type":"default"}} -->
 <div class="wp-block-group ucsc__card ucsc__card-plain"><!-- wp:image -->
 	<figure class="wp-block-image"><img alt=""/></figure>
 	<!-- /wp:image -->
