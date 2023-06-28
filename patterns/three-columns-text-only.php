@@ -7,9 +7,9 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"className":"ucsc-3-column-text","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
-<div class="wp-block-group ucsc-3-column-text" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-	<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|70","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"className":"ucsc-3-column-text","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+<div class="wp-block-group ucsc-3-column-text" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:group {"className":"ucsc-3-column-text__stack","layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group ucsc-3-column-text__stack"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
 		<p class="has-ucsc-primary-blue-color has-text-color has-two-font-size" style="font-style:normal;font-weight:700">Column Heading</p>
 		<!-- /wp:paragraph -->
 
@@ -24,8 +24,8 @@
 		<!-- /wp:buttons --></div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-	<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
+	<!-- wp:group {"className":"ucsc-3-column-text__stack","layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group ucsc-3-column-text__stack"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
 		<p class="has-ucsc-primary-blue-color has-text-color has-two-font-size" style="font-style:normal;font-weight:700">Column Heading</p>
 		<!-- /wp:paragraph -->
 
@@ -44,8 +44,8 @@
 		<!-- /wp:buttons --></div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-	<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
+	<!-- wp:group {"className":"ucsc-3-column-text__stack","layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group ucsc-3-column-text__stack"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"ucsc-primary-blue","fontSize":"two"} -->
 		<p class="has-ucsc-primary-blue-color has-text-color has-two-font-size" style="font-style:normal;font-weight:700">Column Heading</p>
 		<!-- /wp:paragraph -->
 
