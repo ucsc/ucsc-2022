@@ -7,6 +7,7 @@ import debounce from 'lodash/debounce';
 import { on, ready } from '../utils/events';
 import resize from './resize';
 import components from './components';
+import blocks from './blocks';
 import viewportDims from './viewport-dims';
 
 const bindEvents = () => {
@@ -23,6 +24,8 @@ const init = () => {
 	bindEvents();
 
 	components();
+
+	blocks();
 };
 
 /**

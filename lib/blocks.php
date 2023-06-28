@@ -19,4 +19,9 @@ add_action( 'init', function () {
 		'cards',
 		array( 'label' => __( 'Cards', 'ucsc' ) )
 	);
+
+	add_filter( 'wp_rss_img', '__return_false' );
+
 } );
+
+include get_theme_file_path( 'blocks/custom_rss_block.php' );
