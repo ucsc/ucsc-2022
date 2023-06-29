@@ -20,4 +20,3 @@ Does this have tests?
 - [ ] Yes
 - [ ] No, this doesn't need tests because...
 - [ ] No, I need help figuring out how to write the tests.
-
