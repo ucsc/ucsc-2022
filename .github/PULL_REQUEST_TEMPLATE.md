@@ -2,7 +2,6 @@
 
 [ description ]
 
-
 ## QA
 
 Links to relevant issues
