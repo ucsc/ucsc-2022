@@ -1,0 +1,26 @@
+/* BLOCK PATTERN: Link List */
+
+.ucsc__link-list {
+
+	.wp-block-columns {
+		gap: 0;
+
+		@include media-query($wp-columns-unstack) {
+			gap: var(--wp-preset--font-size--one);
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin-block-end: var(--wp--preset--font-size--one);
+		}
+
+		a {
+			font-weight: 700;
+		}
+	}
+}

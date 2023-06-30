@@ -1,11 +1,11 @@
 .wp-block-site-title > a {
-	color: var(--wp--preset--color--darkest-gray);
+	color: var(--ucsc-darkest-gray);
 	text-decoration: none;
 }
 
 .wp-block-site-title > a:hover,
 .wp-block-site-title > a:focus,
 .wp-block-site-title > a:active {
-	color: var(--wp--preset--color--darkest-gray);
+	color: var(--ucsc-darkest-gray);
 	text-decoration: none;
 }

@@ -1,0 +1,34 @@
+.site-footer {
+
+	.site-footer__columns.is-layout-flex {
+		gap: 16px;
+
+		@include media-query($medium) {
+			gap: 24px;
+		}
+	}
+
+	.wp-block-site-title {
+		margin-bottom: 8px;
+
+		@include media-query($medium) {
+			margin-bottom: 0;
+		}
+	}
+
+	.wp-block-navigation {
+		gap: 1rem;
+
+		.wp-block-navigation-item {
+			display: list-item;
+		}
+	}
+
+	.site-footer__social-links {
+		margin-top: 16px;
+
+		@include media-query($medium) {
+			margin-top: 0;
+		}
+	}
+}

@@ -121,8 +121,8 @@ jobs:
         uses: moderntribe/actions/utils/slack-message-deploy@v1
         with:
           branch: ${{ env.BRANCH }}
-          environment: ${{ env.APPNAME }}
+          environment: ${{ inputs.app_name }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-          app_url: "${{ env.APPNAME }}.${{ secrets.server }}"
+          app_url: "${{ inputs.app_name }}.${{ inputs.server }}"
           gha_url: ${{ env.GHA_URL }}
           status: ${{ job.status }}

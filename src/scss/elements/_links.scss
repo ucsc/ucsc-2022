@@ -1,15 +1,36 @@
- a {
+a {
 	color: var(--wp--preset--color--ucsc-primary-blue);
 	text-decoration-color: var(--wp--custom--color--link-decoration);
-	text-decoration-thickness: .12rem;
-	text-underline-offset: .12em;
-  &:hover, &:focus, &:active {
-        color: var(--wp--preset--color--ucsc-secondary-blue);
-        text-decoration: underline;
-        text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
-        text-decoration-skip-ink: auto;
-        text-decoration-thickness: 0.12rem;
-        text-underline-offset: 0.12em;
-  }
+	text-decoration-thickness: 0.12rem;
+	text-underline-offset: 0.12em;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--wp--preset--color--ucsc-secondary-blue);
+		text-decoration: underline;
+		text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
+		text-decoration-skip-ink: auto;
+		text-decoration-thickness: 0.12rem;
+		text-underline-offset: 0.12em;
+	}
 }
 
+// When a link is on a dark background, provide a legible inverse color
+// alternative.
+.has-white-color,
+.has-ucsc-lightest-gray,
+.has-ucsc-light-gray,
+.has-ucsc-violator-yellow-color,
+.has-ucsc-violator-pink-color {
+
+	a {
+		color: var(--wp--preset--color--white);
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+	}
+}

@@ -1,0 +1,3 @@
+export const MEDIUM_BREAKPOINT = 768;
+export const FULL_BREAKPOINT = 960;
+export const NAVIGATION_BREAKPOINT = 1060;

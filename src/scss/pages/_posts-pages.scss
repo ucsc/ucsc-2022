@@ -1,20 +1,23 @@
 .single {
-.wp-block-post-date {
-	color: var(--wp--custom--color--default-text);
+
+	.wp-block-post-date {
+		color: var(--wp--custom--color--default-text);
 	}
 }
 
 .site-content {
-  word-wrap: break-word;
-  flex-direction: row;
+	word-wrap: break-word;
+	flex-direction: row;
 
-  .sticky {
-  box-shadow: 0 0.25rem 8px rgb(36 49 66 / 20%);
-	padding: 1.3em 1.5em;
-	margin-bottom: 2em;}
+	.sticky {
+		box-shadow: 0 0.25rem 8px rgb(36 49 66 / 20%);
+		padding: 1.3em 1.5em;
+		margin-bottom: 2em;
+	}
 }
 
 .post-subtitle {
+
 	.post-subtitle-text {
 		font-size: var(--wp--preset--font-size--medium);
 		color: var(--wp--custom--color--light-gray);
@@ -29,7 +32,7 @@
 	line-height: 1.4;
 
 	.campus-message-label {
-		font-weight: 700
+		font-weight: 700;
 	}
 }
 
