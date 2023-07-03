@@ -348,7 +348,16 @@ add_action(
 add_action( 'wp_body_open', 'ucsc_add_custom_body_open_code' );
 
 function ucsc_add_custom_body_open_code() {
-	echo '<trss-ucsc-header use-logo="true" search-action="/" search-query="s" style="--trss-content-width:80rem;"></trss-ucsc-header>';
+	if ( function_exists( 'get_field' ) ) {
+		$should_use_logo = get_field( 'toggle_universal_logo_visibility', 'options' ) ?? 'true';
+
+		// Convert boolean value to string. Trss header accepts only string value
+		if ( is_bool( $should_use_logo ) ) {
+			$should_use_logo = json_encode( $should_use_logo );
+		}
+	}
+
+	echo sprintf( '<trss-ucsc-header use-logo="%s" search-action="/" search-query="s" style="--trss-content-width:80rem;"></trss-ucsc-header>', $should_use_logo ?? 'true' );
 }
 
 add_action( 'wp_footer', 'ucsc_add_custom_body_close_code' );
