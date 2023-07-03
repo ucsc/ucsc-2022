@@ -4,29 +4,43 @@
 
 .site-footer {
 
- &:before {
-	position: relative;
-	background: transparent url(/images/waves-flat-bottom.svg) no-repeat center 30px;
-	height: 6rem;
-	display:block;
-	content: '';
-	margin: 0 auto 2rem auto;
-	background-size: cover;
-	border-bottom: 1px solid var(--wp--preset--color--ucsc-primary-blue);
-	opacity: .16;
+	&::before {
+		position: relative;
+		background: transparent url(/images/waves-flat-bottom.svg) no-repeat center 30px;
+		height: 6rem;
+		display: block;
+		content: "";
+		margin: 0 auto 2rem auto;
+		background-size: cover;
+		border-bottom: 1px solid var(--wp--preset--color--ucsc-primary-blue);
+		opacity: 0.16;
 
-	@include media-query($medium) {
-		background-position: center top;
+		@include media-query($medium) {
+			background-position: center top;
+		}
 	}
- }
 
- .site-footer__social-links {
-	justify-content: flex-start;
+	.site-footer__social-links {
+		justify-content: flex-start;
 
-	@include media-query($small) {
-		justify-content: flex-end;
+		@include media-query($medium) {
+			justify-content: flex-end;
+		}
 	}
- }
 
+}
+
+.site-footer__columns {
+
+	&.is-layout-flex {
+		flex-flow: column nowrap;
+		gap: var(--wp--preset--spacing--40);
+
+		@include media-query($medium) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr auto;
+			flex-wrap: nowrap !important;
+		}
+	}
 }
 

@@ -11,10 +11,10 @@
 	},
 	"require": {
 		"php": "^7.4",
-		"johnpbloch/wordpress": "^6.2",
+		"johnpbloch/wordpress": "6.2.2",
 		"wpackagist-theme/twentytwentyone": "^1.5",
-	    "vlucas/phpdotenv": "^5.5",
-	  	"advanced-custom-fields/advanced-custom-fields-pro": "6.0.7"
+		"advanced-custom-fields/advanced-custom-fields-pro": "^6.1",
+		"wpackagist-plugin/icon-block": "1.5.0"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
@@ -25,15 +25,16 @@
 		}
 	},
 	"repositories": [
-	  {
-		"type": "composer",
-		"url": "https://wpackagist.org"
-	  },
+	  	{
+		  "type": "composer",
+		  "url": "https://wpackagist.org"
+		},
+
 	  {
 		"type": "package",
 		"package": {
 		  "name": "advanced-custom-fields/advanced-custom-fields-pro",
-		  "version": "6.0.7",
+		  "version": "6.1.6",
 		  "type": "wordpress-plugin",
 		  "dist": {
 			"type": "zip",

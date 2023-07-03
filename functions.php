@@ -32,17 +32,20 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		);
 
 		/*
-		* Load additional block styles.
+		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'button', 'post-template', 'post-author', 'site-title', 'query-pagination', 'post-content', 'rss', 'post-title', 'post-comments', 'navigation', 'list', 'separator', 'latest-posts', 'quote', 'image', 'search', 'paragraph' );
-		foreach ( $styled_blocks as $block_name ) {
+		$styled_blocks = array( 'core/button', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
+		foreach ( $styled_blocks as $block ) {
+
+			$name = explode('/', $block);
 			$args = array(
-				'handle' => "ucsc-$block_name",
-				'src'    => get_theme_file_uri( "wp-blocks/$block_name.css" ),
-				$args['path'] = get_theme_file_path( "wp-blocks/$block_name.css" ),
+				'handle' => "ucsc-$name[1]",
+				'src'    => get_theme_file_uri( "wp-blocks/$name[1].css" ),
+				$args['path'] = get_theme_file_path( "wp-blocks/$name[1].css" ),
 			);
-			wp_enqueue_block_style( "core/$block_name", $args );
+			wp_enqueue_block_style( $block, $args );
 		}
+
 		/**
 		 * Include ThemeHybrid/HyridBreadcrumbs Class
 		 * see: https://github.com/themehybrid/hybrid-breadcrumbs
@@ -260,7 +263,7 @@ function ucsc_breadcrumbs_constructor() {
 		'labels'         => $labels,
 		'show_on_front'  => true,
 		'show_trail_end' => false,
-		'container_class'=> 'breadcrumbs alignwide'
+		'container_class'=> 'ucsc-page-header__breadcrumbs alignwide'
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
@@ -276,9 +279,9 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset( $breadcrumbs ) ) {
+	if ( is_singular() && isset( $breadcrumbs ) && is_page_template( 'page-no-title-with-breadcrumbs' ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['level'] ) && isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'primary-post-title' ) {
+			if ( isset( $block['attrs']['level'] ) ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
 				return $html;
 			}
@@ -310,6 +313,15 @@ add_filter(
 */
 if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 	include get_theme_file_path( 'lib/acf.php' );
+}
+
+include get_theme_file_path( 'lib/blocks.php' );
+
+/**
+ * Register Block Pattern Customizations
+ */
+if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
+	include get_theme_file_path( 'lib/blocks.php' );
 }
 
 /**

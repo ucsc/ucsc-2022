@@ -37,7 +37,7 @@
 }
 
 .wp-block-rss__item-publish-date {
-	color: var(--wp--preset--color--dark-gray);
+	color: var(--ucsc-dark-gray);
 	font-size: var(--wp--preset--font-size--small);
 	margin: 0 0 var(--wp--custom--spacing--x-small) 0;
 	order: 3;

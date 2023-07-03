@@ -1,5 +1,5 @@
 
-.wp-block-quote:before {
+.wp-block-quote::before {
 	display: block;
 	font-style: normal;
 	font-weight: 700;
@@ -7,13 +7,10 @@
 	line-height: 1;
 	font-size: 12rem;
 	font-family: var(--wp--preset--font-family--roboto-serif);
-}
-
-.wp-block-quote:before {
-	content: '“';
+	content: "“";
 	top: -1.5rem;
 	left: 0;
-	color: #D2E7F4
+	color: #d2e7f4;
 }
 
 .wp-block-quote {
@@ -30,5 +27,4 @@
 	display: block;
 	font-size: 1em;
 }
-
 

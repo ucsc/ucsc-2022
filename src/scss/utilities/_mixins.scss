@@ -1,7 +1,11 @@
 // Screen width breakpoints
 // Styles will take effect 1px above these sizes
 $small: 602px;
-$medium: 1082px;
+// The breakpoint where WP block columns switch from being stacked for mobile to
+// being actual columns.
+$wp-columns-unstack: 782px;
+$medium: 960px;
+$desktop-menu: 1060px; // This one needs to be in pixels.
 $large: 1282px;
 $content-size: 80rem;
 
@@ -15,4 +19,10 @@ $content-size: 80rem;
 		@content;
 	}
 
+}
+
+@mixin content-width($size: var(--max-container-1280)) {
+	width: 100%;
+	max-width: $size;
+	margin: 0 auto !important;
 }

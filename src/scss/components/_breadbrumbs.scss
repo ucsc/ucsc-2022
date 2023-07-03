@@ -1,0 +1,61 @@
+//BREADCRUMBS
+
+// Wrapper element.
+.ucsc-page-header__breadcrumbs {
+	font-size: var(--wp--preset--font-size--one);
+}
+
+.breadcrumbs {
+	// Title. Note that this is the heading that says "Browse:". The code
+	// puts it inline with the trail.
+	&__title {
+		display: inline-block;
+		margin: 0 0 1.5rem;
+		font-size: inherit;
+		color: inherit;
+	}
+
+	// List.
+	&__trail {
+		list-style: none;
+		display: inline-block;
+		margin: 0 0 0.35em;
+		padding-inline-start: 0;
+	}
+
+	// Individual crumbs.
+	&__crumb {
+		display: inline-block;
+
+
+		a {
+			border-bottom: 0;
+			text-decoration: none;
+			font-size: 0.82rem;
+			line-height: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--wp--preset--color--white);
+
+			&:active,
+			&:focus,
+			&:hover {
+				border-bottom: 1px solid;
+				text-decoration: none;
+			}
+		}
+
+		// Add separators.
+		&::after {
+			content: ">";
+			padding: 0 0.25em;
+			font-size: 0.82rem;
+			color: var(--wp--preset--color--white);
+		}
+
+		&:last-of-type::after {
+			display: none;
+		}
+	}
+}
