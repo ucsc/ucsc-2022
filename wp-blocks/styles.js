@@ -66,6 +66,18 @@ wp.domReady( () => {
 	wp.blocks.unregisterBlockStyle( 'core/image', 'default' );
 	wp.blocks.unregisterBlockStyle( 'core/image', 'rounded' );
 
+	// Styles for core/columns
+	wp.blocks.registerBlockStyle( 'core/columns', {
+		name: 'ucsc-column-grid-33',
+		label: 'Grid 33%',
+		style_handle: 'ucsc-columns',
+	} );
+	wp.blocks.registerBlockStyle( 'core/columns', {
+		name: 'ucsc-column-grid-50',
+		label: 'Grid 50%',
+		style_handle: 'ucsc-columns',
+	} );
+
 	// Styles for core/rss
 	wp.blocks.registerBlockStyle( 'core/rss', {
 		name: 'ucsc-rss-block',
