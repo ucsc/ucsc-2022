@@ -182,7 +182,14 @@
 					"name": "7"
 				}
 			],
-			"units": ["%", "px", "em", "rem", "vh", "vw"]
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
 		},
 		"typography": {
 			"fluid": true,
@@ -493,7 +500,7 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"lineHeight": "var(--wp--custom--line-height--baseline)"
+					"lineHeight": "var(--wp--custom--line-height--medium)"
 				},
 				"spacing": {
 					"margin": {
