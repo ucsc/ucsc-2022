@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/ucsc/ucsc-2022/compare/v3.0.2...v3.0.3) (2023-07-06)
+
+
+### Bug Fixes
+
+* 🐛 Add new files and folders to theme build manifest 🤦‍♂️ ([db02dcb](https://github.com/ucsc/ucsc-2022/commit/db02dcbdfba80fc4a7b49acd8dba37cbaac7189e))
+
 ### [3.0.2](https://github.com/ucsc/ucsc-2022/compare/v3.0.1...v3.0.2) (2023-07-06)
 
 ### [3.0.1](https://github.com/ucsc/ucsc-2022/compare/v3.0.0...v3.0.1) (2023-07-06)
