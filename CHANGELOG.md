@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/ucsc/ucsc-2022/compare/v2.1.5...v3.0.0) (2023-07-06)
+
+
+### Features
+
+* ✨ Two styles for the columns block to enable multi-row, equal-height columns ([#241](https://github.com/ucsc/ucsc-2022/issues/241)) ([d184290](https://github.com/ucsc/ucsc-2022/commit/d184290353d8077f1a6e4fb33f6dff945ae5717e))
+* 🎨 Add featured image and video patterns ([#213](https://github.com/ucsc/ucsc-2022/issues/213)) ([9e26230](https://github.com/ucsc/ucsc-2022/commit/9e26230ae40eab52a296c267f2e5fcd4474199ea))
+
+
+### Bug Fixes
+
+* fix typo ([68999cf](https://github.com/ucsc/ucsc-2022/commit/68999cfa484679f1369320d213caa8e25776a8ee))
+* update composer ([4334e70](https://github.com/ucsc/ucsc-2022/commit/4334e707b856c557d09f829882975152b9703457))
+
 ### [2.1.5](https://github.com/ucsc/ucsc-2022/compare/v2.1.4...v2.1.5) (2023-03-08)
 
 
