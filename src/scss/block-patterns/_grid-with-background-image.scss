@@ -1,0 +1,23 @@
+/* BLOCK PATTERN: Grid with background image */
+
+.ucsc-grid-with-background__inner {
+	display: grid !important;
+	grid-template-columns: 1fr;
+
+	@include media-query($wp-columns-unstack) {
+		grid-template-columns: 25% 75%;
+	}
+}
+
+.ucsc-grid-with-background__row {
+	display: grid !important;
+	grid-template-columns: 1fr;
+
+	@include media-query($wp-columns-unstack) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include media-query($large) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
