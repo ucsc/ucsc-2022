@@ -1,29 +1,65 @@
 // Site Header
 
+////////////////////////////////////////////////////////////////////////////////
+// Truss Header
+////////////////////////////////////////////////////////////////////////////////
+
+// In order for the sticky header to show at the top of the viewport while
+// open on mobile, the Truss header above it needs to collapse.
+.sc-trss-ucsc-header-h {
+	display: grid;
+	grid-template-rows: 1fr;
+	transition: grid-template-rows 0.2s ease;
+	background-color: var(--wp--preset--color--ucsc-royal-blue);
+
+	.main-nav--is-open & {
+		grid-template-rows: 0fr;
+	}
+
+	.main-nav--is-open &,
+	.main-nav--is-closing & {
+
+		.trss-ucsc-header {
+			overflow: hidden;
+		}
+	}
+
+	.header-region--stuck & {
+		grid-template-rows: 1fr;
+
+		.trss-ucsc-header {
+			overflow: auto;
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Header Region
+////////////////////////////////////////////////////////////////////////////////
+
 .header-region {
 	position: sticky;
 	top: 0;
 	z-index: 10;
 	width: 100%;
-	max-height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-royal-blue);
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 
-	// At this breakpoint, the WP admin bar is also sticky.
-	@media (min-width: 783px) {
-		top: var(--wp-admin--admin-bar--height, 0);
-	}
-
 	@include media-query($desktop-menu) {
+		background-color: var(--wp--preset--color--white);
 		overflow: visible;
 	}
 }
 
+////////////////////////////////////////////////////////////////////////////////
+// Site Header Template
+////////////////////////////////////////////////////////////////////////////////
+
 .site-header {
 	position: relative;
+}
 
+.site-header__header {
 	// Leave room for the main nav menu toggle button.
 	> .wp-block-group:first-child {
 		padding-right: 60px;
@@ -55,7 +91,8 @@
 
 .site-header__separator {
 	margin: 0;
-	height: 2px !important;
+	border-bottom: 2px solid !important;
+	height: 0 !important;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -63,7 +100,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .site-header__inner {
-	margin-top: 0;
+	margin: 0;
 	padding: 0;
 
 	@include media-query($desktop-menu) {
@@ -142,6 +179,29 @@
 
 	margin: 0 !important;
 	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--ucsc-royal-blue);
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+	height: 0;
+	transition: height 0.2s ease;
+
+	// CASE: The mobile nav is open or opening.
+	.main-nav--is-open & {
+		height: calc(100svh - var(--site-header-height));
+	}
+
+	// CASE: The mobile nav's opening animation is complete and it is fully open.
+	.main-nav--is-open:not(.main-nav--is-opening) & {
+		overflow: auto;
+	}
+
+	@include media-query($desktop-menu) {
+		height: auto;
+		position: static;
+		background-color: transparent;
+		overflow: visible;
+	}
 
 	.menu-item {
 		list-style: none;
@@ -224,20 +284,15 @@
 .site-header__navigation .menu {
 	margin: 0;
 	padding: 0;
-	display: none;
+	display: flex;
 	flex-direction: column;
 
 	@include media-query($desktop-menu) {
 		flex-direction: row;
 		flex-wrap: wrap;
-		display: flex;
 		max-width: var(--wp--style--global--content-size);
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	.main-nav--is-open & {
-		display: flex;
 	}
 }
 
