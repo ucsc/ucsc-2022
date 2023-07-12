@@ -1,5 +1,11 @@
 // Site Header
 
+////////////////////////////////////////////////////////////////////////////////
+// Truss Header
+////////////////////////////////////////////////////////////////////////////////
+
+// In order for the sticky header to show at the top of the viewport while
+// open on mobile, the Truss header above it needs to collapse.
 .sc-trss-ucsc-header-h {
 	display: grid;
 	grid-template-rows: 1fr;
@@ -17,7 +23,19 @@
 			overflow: hidden;
 		}
 	}
+
+	.header-region--stuck & {
+		grid-template-rows: 1fr;
+
+		.trss-ucsc-header {
+			overflow: auto;
+		}
+	}
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// Header Region
+////////////////////////////////////////////////////////////////////////////////
 
 .header-region {
 	position: sticky;
@@ -32,6 +50,10 @@
 		overflow: visible;
 	}
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// Site Header Template
+////////////////////////////////////////////////////////////////////////////////
 
 .site-header {
 	position: relative;
@@ -162,12 +184,14 @@
 	width: 100%;
 	position: absolute;
 	height: 0;
-	transition: height 0.2s ease, overflow 0.25s ease;
+	transition: height 0.2s ease;
 
+	// CASE: The mobile nav is open or opening.
 	.main-nav--is-open & {
 		height: calc(100svh - var(--site-header-height));
 	}
 
+	// CASE: The mobile nav's opening animation is complete and it is fully open.
 	.main-nav--is-open:not(.main-nav--is-opening) & {
 		overflow: auto;
 	}

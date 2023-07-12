@@ -8,11 +8,14 @@ import state from '../config/state';
 import { NAVIGATION_BREAKPOINT } from '../config/options';
 import * as bodyLock from '../utils/body-lock';
 
-// Cache some elements and objects.
+// Cache some elements and state.
 const cache = {
 	desktopBreakpoint: NAVIGATION_BREAKPOINT,
 	trussHeader: null,
+	stickyHeader: null,
+	stickyHeaderObserver: null,
 	nav: null,
+	navIsOpen: false,
 	navToggle: null,
 	menuItems: [],
 };
@@ -27,21 +30,19 @@ function initMainNav() {
 	}
 
 	// Observer when our sticky header becomes "stuck".
-	const observer = new window.IntersectionObserver(
+	cache.stickyHeader = document.querySelector('.header-region');
+	cache.stickyHeaderObserver = new window.IntersectionObserver(
 		(entries) => {
-			entries.forEach((entry) => {
-				entry.target.classList.toggle(
-					'header-region--stuck',
-					entry.intersectionRatio < 1
-				);
-			});
+			document.documentElement.classList.toggle(
+				'header-region--stuck',
+				entries[0].intersectionRatio < 1
+			);
 		},
 		{
 			threshold: 1,
 			rootMargin: '-1px 0px 0px 0px',
 		}
 	);
-	observer.observe(document.querySelector('.header-region'));
 
 	// Get our mobile-to-desktop breakpoint.
 	const breakpoint = window
@@ -59,17 +60,15 @@ function initMainNav() {
 			'main-nav--is-opening',
 			'main-nav--is-closing'
 		);
+		// Unlock the body after the nav is closed.
+		if (!cache.navIsOpen) {
+			bodyLock.unlock();
+		}
 	});
 
 	// Add mobile nav toggle.
 	cache.navToggle = document.querySelector('.site-header__navigation-toggle');
-	cache.navToggle.addEventListener('click', () => {
-		if (document.documentElement.classList.contains('main-nav--is-open')) {
-			hideMenu();
-		} else {
-			showMenu();
-		}
-	});
+	cache.navToggle.addEventListener('click', toggleMenu);
 
 	// Add menu item behaviors.
 	cache.nav.querySelectorAll('.menu > .menu-item').forEach((menuItem) => {
@@ -125,14 +124,34 @@ function initMainNav() {
 }
 
 /**
+ * Toggle the main-nav menu on mobile.
+ */
+function toggleMenu() {
+	if (cache.navIsOpen) {
+		hideMenu();
+	} else {
+		showMenu();
+	}
+}
+
+/**
  * Show the main-nav menu on mobile.
  */
 function showMenu() {
+	// Stop observing the sticky header when we open the menu, because it's going
+	// to float to the top of the viewport and not reflect our actual scroll
+	// position.
+	cache.stickyHeaderObserver.unobserve(cache.stickyHeader);
 	bodyLock.lock();
+
 	document.documentElement.classList.add('main-nav--is-open');
-	document.documentElement.classList.add('main-nav--is-opening');
+	if (!cache.navIsOpen) {
+		document.documentElement.classList.add('main-nav--is-opening');
+	}
+
 	cache.nav.setAttribute('aria-hidden', false);
 	cache.navToggle.setAttribute('aria-label', 'Hide main navigation menu');
+	cache.navIsOpen = true;
 }
 
 /**
@@ -140,15 +159,28 @@ function showMenu() {
  */
 function hideMenu() {
 	document.documentElement.classList.remove('main-nav--is-open');
-	document.documentElement.classList.add('main-nav--is-closing');
+	if (cache.navIsOpen) {
+		document.documentElement.classList.add('main-nav--is-closing');
+	}
+
 	cache.nav.setAttribute('aria-hidden', true);
 	cache.navToggle.setAttribute('aria-label', 'Show main navigation menu');
 
-	// Reset submenus on hide.
+	// Reset submenus when the main nav is hidden.
 	cache.menuItems.forEach((data) => {
 		deactivateMenuItem(data);
 	});
-	bodyLock.unlock();
+
+	// If we unlock the body before our closing animation completes, the scroll
+	// position will be off in some cases. For that reason, we unlock the body in
+	// our transitionended event handler. However, if the nav is already hidden,
+	// no transition will occur, so we handle that here.
+	if (!cache.navIsOpen) {
+		bodyLock.unlock();
+	}
+
+	cache.stickyHeaderObserver.observe(cache.stickyHeader);
+	cache.navIsOpen = false;
 }
 
 /**

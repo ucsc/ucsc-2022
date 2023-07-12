@@ -21,7 +21,7 @@ const lock = () => {
 	locked = true;
 
 	style.position = 'fixed';
-	style.marginTop = `-${ scroll }px`;
+	style.marginTop = `-${scroll}px`;
 };
 
 /**
