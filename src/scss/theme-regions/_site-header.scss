@@ -196,6 +196,13 @@
 		overflow: auto;
 	}
 
+	@include media-query($desktop-menu) {
+		height: auto;
+		position: static;
+		background-color: transparent;
+		overflow: visible;
+	}
+
 	.menu-item {
 		list-style: none;
 	}
