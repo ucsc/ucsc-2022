@@ -1,7 +1,7 @@
 /* BLOCK PATTERN: Grid with background image */
 
 .ucsc-grid-with-background__inner {
-	display: flex !important;
+	display: grid !important;
 	grid-template-columns: 1fr;
 
 	@include media-query($wp-columns-unstack) {
