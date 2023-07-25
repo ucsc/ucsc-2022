@@ -383,7 +383,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--preset--font-size--one)",
+			"blockGap": "var(--wp--preset--spacing--20)",
 			"padding": {
 				"top": "0",
 				"right": "1rem",
