@@ -1,0 +1,53 @@
+/* BLOCK PATTERN: 3 Columns: Text Only */
+
+.ucsc-3-column-text {
+	display: grid !important;
+	grid-template-columns: 1fr !important;
+
+	@include media-query($medium) {
+		grid-template-columns: repeat(3, 1fr) !important;
+	}
+
+	> * {
+		height: 100%;
+	}
+
+	.ucsc-3-column-text__cta {
+		margin-top: auto;
+		margin-bottom: 0;
+
+		> * {
+			margin-top: 24px !important;
+		}
+	}
+}
+
+.ucsc-3-column-text__stack {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: calc((var(--wp--preset--spacing--70) / 2) * -1);
+		width: 100%;
+		height: 1px;
+		background-color: #ccc;
+
+		@include media-query($medium) {
+			right: calc((var(--wp--preset--spacing--70) / 2) * -1);
+			bottom: auto;
+			top: 0;
+			height: 100%;
+			width: 1px;
+		}
+	}
+
+	&:last-of-type {
+
+		&::after {
+			content: none;
+		}
+	}
+}
+

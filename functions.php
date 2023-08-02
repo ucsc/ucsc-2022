@@ -8,6 +8,8 @@
  * @since UCSC 1.0.0
  */
 
+use Image_Sizes;
+
 if ( ! function_exists( 'ucsc_setup' ) ) :
 
 	/**
@@ -325,6 +327,27 @@ if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
 }
 
 /**
+ * Register Block Pattern Customizations
+ */
+if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
+	include get_theme_file_path( 'lib/blocks.php' );
+}
+
+/**
+ * Register Image Sizes
+ */
+if ( file_exists( get_theme_file_path( 'lib/image_sizes.php' ) ) ) {
+	include get_theme_file_path( 'lib/image_sizes.php' );
+
+	add_action( 'after_setup_theme', function () {
+		$images = new Image_Sizes();
+		$images->register_sizes();
+		$images->register_size_names();
+		$images->get_sizes();
+	});
+}
+
+/**
  * Enqueue theme block editor style script to modify the "styles" available for blocks in the editor.
  */
 function ucsc_block_editor_scripts() {
@@ -377,3 +400,104 @@ function ucsc_truss_assets() { ?>
 
 <?php
 }
+
+/**
+ * Add Excerpts to Pages
+ */
+add_post_type_support( 'page', 'excerpt' );
+
+/**
+ * Remove default skip link and add a custom one.
+ */
+remove_action( 'wp_footer', 'the_block_template_skip_link' );
+
+/**
+ * Override the default skip link to pass a11y for landmarks.
+ * @return void
+ */
+function ucsc_skip_link() {
+	/**
+	* Print the skip-link styles.
+	*/
+	?>
+	<style id="skip-link-styles">
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip: rect(1px,1px,1px,1px);
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip: auto !important;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+	</style>
+
+	<?php
+	/**
+	 * Print the skip-link script.
+	 */
+	?>
+	<script>
+		( function() {
+			var skipLinkTarget = document.querySelector( 'main' ),
+				sibling,
+				skipLinkTargetID,
+				skipLink;
+
+			// Early exit if a skip-link target can't be located.
+			if ( ! skipLinkTarget ) {
+				return;
+			}
+
+			// Get the site wrapper.
+			// The skip-link will be injected in the beginning of it.
+			sibling = document.querySelector( '.wp-site-blocks' );
+
+			// Early exit if the root element was not found.
+			if ( ! sibling ) {
+				return;
+			}
+
+			// Get the skip-link target's ID, and generate one if it doesn't exist.
+			skipLinkTargetID = skipLinkTarget.id;
+			if ( ! skipLinkTargetID ) {
+				skipLinkTargetID = 'wp--skip-link--target';
+				skipLinkTarget.id = skipLinkTargetID;
+			}
+
+			// Create the skip link.
+			skipLink = document.createElement( 'a' );
+			skipLink.setAttribute( 'role', 'navigation' );
+			skipLink.setAttribute( 'aria-label', 'skip to content' );
+			skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+			skipLink.href = '#' + skipLinkTargetID;
+			skipLink.innerHTML = '<?php /* translators: Hidden accessibility text. */ esc_html_e( 'Skip to content' ); ?>';
+
+			// Inject the skip link.
+			sibling.parentElement.insertBefore( skipLink, sibling );
+		}() );
+	</script>
+	<?php
+}
+
+add_action('wp_footer', 'ucsc_skip_link');

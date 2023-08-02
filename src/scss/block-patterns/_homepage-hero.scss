@@ -1,13 +1,32 @@
 /* BLOCK PATTERN: Homepage Hero */
 
 .ucsc__homepage-hero-header {
-	max-width: 1280px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr;
+	max-width: 75%;
 
-	> .wp-block-heading {
-		justify-self: flex-start;
+	@include media-query($medium) {
+		max-width: 50% !important;
+	}
+}
+
+.wp-block-cover__inner-container {
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.ucsc__homepage-hero-title {
+	display: inline;
+	line-height: 1.7;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+
+	@include media-query($medium) {
+		line-height: 1.6;
+	}
+
+	@include media-query($large) {
+		line-height: 1.47;
 	}
 }
 

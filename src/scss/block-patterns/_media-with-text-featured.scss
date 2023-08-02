@@ -1,0 +1,29 @@
+/* BLOCK PATTERN: Media with text, featured */
+
+.ucsc__media-with-text-featured {
+
+	.wp-block-media-text__media {
+		aspect-ratio: 1;
+
+		@include media-query($wp-media-with-text-unstack) {
+			aspect-ratio: auto;
+		}
+	}
+
+	.wp-block-media-text__content {
+		padding: var(--wp--preset--spacing--20);
+		display: flex;
+		flex-direction: column;
+
+		@include media-query($wp-media-with-text-unstack) {
+			padding: var(--wp--preset--spacing--50);
+			row-gap: var(--wp--preset--spacing--30);
+
+			.wp-block-heading {
+				border-left: 10px solid var(--wp--preset--color--ucsc-primary-yellow);
+				margin-left: calc(var(--wp--preset--spacing--50) * -1) !important;
+				padding-left: calc(var(--wp--preset--spacing--50) - 10px);
+			}
+		}
+	}
+}

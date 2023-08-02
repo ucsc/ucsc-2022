@@ -1,0 +1,4 @@
+/* CASE: remove extra space at the top of the main container */
+main.wp-block-group {
+	margin-block-start: 0 !important;
+}

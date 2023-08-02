@@ -20,6 +20,7 @@
 // Pages
 //===============================
 @import "pages/posts-pages";
+@import "pages/archives";
 
 // Components
 //===============================
@@ -32,6 +33,7 @@
 @import "theme-regions/footer";
 @import "theme-regions/site-header";
 @import "theme-regions/site-footer";
+@import "theme-regions/site-content";
 
 // Blocks and Block Patterns
 //===============================
@@ -39,5 +41,8 @@
 @import "block-patterns/homepage-hero";
 @import "block-patterns/interstitial";
 @import "block-patterns/link-list";
+@import "block-patterns/media-with-text-featured";
 @import "block-patterns/statistics";
 @import "block-patterns/page-header-breadcrumbs";
+@import "block-patterns/cards";
+@import "block-patterns/three-columns-text";

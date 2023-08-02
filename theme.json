@@ -33,6 +33,11 @@
 					"name": "UCSC Header Gradient",
 					"gradient": "linear-gradient(90deg, #003c6c 29%, #1569a9 100%)",
 					"slug": "ucsc-header-gradient"
+				},
+				{
+					"name": "UCSC Light Gradient",
+					"gradient": "linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%)",
+					"slug": "ucsc-light-gradient"
 				}
 			],
 			"palette": [
@@ -385,7 +390,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--preset--font-size--one)",
+			"blockGap": "var(--wp--preset--spacing--20)",
 			"padding": {
 				"top": "0",
 				"right": "1rem",
