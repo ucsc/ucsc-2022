@@ -11,6 +11,11 @@ add_action( 'init', function () {
 	);
 
 	register_block_pattern_category(
+		'navigation',
+		array( 'label' => __( 'Navigation', 'ucsc' ) )
+	);
+
+	register_block_pattern_category(
 		'hero',
 		array( 'label' => __( 'Hero', 'ucsc' ) )
 	);

@@ -3,7 +3,7 @@
  * Title: Homepage Hero
  * Slug: ucsc-2022/homepage-hero
  * Block Types: core/cover, core/heading, core/columns, core/paragraph
- * Categories: ucsc, hero
+ * Categories: banner
  */
 ?>
 

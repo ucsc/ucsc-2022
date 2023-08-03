@@ -2,7 +2,7 @@
  /**
   * Title: Featured video
   * Slug: ucsc-2022/featured-video
-  * Categories: Video
+  * Categories: media
   */
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
