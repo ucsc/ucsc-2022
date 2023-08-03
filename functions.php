@@ -327,13 +327,6 @@ if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
 }
 
 /**
- * Register Block Pattern Customizations
- */
-if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
-	include get_theme_file_path( 'lib/blocks.php' );
-}
-
-/**
  * Register Image Sizes
  */
 if ( file_exists( get_theme_file_path( 'lib/image_sizes.php' ) ) ) {
