@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/ucsc/ucsc-2022/compare/v3.0.3...v3.1.0) (2023-08-03)
+
+
+### Bug Fixes
+
+* 🐛 Remove redundant include of lib/blocks.php ([99efc5e](https://github.com/ucsc/ucsc-2022/commit/99efc5e3dbe6eb5c84a77fcb405750de214b8932))
+* 💄 Change intro text style color to black ([a7fcddb](https://github.com/ucsc/ucsc-2022/commit/a7fcddb400362f7b2cda16244a87393fae552644))
+* 📝 Remove third call to include lib/blocks.php ([e58deeb](https://github.com/ucsc/ucsc-2022/commit/e58deebf2e9302afc340fe85b790a36afef641c0))
+
 ### [3.0.3](https://github.com/ucsc/ucsc-2022/compare/v3.0.2...v3.0.3) (2023-07-06)
 
 
