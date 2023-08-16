@@ -6,11 +6,6 @@ add_action( 'init', function () {
 
 	// Register Block Categories
 	register_block_pattern_category(
-		'ucsc',
-		array( 'label' => __( 'UCSC', 'ucsc' ) )
-	);
-
-	register_block_pattern_category(
 		'navigation',
 		array( 'label' => __( 'Navigation', 'ucsc' ) )
 	);
