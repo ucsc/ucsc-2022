@@ -3,7 +3,7 @@
  * Title: Page Header w/ Breadcrumbs
  * Slug: ucsc-2022/page-header
  * Block Types: core/cover, core/heading
- * Categories: ucsc
+ * Categories: banners
  */
 ?>
 
