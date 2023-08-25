@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/ucsc/ucsc-2022/compare/v3.1.0...v3.2.0) (2023-08-25)
+
+
+### Bug Fixes
+
+* 🐛 Breadcrumbs: appearance and color ([7978f73](https://github.com/ucsc/ucsc-2022/commit/7978f73379979d2f6cce4db8867b227612553d82))
+* 🐛 Pattern: remove the Rick Roll from featured video ([3096e0a](https://github.com/ucsc/ucsc-2022/commit/3096e0a3a6a22ad648b14b90936d300e3031d5dc))
+* 🐛 Set anchor link scroll position below fixed site header height ([#262](https://github.com/ucsc/ucsc-2022/issues/262)) ([f0f2272](https://github.com/ucsc/ucsc-2022/commit/f0f227279d00aecaf1718c493dec4d64f8a576c4))
+* 📝 Pattern: remove 'ucsc' category from patterns ([6dce7f9](https://github.com/ucsc/ucsc-2022/commit/6dce7f9ba26298f530f716094a46ba686bc3db0e))
+* 🔒️ Pattern: remove homepage hero pattern from theme ([9574ca0](https://github.com/ucsc/ucsc-2022/commit/9574ca06326e040676922500c3c6f17e1066987e))
+
 ## [3.1.0](https://github.com/ucsc/ucsc-2022/compare/v3.0.3...v3.1.0) (2023-08-03)
 
 ### New patterns
