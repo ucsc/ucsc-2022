@@ -51,6 +51,13 @@
 	}
 }
 
+// Add a top scroll margin to scroll targets in other regions so they're not
+// behind the sticky nav after being scrolled to.
+.content-region *,
+.footer-region * {
+	scroll-margin-top: calc(var(--site-header-height, 0) + 1rem);
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Site Header Template
 ////////////////////////////////////////////////////////////////////////////////
