@@ -8,8 +8,6 @@
  * @since UCSC 1.0.0
  */
 
-use Image_Sizes;
-
 if ( ! function_exists( 'ucsc_setup' ) ) :
 
 	/**
