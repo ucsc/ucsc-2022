@@ -3,7 +3,7 @@
  * Title: Interstitial
  * Slug: ucsc-2022/interstitial
  * Block Types: core/paragraph, core/list
- * Categories: ucsc, buttons, call-to-action, headers, text
+ * Categories: call-to-action, text
  */
 ?>
 <!-- wp:group {"lock":{"move":false,"remove":false},"align":"full","backgroundColor":"white","textColor":"black","className":"ucsc__interstitial","layout":{"type":"constrained","contentSize":"1280px","justifyContent":"center"},"fontSize":"two"} -->

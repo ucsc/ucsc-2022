@@ -1,0 +1,35 @@
+.is-style-ucsc-column-grid-33.is-layout-flex > .wp-block-column,
+.is-style-ucsc-column-grid-50.is-layout-flex > .wp-block-column,
+.editor-styles-wrapper .is-style-ucsc-column-grid-33.is-layout-flex > .wp-block-column,
+.editor-styles-wrapper .is-style-ucsc-column-grid-50.is-layout-flex > .wp-block-column {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: flex-start;
+	line-height: 1.3;
+}
+
+@media (min-width: 782px) {
+
+	.is-style-ucsc-column-grid-50.is-layout-flex,
+	.editor-styles-wrapper .is-style-ucsc-column-grid-50.is-layout-flex {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
+		column-gap: 0;
+		row-gap: 0;
+		place-items: stretch;
+		grid-auto-rows: minmax(10rem, auto);
+	}
+
+	.is-style-ucsc-column-grid-33.is-layout-flex,
+	.editor-styles-wrapper .is-style-ucsc-column-grid-33.is-layout-flex {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+		column-gap: 0;
+		row-gap: 0;
+		place-items: stretch;
+		grid-auto-rows: minmax(10rem, auto);
+	}
+
+}

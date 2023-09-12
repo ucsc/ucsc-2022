@@ -2,14 +2,14 @@
  /**
   * Title: Featured video
   * Slug: ucsc-2022/featured-video
-  * Categories: Video
+  * Categories: media
   */
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
-</div><figcaption class="wp-element-caption">"Never Gonna Give You Up" by Rick Astley</figcaption></figure>
+https://www.youtube.com/watch?v=1sBKG7iZNBA
+</div><figcaption class="wp-element-caption">"The real change is us" by UC Santa Cruz</figcaption></figure>
 <!-- /wp:embed -->
 
 <!-- wp:group {"layout":{"type":"constrained","wideSize":"60%"}} -->

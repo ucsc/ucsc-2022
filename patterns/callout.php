@@ -3,7 +3,7 @@
  * Title: Callout
  * Slug: ucsc-2022/callout
  * Block Types: core/heading
- * Categories: ucsc, headers, text
+ * Categories: call-to-action, headers, text
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","right":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"textColor":"white","gradient":"ucsc-header-gradient","className":"ucsc__callout","layout":{"type":"constrained","contentSize":"1280px"}} -->

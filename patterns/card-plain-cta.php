@@ -3,7 +3,7 @@
 /**
  * Title: Card w/ CTA
  * Slug: ucsc-2022/card-plain-cta
- * Categories: ucsc, cards
+ * Categories: call-to-action
  */
 ?>
 

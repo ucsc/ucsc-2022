@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/ucsc/ucsc-2022/compare/v3.1.0...v3.2.0) (2023-08-25)
+
+
+### Bug Fixes
+
+* 🐛 Breadcrumbs: appearance and color ([7978f73](https://github.com/ucsc/ucsc-2022/commit/7978f73379979d2f6cce4db8867b227612553d82))
+* 🐛 Pattern: remove the Rick Roll from featured video ([3096e0a](https://github.com/ucsc/ucsc-2022/commit/3096e0a3a6a22ad648b14b90936d300e3031d5dc))
+* 🐛 Set anchor link scroll position below fixed site header height ([#262](https://github.com/ucsc/ucsc-2022/issues/262)) ([f0f2272](https://github.com/ucsc/ucsc-2022/commit/f0f227279d00aecaf1718c493dec4d64f8a576c4))
+* 📝 Pattern: remove 'ucsc' category from patterns ([6dce7f9](https://github.com/ucsc/ucsc-2022/commit/6dce7f9ba26298f530f716094a46ba686bc3db0e))
+* 🔒️ Pattern: remove homepage hero pattern from theme ([9574ca0](https://github.com/ucsc/ucsc-2022/commit/9574ca06326e040676922500c3c6f17e1066987e))
+
+## [3.1.0](https://github.com/ucsc/ucsc-2022/compare/v3.0.3...v3.1.0) (2023-08-03)
+
+### New patterns
+
+* Cards: with and without CTAs. plus a yellow version.
+* 2 and 3 column patterns.
+* 2 and 3 column card grid patterns.
+* Post query card and blog/archive loop template parts and patterns.
+* Callout pattern.
+* Featured Media+Text pattern
+* Interstitial Pattern
+
+### Bug Fixes
+
+* 🐛 Homepage hero pattern now has a wrapping single heading
+* 🐛 Unintentional whitespace below the main nav removed
+* 🐛 Skip link a11y issue addressed
+* 🐛 Remove redundant includes of lib/blocks.php ([99efc5e](https://github.com/ucsc/ucsc-2022/commit/99efc5e3dbe6eb5c84a77fcb405750de214b8932))
+* 💄 Change intro text style color to black ([a7fcddb](https://github.com/ucsc/ucsc-2022/commit/a7fcddb400362f7b2cda16244a87393fae552644))
+
+### [3.0.3](https://github.com/ucsc/ucsc-2022/compare/v3.0.2...v3.0.3) (2023-07-06)
+
+
+### Bug Fixes
+
+* 🐛 Add new files and folders to theme build manifest 🤦‍♂️ ([db02dcb](https://github.com/ucsc/ucsc-2022/commit/db02dcbdfba80fc4a7b49acd8dba37cbaac7189e))
+
+### [3.0.2](https://github.com/ucsc/ucsc-2022/compare/v3.0.1...v3.0.2) (2023-07-06)
+
+### [3.0.1](https://github.com/ucsc/ucsc-2022/compare/v3.0.0...v3.0.1) (2023-07-06)
+
+## [3.0.0](https://github.com/ucsc/ucsc-2022/compare/v2.1.5...v3.0.0) (2023-07-06)
+
+
+### Features
+
+* ✨ Two styles for the columns block to enable multi-row, equal-height columns ([#241](https://github.com/ucsc/ucsc-2022/issues/241)) ([d184290](https://github.com/ucsc/ucsc-2022/commit/d184290353d8077f1a6e4fb33f6dff945ae5717e))
+* 🎨 Add featured image and video patterns ([#213](https://github.com/ucsc/ucsc-2022/issues/213)) ([9e26230](https://github.com/ucsc/ucsc-2022/commit/9e26230ae40eab52a296c267f2e5fcd4474199ea))
+
+
+### Bug Fixes
+
+* fix typo ([68999cf](https://github.com/ucsc/ucsc-2022/commit/68999cfa484679f1369320d213caa8e25776a8ee))
+* update composer ([4334e70](https://github.com/ucsc/ucsc-2022/commit/4334e707b856c557d09f829882975152b9703457))
+
 ### [2.1.5](https://github.com/ucsc/ucsc-2022/compare/v2.1.4...v2.1.5) (2023-03-08)
 
 
