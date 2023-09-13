@@ -346,6 +346,7 @@
 				}
 			},
 			"core/navigation": {
+			    "maxNestingLevel": 1,
 				"typography": {
 					"customFontSize": false
 				},
