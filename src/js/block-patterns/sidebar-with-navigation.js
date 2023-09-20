@@ -10,7 +10,7 @@ const toggleSubmenu = ( toggle ) => {
 	const item = toggle.closest( c.itemSelector );
 	const submenu = item.querySelector( c.submenuSelector );
 
-	// Collapse
+	// Hide
 	if ( item.classList.contains( c.itemExpandedClass ) ) {
 		item.classList.remove( c.itemExpandedClass );
 		submenu.setAttribute( 'aria-hidden', true );
@@ -18,7 +18,7 @@ const toggleSubmenu = ( toggle ) => {
 			subItemLink.setAttribute( 'tabIndex', -1 );
 		} );
 	}
-	// Expand
+	// Show
 	else {
 		item.classList.add( c.itemExpandedClass );
 		submenu.setAttribute( 'aria-hidden', false );
