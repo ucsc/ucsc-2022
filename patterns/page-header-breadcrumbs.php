@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Page Header w/ Breadcrumbs
+ * Title: Page Header
  * Slug: ucsc-2022/page-header
  * Block Types: core/cover, core/heading
- * Categories: banners
+ * Categories: banner
  */
 ?>
 

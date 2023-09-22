@@ -3,7 +3,7 @@
  * Title: Link list
  * Slug: ucsc-2022/link-list
  * Block Types: core/list
- * Categories: navigation
+ * Categories: text_layout
  */
 ?>
 <!-- wp:group {"backgroundColor":"white","textColor":"black","className":"ucsc__link-list","layout":{"type":"constrained"}} -->

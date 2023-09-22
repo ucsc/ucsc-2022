@@ -2,7 +2,7 @@
  /**
   * Title: Media with text, fixed width
   * Slug: ucsc-2022/media-with-text-fixed-width
-  * Categories: wireframe, columns
+  * Categories: banner
   */
 ?>
 <!-- wp:media-text {"align":"wide","mediaId":52,"mediaLink":"https://www-next.ucsc.edu/?attachment_id=52","mediaType":"image","mediaWidth":61,"mediaSizeSlug":"thumbnail","verticalAlignment":"top","imageFill":true,"focalPoint":{"x":"0.56","y":"0.32"},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"backgroundColor":"ucsc-primary-yellow"} -->

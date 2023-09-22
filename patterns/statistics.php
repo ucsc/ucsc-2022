@@ -1,9 +1,8 @@
 <?php
-
 /**
  * Title: Statistics
  * Slug: ucsc-2022/statistics
- * Categories: text
+ * Categories: text_layout
  */
 ?>
 

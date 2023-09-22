@@ -3,7 +3,7 @@
 /**
  * Title: Card: Yellow w/ CTA
  * Slug: ucsc-2022/card-yellow-cta
- * Categories: cards
+ * Categories: text_layout
  */
 ?>
 

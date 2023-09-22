@@ -2,7 +2,7 @@
  /**
   * Title: 3 columns with background image
   * Slug: ucsc-2022/columns-3-with-background-image
-  * Categories: columns
+  * Categories: text_layout
   */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"ucsc-secondary-blue","textColor":"white","className":"ucsc__columns-3-with-background-image","layout":{"type":"constrained"}} -->
