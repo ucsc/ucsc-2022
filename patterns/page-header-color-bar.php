@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Wide Page Header
- * Slug: ucsc-2022/page-header-wide
+ * Title: Page Header with text color bar
+ * Slug: ucsc-2022/page-header-color-bar
  * Block Types: core/cover, core/heading
  * Categories: banner
  */
