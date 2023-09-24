@@ -3,7 +3,7 @@
 /**
  * Title: Card Grid 2 Columns
  * Slug: ucsc-2022/card-grid-2-columns
- * Categories: text
+ * Categories: grid
  */
 ?>
 

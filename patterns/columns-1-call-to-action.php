@@ -2,7 +2,7 @@
  /**
   * Title: Centered call to action column
   * Slug: ucsc-2022/columns-1-call-to-action
-  * Categories: call-to-action
+  * Categories: banner
   */
 ?>
 <!-- wp:columns -->

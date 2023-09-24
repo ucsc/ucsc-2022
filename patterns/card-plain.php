@@ -3,7 +3,7 @@
 /**
  * Title: Card
  * Slug: ucsc-2022/card-plain
- * Categories: cards
+ * Categories: text_layout
  */
 ?>
 

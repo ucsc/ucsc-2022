@@ -6,17 +6,22 @@ add_action( 'init', function () {
 
 	// Register Block Categories
 	register_block_pattern_category(
-		'navigation',
-		array( 'label' => __( 'Navigation', 'ucsc' ) )
+		'page_layout',
+		array( 'label' => __( 'Page Layout', 'ucsc' ) )
 	);
 
 	register_block_pattern_category(
-		'hero',
-		array( 'label' => __( 'Hero', 'ucsc' ) )
+		'text_layout',
+		array( 'label' => __( 'Text Layout', 'ucsc' ) )
 	);
 
 	register_block_pattern_category(
-		'cards',
-		array( 'label' => __( 'Cards', 'ucsc' ) )
+		'banner',
+		array( 'label' => __( 'Banner', 'ucsc' ) )
+	);
+
+	register_block_pattern_category(
+		'grid',
+		array( 'label' => __( 'Grid', 'ucsc' ) )
 	);
 } );
