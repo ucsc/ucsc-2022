@@ -1,4 +1,5 @@
 /* BLOCK PATTERN: Cards */
+/* stylelint-disable no-descending-specificity */
 
 .ucsc__card {
 	display: flex;
@@ -13,19 +14,6 @@
 		&:hover,
 		&:focus {
 			color: var(--wp--preset--color--ucsc-primary-blue);
-		}
-	}
-
-	&.ucsc__card-yellow {
-
-		a {
-			text-decoration-color: var(--wp--preset--color--black);
-
-			&:hover,
-			&:focus {
-				color: var(--wp--preset--color--ucsc-primary-blue);
-				text-decoration-color: var(--wp--preset--color--ucsc-primary-blue);
-			}
 		}
 	}
 
@@ -46,16 +34,34 @@
 	}
 }
 
-.ucsc__card--query-loop {
+.ucsc__card-yellow {
 
-	/* stylelint-disable no-descending-specificity */
-	.ucsc-query-loop__category > a {
-		text-decoration: none;
+	a {
+		text-decoration-color: var(--wp--preset--color--black);
 
 		&:hover,
 		&:focus {
-			text-decoration: underline;
-			text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
+			color: var(--wp--preset--color--ucsc-primary-blue);
+			text-decoration-color: var(--wp--preset--color--ucsc-primary-blue);
+		}
+	}
+}
+
+.ucsc__card--query-loop {
+
+	.wp-block-post-featured-image a {
+		overflow: hidden;
+
+		img {
+			transition: transform 0.3s ease;
+		}
+
+		&:hover,
+		&:focus {
+
+			img {
+				transform: scale(1.15);
+			}
 		}
 	}
 
@@ -67,6 +73,24 @@
 			display: block;
 			aspect-ratio: 16 / 9;
 			background-image: var(--wp--preset--gradient--ucsc-headline-gradient);
+		}
+	}
+
+	.ucsc-query-loop__category a {
+		text-decoration-line: none;
+
+		&:hover,
+		&:focus {
+			text-decoration-line: underline;
+		}
+	}
+
+	.wp-block-post-title > a {
+		text-decoration-line: none;
+
+		&:hover,
+		&:focus {
+			text-decoration-line: underline;
 		}
 	}
 }
