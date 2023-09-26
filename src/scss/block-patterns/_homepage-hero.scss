@@ -1,4 +1,8 @@
 /* BLOCK PATTERN: Homepage Hero */
+.ucsc__homepage-hero .wp-block-cover:nth-child(2) {
+	overflow: visible;
+}
+
 
 .ucsc__homepage-hero-header {
 	max-width: 75%;
@@ -31,7 +35,7 @@
 }
 
 .ucsc__homepage-hero--bottom {
-	margin-top: calc(var(--wp--preset--spacing--60) * -1);
+	margin-top: calc(var(--wp--preset--spacing--60) * -1) !important;
 }
 
 .ucsc__homepage-hero-cards {

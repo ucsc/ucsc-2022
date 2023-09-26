@@ -267,7 +267,7 @@ const deactivateMenuItem = ( data ) => {
 
 const handleResize = () => {
 	// Find the site header height.
-	const siteHeader = document.querySelector( '.site-header__header' );
+	const siteHeader = document.querySelector( '.site-header' );
 	document.documentElement.style.setProperty(
 		'--site-header-height',
 		siteHeader.clientHeight + 'px'

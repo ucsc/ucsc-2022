@@ -34,3 +34,30 @@ a {
 		}
 	}
 }
+
+// Clicking anchor links should
+// have padding to account for
+// the fixed header height
+:target {
+	scroll-margin-top: 5rem;
+	animation: 2s ease-out 0.1s bgcolor;
+
+	@keyframes bgcolor {
+
+		from {
+			background-color: initial;
+		}
+
+		15% {
+			background-color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+
+		to {
+			background-color: initial;
+		}
+	}
+
+	@include media-query($wp-columns-unstack) {
+		scroll-margin-top: 11rem;
+	}
+}

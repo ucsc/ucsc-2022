@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'core/button', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
+		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
 		foreach ( $styled_blocks as $block ) {
 
 			$name = explode('/', $block);
@@ -279,7 +279,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset( $breadcrumbs ) && is_page_template( 'page-no-title-with-breadcrumbs' ) ) {
+	if ( is_singular() && isset( $breadcrumbs ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			if ( isset( $block['attrs']['level'] ) ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
@@ -313,15 +313,6 @@ add_filter(
 */
 if ( file_exists( get_theme_file_path( 'lib/acf.php' ) ) ) {
 	include get_theme_file_path( 'lib/acf.php' );
-}
-
-include get_theme_file_path( 'lib/blocks.php' );
-
-/**
- * Register Block Pattern Customizations
- */
-if ( file_exists( get_theme_file_path( 'lib/blocks.php' ) ) ) {
-	include get_theme_file_path( 'lib/blocks.php' );
 }
 
 /**
@@ -393,8 +384,8 @@ add_action( 'wp_footer', 'ucsc_truss_assets' );
 function ucsc_truss_assets() { ?>
 
 <!-- Script and style to include our components library, Truss.  -->
-<script type="module" src="https://unpkg.com/@ucsantacruz/truss@latest/dist/ucsc-trss/ucsc-trss.esm.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@latest/dist/ucsc-trss/ucsc-trss.css">
+<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.7.7/dist/ucsc-trss/ucsc-trss.esm.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.7.7/dist/ucsc-trss/ucsc-trss.css">
 
 <?php
 }
