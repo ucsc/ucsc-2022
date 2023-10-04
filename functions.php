@@ -344,15 +344,6 @@ function ucsc_block_editor_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
-/**
- * Remove core block patterns
- */
-add_action(
-	'init',
-	function() {
-		remove_theme_support( 'core-block-patterns' );
-	}
-);
 
 /**
  * Add Truss global header and global footer components
