@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Page Header with text color bar
+ * Title: Page Header with bottom text bar
  * Slug: ucsc-2022/page-header-color-bar
  * Block Types: core/cover, core/heading
  * Categories: banner
@@ -8,8 +8,8 @@
 ?>
 
 <!-- wp:group {"align":"full","className":"ucsc-page-header","layout":{"type":"default"},"fontSize":"base"} -->
-<div class="wp-block-group alignfull ucsc-page-header has-base-font-size"><!-- wp:cover {"url":"https://officeofresearch.wordpress.ucsc.edu/files/2023/09/2019_04_12_UCSC_day3-173.jpg","id":2091,"dimRatio":0,"minHeight":570,"minHeightUnit":"px","contentPosition":"center center","isDark":false,"className":"ucsc-page-header__content","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-cover is-light ucsc-page-header__content" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:0;padding-bottom:0;min-height:570px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2091" alt="" src="https://officeofresearch.wordpress.ucsc.edu/files/2023/09/2019_04_12_UCSC_day3-173.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull ucsc-page-header has-base-font-size"><!-- wp:cover {"url":"https://unsplash.com/photos/P8PlK2nGwqA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8bGFuZHNjYXBlJTIwZm9yZXN0fGVufDB8fHx8MTY5NjM3OTM1MXww\u0026w=1920","dimRatio":0,"focalPoint":{"x":0.49,"y":0.24},"minHeight":570,"minHeightUnit":"px","contentPosition":"center center","isDark":false,"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"className":"ucsc-page-header__content"} -->
+<div class="wp-block-cover is-light ucsc-page-header__content" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:0;padding-bottom:0;min-height:570px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://unsplash.com/photos/P8PlK2nGwqA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8bGFuZHNjYXBlJTIwZm9yZXN0fGVufDB8fHx8MTY5NjM3OTM1MXww&amp;w=1920" style="object-position:49% 24%" data-object-fit="cover" data-object-position="49% 24%"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:post-title {"level":1,"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","right":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"backgroundColor":"ucsc-primary-yellow","textColor":"ucsc-primary-blue","className":"ucsc-page-header__title primary-post-title","fontSize":"seven"} /--></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
