@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Title: Card Grid 3 Columns
+ * Title: Grid 3 Columns
  * Slug: ucsc-2022/card-grid-3-columns
  * Categories: grid
  */
@@ -9,7 +9,7 @@
 
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|50","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"className":"ucsc__3-col-card-grid","layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group alignfull ucsc__3-col-card-grid" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)"><!-- wp:heading -->
-	<h2 class="wp-block-heading">3-Column Card Grid</h2>
+	<h2 class="wp-block-heading">3-Column Grid</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|20"}}},"className":"ucsc__card-grid"} -->
@@ -20,7 +20,7 @@
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"level":3} -->
-				<h3 class="wp-block-heading">Card Title</h3>
+				<h3 class="wp-block-heading">Heading</h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"base"} -->
@@ -36,7 +36,7 @@
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"level":3} -->
-				<h3 class="wp-block-heading">Card Title</h3>
+				<h3 class="wp-block-heading">Heading</h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"base"} -->
@@ -52,7 +52,7 @@
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"level":3} -->
-				<h3 class="wp-block-heading">Card Title</h3>
+				<h3 class="wp-block-heading">Heading</h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"base"} -->
