@@ -2,7 +2,7 @@
  /**
   * Title: Media with text, featured
   * Slug: ucsc-2022/media-with-text-featured
-  * Categories: banner
+  * Categories: text_layout
   */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"textColor":"ucsc-primary-blue","className":"ucsc__media-with-text-featured","layout":{"type":"constrained","contentSize":"","wideSize":""}} -->
