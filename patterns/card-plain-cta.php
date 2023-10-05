@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Title: Card w/ CTA
+ * Title: Text Layout w/ CTA
  * Slug: ucsc-2022/card-plain-cta
  * Categories: text_layout
  */
@@ -13,7 +13,7 @@
 	<!-- /wp:image -->
 
 	<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
-	<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Card Title</h3>
+	<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Heading</h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"fontSize":"base"} -->
