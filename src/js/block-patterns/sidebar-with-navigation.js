@@ -1,30 +1,40 @@
-const blocks = document.querySelectorAll( '.ucsc__sidebar-with-navigation' );
+const el = document.querySelectorAll( '.ucsc__sidebar-with-navigation' );
 
-// Cache object, populated upon initialization.
-let c = {};
+const selectors = {
+	itemSelector: '.wp-block-navigation-item',
+	itemExpandedClass: 'ucsc__sidebar-with-navigation--expanded',
+	linkSelector: 'a.wp-block-navigation-item__content',
+	toggleSelector: '.wp-block-navigation-submenu__toggle',
+	submenuWrapperClass: 'wp-block-navigation__submenu-transition-wrapper',
+	submenuSelector: '.wp-block-navigation__submenu-container',
+};
 
 /**
  * Show or hide the submenu associated with a given toggle button.
  */
 const toggleSubmenu = ( toggle ) => {
-	const item = toggle.closest( c.itemSelector );
-	const submenu = item.querySelector( c.submenuSelector );
+	const item = toggle.closest( selectors.itemSelector );
+	const submenu = item.querySelector( selectors.submenuSelector );
 
 	// Hide
-	if ( item.classList.contains( c.itemExpandedClass ) ) {
-		item.classList.remove( c.itemExpandedClass );
+	if ( item.classList.contains( selectors.itemExpandedClass ) ) {
+		item.classList.remove( selectors.itemExpandedClass );
 		submenu.setAttribute( 'aria-hidden', true );
-		submenu.querySelectorAll( c.linkSelector ).forEach( ( subItemLink ) => {
-			subItemLink.setAttribute( 'tabIndex', -1 );
-		} );
+		submenu
+			.querySelectorAll( selectors.linkSelector )
+			.forEach( ( subItemLink ) => {
+				subItemLink.setAttribute( 'tabIndex', -1 );
+			} );
 	}
 	// Show
 	else {
-		item.classList.add( c.itemExpandedClass );
+		item.classList.add( selectors.itemExpandedClass );
 		submenu.setAttribute( 'aria-hidden', false );
-		submenu.querySelectorAll( c.linkSelector ).forEach( ( subItemLink ) => {
-			subItemLink.removeAttribute( 'tabIndex' );
-		} );
+		submenu
+			.querySelectorAll( selectors.linkSelector )
+			.forEach( ( subItemLink ) => {
+				subItemLink.removeAttribute( 'tabIndex' );
+			} );
 	}
 };
 
@@ -33,16 +43,18 @@ const toggleSubmenu = ( toggle ) => {
  * since we've disabled accordion behavior.
  */
 const fixAriaAttributes = () => {
-	blocks.forEach( ( block ) => {
-		block.querySelectorAll( c.itemSelector ).forEach( ( item ) => {
-			const isExpanded = item.classList.contains( c.itemExpandedClass );
+	el.forEach( ( block ) => {
+		block.querySelectorAll( selectors.itemSelector ).forEach( ( item ) => {
+			const isExpanded = item.classList.contains(
+				selectors.itemExpandedClass
+			);
 
-			const toggle = item.querySelector( c.toggleSelector );
+			const toggle = item.querySelector( selectors.toggleSelector );
 			if ( toggle ) {
 				toggle.setAttribute( 'aria-expanded', isExpanded );
 			}
 
-			const submenu = item.querySelector( c.submenuSelector );
+			const submenu = item.querySelector( selectors.submenuSelector );
 			if ( submenu ) {
 				toggle.setAttribute( 'aria-hidden', ! isExpanded );
 			}
@@ -54,15 +66,17 @@ const fixAriaAttributes = () => {
  * Bind event listeners.
  */
 const bindEvents = () => {
-	blocks.forEach( ( block ) => {
-		block.querySelectorAll( c.toggleSelector ).forEach( ( toggle ) => {
-			toggle.addEventListener( 'click', () => {
-				toggleSubmenu( toggle );
+	el.forEach( ( block ) => {
+		block
+			.querySelectorAll( selectors.toggleSelector )
+			.forEach( ( toggle ) => {
+				toggle.addEventListener( 'click', () => {
+					toggleSubmenu( toggle );
+				} );
 			} );
-		} );
 
 		block
-			.querySelectorAll( '.' + c.submenuWrapperClass )
+			.querySelectorAll( '.' + selectors.submenuWrapperClass )
 			.forEach( ( wrapper ) => {
 				wrapper.addEventListener( 'transitionend', () => {
 					fixAriaAttributes();
@@ -75,30 +89,34 @@ const bindEvents = () => {
  * Set up custom block markup.
  */
 const initBlockMarkup = () => {
-	blocks.forEach( ( block ) => {
-		block.querySelectorAll( c.submenuSelector ).forEach( ( submenu ) => {
-			// Initialize submenu ARIA attribute.
-			submenu.setAttribute( 'aria-hidden', true );
-			submenu
-				.querySelectorAll( c.linkSelector )
-				.forEach( ( subItemLink ) => {
-					subItemLink.setAttribute( 'tabIndex', -1 );
-				} );
+	el.forEach( ( block ) => {
+		block
+			.querySelectorAll( selectors.submenuSelector )
+			.forEach( ( submenu ) => {
+				// Initialize submenu ARIA attribute.
+				submenu.setAttribute( 'aria-hidden', true );
+				submenu
+					.querySelectorAll( selectors.linkSelector )
+					.forEach( ( subItemLink ) => {
+						subItemLink.setAttribute( 'tabIndex', -1 );
+					} );
 
-			// Add a wrapper around submenus in order to do height transitions.
-			const item = submenu.closest( c.itemSelector );
-			const wrapper = document.createElement( 'div' );
-			wrapper.classList.add( c.submenuWrapperClass );
-			item.append( wrapper );
-			wrapper.append( submenu );
-		} );
+				// Add a wrapper around submenus in order to do height transitions.
+				const item = submenu.closest( selectors.itemSelector );
+				const wrapper = document.createElement( 'div' );
+				wrapper.classList.add( selectors.submenuWrapperClass );
+				item.append( wrapper );
+				wrapper.append( submenu );
+			} );
 
 		// Remove nested submenus and their toggles.
 		block
-			.querySelectorAll( c.submenuSelector + ' ' + c.submenuSelector )
+			.querySelectorAll(
+				selectors.submenuSelector + ' ' + selectors.submenuSelector
+			)
 			.forEach( ( nestedSubmenu ) => {
-				const item = nestedSubmenu.closest( c.itemSelector );
-				const toggle = item.querySelector( c.toggleSelector );
+				const item = nestedSubmenu.closest( selectors.itemSelector );
+				const toggle = item.querySelector( selectors.toggleSelector );
 				toggle.remove();
 				nestedSubmenu.remove();
 			} );
@@ -109,18 +127,9 @@ const initBlockMarkup = () => {
  * Initialize custom block behaviors.
  */
 const init = () => {
-	if ( ! blocks.length ) {
+	if ( ! el.length ) {
 		return;
 	}
-
-	c = {
-		itemSelector: '.wp-block-navigation-item',
-		itemExpandedClass: 'ucsc__sidebar-with-navigation--expanded',
-		linkSelector: 'a.wp-block-navigation-item__content',
-		toggleSelector: '.wp-block-navigation-submenu__toggle',
-		submenuWrapperClass: 'wp-block-navigation__submenu-transition-wrapper',
-		submenuSelector: '.wp-block-navigation__submenu-container',
-	};
 
 	initBlockMarkup();
 	bindEvents();
