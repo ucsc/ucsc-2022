@@ -11,7 +11,7 @@
 <h3 class="wp-block-heading has-base-font-size" style="text-transform:uppercase">Navigation header</h3>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":1857,"textColor":"ucsc-royal-blue","overlayMenu":"never","overlayTextColor":"ucsc-royal-blue","maxNestingLevel":1,"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"fontSize":"base"} /--></div>
+<!-- wp:navigation {"textColor":"ucsc-royal-blue","overlayMenu":"never","overlayTextColor":"ucsc-royal-blue","maxNestingLevel":1,"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"fontSize":"base"} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"66.66%"} -->
