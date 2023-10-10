@@ -112,7 +112,7 @@ const initBlockMarkup = () => {
 		// Remove nested submenus and their toggles.
 		block
 			.querySelectorAll(
-				selectors.submenuSelector + ' ' + selectors.submenuSelector
+				`${ selectors.submenuSelector } ${ selectors.submenuSelector }`
 			)
 			.forEach( ( nestedSubmenu ) => {
 				const item = nestedSubmenu.closest( selectors.itemSelector );
