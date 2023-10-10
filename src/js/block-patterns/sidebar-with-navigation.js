@@ -11,6 +11,8 @@ const selectors = {
 
 /**
  * Show or hide the submenu associated with a given toggle button.
+ *
+ * @param {HTMLElement} toggle The actioned submenu toggle button.
  */
 const toggleSubmenu = ( toggle ) => {
 	const item = toggle.closest( selectors.itemSelector );
