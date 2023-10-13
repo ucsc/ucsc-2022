@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/ucsc/ucsc-2022/compare/v3.3.0...v3.4.0) (2023-10-13)
+
+
+### Features
+
+* ✨ Add Google site search ([#275](https://github.com/ucsc/ucsc-2022/issues/275)) ([b43c434](https://github.com/ucsc/ucsc-2022/commit/b43c4341fa94d3e7e3ba373cc1ef4b3ff4a9dda5)), closes [#40](https://github.com/ucsc/ucsc-2022/issues/40)
+
 ## [3.3.0](https://github.com/ucsc/ucsc-2022/compare/v3.2.0...v3.3.0) (2023-09-24)
 
 
