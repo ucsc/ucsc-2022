@@ -1,18 +1,14 @@
 /*--------------------------------------------------------------
 # - Alignments
 --------------------------------------------------------------*/
-.alignleft {
-	float: left;
-	clear: left;
+
+/*
+ * Fix WP bug that pushes left and rigtht floats outside bounding box
+ */
+.is-layout-constrained > .alignleft {
+	margin-left: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
 }
 
-.alignright {
-	float: right;
-	clear: right;
+.is-layout-constrained > .alignright {
+	margin-right: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
 }
-
-.aligncenter {
-	clear: both;
-	display: table;
-}
-

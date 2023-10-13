@@ -4,10 +4,3 @@
 	color: var(--ucsc-dark-gray);
 }
 
-body .is-layout-constrained > .alignleft {
-	margin-left: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
-}
-
-body .is-layout-constrained > .alignright {
-	margin-right: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
-}
