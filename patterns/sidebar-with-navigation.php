@@ -5,17 +5,18 @@
   * Categories: navigation
   */
 ?>
-
-<!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:heading {"level":3,"fontSize":"base"} -->
-<h3 class="wp-block-heading has-base-font-size"><strong>Navigation header</strong></h3>
+<!-- wp:columns {"className":"ucsc__sidebar-with-navigation"} -->
+<div class="wp-block-columns ucsc__sidebar-with-navigation"><!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"base"} -->
+<h3 class="wp-block-heading has-base-font-size" style="text-transform:uppercase">Navigation header</h3>
 <!-- /wp:heading -->
 
-<!-- wp:navigation { "maxNestingLevel": 1,"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} /--></div>
+<!-- wp:navigation {"textColor":"ucsc-royal-blue","overlayMenu":"never","overlayTextColor":"ucsc-royal-blue","maxNestingLevel":1,"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"fontSize":"base"} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"66.66%"} -->
-<div class="wp-block-column" style="flex-basis:66.66%"></div>
+<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Page title</h1>
+<!-- /wp:heading --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
