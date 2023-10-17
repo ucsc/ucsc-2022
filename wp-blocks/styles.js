@@ -99,4 +99,19 @@ wp.domReady( () => {
 			height: '4rem',
 		},
 	} );
+	// Styles for core/details
+	// wp.blocks.registerBlockStyle('core/details', {
+		// name: 'chevron',
+		// label: __('Chevron', 'ucsc-2022'),
+	// });
+	// wp.blocks.registerBlockStyle('core/details', {
+		// name: 'plus',
+		// label: __('Plus/Minus', 'ucsc-2022'),
+//
+	// });
+	// wp.blocks.registerBlockStyle('core/details', {
+		// name: 'check',
+		// label: __('Check mark', 'ucsc-2022'),
+//
+	// });
 } );

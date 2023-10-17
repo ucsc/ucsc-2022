@@ -33,10 +33,20 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 			)
 		);
 
+		/**
+		 * Enqueue Dashicons for front-end use
+		 */
+		function ucsc_enqueue_dashicons() {
+			wp_enqueue_style(
+				'dashicons'
+			);
+		}
+		add_action( 'wp_enqueue_scripts', 'ucsc_enqueue_dashicons' );
+
 		/*
 		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
+		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion','core/details' );
 		foreach ( $styled_blocks as $block ) {
 
 			$name = explode('/', $block);
@@ -492,3 +502,39 @@ function ucsc_skip_link() {
 }
 
 add_action('wp_footer', 'ucsc_skip_link');
+
+// TEST CODE
+
+/**
+ * Block Styles
+ */
+function rich_register_block_styles() {
+
+	if ( function_exists( 'register_block_style' ) ) {
+
+		register_block_style(
+			'core/details',
+			array(
+				'name'  => 'chevron',
+				'label' => __( 'Chevron', 'ucsc-2022' ),
+			)
+		);
+
+		register_block_style(
+			'core/details',
+			array(
+				'name'  => 'plus',
+				'label' => __( 'Plus/Minus', 'ucsc-2022' ),
+			)
+		);
+
+		register_block_style(
+			'core/details',
+			array(
+				'name'  => 'check',
+				'label' => __( 'Check mark', 'ucsc-2022' ),
+			)
+		);
+	}
+}
+add_action( 'after_setup_theme', 'rich_register_block_styles' );
