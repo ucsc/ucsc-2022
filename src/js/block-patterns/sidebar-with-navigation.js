@@ -27,9 +27,8 @@ const toggleSubmenu = ( toggle ) => {
 			.forEach( ( subItemLink ) => {
 				subItemLink.setAttribute( 'tabIndex', -1 );
 			} );
-	}
-	// Show
-	else {
+		// Show
+	} else {
 		item.classList.add( selectors.itemExpandedClass );
 		submenu.setAttribute( 'aria-hidden', false );
 		submenu
@@ -58,7 +57,7 @@ const fixAriaAttributes = () => {
 
 			const submenu = item.querySelector( selectors.submenuSelector );
 			if ( submenu ) {
-				toggle.setAttribute( 'aria-hidden', ! isExpanded );
+				submenu.setAttribute( 'aria-hidden', ! isExpanded );
 			}
 		} );
 	} );
