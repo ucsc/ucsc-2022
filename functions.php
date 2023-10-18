@@ -503,38 +503,3 @@ function ucsc_skip_link() {
 
 add_action('wp_footer', 'ucsc_skip_link');
 
-// TEST CODE
-
-/**
- * Block Styles
- */
-function rich_register_block_styles() {
-
-	if ( function_exists( 'register_block_style' ) ) {
-
-		register_block_style(
-			'core/details',
-			array(
-				'name'  => 'chevron',
-				'label' => __( 'Chevron', 'ucsc-2022' ),
-			)
-		);
-
-		register_block_style(
-			'core/details',
-			array(
-				'name'  => 'plus',
-				'label' => __( 'Plus/Minus', 'ucsc-2022' ),
-			)
-		);
-
-		register_block_style(
-			'core/details',
-			array(
-				'name'  => 'check',
-				'label' => __( 'Check mark', 'ucsc-2022' ),
-			)
-		);
-	}
-}
-add_action( 'after_setup_theme', 'rich_register_block_styles' );
