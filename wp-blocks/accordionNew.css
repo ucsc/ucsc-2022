@@ -1,8 +1,8 @@
-details, .ucsc-block-accordion {
+.ucsc-block-accordion {
 	position: relative;
 }
 
-details summary, .ucsc-block-accordion summary {
+.ucsc-block-accordion summary {
 	box-sizing: border-box;
 	width: 100%;
 	padding: var(--wp--preset--font-size--small);
@@ -12,11 +12,11 @@ details summary, .ucsc-block-accordion summary {
 	transition: font-weight 0.2s ease-in-out;
 }
 
-details summary::-webkit-.ucsc-block-accordion-marker, .ucsc-block-accordion summary::-webkit-.ucsc-block-accordion-marker {
+.ucsc-block-accordion summary::-webkit-.ucsc-block-accordion-marker {
 	display: none;
 }
 
-details summary::before, .ucsc-block-accordion summary::before {
+.ucsc-block-accordion summary::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -26,19 +26,18 @@ details summary::before, .ucsc-block-accordion summary::before {
 	transition: transform 0.1s linear;
 }
 
-details summary:focus,
-details summary:hover, .ucsc-block-accordion summary:focus,
+.ucsc-block-accordion summary:focus,
 .ucsc-block-accordion summary:hover {
 	outline: none;
 	color: var(--wp--preset--color--ucsc-primary-blue);
 }
 
-details[open] > summary, .ucsc-block-accordion[open] > summary {
+.ucsc-block-accordion[open] > summary {
 	color: var(--wp--preset--color--ucsc-primary-blue);
 	font-weight: 600;
 	border-bottom: 1px solid var(--wp--preset--color--ucsc-primary-yellow);
 }
 
-details[open] summary::before, .ucsc-block-accordion[open] summary::before {
+.ucsc-block-accordion[open] summary::before {
 	transform: rotate(90deg);
 }
