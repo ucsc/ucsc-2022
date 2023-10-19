@@ -3,7 +3,7 @@
  * Title: Query Loop Card
  * Slug: ucsc-2022/query-loop-card
  * Block Types: core/post-title, core/featured-image, core/post-date, core/post-excerpt
- * Categories: cards
+ * Categories: text_layout
  */
 ?>
 <!-- wp:group {"className":"ucsc__card ucsc__card\u002d\u002dquery-loop","layout":{"type":"default"}} -->

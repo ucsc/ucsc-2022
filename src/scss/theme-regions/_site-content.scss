@@ -2,3 +2,8 @@
 main.wp-block-group {
 	margin-block-start: 0 !important;
 }
+
+/* Remove default padding from Google site search results */
+.gsc-control-cse {
+	padding: 0 !important;
+}

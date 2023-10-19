@@ -279,7 +279,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset( $breadcrumbs ) ) {
+	if ( !is_page_template( 'page-no-title' ) && isset( $breadcrumbs ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			if ( isset( $block['attrs']['level'] ) ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
@@ -344,15 +344,6 @@ function ucsc_block_editor_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
-/**
- * Remove core block patterns
- */
-add_action(
-	'init',
-	function() {
-		remove_theme_support( 'core-block-patterns' );
-	}
-);
 
 /**
  * Add Truss global header and global footer components

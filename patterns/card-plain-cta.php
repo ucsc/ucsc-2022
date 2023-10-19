@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Title: Card w/ CTA
+ * Title: Text Layout w/ CTA
  * Slug: ucsc-2022/card-plain-cta
- * Categories: call-to-action
+ * Categories: text_layout
  */
 ?>
 

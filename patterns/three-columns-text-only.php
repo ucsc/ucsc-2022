@@ -3,7 +3,7 @@
  * Title: 3 Columns: Text Only
  * Slug: ucsc-2022/three-columns-text-only
  * Block Types: core/columns, core/paragraph, core/buttons
- * Categories: columns
+ * Categories: grid
  */
 ?>
 

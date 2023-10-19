@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Title: Card Grid 3 Columns
+ * Title: Grid 3 Columns
  * Slug: ucsc-2022/card-grid-3-columns
- * Categories: text
+ * Categories: grid
  */
 ?>
 

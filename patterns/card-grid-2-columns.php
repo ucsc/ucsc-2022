@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Title: Card Grid 2 Columns
+ * Title: Grid 2 Columns
  * Slug: ucsc-2022/card-grid-2-columns
- * Categories: text
+ * Categories: grid
  */
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|50","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"className":"ucsc__2-col-card-grid","layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group alignfull ucsc__2-col-card-grid" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)"><!-- wp:heading -->
-<h2 class="wp-block-heading">2-Column Card Grid</h2>
+<h2 class="wp-block-heading">2-Column Grid</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|20"}}},"className":"ucsc__card-grid"} -->
@@ -24,7 +24,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Card Title</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Heading</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"fontSize":"base"} -->
@@ -50,7 +50,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Card Title</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Heading</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"fontSize":"base"} -->

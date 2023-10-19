@@ -1,8 +1,8 @@
 <?php
  /**
-  * Title: Content with left navigation
+  * Title: Left navigation
   * Slug: ucsc-2022/sidebar-with-navigation
-  * Categories: navigation
+  * Categories: page_layout
   */
 ?>
 <!-- wp:columns {"className":"ucsc__sidebar-with-navigation"} -->

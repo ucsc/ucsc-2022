@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Title: Card
+ * Title: Single
  * Slug: ucsc-2022/card-plain
- * Categories: cards
+ * Categories: text_layout
  */
 ?>
 
@@ -17,7 +17,7 @@
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3} -->
-	<h3 class="wp-block-heading">Card Title</h3>
+	<h3 class="wp-block-heading">Heading</h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"fontSize":"base"} -->
