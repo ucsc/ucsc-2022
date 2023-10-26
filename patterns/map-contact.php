@@ -3,7 +3,7 @@
  * Title: Map + Contact
  * Slug: ucsc-2022/map-contact
  * Block Types: core/columns, core/paragraph, core/heading, core/html
- * Categories: ucsc, columns
+ * Categories: text_layout
  */
 ?>
 

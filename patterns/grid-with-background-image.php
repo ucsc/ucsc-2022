@@ -2,7 +2,7 @@
  /**
   * Title: 4 columns with background image
   * Slug: ucsc-2022/grid-with-background-image
-  * Categories: ucsc, columns
+  * Categories: text_layout
   */
 ?>
 
@@ -35,7 +35,7 @@
 							<!-- /wp:image -->
 
 							<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"white","fontSize":"three"} -->
-							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Column Card Link Example</a></p>
+							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Link Example</a></p>
 							<!-- /wp:paragraph --></div>
 						<!-- /wp:group -->
 
@@ -45,7 +45,7 @@
 							<!-- /wp:image -->
 
 							<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"white","fontSize":"three"} -->
-							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Column Card Link Example</a></p>
+							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Link Example</a></p>
 							<!-- /wp:paragraph --></div>
 						<!-- /wp:group -->
 
@@ -55,7 +55,7 @@
 							<!-- /wp:image -->
 
 							<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"white","fontSize":"three"} -->
-							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Column Card Link Example</a></p>
+							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Link Example</a></p>
 							<!-- /wp:paragraph --></div>
 						<!-- /wp:group -->
 
@@ -65,7 +65,7 @@
 							<!-- /wp:image -->
 
 							<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"white","fontSize":"three"} -->
-							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Column Card Link Example</a></p>
+							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Link Example</a></p>
 							<!-- /wp:paragraph --></div>
 						<!-- /wp:group -->
 
@@ -75,7 +75,7 @@
 							<!-- /wp:image -->
 
 							<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","right":"var:preset|spacing|20","left":"var:preset|spacing|20"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"white","fontSize":"three"} -->
-							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Column Card Link Example</a></p>
+							<p class="has-white-color has-text-color has-link-color has-three-font-size" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);font-style:normal;font-weight:700"><a href="#">Link Example</a></p>
 							<!-- /wp:paragraph --></div>
 						<!-- /wp:group -->
 

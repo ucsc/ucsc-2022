@@ -17,7 +17,7 @@
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3} -->
-	<h3 class="wp-block-heading">Card Title</h3>
+	<h3 class="wp-block-heading">Title</h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"fontSize":"base"} -->
