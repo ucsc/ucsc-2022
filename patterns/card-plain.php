@@ -7,10 +7,14 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"className":"ucsc__card ucsc__card-plain","layout":{"type":"default"}} -->
+<!-- wp:group {"className":"ucsc__card ucsc__card-plain","layout":{"type":"default"}} -->
 <div class="wp-block-group ucsc__card ucsc__card-plain"><!-- wp:image -->
 	<figure class="wp-block-image"><img alt=""/></figure>
 	<!-- /wp:image -->
+
+	<!-- wp:paragraph {"fontSize":"small"} -->
+	<p class="has-small-font-size">Overline</p>
+	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3} -->
 	<h3 class="wp-block-heading">Heading</h3>
