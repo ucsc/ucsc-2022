@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/ucsc/ucsc-2022/compare/v3.4.0...v3.5.0) (2023-10-27)
+
+
+### Features
+
+* 🔥 Update Truss to version v0.7.11 ([334bf97](https://github.com/ucsc/ucsc-2022/commit/334bf97cbdf3d49ebd92249a853f5caef84c6bd2))
+
+
+### Bug Fixes
+
+* :bug: Fixes [#252](https://github.com/ucsc/ucsc-2022/issues/252) `accordion.css` updated to add a target class, `ucsc-block-accordion` ([#265](https://github.com/ucsc/ucsc-2022/issues/265)) ([58aed36](https://github.com/ucsc/ucsc-2022/commit/58aed361e3f62b67c1c7c29b4eb575c646df0b2c))
+* :bug: Fixes [#257](https://github.com/ucsc/ucsc-2022/issues/257), images that are aligned left or right break out of their binding box ([#274](https://github.com/ucsc/ucsc-2022/issues/274)) ([c47264f](https://github.com/ucsc/ucsc-2022/commit/c47264f97bb342e070041622d94395b68ce6ce3a))
+
 ## [3.4.0](https://github.com/ucsc/ucsc-2022/compare/v3.3.0...v3.4.0) (2023-10-13)
 
 
