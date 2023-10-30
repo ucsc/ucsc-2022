@@ -8,22 +8,101 @@ import state from '../config/state';
 import { NAVIGATION_BREAKPOINT } from '../config/options';
 import * as bodyLock from '../utils/body-lock';
 
-// Cache some elements.
+// Cache some elements and state.
 const cache = {
 	desktopBreakpoint: NAVIGATION_BREAKPOINT,
+	trussHeader: null,
+	stickyHeader: null,
+	stickyHeaderObserver: null,
 	nav: null,
+	navIsOpen: false,
 	navToggle: null,
 	menuItems: [],
 };
 
 /**
+ * Show the main-nav menu on mobile.
+ */
+const showMenu = () => {
+	// Stop observing the sticky header when we open the menu, because it's going
+	// to float to the top of the viewport and not reflect our actual scroll
+	// position.
+	cache.stickyHeaderObserver.unobserve( cache.stickyHeader );
+	bodyLock.lock();
+
+	document.documentElement.classList.add( 'main-nav--is-open' );
+	if ( ! cache.navIsOpen ) {
+		document.documentElement.classList.add( 'main-nav--is-opening' );
+	}
+
+	cache.nav.setAttribute( 'aria-hidden', false );
+	cache.navToggle.setAttribute( 'aria-label', 'Hide main navigation menu' );
+	cache.navIsOpen = true;
+};
+
+/**
+ * Hide the main-nav menu on mobile.
+ */
+const hideMenu = () => {
+	document.documentElement.classList.remove( 'main-nav--is-open' );
+	if ( cache.navIsOpen ) {
+		document.documentElement.classList.add( 'main-nav--is-closing' );
+	}
+
+	cache.nav.setAttribute( 'aria-hidden', true );
+	cache.navToggle.setAttribute( 'aria-label', 'Show main navigation menu' );
+
+	// Reset submenus when the main nav is hidden.
+	cache.menuItems.forEach( ( data ) => {
+		deactivateMenuItem( data );
+	} );
+
+	// If we unlock the body before our closing animation completes, the scroll
+	// position will be off in some cases. For that reason, we unlock the body in
+	// our transitionended event handler. However, if the nav is already hidden,
+	// no transition will occur, so we handle that here.
+	if ( ! cache.navIsOpen && bodyLock.isLocked() ) {
+		bodyLock.unlock();
+	}
+
+	cache.stickyHeaderObserver.observe( cache.stickyHeader );
+	cache.navIsOpen = false;
+};
+
+/**
+ * Toggle the main-nav menu on mobile.
+ */
+const toggleMenu = () => {
+	if ( cache.navIsOpen ) {
+		hideMenu();
+	} else {
+		showMenu();
+	}
+};
+
+/**
  * Add JS behaviors to the main-nav menu.
  */
-function initMainNav() {
+const initMainNav = () => {
 	cache.nav = document.querySelector( '[data-js="main-nav"]' );
 	if ( ! cache.nav ) {
 		return;
 	}
+
+	// Observer when our sticky header becomes "stuck".
+	cache.stickyHeader = document.querySelector( '.header-region' );
+	cache.stickyHeaderObserver = new window.IntersectionObserver(
+		( entries ) => {
+			document.documentElement.classList.toggle(
+				'header-region--stuck',
+				entries[ 0 ].intersectionRatio < 1
+			);
+		},
+		{
+			threshold: 1,
+			rootMargin: '-1px 0px 0px 0px',
+		}
+	);
 
 	// Get our mobile-to-desktop breakpoint.
 	const breakpoint = window
@@ -34,17 +113,24 @@ function initMainNav() {
 		cache.desktopBreakpoint = parseInt( breakpoint );
 	}
 
+	// Update CSS classes for navigation animation states.
+	const navigation = document.querySelector( '.site-header__navigation' );
+	navigation.addEventListener( 'transitionend', () => {
+		document.documentElement.classList.remove(
+			'main-nav--is-opening',
+			'main-nav--is-closing'
+		);
+		// Unlock the body after the nav is closed.
+		if ( ! cache.navIsOpen && bodyLock.isLocked() ) {
+			bodyLock.unlock();
+		}
+	} );
+
 	// Add mobile nav toggle.
 	cache.navToggle = document.querySelector(
 		'.site-header__navigation-toggle'
 	);
-	cache.navToggle.addEventListener( 'click', () => {
-		if ( document.body.classList.contains( 'main-nav--is-open' ) ) {
-			hideMenu();
-		} else {
-			showMenu();
-		}
-	} );
+	cache.navToggle.addEventListener( 'click', toggleMenu );
 
 	// Add menu item behaviors.
 	cache.nav
@@ -108,51 +194,26 @@ function initMainNav() {
 
 	// Start closed.
 	hideMenu();
-}
-
-/**
- * Show the main-nav menu on mobile.
- */
-function showMenu() {
-	bodyLock.lock();
-	document.body.classList.add( 'main-nav--is-open' );
-	cache.nav.setAttribute( 'aria-hidden', false );
-	cache.navToggle.setAttribute( 'aria-label', 'Hide main navigation menu' );
-}
-
-/**
- * Hide the main-nav menu on mobile.
- */
-function hideMenu() {
-	bodyLock.unlock();
-	document.body.classList.remove( 'main-nav--is-open' );
-	cache.nav.setAttribute( 'aria-hidden', true );
-	cache.navToggle.setAttribute( 'aria-label', 'Show main navigation menu' );
-
-	// Reset submenus on hide.
-	cache.menuItems.forEach( ( data ) => {
-		deactivateMenuItem( data );
-	} );
-}
+};
 
 /**
  * Check if our main-nav menu is in mobile mode (vs desktop mode).
  */
-function menuIsMobile() {
+const menuIsMobile = () => {
 	return (
 		Math.max(
 			document.documentElement.clientWidth || 0,
 			window.innerWidth || 0
 		) < cache.desktopBreakpoint
 	);
-}
+};
 
 /**
  * Update a top-level menu item's active status.
  *
  * @param {Object} data The menu item data object from cache.menuItems.
  */
-function updateMenuItem( data ) {
+const updateMenuItem = ( data ) => {
 	// On mobile, only open menu items when the associated toggle button is
 	// pressed.
 	if ( menuIsMobile() ) {
@@ -168,14 +229,14 @@ function updateMenuItem( data ) {
 	} else if ( ! data.isActive && shouldBeActive ) {
 		activateMenuItem( data );
 	}
-}
+};
 
 /**
  * Mark a top-level menu item as active and show its submenu if it has one.
  *
  * @param {Object} data The menu item data object from cache.menuItems.
  */
-function activateMenuItem( data ) {
+const activateMenuItem = ( data ) => {
 	data.menuItem.classList.add( 'menu-item--is-active' );
 	if ( data.submenu ) {
 		data.submenu.setAttribute( 'aria-hidden', false );
@@ -185,14 +246,14 @@ function activateMenuItem( data ) {
 		} );
 	}
 	data.isActive = true;
-}
+};
 
 /**
  * Mark a top-level menu item as inactive and hide its submenu if it has one.
  *
  * @param {Object} data The menu item data object from cache.menuItems.
  */
-function deactivateMenuItem( data ) {
+const deactivateMenuItem = ( data ) => {
 	data.menuItem.classList.remove( 'menu-item--is-active' );
 	if ( data.submenu ) {
 		data.submenu.setAttribute( 'aria-hidden', true );
@@ -202,11 +263,17 @@ function deactivateMenuItem( data ) {
 		} );
 	}
 	data.isActive = false;
-}
+};
 
 const handleResize = () => {
-	const navElement = document.querySelector( '[data-js="main-nav"]' );
+	// Find the site header height.
+	const siteHeader = document.querySelector( '.site-header' );
+	document.documentElement.style.setProperty(
+		'--site-header-height',
+		siteHeader.clientHeight + 'px'
+	);
 
+	const navElement = document.querySelector( '[data-js="main-nav"]' );
 	if ( state.v_width >= NAVIGATION_BREAKPOINT ) {
 		navElement.setAttribute( 'aria-hidden', 'false' );
 		return;

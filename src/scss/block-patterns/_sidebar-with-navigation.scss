@@ -1,0 +1,174 @@
+/* BLOCK PATTERN: Content with left navigation */
+
+.ucsc__sidebar-with-navigation {
+	flex-direction: column-reverse;
+
+	@include media-query($wp-columns-unstack) {
+		flex-direction: row;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 8px;
+	}
+
+	// Block
+	.wp-block-navigation {
+		margin-top: 0;
+
+		.wp-block-navigation-item__content {
+
+			&:hover,
+			&:focus-visible {
+				text-decoration: underline;
+				text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: 0.12rem;
+				text-underline-offset: 0.12em;
+			}
+
+			&[aria-current="page"] {
+				font-weight: 700;
+			}
+		}
+
+		.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+
+			&:focus-visible {
+				outline-offset: -1px;
+			}
+		}
+
+		// Navigation menu
+		> .wp-block-navigation__container {
+			width: 100%;
+			gap: 0;
+
+			// Top-level menu item
+			> .wp-block-navigation-item {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				grid-template-rows: auto 0fr;
+				grid-template-areas:
+					"link toggle"
+					"submenu submenu";
+				border-top: 1px solid var(--wp--preset--color--light-gray);
+				transition: grid-template-rows 0.25s ease;
+
+				&:last-child {
+					border-bottom: 1px solid var(--wp--preset--color--light-gray);
+				}
+
+				// Top-level menu link
+				> .wp-block-navigation-item__content {
+					grid-area: link;
+					padding: 12px 0;
+					display: block;
+				}
+
+				// Submenu toggle button
+				> .wp-block-navigation-submenu__toggle {
+					grid-area: toggle;
+					display: flex;
+					height: 100%;
+					min-width: 32px;
+					align-items: flex-start;
+					justify-content: flex-end;
+					color: inherit;
+					position: relative;
+
+					&::before {
+						content: "";
+						display: none;
+						width: 28px;
+						height: calc(100% - 2px);
+						position: absolute;
+						border: 2px solid #000;
+						border-radius: 3px;
+						transform: translateX(5px);
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						width: 10px;
+						height: 10px;
+						border-width: 1px 1px 0 0;
+						border-style: solid;
+						border-color: currentcolor;
+						transform: translate(-5px, 12px) rotate(-225deg);
+						transition: transform 0.25s ease;
+					}
+
+					&:hover,
+					&:focus-visible {
+						outline: 0 none;
+
+						&::after {
+							border-width: 2px 2px 0 0;
+						}
+					}
+
+					&:focus-visible {
+
+						&::before {
+							display: block;
+						}
+					}
+
+					svg {
+						display: none;
+					}
+				}
+
+				// Unwrapped submenu prior to JS initialization
+				> .wp-block-navigation__submenu-container {
+					display: none;
+				}
+
+				// Submenu transition wrapper
+				> .wp-block-navigation__submenu-transition-wrapper {
+					grid-area: submenu;
+					display: grid;
+					grid-template-rows: 0fr;
+					transition: grid-template-rows 0.25s ease;
+
+					// Submenu
+					> .wp-block-navigation__submenu-container {
+						position: static;
+						width: 100%;
+						background-color: transparent;
+						border: 0 none;
+						color: inherit;
+						height: auto;
+						opacity: 1;
+						overflow: hidden;
+						visibility: visible;
+
+						// Hide everything beyond the top two levels of the menu.
+						.wp-block-navigation-submenu__toggle,
+						.wp-block-navigation__submenu-container {
+							display: none;
+						}
+					}
+				}
+
+				// Top-level menu item with submenu expanded
+				&.ucsc__sidebar-with-navigation--expanded {
+
+					> .wp-block-navigation-submenu__toggle::after {
+						transform: translate(-5px, 18px) rotate(-45deg);
+					}
+
+					> .wp-block-navigation__submenu-transition-wrapper {
+						grid-template-rows: 1fr;
+						padding-bottom: 12px;
+					}
+				}
+			}
+		}
+	}
+}

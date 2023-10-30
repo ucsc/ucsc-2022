@@ -1,0 +1,52 @@
+/* BLOCK PATTERN: Grid with background image */
+
+.ucsc-grid-with-background__inner {
+	display: grid !important;
+	grid-template-columns: 1fr;
+
+	@include media-query($wp-columns-unstack) {
+		grid-template-columns: 25% 75%;
+	}
+}
+
+.ucsc-grid-with-background__row {
+	display: grid !important;
+	grid-template-columns: 1fr;
+
+	> * {
+		height: 100%;
+	}
+
+	@include media-query($wp-columns-unstack) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include media-query($large) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.ucsc-grid-with-background__card {
+	display: grid !important;
+	grid-template-rows: auto 1fr;
+	justify-content: space-between;
+
+	.wp-block-image {
+		overflow: hidden;
+
+		> img {
+			width: 100%;
+		}
+
+		/* CASE: Admin fix for image resizing. */
+		> div {
+			max-width: 100% !important;
+			height: auto !important;
+
+			> img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

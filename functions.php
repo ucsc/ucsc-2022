@@ -8,8 +8,6 @@
  * @since UCSC 1.0.0
  */
 
-use Image_Sizes;
-
 if ( ! function_exists( 'ucsc_setup' ) ) :
 
 	/**
@@ -291,7 +289,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	if ( ucsc_breadcrumbs_constructor() ) {
 		$breadcrumbs = ucsc_breadcrumbs_constructor();
 	}
-	if ( is_singular() && isset( $breadcrumbs ) ) {
+	if ( !is_page_template( 'page-no-title' ) && isset( $breadcrumbs ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
 			if ( isset( $block['attrs']['level'] ) ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
@@ -356,15 +354,6 @@ function ucsc_block_editor_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'ucsc_block_editor_scripts' );
 
-/**
- * Remove core block patterns
- */
-add_action(
-	'init',
-	function() {
-		remove_theme_support( 'core-block-patterns' );
-	}
-);
 
 /**
  * Add Truss global header and global footer components
@@ -396,8 +385,8 @@ add_action( 'wp_footer', 'ucsc_truss_assets' );
 function ucsc_truss_assets() { ?>
 
 <!-- Script and style to include our components library, Truss.  -->
-<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.7.7/dist/ucsc-trss/ucsc-trss.esm.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.7.7/dist/ucsc-trss/ucsc-trss.css">
+<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.7.11/dist/ucsc-trss/ucsc-trss.esm.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.7.11/dist/ucsc-trss/ucsc-trss.css">
 
 <?php
 }

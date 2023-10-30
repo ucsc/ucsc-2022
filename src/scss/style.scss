@@ -8,6 +8,7 @@
 @import "base/normalize";
 @import "base/svg";
 @import "base/layout";
+@import "base/alignments";
 
 // Theme
 //===============================
@@ -46,3 +47,6 @@
 @import "block-patterns/page-header-breadcrumbs";
 @import "block-patterns/cards";
 @import "block-patterns/three-columns-text";
+@import "block-patterns/grid-with-background-image";
+@import "block-patterns/map-contact";
+@import "block-patterns/sidebar-with-navigation";

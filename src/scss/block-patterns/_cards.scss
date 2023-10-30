@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /* BLOCK PATTERN: Cards */
 
 .ucsc__card {
@@ -6,27 +8,9 @@
 	align-items: stretch;
 	gap: var(--wp--preset--spacing--20);
 
-	a {
-		color: var(--wp--preset--color--black);
-		font-weight: 700;
-
-		&:hover,
-		&:focus {
-			color: var(--wp--preset--color--ucsc-primary-blue);
-		}
-	}
-
-	&.ucsc__card-yellow {
-
-		a {
-			text-decoration-color: var(--wp--preset--color--black);
-
-			&:hover,
-			&:focus {
-				color: var(--wp--preset--color--ucsc-primary-blue);
-				text-decoration-color: var(--wp--preset--color--ucsc-primary-blue);
-			}
-		}
+	&.is-layout-flow > * {
+		margin-block-start: 0;
+		margin-block-end: 0;
 	}
 
 	.ucsc__card-grid & {
@@ -38,6 +22,57 @@
 	height: 100%;
 }
 
+/* Card images */
+:where(.ucsc__card .wp-block-image),
+:where(.ucsc__card .wp-block-post-featured-image) {
+
+	a {
+		display: block;
+		overflow: hidden;
+
+		img {
+			transition: transform 0.3s ease;
+		}
+
+		&:hover,
+		&:focus {
+
+			img {
+				transform: scale(1.15);
+			}
+		}
+	}
+}
+
+/* Links in card overlines and titles */
+:where(.ucsc__card .has-small-font-size:first-child),
+:where(.ucsc__card .wp-block-image + .has-small-font-size),
+:where(.ucsc__card .wp-block-post-featured-image + .has-small-font-size),
+:where(.ucsc__card .wp-block-heading),
+:where(.ucsc__card .wp-block-post-title) {
+
+	a {
+		color: var(--wp--preset--color--ucsc-secondary-blue);
+		text-decoration-line: none;
+
+		&:hover,
+		&:focus {
+			color: var(--wp--preset--color--ucsc-primary-blue);
+			text-decoration-line: underline;
+		}
+	}
+}
+
+/* CASE: Card title follows an overline */
+:where(.ucsc__card .has-small-font-size) {
+
+	+ .wp-block-heading,
+	+ .wp-block-post-title {
+		margin-block-start: -16px !important;
+	}
+}
+
+/* Card CTAs */
 .ucsc__card-cta {
 
 	.ucsc__card-grid & {
@@ -46,18 +81,17 @@
 	}
 }
 
-.ucsc__card--query-loop {
+/* CASE: Card with yellow background */
+.ucsc__card-yellow {
+	gap: 0;
 
-	/* stylelint-disable no-descending-specificity */
-	.ucsc-query-loop__category > a {
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-			text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
-		}
+	a {
+		text-decoration-color: var(--wp--preset--color--black);
 	}
+}
+
+/* CASE: Query loop card */
+.ucsc__card--query-loop {
 
 	/* CASE: Query Loop Card does not have a featured image */
 	&:not(&:has(figure)) {
