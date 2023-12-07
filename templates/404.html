@@ -1,10 +1,10 @@
 <!-- wp:template-part {"slug":"header","theme":"ucsc-2022","tagName":"header","className":"header-region"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}},"className":"content-region"} -->
-<main class="wp-block-group content-region" style="margin-top:var(--wp--preset--spacing--50)">
+<!-- wp:group {"tagName":"main","className":"content-region","layout":{"inherit":true}} -->
+<main class="wp-block-group content-region">
 
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"layout":{"type":"constrained"}, "style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50)">
 
 		<!-- wp:heading {"level":1,"className":"entry-title"} -->
 		<h1 class="entry-title">
@@ -17,6 +17,8 @@
 			It looks like nothing was found at this location. Maybe try a search or one of the links in the navigation menu.
 		</p>
 		<!-- /wp:paragraph -->
+
+		<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search this site","width":50,"widthUnit":"%","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"fontSize":"one"} /-->
 
 	</div>
 	<!-- /wp:group -->
