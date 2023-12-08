@@ -269,7 +269,7 @@ function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
 	}
 	if ( !is_page_template( 'page-no-title' ) && isset( $breadcrumbs ) ) {
 		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['level'] ) ) {
+			if ( isset($block['attrs']['level']) && $block['attrs']['level'] === 1 ) {
 				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
 				return $html;
 			}
