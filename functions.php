@@ -197,27 +197,15 @@ add_filter( 'render_block', 'ucsc_adjust_structure', 10, 2 );
 function ucsc_post_author_link( $block_content = '', $block = array() ) {
 	// Check for single post; use `global $post` to access data outide the Loop.
 	if ( is_single() ) {
-		global $post;
-		$post_id          = $post->post_id;
-		$author_id        = $post->post_author;
-		$author_nicename  = get_the_author_meta( 'nicename', $author_id );
-		$author_firstname = get_the_author_meta( 'first_name', $author_id );
-		$author_lastname  = get_the_author_meta( 'last_name', $author_id );
-		if ( $author_firstname && $author_lastname ) {
-			$author_name = $author_firstname . ' ' . $author_lastname;
-		} else {
-			$author_name = $author_nicename;
-		}
-		$author_email   = get_the_author_meta( 'user_email', $author_id );
-		$author_archive = get_author_posts_url( $author_id );
 		if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
-			$html = str_replace( $block_content, '<p class="wp-block-post-author__name">By <a href="' . $author_archive . '">' . $author_name . '</a></p>', $block_content );
-			return $html;
+			if ( function_exists( 'coauthors_posts_links' ) ) {
+    		$block_content = coauthors_posts_links( null, null, null, null, false );
+			}
 		}
 	}
 	return $block_content;
 }
-add_filter( 'render_block', 'ucsc_post_author_link', 10, 2 );
+add_filter( 'render_block', 'ucsc_post_author_link', 8, 2 );
 
 /**
  * Add Subtitle meta field

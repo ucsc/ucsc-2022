@@ -1,18 +1,21 @@
 <!-- wp:template-part {"slug":"header","theme":"ucsc-2022","tagName":"header","className":"header-region"} /-->
 
 <!-- wp:group {"tagName":"main","className":"content-region"} -->
-<main class="wp-block-group content-region">
+<main class="wp-block-group content-region"><!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:post-title {"level":1,"className":"primary-post-title"} /-->
 
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:post-title {"level":1,"className":"primary-post-title"} /-->
-		<!-- wp:post-date /-->
-		<!-- wp:post-author {"showAvatar":false,"showBio":false,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
+		<!-- wp:post-date {"style":{"elements":{"link":{"color":{"text":"var:preset|color|black"}}}},"textColor":"black"} /-->
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"
+			style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<!-- wp:post-author {"showAvatar":false,"showBio":false,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
+		</div>
+		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
 
 	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50)"><!-- wp:comments -->
@@ -59,9 +62,6 @@
 		<!-- /wp:comments -->
 	</div>
 	<!-- /wp:group -->
-
-
-
 </main>
 <!-- /wp:group -->
 
