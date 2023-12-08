@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/ucsc/ucsc-2022/compare/v3.5.0...v3.6.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* 🐛 Don't show breadcrumbs on a post title block that is set to H2 or lower ([#286](https://github.com/ucsc/ucsc-2022/issues/286)) ([eb2511b](https://github.com/ucsc/ucsc-2022/commit/eb2511b6e8478ff23fe669bbca3c4c4aa579912e))
+
 ## [3.5.0](https://github.com/ucsc/ucsc-2022/compare/v3.4.0...v3.5.0) (2023-10-27)
 
 
