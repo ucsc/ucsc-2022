@@ -196,7 +196,7 @@ add_filter( 'render_block', 'ucsc_adjust_structure', 10, 2 );
  */
 function ucsc_post_author_link( $block_content = '', $block = array() ) {
 	// Check for single post; use `global $post` to access data outide the Loop.
-	if ( is_single() ) {
+	if ( is_singular()  ) {
 		if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
 			if ( function_exists( 'coauthors_posts_links' ) ) {
     		$block_content = coauthors_posts_links( null, null, null, null, false );
@@ -251,7 +251,7 @@ function ucsc_breadcrumbs_constructor() {
 		'labels'         => $labels,
 		'show_on_front'  => true,
 		'show_trail_end' => false,
-		'container_class'=> 'ucsc-page-header__breadcrumbs alignwide'
+		'container_class'=> 'ucsc-page-header__breadcrumbs'
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
