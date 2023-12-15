@@ -202,6 +202,11 @@ function ucsc_post_author_link( $block_content = '', $block = array() ) {
     		$block_content = coauthors_posts_links( null, null, null, null, false );
 			}
 		}
+		if ( isset( $block['blockName'] ) && 'core/post-author-name' === $block['blockName'] ) {
+			if ( function_exists( 'coauthors' ) ) {
+				$block_content = coauthors( null, null, null, null, false );
+			}
+		}
 	}
 	return $block_content;
 }
