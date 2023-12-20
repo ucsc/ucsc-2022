@@ -197,14 +197,9 @@ add_filter( 'render_block', 'ucsc_adjust_structure', 10, 2 );
 function ucsc_post_author_link( $block_content = '', $block = array() ) {
 	// Check for single post; use `global $post` to access data outide the Loop.
 	if ( is_singular()  ) {
-		if ( isset( $block['blockName'] ) && 'core/post-author' === $block['blockName'] ) {
-			if ( function_exists( 'coauthors_posts_links' ) ) {
-    		$block_content = coauthors_posts_links( null, null, null, null, false );
-			}
-		}
 		if ( isset( $block['blockName'] ) && 'core/post-author-name' === $block['blockName'] ) {
-			if ( function_exists( 'coauthors' ) ) {
-				$block_content = coauthors( null, null, null, null, false );
+			if ( function_exists( 'coauthors_posts_links' ) ) {
+				$block_content = coauthors_posts_links( null, null, null, null, false );
 			}
 		}
 	}
