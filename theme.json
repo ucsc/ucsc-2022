@@ -47,6 +47,11 @@
 					"slug": "black"
 				},
 				{
+					"name": "Dark Gray",
+					"color": "#595959",
+					"slug": "dark-gray"
+				},
+				{
 					"name": "Light Gray",
 					"color": "#d9d9d9",
 					"slug": "light-gray"
@@ -346,7 +351,7 @@
 				}
 			},
 			"core/navigation": {
-			    "maxNestingLevel": 1,
+				"maxNestingLevel": 1,
 				"typography": {
 					"customFontSize": false
 				},
@@ -384,8 +389,7 @@
 				"radius": "0"
 			},
 			"color": {
-				"link": "var(--wp--preset--color--ucsc-primary-blue)",
-				"link-decoration": "var(--wp--preset--color--ucsc-primary-yellow)"
+				"link": "var(--wp--preset--color--ucsc-primary-blue)"
 			}
 		}
 	},
@@ -485,23 +489,6 @@
 				},
 				"spacing": {
 					"blockGap": "var(--wp--preset--spacing--40)"
-				}
-			},
-			"core/post-date": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
-					"lineHeight": "var(--wp--custom--line-height--small)"
-				},
-				"color": {
-					"text": "var(--wp--preset--color--light-gray)"
-				},
-				"spacing": {
-					"margin": {
-						"top": "0",
-						"right": "0",
-						"bottom": "0.555em",
-						"left": "0"
-					}
 				}
 			},
 			"core/post-title": {
