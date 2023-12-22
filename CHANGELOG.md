@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/ucsc/ucsc-2022/compare/v3.6.0...v3.7.0) (2023-12-22)
+
+
+### Features
+
+* 📝 Basic template for single posts (news articles) ([#290](https://github.com/ucsc/ucsc-2022/issues/290)) ([b7d971e](https://github.com/ucsc/ucsc-2022/commit/b7d971e1ef644367693a01b0f6c956c9ea4d9db1))
+
+
+### Bug Fixes
+
+* 🐛 Contrast error with date in query loop block  Fixes [#282](https://github.com/ucsc/ucsc-2022/issues/282) ([#289](https://github.com/ucsc/ucsc-2022/issues/289)) ([3417a65](https://github.com/ucsc/ucsc-2022/commit/3417a650176411c777f0e325fd46858764d3778a))
+
 ## [3.6.0](https://github.com/ucsc/ucsc-2022/compare/v3.5.0...v3.6.0) (2023-12-08)
 
 
