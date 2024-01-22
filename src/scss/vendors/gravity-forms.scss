@@ -1,0 +1,12 @@
+div[id*="gform_wrapper_"][data-form-index="0"].gform-theme {
+	--gf-color-primary: var(--wp--preset--color--ucsc-primary-blue) !important;
+	--gf-ctrl-btn-padding-x: calc(2.5em + 2px) !important;
+	--gf-ctrl-btn-padding-y: calc(0.55em + 2px) !important;
+	--gf-ctrl-btn-radius: 100px;
+	--gf-ctrl-btn-font-size: var(--wp--preset--font-size--base) !important;
+	--gf-ctrl-btn-border-width-primary: 2px;
+	--gf-ctrl-btn-bg-color-hover-primary: var(--wp--preset--color--white);
+	--gf-ctrl-btn-border-color-hover-primary: var(--wp--preset--color--ucsc-primary-blue);
+	--gf-ctrl-btn-shadow-hover: none;
+	--gf-ctrl-btn-color-hover-primary: var(--wp--preset--color--ucsc-primary-blue);
+}
