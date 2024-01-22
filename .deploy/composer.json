@@ -1,7 +1,7 @@
 {
 	"config": {
 		"platform": {
-			"php": "7.4.7"
+			"php": "8.2"
 		},
 		"allow-plugins": {
 			"composer/installers": true,
@@ -10,11 +10,12 @@
 		}
 	},
 	"require": {
-		"php": "^7.4",
+		"php": "^8.2",
 		"johnpbloch/wordpress": "6.2.2",
 		"wpackagist-theme/twentytwentyone": "^1.5",
 		"advanced-custom-fields/advanced-custom-fields-pro": "^6.1",
-		"wpackagist-plugin/icon-block": "1.5.0"
+		"wpackagist-plugin/icon-block": "1.5.0",
+		"gravityforms/gravityforms": "^2.8"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
@@ -39,6 +40,21 @@
 		  "dist": {
 			"type": "zip",
 			"url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%WP_PLUGIN_ACF_KEY}&t={%VERSION}"
+		  },
+		  "require": {
+			"ffraenz/private-composer-installer": "^5.0"
+		  }
+		}
+	  },
+	  {
+		"type": "package",
+		"package": {
+		  "name": "gravityforms/gravityforms",
+		  "version": "2.8.2",
+		  "type": "wordpress-plugin",
+		  "dist": {
+			"type": "zip",
+			"url": "https://composer.utility.mtribe.site/gravityforms/?key={%WP_PLUGIN_GF_KEY}&token={%WP_PLUGIN_GF_TOKEN}&t={%VERSION}"
 		  },
 		  "require": {
 			"ffraenz/private-composer-installer": "^5.0"
