@@ -1,12 +1,34 @@
 div[id*="gform_wrapper_"][data-form-index="0"].gform-theme {
 	--gf-color-primary: var(--wp--preset--color--ucsc-primary-blue) !important;
+	--gf-color-primary-rgb: 0, 60, 108 !important;
 	--gf-ctrl-btn-padding-x: calc(2.5em + 2px) !important;
 	--gf-ctrl-btn-padding-y: calc(0.55em + 2px) !important;
 	--gf-ctrl-btn-radius: 100px;
+	--gf-ctrl-btn-font-weight: 400;
 	--gf-ctrl-btn-font-size: var(--wp--preset--font-size--base) !important;
 	--gf-ctrl-btn-border-width-primary: 2px;
 	--gf-ctrl-btn-bg-color-hover-primary: var(--wp--preset--color--white);
 	--gf-ctrl-btn-border-color-hover-primary: var(--wp--preset--color--ucsc-primary-blue);
 	--gf-ctrl-btn-shadow-hover: none;
 	--gf-ctrl-btn-color-hover-primary: var(--wp--preset--color--ucsc-primary-blue);
+	--gf-ctrl-btn-bg-color-secondary: var(--wp--preset--color--white);
+	--gf-ctrl-btn-border-color-secondary: var(--gf-color-primary) !important;
+	--gf-ctrl-btn-color-secondary: var(--gf-color-primary);
+	--gf-ctrl-btn-bg-color-hover-secondary: var(--gf-color-primary);
+	--gf-ctrl-btn-border-color-hover-secondary: var(--gf-color-primary);
+	--gf-ctrl-btn-color-hover-secondary: var(--wp--preset--color--white);
+	--gf-color-danger-rgb: 218, 33, 109;
+	--gf-color-danger: var(--wp--preset--color--ucsc-rubine-red);
+	--gf-form-validation-color: var(--wp--preset--color--ucsc-rubine-red);
+	--gf-form-validation-heading-color: var(--wp--preset--color--ucsc-rubine-red);
+	--gf-form-validation-bg-color: rgba(var(--gf-color-danger-rgb), 0.03);
+	--gf-form-validation-font-family: var(--wp--preset--font-family--roboto);
+	--gf-color-in-ctrl-primary: var(--wp--preset--color--ucsc-secondary-blue) !important;
+	--gf-form-validation-border-color: rgba(var(--gf-color-danger-rgb), 0.25);
+	--gf-form-validation-shadow: 0 1px 4px rgba(var(--gf-color-primary-rgb), 0.078);
+	--gf-form-validation-heading-icon-bg-color: rgba(var(--gf-color-danger-rgb), 0.05);
+	--gf-form-validation-heading-icon-border-color: var(--gf-form-validation-border-color);
+	--gf-form-validation-heading-icon-color: var(--gf-form-validation-heading-color);
+	--gf-form-validation-summary-color: var(--gf-form-validation-color);
+	--gf-field-pg-prog-bar-bg-color-blue: var(--gf-color-primary);
 }
