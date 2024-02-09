@@ -121,7 +121,24 @@ const initBlockMarkup = () => {
 				toggle.remove();
 				nestedSubmenu.remove();
 			} );
+
+		initBlockOnPageLoad( block );
 	} );
+};
+
+const initBlockOnPageLoad = ( block ) => {
+	if ( ! block ) {
+		return;
+	}
+
+	const currentItem = block.querySelector( '.current-menu-item' );
+
+	if ( ! currentItem ) {
+		return;
+	}
+
+	const submenu = currentItem.closest( 'li.wp-block-navigation-submenu' );
+	toggleSubmenu( submenu.querySelector( selectors.toggleSelector ) );
 };
 
 /**
@@ -133,6 +150,7 @@ const init = () => {
 	}
 
 	initBlockMarkup();
+	initBlockOnPageLoad();
 	bindEvents();
 	fixAriaAttributes();
 };
