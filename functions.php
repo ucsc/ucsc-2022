@@ -365,13 +365,17 @@ function ucsc_truss_assets() { ?>
 	<!-- Script and style to include our components library, Truss.  -->
 	<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.7.11/dist/ucsc-trss/ucsc-trss.esm.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.7.11/dist/ucsc-trss/ucsc-trss.css">
-	<!-- Last modified code.  -->
 	<?php
-	echo '<div class="trss-ucsc-footer sc-trss-ucsc-footer" ><div class="lm-footer trss-ucsc-footer__inner sc-trss-ucsc-footer"><div class="trss-ucsc-footer__inner-right sc-trss-ucsc-footer"><ul class="sc-trss-ucsc-footer"><li class="sc-trss-ucsc-footer">Last modified: ';
-	echo do_shortcode('[last-modified]');
-	echo '</li></ul></div></div>';
 }
 
+add_action( 'wp_footer', 'ucsc_last_modified', 10 );
+
+function ucsc_last_modified() {
+	echo '<!-- Last modified code.  --><div class="last-modified__outer" ><div class="last-modified__inner"><div class="last-modified">Last modified: ';
+	echo do_shortcode('[last-modified]');
+	echo '</div></div></div><!-- End last modified code.  -->';
+
+}
 /**
  * Add Excerpts to Pages
  */

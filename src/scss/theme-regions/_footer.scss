@@ -13,16 +13,3 @@ Footer Styles
 	margin-top: 3rem;
 	flex-shrink: 0;
 }
-
-.lm-footer {
-	grid-template-columns: 1fr !important;
-	padding: 0 !important;
-
-	@include media-query($small) {
-		padding: 0 0 0.8rem 0 !important;
-	}
-
-	li {
-		font-size: 0.8rem !important;
-	}
-}

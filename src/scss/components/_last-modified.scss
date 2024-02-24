@@ -1,0 +1,23 @@
+.last-modified__outer {
+	background-color: var(--ucsc-primary-blue);
+	color: var(--ucsc-light-gray);
+	font-size: 0.8rem;
+
+	.last-modified__inner {
+		max-width: var(--wp--style--global--content-size);
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 0 0 0.8rem 0;
+		margin: 0 auto;
+		align-items: center;
+
+		.last-modified {
+			justify-self: center;
+
+			@include media-query($small) {
+				justify-self: end;
+
+			}
+		}
+	}
+}
