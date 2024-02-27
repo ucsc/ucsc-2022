@@ -158,33 +158,36 @@ function ucsc_logo_switch( $block_content = '', $block = array() ) {
 add_filter( 'render_block', 'ucsc_logo_switch', 10, 2 );
 
 /**
- * Set accessible HTML headers
- * The site title is the `h1` on the home page and `p` on all other pages.
- * The page title is the `h1` on all other pages.
+ * Set accessible site title tags
+ * The core/site-title should be an `h1` on the home page and `p` on all other pages.
+ * The core/page-title should be an `h1` on all internal pages.
  *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
+ * @param  string $block_content 	Block content to be rendered.
+ * @param  array  $block         	Block attributes.
  */
-function ucsc_adjust_structure( $block_content = '', $block = array() ) {
-	if ( is_front_page() ) {
-		// On the home page, return the block as is.
-		$html = $block_content;
-		return $html;
-	} else {
-		// On all other pages, the site title becomes `p` and page title becomes `h1`.
-		if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-			$html = str_replace(
-				'<h1 ',
-				'<p ',
-				$block_content
-			);
-			return $html;
+function ucsc_modify_site_title( $block_content, $block ) {
+
+		// We capture the HTML tag in the site-title block content
+		$pattern = '/<(p|h\\d) (.*)<\/(p|h\\d)>/';
+
+    if ( is_front_page() ) {
+			// If we're on the home page, we make the site-title an <h1>
+			$replacement = '<h1 $2</h1>';
+			$block_content = preg_replace($pattern, $replacement, $block_content);
+
+		} else {
+			// If we're on an internal page, we make the site-title a <p>
+			$replacement = '<p $2</p>';
+			$block_content = preg_replace($pattern, $replacement, $block_content);
 		}
-	}
-	return $block_content;
+
+		// After we modify the site title in the header, we remove this filter to prevent
+		// it from running on any other instance of the core/site-title block
+		remove_filter( 'render_block_core/site-title', 'ucsc_modify_site_title', 10 );
+    return $block_content;
 }
-add_filter( 'render_block', 'ucsc_adjust_structure', 10, 2 );
+add_filter( 'render_block_core/site-title', 'ucsc_modify_site_title', 10, 2 );
+
 
 /**
  * Add author link to Post Author on
