@@ -6,7 +6,8 @@
   "require": {
     "php": "^8.1",
     "moderntribe/square1-container": "^4.2",
-    "monolog/monolog": "^3.5"
+    "monolog/monolog": "^3.5",
+	"wp-cli/wp-cli-bundle": "*"
   },
   "autoload": {
     "psr-4": {
