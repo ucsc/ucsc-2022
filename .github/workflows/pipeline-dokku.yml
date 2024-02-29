@@ -123,6 +123,11 @@ jobs:
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
+      - name: Move migration plugin
+        working-directory: .deploy
+        run: |
+          mv ucsc-news-migration .deploy/wp-content/plugins/
+
       - name: Define app to deploy
         id: define_app
         run: |
