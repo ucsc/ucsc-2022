@@ -124,9 +124,8 @@ jobs:
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       - name: Move migration plugin
-        working-directory: .deploy
         run: |
-          mv ucsc-news-migration .deploy/wp-content/plugins/
+          mv .deploy/ucsc-news-migration .deploy/wp-content/plugins/
 
       - name: Define app to deploy
         id: define_app
