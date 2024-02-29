@@ -1,0 +1,22 @@
+{
+  "name": "ucsc/news-migration",
+  "type": "project",
+  "description": "Allows importing Cascade XML content to WordPress as posts",
+  "license": "GPLv2 or later",
+  "require": {
+    "php": "^8.1",
+    "moderntribe/square1-container": "^4.2",
+    "monolog/monolog": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "TribeUCSC\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
