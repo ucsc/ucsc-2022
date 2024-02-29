@@ -15,7 +15,8 @@
 		"wpackagist-theme/twentytwentyone": "^1.5",
 		"advanced-custom-fields/advanced-custom-fields-pro": "^6.1",
 		"wpackagist-plugin/icon-block": "1.5.0",
-		"gravityforms/gravityforms": "^2.8"
+		"gravityforms/gravityforms": "^2.8",
+		"wpackagist-plugin/co-authors-plus": "3.5.15"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",

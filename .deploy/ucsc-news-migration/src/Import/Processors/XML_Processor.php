@@ -55,6 +55,7 @@ class XML_Processor {
 					'page_name'  => (string) $node->name,
 					'content'	 => json_encode( $node ),
 					'post_html'	 => $html,
+					'status'	 => 0,
 				];
 
 				if ( ! $exists ) {
