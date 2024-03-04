@@ -40,7 +40,7 @@ class Import_Posts_Command extends Command {
 			$sql .= " AND page_name = '" . $page . "'";
 		}
 
-		$sql .= " LIMIT 0, " . self::BATCH_SIZE;
+		$sql .= "ORDER BY file ASC LIMIT 0, " . self::BATCH_SIZE;
 
 		$records = $wpdb->get_results( $sql );
 
