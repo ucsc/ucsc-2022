@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','core/code','ucscblocks/accordion' );
+		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph', 'ucscblocks/accordion' );
 		foreach ( $styled_blocks as $block ) {
 
 			$name = explode('/', $block);
@@ -82,7 +82,6 @@ function ucsc_scripts() {
 	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css', array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800&display=swap', false );
 	wp_enqueue_style( 'ucsc-google-roboto-serif-font', 'https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,500;0,8..144,600;1,8..144,400;1,8..144,500;1,8..144,600&display=swap', false );
-	wp_enqueue_style( 'ucsc-google-roboto-mono-font', 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap', false );
 	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'ucsc-front' );
 
