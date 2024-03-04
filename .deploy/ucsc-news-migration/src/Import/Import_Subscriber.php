@@ -11,6 +11,7 @@ class Import_Subscriber extends Abstract_Subscriber {
 			$this->container->get( Import_XML_Command::class )->register();
 			$this->container->get( Import_Files_Command::class )->register();
 			$this->container->get( Import_Posts_Command::class )->register();
+			$this->container->get( Import_Reset_Command::class )->register();
 		}, 10, 0 );
 	}
 
