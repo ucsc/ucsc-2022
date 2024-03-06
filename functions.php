@@ -34,7 +34,7 @@ if ( ! function_exists( 'ucsc_setup' ) ) :
 		/*
 		* Load additional Core block styles.
 		*/
-		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph','ucscblocks/accordion' );
+		$styled_blocks = array( 'core/button', 'core/columns', 'core/post-template', 'core/post-author', 'core/site-title', 'core/query-pagination', 'core/post-content', 'core/rss', 'core/post-title', 'core/post-comments', 'core/navigation', 'core/list', 'core/separator', 'core/latest-posts', 'core/quote', 'core/image', 'core/search', 'core/paragraph', 'ucscblocks/accordion' );
 		foreach ( $styled_blocks as $block ) {
 
 			$name = explode('/', $block);
