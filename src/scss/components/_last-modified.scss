@@ -2,6 +2,7 @@
 	background-color: var(--ucsc-primary-blue);
 	color: var(--ucsc-light-gray);
 	font-size: 0.8rem;
+	padding: 0 1rem;
 
 	.last-modified__inner {
 		max-width: var(--wp--style--global--content-size);
@@ -14,9 +15,8 @@
 		.last-modified {
 			justify-self: center;
 
-			@include media-query($small) {
+			@media screen and (min-width: 56.25rem) {
 				justify-self: end;
-
 			}
 		}
 	}
