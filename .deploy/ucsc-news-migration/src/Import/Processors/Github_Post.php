@@ -25,16 +25,6 @@ class Github_Post extends Creator {
 
 	public function run(): bool {
 		try {
-			if ( ! $this->force && $this->is_post_exists() > 0 ) {
-				\WP_CLI::colorize( sprintf( 'The %s post exists with ID %d. Skipping ', $this->post_name, $this->existing_id ) );
-				$this->write_log( 'Post exists. Skipping', [
-					'page' => $this->post_title,
-					'id'   => $this->existing_id,
-				] );
-
-				return true;
-			}
-
 			$post_id = $this->maybe_create_post( [
 				'post_name'    => $this->post_name,
 				'post_title'   => $this->post_title,
