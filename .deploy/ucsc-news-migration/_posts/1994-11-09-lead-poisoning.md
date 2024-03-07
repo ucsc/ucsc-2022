@@ -1,0 +1,27 @@
+---
+layout: post
+title: Lead-poisoning Therapy May Pose Hidden Risks, According To Preliminary Research
+author: Robert Irion
+---
+
+SANTA CRUZ, CA--A drug commonly used to treat lead poisoning may  increase the amount of lead absorbed from the gastrointestinal tract  into other parts of the body, according to a pilot study on twelve  adult men.
+
+The study's authors are proposing research on a larger scale  using people with moderate cases of lead poisoning. Meanwhile, they  urge doctors to keep patients in lead-clean places while giving them  the drug. Otherwise, the patients' bodies might absorb additional  lead and store it in bones or vulnerable organs, which can cause  long-term harm.
+
+"It's common sense that when you treat people for lead  exposure, you shouldn't return them to the same environment during  treatment," says principal author Donald Smith, assistant research  toxicologist at the University of California, Santa Cruz. "This study  provides preliminary evidence that we should justifiably be  concerned when that happens--and the reality is that it may happen."
+
+Smith and his coworkers published their results in the October  1994 issue of the journal Environmental Research. His coauthors  were pediatricians Morri Markowitz and John Rosen of the  Montefiore Medical Center of the Albert Einstein College of Medicine,  Bronx, New York, and two colleagues in the environmental toxicology  program at UC Santa Cruz: earth sciences professor Russell Flegal  and technician Jonathan Crick. Smith also is affiliated with the  department of laboratory medicine at UC San Francisco.
+
+The team examined "succimer," now considered the safest drug  to treat lead poisoning. The McNeil Consumer Products Company sells  succimer under the trade name CHEMET. Like other chemicals used  for lead poisoning, succimer clamps onto lead and other toxic metals  and allows patients to excrete them. However, it is not clear  whether succimer also moves lead from the blood, stomach, or  intestines to other parts of the body, such as the skeleton and the  brain. That transfer of lead is the primary concern with EDTA,  another lead-poisoning treatment. If that occurs with succimer as  well, it would compromise the effectiveness of the drug--especially  for children, who are most susceptible to lead's insidious behavioral  and neurological effects.
+
+In the study, each participant ingested a tiny amount of a  nonradioactive isotope of lead, followed by one dose of either the  drug or a placebo. The researchers took several blood samples and  collected urine and feces from the volunteers for about 26 hours.  Measurements sensitive to one part per 10 billion allowed the team  to trace the levels of the lead isotope in the samples.
+
+The research team found two hints that succimer did cause the  men to absorb some lead through their gastrointestinal tracts. First,  those who took the drug excreted more lead isotope in their urine  but less in their feces, on average, than those who got a placebo.  Second, when the researchers added up all of the lead isotope from  each person's blood and excretions, they accounted for less lead, on  average, from the people who took succimer. Smith suggests that the  missing lead isotope went elsewhere in their bodies, rather than  staying in the blood or being excreted.
+
+Smith cautions that several factors make this research  preliminary. The size of the study--three groups of four men each-- produced results that were not statistically robust. Rather, the data  pointed to trends among the groups. Doctors using succimer on lead- exposed patients give the drug for up to several weeks, rather than  in one dose. Further, the study's volunteers had low levels of lead in  their blood, whereas patients who receive succimer have five to ten  times as much. Even so, the researchers found their pilot study  compelling enough to request funds for a larger physiological study  on children who receive succimer for lead poisoning.
+
+In 1991, the U.S. Food and Drug Administration approved  succimer for use on children whose lead levels exceed 45  micrograms of lead per deciliter of whole blood (45 ug/dL). However,  medical researchers suspect that lead can cause subtle harm at  levels of 10 ug/dL or even lower. Scientists are striving to weigh  the medical and financial costs of lead-poisoning therapy against its  benefits for children with moderate lead levels--in the range of 25  to 40 ug/dL. A major new study funded by the National Institutes of  Health will examine whether succimer helps these children by  reducing behavioral and neurological lead toxicity. A parallel study,  involving Smith and Flegal, will use monkeys to explore the same  questions under controlled conditions. The study also will trace  succimer's effects on the monkeys' bodies: Does it carry lead to the  brain, liver, kidneys, skeleton, or elsewhere?
+
+"These studies are trying to evaluate the benefit of treatment  at lower blood-lead levels," Smith says. "However, for all children,  the focus should remain on removing the sources of lead exposure,  especially when they are being treated for lead poisoning." Those  sources are not always readily apparent, Smith notes. Even in  obvious cases, such as old lead-based paint in a home, the financial  resources to remove the lead often do not exist.
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/94-95/11-94/110994-Lead-poisoning_ther.html "Permalink to 110994-Lead-poisoning_ther")

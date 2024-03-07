@@ -1,0 +1,19 @@
+---
+layout: post
+title: UC Santa Cruz Ranked Second Worldwide In Physical Sciences Research
+author: Tim Stephens
+---
+
+SANTA CRUZ, CA--The University of California, Santa Cruz, is the second most influential university in the world in the physical sciences, according to rankings of research universities and other institutions published recently by the British newspaper _The Guardian._ The rankings are based on an analysis of scholarly publications from 1994 to 1998.
+
+Data for the study were provided by the Institute for Scientific Information (ISI), based in Philadelphia. ISI bases its analyses on the long-standing tradition of scholarly citations. When researchers publish a journal article, they must cite previous papers by other authors that set the stage for their work. Generally, a paper garners more citations when scientists accept the work as important and well done. ISI analysts consider the average number of citations per paper, or the "citation impact," as the most objective way to gauge the quality of a department's or an institution's research.
+
+ISI maintains databases of journals and keeps track of how often research papers are cited in other publications. _The Guardian_ used ISI's data to evaluate the research quality of institutions in Britain, Canada, Germany, and the United States. ISI's data indicate that scholars in those countries are the top producers of research papers.
+
+The physical sciences include chemistry, physics, geosciences, mathematics, and engineering. The top-ranked institution in the physical sciences, according to _The Guardian,_ is the Scripps Research Institute in La Jolla, followed by UC Santa Cruz, Rockefeller University, Harvard University, and Brandeis University.
+
+"While some may find our ranking of number two in the world for our physical sciences impact surprising, it is consistent with similar rankings we have received for many years," said David Kliger, dean of natural sciences at UCSC. "What should be surprising is that so few people know about our strong programs in the physical sciences and that this ranking continues to surprise so many people."
+
+Since the 1980s, UCSC has consistently ranked in the top 10 nationally in ISI studies. An analysis released by ISI last year found that UCSC ranked first in the field of astrophysics among the top 100 federally funded U.S. universities. In addition to its top-ranked Department of Astronomy and Astrophysics, UCSC is home to the highly respected Santa Cruz Institute for Particle Physics and a branch of the University of California's Institute for Geophysics and Planetary Physics.
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/00-01/06-01/ranking.html "Permalink to UCSC second in physical sciences")

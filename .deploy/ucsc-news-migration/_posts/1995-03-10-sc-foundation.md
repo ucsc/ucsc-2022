@@ -1,0 +1,33 @@
+---
+layout: post
+title: Five New Trustees Named To UC Santa Cruz Foundation, Including Two From Santa Cruz; UCSC Pursuing Plan To Increase Membership
+author: Francine Tyler
+---
+
+SANTA CRUZ, CA--Pursuing a plan to increase its membership, the  University of California, Santa Cruz, Foundation has added five new  trustees to its board. The trustees will participate in the private  fund-raising efforts of the board, which promotes and supports  academic programs, scholarships and fellowships, and capital  improvements at UC Santa Cruz.
+
+Two of the trustees, Stephanie Lynn Mills, general partner of  Mills & Lynn Enterprises, and David B. Regan, publisher of the Santa  Cruz County Sentinel, are residents of Santa Cruz County. Also newly  appointed are Lynn K. Engstrand of Arlington, Virginia, and David W.  Graves and Virginia "Lyn" Wilson of Napa.
+
+"Private support has always been important, but is even more  so today," said Daniel G. Aldrich III, assistant chancellor for  University Advancement at UCSC. "In the 1990s, state support for  the university has dropped sharply, making the financing of higher  education a shared responsibility between taxpayers, students, and  private donors who underwrite programs or scholarships."
+
+To aid the university in its fund-raising efforts, the  Foundation board voted last year to expand its membership from 31  to 50 over a period of several years. The board expects to have  approximately 40 members by the end of this year, said Aldrich.
+
+"By expanding the Foundation board, we believe we will have a  greater number of people who are well-informed about the people  and programs of UCSC," said Aldrich. "They, in turn, can help us  increase private and public support for the campus."
+
+The new trustees come from a variety of backgrounds.
+
+Stephanie Lynn Mills's career includes five years as an  attorney for AT&T and four years as an associate with the New  Jersey law firm of Stryker, Tams & Dill. She also worked as a law  clerk for Justice Stewart Pollock of the New Jersey Supreme Court  and for the Governor's Counsel in Trenton, New Jersey. Mills earned a  J.D. from Rutgers University School of Law in New Jersey and an A.B.  degree from Rutgers University. She studied chemistry at the  University of California, Berkeley, as an undergraduate.
+
+David Regan started his publishing career as a printer with  O'Brien Press in Danbury, Connecticut, before working his way up  through the ranks of Ottaway Newspapers, Inc., working at both the  Danbury News-Times in Connecticut and the Middletown Times  Herald-Record in New York State. He was assistant general manager  of the Times Herald-Record when he came to Santa Cruz to become  Sentinel general manager in 1983. He was named publisher in 1991.  Regan's many community involvements include serving on the  Dominican Hospital Foundation Board, the Board of Directors for the  Cities in Schools program, and the Advisory Committee of the Santa  Cruz Boys and Girls Club. He is a member of the Advisory Committee  for the UCSC Leadership Opportunity Awards Scholarship program  and will serve as president of United Way of Santa Cruz County next  year. He is past president of the Santa Cruz chapters of the  American Cancer Society and the Santa Cruz Host Lions Club.
+
+David Graves graduated from UCSC in 1975 with a bachelor's  degree in biology and has served on UCSC's Alumni Council. He is co- founder and co-general partner of Saintsbury, a small winery in the  Carneros region of Napa County. A professional member of the  American Society for Enology and Viticulture, Graves served as  president of Pinot Noir: America and the Carneros Quality Alliance,  two professional organizations. He is currently treasurer for the  Alliance. Graves and his wife, Elizabeth McKinne, live in Napa.
+
+Lynn Engstrand is an agribusiness specialist with the World  Bank in Washington, D.C. She has traveled worldwide, working to help  privatize agriculture in Romania, assess the potential for private  investment in Nigeria, and develop fresh-fruit and vegetable export  systems in India. Before joining World Bank, Engstrand was general  manager for Pioneer HiBred Hungary, international business manager  for ILMC, and vice president of business development for Brady  International. Engstrand holds master's degrees in business  administration and international management, and a master of  science degree in food technology/nutrition. She holds a bachelor of  science degree in vocational education.
+
+Virginia "Lyn" Wilson studied art at Hollins College in Roanoke,  Virginia. An artist who also works on the ranch she and her husband,  Terrence Wilson, own in Napa Valley, Wilson has been active in  defending the agricultural nature of Napa County, working to  increase the county's minimum parcel size. Wilson has served on the  Board of Trustees for Fountain Valley School in Colorado Springs,  which her children have attended, and has volunteered as an art and  Spanish teacher at Napa County's one-room Wooden Valley School.  Wilson's daughters, Lily and Erin Wilson, are undergraduates at UCSC.
+
+Other UC Santa Cruz Foundation trustees are John M. Halliday  of Mill Valley, who serves as president; Jack Baskin, Anne Neufeld  Levin, Gurden Mooser, Eleanor W. Wasson, and Diane M. Wolfsen, all of  Santa Cruz; Patricia S. Rebele of Aptos; Richard "Todd" Spieker of  Atherton; Fred S. Farr of Carmel; Allan J. Goodman of Culver City;  Lawrence Michels of Evergreen, Colorado; Stephen L. Domenik of  Highland Park, Texas; Eliza C. Anderson of Prescott, Arizona; Paul J. Hall of Kentfield; Leticia Quezada of Los Angeles; William H. Cilker  of Los Gatos; Stoddard P. Johnston, vice president, of Pebble Beach;  Arthur Graham of Portola Valley; Antonio Velasco of Salinas; James  W. Fuller, George A. Malloch, Patrick G. Riley, and John M. Woodward  of San Francisco; Richard R. Crowell and Kenneth A. Feingold of Santa  Monica; Donald E. Cooley, Harold A. Hyde, and Paul Irwin of  Watsonville; and Narinder S. Kapany of Woodside. Serving as ex  officio trustees are UCSC Chancellor Karl S. Pister and Mary E. Doyle,  president of the UCSC Alumni Association. Doyle lives in Pacific  Palisades.
+
+Since its inception in 1974, the Foundation has brought nearly  $32 million in private gift support to the university. Approximately  $22 million has been distributed in the form of fellowships,  scholarships, capital improvements, and campus programs, and more  than $10 million has been invested in endowments and trusts. The  Foundation is a nonprofit public benefit corporation.
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/94-95/03-95/031095-Five_new_trustees_n.html "Permalink to 031095-Five_new_trustees_n")

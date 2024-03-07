@@ -64,12 +64,8 @@ class Image {
 		}
 
 		update_post_meta( $this->post_id, self::SOURCE_URL, $this->image_url );
-		$this->write_log( 'Image data', [
-			'post_id' => $this->post_id,
-			'data'    => $this->image_data['image-alt'],
-		] );
 
-		if ( empty( $this->image_data['image-alt'] ) ) {
+		if ( empty( $this->image_data ) || empty( $this->image_data['image-alt'] ) ) {
 			return $image_id;
 		}
 

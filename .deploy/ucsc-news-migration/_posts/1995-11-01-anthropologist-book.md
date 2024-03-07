@@ -1,0 +1,23 @@
+---
+layout: post
+title: UC Santa Cruz Anthropologist's New Book Offers Insight Into African Cultural Practices That Have Sparked Outrage In The West
+author: Jennifer McNulty
+---
+
+SANTA CRUZ, CA--For anthropologist Carolyn Martin Shaw, the  decision to address the subject of female genital mutilation in her  new book meant confronting much of the feminist rhetoric about  clitoridectomy.
+
+"I am not an apologist for this operation--I think it should be  ended--but at the same time, I wanted to understand why women  participate in it, and I wanted to see the cultural underpinnings that  keep it going," says Martin Shaw, an associate professor of  anthropology at the University of California, Santa Cruz.
+
+Martin Shaw is the author of the just-published Colonial  Inscriptions: Race, Sex, and Class in Kenya (Minneapolis: University  of Minnesota Press, 1995), an artful study of Kenyan culture that  uses works by historians and ethnographers, as well as novels and  films, to reexamine the interactions of whites and blacks and the  status of women.
+
+What Martin Shaw discovered during more than twenty years of  research was that for many women, clitoridectomy remains central  to their identity as women. "Many women cannot imagine what a  decent woman would be like if she didn't have this operation," says  Martin Shaw. The practice, which is typically performed on girls  between the ages of ten and fifteen, is associated with cleanliness  and fertility (despite studies to the contrary, notes Martin Shaw). In  many African societies, clitoridectomy is not associated with  virginity; in some areas, girls traditionally were operated on but  were not expected to refrain from premarital sex. Overwhelmingly,  though, clitoridectomy stands as a test of a girl's ability to  withstand pain--as a precursor to the pain of childbirth--and it  remains a rite of adulthood, says Martin Shaw.
+
+The tenacity of the practice is also rooted in cultural  practices that have economic consequences, says Martin Shaw.  "Having the operation is still equated with being pure, strong,  complete--and desirable for marriage, so it is favored by mothers  and fathers who want their daughters to have a better life and to be  able to take care of themselves," notes Martin Shaw. Conversely, not  having the operation is seen by many as unacceptably "modern" and a  rejection of traditional values.
+
+In a vivid illustration of the persistence of genital mutilation,  Martin Shaw notes that members of the Kenyan national legislature  who have helped to pass laws outlawing the practice have  nevertheless chosen the operation for their daughters. Ninety-five  percent of the women in a Kenyan village studied by Martin Shaw  said they would have their daughters clitoridectomized. "In nearby  Sudan, clitoridectomy represents elite status, so some members of  the lower classes have started performing the operation to make  claims to higher social status," adds Martin Shaw.
+
+Ironically, the outrage over female genital mutilation that has  been expressed by Western women since the practice became widely  known in the mid-1980s may have encouraged the practice by fueling  a backlash of support among African women, says Martin Shaw.  "African women have been incensed by the reaction of American and  European women," she says. "One thing that keeps it going is our  critique of it." In her denunciation of female genital mutilation,  Alice Walker claims a special connection to suffering African  women because of race, but Martin Shaw, an African American  scholar, does not find that her race provides a purview on the  cultural depth of the practice.
+
+For Martin Shaw, the challenge of trying to understand the  cultural value and persistence of clitoridectomy was akin to her  desire to examine the impact of blacks on whites in Kenya during the  colonial period. In her book, Martin Shaw addresses the writings and  experiences of a diverse group, including anthropologist Jomo  Kenyatta, who became the first president of Kenya, paleontologist  Louis Leakey, British memoirist Elspeth Huxley, Danish writer Isak  Dinesen, and American novelist Robert Ruark. "The standard approach  is to see that whites came to Africa, and Africans were reshaped,"  says Martin Shaw. "But it's also true that whites came to Africa, and  they were changed. I challenge the conventional wisdom about what  whites made out of Africa, and I show what Africa made out of  them."
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/95-96/11-95/110195-Anthropologist_boo.html "Permalink to 110195-Anthropologist_boo")

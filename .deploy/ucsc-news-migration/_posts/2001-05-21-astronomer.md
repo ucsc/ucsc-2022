@@ -1,0 +1,31 @@
+---
+layout: post
+title: UC Santa Cruz Astronomer Elected To American Academy Of Arts And Sciences
+author: [Erica Klarreich, Tim Stephens]
+---
+
+SANTA CRUZ, CA--Stanford E. Woosley, professor and chair of astronomy and astrophysics at the University of California, Santa Cruz, has been elected to membership in the American Academy of Arts and Sciences, an honor reserved for the country's most distinguished scientists, artists, and public figures. In addition to Woosley, this year's fellows and foreign honorary members of the Academy include Madeleine Albright, Woody Allen, and King Juan Carlos I of Spain.
+
+The American Academy of Arts and Sciences, founded during the American Revolution by John Adams, is one of the oldest honorary societies in the United States. Its purpose is "to cultivate every art and science which may tend to advance the interest, honor, dignity, and happiness of a free, independent and virtuous people." The Academy has about 4,000 members and elects approximately 200 members each year.
+
+Woosley and other new members of the Academy will be formally inducted in ceremonies at the Academy's headquarters in Cambridge, Massachusetts, in October. With the election of Woosley, 16 UCSC faculty are Academy members, of whom three are still active faculty members.
+
+Woosley joined the faculty at UCSC in 1975, and he has served as chair of the astronomy and astrophysics department for eight years. This coming academic year he will be the Hans A. Bethe Distinguished Lecturer at Cornell University in Ithaca, New York, and from 1995 to 1997 he was the Humboldt Fellow at the Max Planck Institute for Astrophysics in Germany. He is an editor of two scientific journals, and has written or co-written about 240 publications.
+
+Woosley's research centers around supernovae, massive explosions of dying stars.
+
+"I like things that explode, the bigger the better," he said. "And if the explosions are in outer space, they don't hurt anyone."
+
+One of Woosley's accomplishments has been to construct a mathematical model for how stars explode. "For an instant, a star's explosion can be as bright in light as a galaxy," he said. "It can emit more energy in neutrinos in 10 seconds than the rest of the universe, and all of that in a space the size of Santa Cruz."
+
+Woosley's model helps explain how elements like oxygen and iron formed in the universe. "Hydrogen and helium come from the Big Bang, but all the other elements are made in stars," Woosley said.
+
+According to Woosley's model, the intense heat inside a star makes hydrogen and helium atoms collide and fuse together to form atoms such as carbon, oxygen, and iron. When the energy for these nuclear reactions runs out, the star crashes inward and then explodes. In the raging nuclear fires of this stellar inferno, atoms smash into each other to form heavier elements like copper and gold.
+
+Woosley's latest research is on gamma-ray bursts, mysterious blasts of very intense radiation, which occur in unpredictable places as often as once a day.
+
+Woosley's "collapsar" model for gamma-ray bursts, which has come to be generally accepted as the leading model, proposes that the bursts occur when matter in a huge dying star collapses into a central black hole, generating a vast amount of energy.
+
+"Gamma-ray bursts are one of the major puzzles in the last 30 years of astronomy," he said.
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/00-01/05-01/woosley.html "Permalink to Academy of Arts and Sciences")

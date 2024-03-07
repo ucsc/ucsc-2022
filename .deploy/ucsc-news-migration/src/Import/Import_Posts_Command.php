@@ -10,7 +10,7 @@ class Import_Posts_Command extends Command {
 
 	use With_Log_Entry;
 
-	public const BATCH_SIZE = 10000;
+	public const BATCH_SIZE = 20000;
 
 	public function run( $args, $assoc_args ) {
 		$file  = $assoc_args['file'] ?? '';
@@ -40,7 +40,7 @@ class Import_Posts_Command extends Command {
 			$sql .= " AND page_name = '" . $page . "'";
 		}
 
-		$sql .= " ORDER BY file ASC LIMIT 0, " . self::BATCH_SIZE;
+		$sql .= " LIMIT 0, " . self::BATCH_SIZE;
 
 		$records = $wpdb->get_results( $sql );
 

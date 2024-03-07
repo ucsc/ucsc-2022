@@ -1,0 +1,17 @@
+---
+layout: post
+title: UCSC Education Department Hosts Talk February 25 By Deborah Meier
+author: Jennifer McNulty
+---
+
+SANTA CRUZ, CA--Deborah Meier, founder of one of the most remarkable  public schools in the country, will give a talk at the University of California,  Santa Cruz, on Tuesday, February 25, at 7:30 P.M. The talk, titled "The Power  of Their Ideas," is free and open to the public. It will be held in room B206 of  the Earth and Marine Sciences Building.
+
+For 20 years, Meier has helped to revitalize public schools in New York  City's East Harlem district. Founder and former director of Central Park East  Secondary School in East Harlem, Meier is one of the best-known and most  celebrated educators in the country. In a city where the average graduation  rate is 50 percent, Central Park East Secondary School boasts a graduation  rate of 90 percent--and 90 percent of those graduates go on to college. The  author of The Power of Their Ideas: Lessons for America from a Small School  in Harlem, Meier is currently leading an effort to create 50 more innovative  public schools in New York City.
+
+"Deborah Meier is a champion of innovative public education," says  Ellen Moir, director of teacher education at UCSC. "Her work is fueled by  creativity and dedication, and she is a powerful role model for anyone  involved in education."
+
+Meier is president of the Center for Collaborative Education in New  York and is a part-time fellow at the Annenberg National Institute for  School Reform at Brown University. She began her teaching career as a  kindergarten teacher in Chicago. She now holds honorary degrees from  Harvard, Yale, Brown, and Columbia's Teachers College. She received a  MacArthur Foundation Fellowship for her work in New York, and she has  written for the Nation, Dissent, and many other publications.
+
+Free parking will be available in the Science Library or Applied  Sciences lots. The Earth and Marine Sciences Building is located below the  parking lots. For more information, call the Education Department at (408)  459-4102.
+
+[Source](http://www1.ucsc.edu/news_events/press_releases/archive/96-97/02-97/021397-UCSC_education_dept.html "Permalink to 021397-UCSC_education_dept")
