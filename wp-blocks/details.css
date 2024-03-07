@@ -1,0 +1,113 @@
+.wp-block-details {
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.wp-block-details summary {
+	cursor: pointer;
+}
+
+.wp-block-details.is-style-default summary {
+	padding-left: 0.5rem;
+}
+
+.wp-block-details.is-style-chevron summary::before {
+	content: "\f345";
+}
+
+.wp-block-details.is-style-plus summary::before {
+	content: "\f543";
+}
+
+.wp-block-details.is-style-check summary::before {
+	content: "\f147";
+}
+
+.wp-block-details summary > * {
+	display: inline;
+}
+
+/* Use block gap for block; falls back to browser default if not supported. */
+.wp-block-details > *:not(summary) {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/* Remove excess margin from the last block. */
+.wp-block-details > *:last-child {
+	margin-bottom: 0;
+}
+
+/* Styles for marker and Dashicon variations [open]*/
+.wp-block-details[open].is-style-chevron summary::before {
+	content: "\f347";
+}
+
+.wp-block-details[open].is-style-plus summary::before {
+	content: "\f460";
+}
+
+.wp-block-details[open].is-style-check summary::before {
+	content: "\f335";
+}
+
+/* Add Dashicons to non-default styles */
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary {
+	list-style: none;
+	position: relative;
+	padding-left: 1.25rem;
+}
+
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary::-webkit-details-marker {
+	display: none;
+}
+
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary::before {
+	color: currentcolor;
+	font-family: dashicons, sans-serif;
+	position: absolute;
+	top: 1.3em;
+	left: 0.1em;
+	margin-top: -1.3em;
+}
+
+/* Styles for Dashicon variations */
+details.wp-block-details:not([class*="is-style-default"]).has-small-font-size summary {
+	padding-left: 1rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-base-font-size summary {
+	padding-left: 1.25rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-one-font-size summary {
+	padding-left: 1.5rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-two-font-size summary {
+	padding-left: 1.75rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-three-font-size summary {
+	padding-left: 2rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-four-font-size summary {
+	padding-left: 2.25rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-five-font-size summary {
+	padding-left: 2.75rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-six-font-size summary {
+	padding-left: 3.25rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-seven-font-size summary {
+	padding-left: 4rem !important;
+}
+
+details.wp-block-details:not([class*="is-style-default"]).has-eight-font-size summary {
+	padding-left: 5.5rem !important;
+}
