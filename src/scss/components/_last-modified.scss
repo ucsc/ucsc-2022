@@ -1,0 +1,23 @@
+.last-modified__outer {
+	background-color: var(--ucsc-primary-blue);
+	color: var(--ucsc-light-gray);
+	font-size: 0.8rem;
+	padding: 0 1rem;
+
+	.last-modified__inner {
+		max-width: var(--wp--style--global--content-size);
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 0 0 0.8rem 0;
+		margin: 0 auto;
+		align-items: center;
+
+		.last-modified {
+			justify-self: center;
+
+			@media screen and (min-width: 56.25rem) {
+				justify-self: end;
+			}
+		}
+	}
+}
