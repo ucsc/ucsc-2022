@@ -31,7 +31,7 @@
 details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary {
 	list-style: none;
 	position: relative;
-	padding-left: 1.125rem;
+	padding-left: 1.125em;
 }
 
 details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary::-webkit-details-marker {
@@ -45,45 +45,4 @@ details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) su
 	top: 1.3em;
 	left: 0;
 	margin-top: -1.3em;
-}
-
-/* Styles for Dashicon variations */
-details.wp-block-details:not([class*="is-style-default"]).has-small-font-size summary {
-	padding-left: 1rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-base-font-size summary {
-	padding-left: 1.25rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-one-font-size summary {
-	padding-left: 1.5rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-two-font-size summary {
-	padding-left: 1.75rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-three-font-size summary {
-	padding-left: 2rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-four-font-size summary {
-	padding-left: 2.25rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-five-font-size summary {
-	padding-left: 2.75rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-six-font-size summary {
-	padding-left: 3.25rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-seven-font-size summary {
-	padding-left: 4rem;
-}
-
-details.wp-block-details:not([class*="is-style-default"]).has-eight-font-size summary {
-	padding-left: 5.5rem;
 }
