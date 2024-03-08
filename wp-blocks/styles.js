@@ -99,4 +99,17 @@ wp.domReady( () => {
 			height: '4rem',
 		},
 	} );
+	// Styles for core/details
+	wp.blocks.registerBlockStyle( 'core/details', {
+		name: 'chevron',
+		label: 'Chevron',
+	} );
+	wp.blocks.registerBlockStyle( 'core/details', {
+		name: 'plus',
+		label: 'Plus/Minus',
+	} );
+	wp.blocks.registerBlockStyle( 'core/details', {
+		name: 'check',
+		label: 'Check mark',
+	} );
 } );

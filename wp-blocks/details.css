@@ -1,0 +1,48 @@
+.wp-block-details.is-style-chevron summary::before {
+	content: "\f345";
+}
+
+.wp-block-details.is-style-plus summary::before {
+	content: "\f543";
+}
+
+.wp-block-details.is-style-check summary::before {
+	content: "\f147";
+}
+
+.wp-block-details summary > * {
+	display: inline;
+}
+
+/* Styles for marker and Dashicon variations [open]*/
+.wp-block-details[open].is-style-chevron summary::before {
+	content: "\f347";
+}
+
+.wp-block-details[open].is-style-plus summary::before {
+	content: "\f460";
+}
+
+.wp-block-details[open].is-style-check summary::before {
+	content: "\f335";
+}
+
+/* Add Dashicons to non-default styles */
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary {
+	list-style: none;
+	position: relative;
+	padding-left: 1.125em;
+}
+
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary::-webkit-details-marker {
+	display: none;
+}
+
+details.wp-block-details[class*="is-style-"]:not([class*="is-style-default"]) summary::before {
+	color: currentcolor;
+	font-family: dashicons, sans-serif;
+	position: absolute;
+	top: 1.3em;
+	left: 0;
+	margin-top: -1.3em;
+}
