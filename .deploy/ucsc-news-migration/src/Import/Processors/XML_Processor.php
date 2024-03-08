@@ -43,9 +43,7 @@ class XML_Processor {
 				$exists     = $this->is_existed_entry( $cascade_id );
 
 				if ( $node->{'system-data-structure'}->{'article-text'} ) {
-					foreach ( $node->{'system-data-structure'}->{'article-text'}->children() as $child ) {
-						$html .= $child->asXML();
-					}
+					$html = str_replace( ['<article-text>', '</article-text>'], '', $node->{'system-data-structure'}->{'article-text'}->asXML() );
 				}
 
 				$args = [

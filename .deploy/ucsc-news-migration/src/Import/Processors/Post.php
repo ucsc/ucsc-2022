@@ -21,15 +21,7 @@ class Post extends Creator {
 
 	public function run(): bool {
 		try {
-			if ( ! $this->force && $this->is_post_exists() > 0 ) {
-				\WP_CLI::colorize( sprintf( 'The %s post exists with ID %d. Skipping ', $this->page_name, $this->existing_id ) );
-				$this->write_log( 'Post exists. Skipping', [
-					'page' => $this->page_name,
-					'id'   => $this->existing_id,
-				] );
-
-				return true;
-			}
+			$this->maybe_set_existing_post_id();
 
 			$data = $this->parse_raw_data();
 
@@ -44,7 +36,7 @@ class Post extends Creator {
 			unset( $data['categories'] );
 			unset( $data['has_secondary_image'] );
 
-			$post_id = $this->maybe_create_post( $data );
+			$post_id = $this->maybe_create_post( $data, $this->existing_id );
 
 			if ( $post_id < 1 ) {
 				return false;
@@ -78,19 +70,37 @@ class Post extends Creator {
 			// TODO: skip images for now until we have clear vision on that
 			if ( in_array( $meta_key, [ 'cascade_lead_image', 'cascade_secondary_images' ] ) ) {
 				update_post_meta( $post_id, $meta_key, $meta_value );
-				// skip empty
-				if ( ! isset( $meta_value['image'] ) || ! isset( $meta_value['image']['link'] ) ) {
+
+				if ( isset( $meta_value['image'] ) ) {
+					$meta_value = [ $meta_value ];
+				}
+
+				$injected_html = '';
+				foreach ( $meta_value as $image ) {
+					$image_processor = new Image( $image['image']['link'], $post_id, $meta_key, $image );
+					$image_id 		 = $image_processor->run();
+
+					if ( is_wp_error( $image_id ) || (int) $image_id === 0 ) {
+						continue;
+					}
+
+					$injected_html .= $this->inject_image_block( $post_id, $image_id, $meta_key, $image, $has_secondary_image );
+				}
+
+				if ( strlen( $injected_html ) < 1 ) {
 					continue;
 				}
 
-				$image_processor = new Image( $meta_value['image']['link'], $post_id, $meta_key, $meta_value );
-				$image_id 		 = $image_processor->run();
+				$post = get_post( $post_id );
 
-				if ( is_wp_error( $image_id ) || (int) $image_id === 0 ) {
+				if ( ! $post ) {
 					continue;
 				}
 
-				$this->inject_image_block( $post_id, $image_id, $meta_key, $meta_value, $has_secondary_image );
+				wp_update_post( [
+					'ID' 		   => $post_id,
+					'post_content' => $injected_html . $post->post_content,
+				] );
 
 				continue;
 			}
@@ -123,9 +133,9 @@ class Post extends Creator {
 		$this->assign_co_author( $post_id, $author['name'] ?? '', $author['email'] ?? '' );
 	}
 
-	protected function inject_image_block( int $post_id, int $image_id, string $meta_key, array $meta = [], bool $has_secondary_image = false ): void {
+	protected function inject_image_block( int $post_id, int $image_id, string $meta_key, array $meta = [], bool $has_secondary_image = false ): string {
 		if ( ( $has_secondary_image && $meta_key === 'cascade_lead_image' ) || ( ! $has_secondary_image && $meta_key !== 'cascade_secondary_images' ) ) {
-			return;
+			return '';
 		}
 
 		$line_1		   = sprintf( '<!-- wp:image {"align":"right","id":%s,"sizeSlug":"full","linkDestination":"none"} -->', $image_id );
@@ -148,18 +158,8 @@ EOF;
 			'image_caption' => $image_caption,
 			'image_block'   => $image_block,
 		] );
-		$post = get_post( $post_id );
 
-		if ( ! $post ) {
-			return;
-		}
-
-		$post_content = $image_block . $post->post_content;
-
-		wp_update_post( [
-			'ID' 		   => $post_id,
-			'post_content' => $post_content,
-		] );
+		return $image_block;
 	}
 
 	protected function process_post_categories( int $post_id, array $categories ): void {
@@ -268,7 +268,7 @@ EOF;
 		];
 	}
 
-	protected function is_post_exists(): int {
+	protected function maybe_set_existing_post_id(): int {
 		$posts = get_posts( [
 			'name'   => $this->page_name,
 			'fields' => 'ids'

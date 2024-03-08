@@ -16,6 +16,7 @@ class Import_XML_Command extends Command {
 	public function run( $args, $assoc_args ) {
 		$path_to_records = sprintf( '%srecords', tribe_ucsc()->get_container()->get( Core::PLUGIN_PATH ) );
 		$files 		     = $this->get_folder_tree( $path_to_records );
+		$single_file 	 = $assoc_args['file'] ?? '';
 
 		natsort($files );
 
@@ -29,7 +30,7 @@ class Import_XML_Command extends Command {
 		}
 
 		foreach ( $files as $file ) {
-			if ( in_array( $file, [ '.', '..', '.gitignore' ] ) ) {
+			if ( in_array( $file, [ '.', '..', '.gitignore' ] ) || ( ! empty( $single_file ) && $single_file !== $file ) ) {
 				continue;
 			}
 
@@ -98,7 +99,14 @@ class Import_XML_Command extends Command {
 	 * @return array[]
 	 */
 	protected function arguments(): array {
-		return [];
+		return [
+			[
+				'type'        => 'assoc',
+				'name'        => 'file',
+				'optional'    => true,
+				'description' => esc_html__( 'file to process.', 'tribe' ),
+			],
+		];
 	}
 
 }

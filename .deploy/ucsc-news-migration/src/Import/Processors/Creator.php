@@ -57,13 +57,12 @@ class Creator {
 		$co_authors_plus->add_coauthors( $post_id, [ $name ], true );
 	}
 
-	protected function maybe_create_post( array $post_data ): int {
+	protected function maybe_create_post( array $post_data, int $existing_id = 0 ): int {
 		$args = $post_data;
 
-		if ( $this->existing_id > 0 ) {
-			$args = array_merge( [ 'ID' => $this->existing_id ], $post_data );
+		if ( $existing_id > 0 ) {
+			$args = array_merge( [ 'ID' => $existing_id ], $post_data );
 		}
-
 
 		$id = wp_insert_post( $args );
 
