@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/ucsc/ucsc-2022/compare/v3.7.0...v3.8.0) (2024-03-08)
+
+
+### Bug Fixes
+
+* 🐛 Properly modify both tags of the site-title block on home and interior pages. Fixes [#299](https://github.com/ucsc/ucsc-2022/issues/299) ([#300](https://github.com/ucsc/ucsc-2022/issues/300)) ([2b4237c](https://github.com/ucsc/ucsc-2022/commit/2b4237c944702c410e05c91bc908d3a053f0e7af))
+* 🔧 wrap a block level element around the skip link and prepend it to the top of the body element ([#307](https://github.com/ucsc/ucsc-2022/issues/307)) ([30704a6](https://github.com/ucsc/ucsc-2022/commit/30704a6b9bb16db64cf728a2b17cc04065dc3248)), closes [#293](https://github.com/ucsc/ucsc-2022/issues/293)
+
 ## [3.7.0](https://github.com/ucsc/ucsc-2022/compare/v3.6.0...v3.7.0) (2023-12-22)
 
 
