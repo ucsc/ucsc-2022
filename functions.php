@@ -449,7 +449,7 @@ function ucsc_skip_link() {
 
 			// Get the site wrapper.
 			// The skip-link will be injected in the beginning of it.
-			sibling = document.querySelector( '.wp-site-blocks' );
+			sibling = document.body.firstChild;
 
 			// Early exit if the root element was not found.
 			if ( ! sibling ) {
@@ -463,16 +463,21 @@ function ucsc_skip_link() {
 				skipLinkTarget.id = skipLinkTargetID;
 			}
 
+			// Create a block level element to contain the skip link.
+			skipLinkContainer = document.createElement( 'div' );
+			skipLinkContainer.setAttribute( 'role', 'navigation' );
+
 			// Create the skip link.
 			skipLink = document.createElement( 'a' );
-			skipLink.setAttribute( 'role', 'navigation' );
 			skipLink.setAttribute( 'aria-label', 'skip to content' );
 			skipLink.classList.add( 'skip-link', 'screen-reader-text' );
 			skipLink.href = '#' + skipLinkTargetID;
 			skipLink.innerHTML = '<?php /* translators: Hidden accessibility text. */ esc_html_e( 'Skip to content' ); ?>';
 
+			skipLinkContainer.append(skipLink);
+
 			// Inject the skip link.
-			sibling.parentElement.insertBefore( skipLink, sibling );
+			sibling.parentElement.insertBefore( skipLinkContainer, sibling );
 		}() );
 	</script>
 	<?php
