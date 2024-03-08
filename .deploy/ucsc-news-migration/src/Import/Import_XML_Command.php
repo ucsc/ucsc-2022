@@ -17,6 +17,7 @@ class Import_XML_Command extends Command {
 		$path_to_records = sprintf( '%srecords', tribe_ucsc()->get_container()->get( Core::PLUGIN_PATH ) );
 		$files 		     = $this->get_folder_tree( $path_to_records );
 		$single_file 	 = $assoc_args['file'] ?? '';
+		$over_year	     = $assoc_args['over_year'] ?? '';
 
 		natsort($files );
 
@@ -32,6 +33,14 @@ class Import_XML_Command extends Command {
 		foreach ( $files as $file ) {
 			if ( in_array( $file, [ '.', '..', '.gitignore' ] ) || ( ! empty( $single_file ) && $single_file !== $file ) ) {
 				continue;
+			}
+
+			preg_match( "/(?>records\/)(?'year'[0-9]*)\//i", $file, $year );
+
+			if ( ! empty( $year ) && ! empty( $year['year'] ) && ! empty( $over_year ) ) {
+				if ( (int) $year['year'] < (int) $over_year ) {
+					continue;
+				}
 			}
 
 			\WP_CLI::line( sprintf( 'Processing XML file: %s', $file ) );
@@ -103,6 +112,12 @@ class Import_XML_Command extends Command {
 			[
 				'type'        => 'assoc',
 				'name'        => 'file',
+				'optional'    => true,
+				'description' => esc_html__( 'file to process.', 'tribe' ),
+			],
+			[
+				'type'        => 'assoc',
+				'name'        => 'over_year',
 				'optional'    => true,
 				'description' => esc_html__( 'file to process.', 'tribe' ),
 			],
