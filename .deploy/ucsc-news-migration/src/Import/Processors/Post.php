@@ -102,7 +102,7 @@ class Post extends Creator {
 
 				wp_update_post( [
 					'ID' 		   => $post_id,
-					'post_content' => $injected_html . $post->post_content,
+					'post_content' => '<div style="float: right;">' . $injected_html . '</div>' . $post->post_content,
 				] );
 
 				continue;
