@@ -77,6 +77,9 @@ class Post extends Creator {
 
 				$injected_html = '';
 				foreach ( $meta_value as $image ) {
+					if ( empty( $image['image']['link'] ) ) {
+						continue;
+					}
 					$image_processor = new Image( $image['image']['link'], $post_id, $meta_key, $image );
 					$image_id 		 = $image_processor->run();
 
