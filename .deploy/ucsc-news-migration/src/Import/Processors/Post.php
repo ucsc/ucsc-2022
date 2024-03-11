@@ -133,7 +133,7 @@ class Post extends Creator {
 			return;
 		}
 
-		$this->assign_co_author( $post_id, $author['name'] ?? '', $author['email'] ?? '' );
+		$this->assign_co_author( $post_id, (string) $author['name'] ?? '', (string) $author['email'] ?? '' );
 	}
 
 	protected function inject_image_block( int $post_id, int $image_id, string $meta_key, array $meta = [], bool $has_secondary_image = false ): string {
