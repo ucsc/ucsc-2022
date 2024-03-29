@@ -81,7 +81,6 @@ function ucsc_scripts() {
 	wp_enqueue_style( 'ucsc-styles', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'ucsc-styles-scss', get_template_directory_uri() . '/build/style-index.css', array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'ucsc-google-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800&display=swap', false );
-	wp_enqueue_style( 'ucsc-google-roboto-serif-font', 'https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,500;0,8..144,600;1,8..144,400;1,8..144,500;1,8..144,600&display=swap', false );
 	wp_register_script( 'ucsc-front', get_template_directory_uri() . '/build/theme.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'ucsc-front' );
 
@@ -105,57 +104,6 @@ function ucsc_add_admin_scripts() {
 	wp_enqueue_script( 'ucsc-admin-scripts' );
 }
 add_action( 'admin_enqueue_scripts', 'ucsc_add_admin_scripts' );
-
-/** TODO #24 Replace hard-coded links */
-
-
-/** TODO #24 Replace hard-coded links */
-
-
-/** TODO #24 Replace hard-coded links */
-
-/**
- * Change Site Title and Logo
- * Main Site vs Subsite
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_logo_switch( $block_content = '', $block = array() ) {
-	$site_location = home_url();
-	if ( '' === $site_location ) {
-		if ( isset( $block['blockName'] ) && 'outermost/icon-block' === $block['blockName'] ) {
-			if ( isset( $block['attrs']['className'] ) && $block['attrs']['className'] === 'global-header-logo' ) {
-					$html = '';
-					return $html;
-			}
-		} elseif ( ( is_front_page() && is_home() ) || is_front_page() || is_home() ) {
-			if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-				$html = str_replace(
-					$block_content,
-					'<h1>
-						<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></h1> ',
-					$block_content
-				);
-				return $html;
-			}
-		} else {
-			if ( isset( $block['blockName'] ) && 'core/site-title' === $block['blockName'] ) {
-				$html = str_replace(
-					$block_content,
-					'<p class="mainsite-logo" style="font-size: var(--wp--preset--font-size--xx-large); font-weight: 600;line-height: var(--wp--custom--line-height--small);margin-top: .12em; margin-bottom: .12em;">
-						<a href="https://www.ucsc.edu" class="mainsite-logo" id="logo">UC Santa Cruz</a></p> ',
-					$block_content
-				);
-				return $html;
-			}
-		}
-	}
-	return $block_content;
-}
-
-add_filter( 'render_block', 'ucsc_logo_switch', 10, 2 );
 
 /**
  * Set accessible site title tags
@@ -253,51 +201,12 @@ function ucsc_breadcrumbs_constructor() {
 	$args   = array(
 		'labels'         => $labels,
 		'show_on_front'  => true,
-		'show_trail_end' => false,
+		'show_trail_end' => true,
 		'container_class'=> 'ucsc-page-header__breadcrumbs'
 	);
 	return Hybrid\Breadcrumbs\Trail::render( $args );
 }
 
-/**
- * Add Breadcrumbs above Post Title.
- *
- * @param  string $block_content Block content to be rendered.
- * @param  array  $block         Block attributes.
- * @return string
- */
-function ucsc_add_breadcrumbs( $block_content = '', $block = array() ) {
-	if ( ucsc_breadcrumbs_constructor() ) {
-		$breadcrumbs = ucsc_breadcrumbs_constructor();
-	}
-	if ( !is_page_template( 'page-no-title' ) && isset( $breadcrumbs ) ) {
-		if ( isset( $block['blockName'] ) && 'core/post-title' === $block['blockName'] ) {
-			if ( isset($block['attrs']['level']) && $block['attrs']['level'] === 1 ) {
-				$html = str_replace( $block_content, $breadcrumbs . $block_content, $block_content );
-				return $html;
-			}
-		}
-	}
-	return $block_content;
-}
-add_filter( 'render_block', 'ucsc_add_breadcrumbs', 10, 2 );
-
-/**
-* Only administrators can move/remove UCSC header and footer regions
-* Note: this does not prevent editing of blocks. Only moving/removing
-*/
-add_filter(
-	'block_editor_settings_all',
-	function( $settings, $context ) {
-		// Allow for the Administrator role and above
-				// https://wordpress.org/support/article/roles-and-capabilities/.
-		$settings['canLockBlocks'] = current_user_can( 'switch_themes' );
-
-		return $settings;
-	},
-	10,
-	2
-);
 
 /**
 * Register Advanced Custom Fields
