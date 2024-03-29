@@ -5,17 +5,18 @@
 	font-weight: 700;
 	position: absolute;
 	line-height: 1;
-	font-size: 12rem;
-	font-family: var(--wp--preset--font-family--roboto-serif);
+	font-size: 4rem;
+	font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;
 	content: "“";
-	top: -1.5rem;
+	top: 0;
 	left: 0;
 	color: #d2e7f4;
+	margin-block-start: 1rem;
 }
 
 .wp-block-quote {
 	position: relative;
-	padding: 4rem 3.2rem 0 3.2rem;
+	padding: 2.5em 3.2em 0 2em;
 	border: none;
 }
 
