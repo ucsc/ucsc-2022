@@ -1,0 +1,21 @@
+{
+	"name": "acf/breadcrumbs",
+	"title": "Breadcrumbs",
+	"description": "Displays breadcrumbs.",
+	"category": "theme",
+	"icon": "text",
+	"keywords": [
+		"navigation",
+		"breadcrumbs"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "index.php"
+	},
+	"supports": {
+		"jsx": true
+	},
+	"style": [
+		"acf/breadcrumb-styles"
+	]
+}
