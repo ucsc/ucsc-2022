@@ -43,7 +43,7 @@
 	z-index: 10;
 	width: 100%;
 	background-color: var(--wp--preset--color--ucsc-royal-blue);
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 
 	@include media-query($desktop-menu) {
 		background-color: var(--wp--preset--color--white);
@@ -336,8 +336,8 @@
 
 	@include media-query($desktop-menu) {
 		color: var(--wp--preset--color--ucsc-primary-blue);
-		font-size: 15px;
-		line-height: 18px;
+		font-size: 16px;
+		line-height: 20px;
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}

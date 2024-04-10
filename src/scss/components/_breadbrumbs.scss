@@ -1,5 +1,14 @@
 //BREADCRUMBS
 
+.breadcrumbs-region {
+	margin-block-start: 0.5rem;
+	margin-block-end: 2rem;
+
+	.page-template-page-no-title & {
+		margin-block-end: 0.25rem;
+	}
+}
+
 // Wrapper element.
 .ucsc-page-header__breadcrumbs {
 	font-size: var(--wp--preset--font-size--one);
@@ -21,62 +30,47 @@
 		display: inline-block;
 		margin: 0 0 0.35em;
 		padding-inline-start: 0;
-		margin-block-start: var(--wp--preset--font-size--six);
 	}
 
 	// Individual crumbs.
 	&__crumb {
 		display: inline-block;
-
+		font-size: 0.85rem;
+		line-height: 1.1;
+		font-weight: 400;
+		text-transform: none;
+		letter-spacing: 0.03em;
 
 		a {
 			border-bottom: 0;
 			text-decoration: none;
-			font-size: 0.82rem;
-			line-height: 20px;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.04em;
-			color: var(--wp--preset--color--black);
+			color: rgba(0, 0, 0, 0.68);
 
 			&:active,
 			&:focus,
 			&:hover {
-				border-bottom: 1px solid;
-				text-decoration: none;
+				color: var(--wp--preset--color--ucsc-primary-blue);
+				text-decoration: underline;
+				text-decoration-thickness: 0.1em;
+				text-underline-offset: 0.15em;
 			}
+		}
+
+		> span {
+			color: rgba(0, 0, 0, 0.68);
 		}
 
 		// Add separators.
 		&::after {
-			content: ">";
-			padding: 0 0.25em;
-			font-size: 0.82rem;
-			color: var(--wp--preset--color--black);
+			content: "/";
+			padding: 0 0.58em;
+			font-size: 1em;
+			font-weight: 600;
+			color: var(--wp--preset--color--ucsc-ocean-blue);
 		}
 
 		&:last-of-type::after {
 			display: none;
 		}
 	}
-}
-
-.page-template-page-no-title-with-breadcrumbs {
-
-	.breadcrumbs {
-
-		&__trail {
-			margin-block-start: 0;
-		}
-
-		&__crumb {
-
-			a,
-			&::after {
-				color: var(--wp--preset--color--white);
-			}
-		}
-
-	}
-
 }
