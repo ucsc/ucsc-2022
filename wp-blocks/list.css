@@ -29,16 +29,20 @@
 	border-bottom: none;
 }
 
+.is-style-ucsc-upper-alpha-list > li {
+	list-style-type: upper-alpha;
+}
+
+.is-style-ucsc-lower-alpha-list > li {
+	list-style-type: lower-alpha;
+}
+
+.is-style-ucsc-lower-roman-list > li {
+	list-style-type: lower-roman;
+}
+
 .site-content ul li,
 .site-content ol li {
 	margin: calc(var(--wp--style--block-gap) / 2) 0;
 	line-height: var(--wp--custom--line-height--baseline);
-}
-
-.is-style-ucsc-upper-alpha-list {
-	list-style-type: upper-alpha;
-}
-
-.is-style-ucsc-lower-alpha-list {
-	list-style-type: lower-alpha;
 }
