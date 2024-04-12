@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/ucsc/ucsc-2022/compare/v3.8.0...v4.0.0) (2024-04-12)
+
+
+### Features
+
+* Add preconfigured vertical gradient for text over images  Fixes [#291](https://github.com/ucsc/ucsc-2022/issues/291) ([#313](https://github.com/ucsc/ucsc-2022/issues/313)) ([8478f03](https://github.com/ucsc/ucsc-2022/commit/8478f030e25570cb30488bfccc196100e666d95a))
+
+
+### Bug Fixes
+
+* 📝 page-no-title template is only for pages, not posts ([#312](https://github.com/ucsc/ucsc-2022/issues/312)) ([18c6c40](https://github.com/ucsc/ucsc-2022/commit/18c6c4035d0be53a98649bc99b9136799e1ad7dd))
+* 🚑️ Fix two issues introduced by breadcrumbs changes ([c311b4f](https://github.com/ucsc/ucsc-2022/commit/c311b4f9e116b0febe1884f73d7d55d0060904c0))
+
 ## [3.8.0](https://github.com/ucsc/ucsc-2022/compare/v3.7.0...v3.8.0) (2024-03-08)
 
 
