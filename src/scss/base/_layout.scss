@@ -12,6 +12,10 @@ body {
 	flex: 1 0 auto;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+
+	&:has(.breadcrumbs-region) {
+		grid-template-rows: auto auto 1fr auto;
+	}
 }
 
 .editor-styles-wrapper {
