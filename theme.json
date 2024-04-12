@@ -532,8 +532,7 @@
 		{
 			"name": "page-no-title",
 			"postTypes": [
-				"page",
-				"post"
+				"page"
 			],
 			"title": "Page no title"
 		}
