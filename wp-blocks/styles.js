@@ -117,4 +117,9 @@ wp.domReady( () => {
 		name: 'check',
 		label: 'Check mark',
 	} );
+	// Style for outermost/icon-block
+	wp.blocks.registerBlockStyle( 'outermost/icon-block', {
+		name: 'remove-hover',
+		label: 'Remove hover',
+	} );
 } );
