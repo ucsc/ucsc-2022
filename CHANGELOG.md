@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/ucsc/ucsc-2022/compare/v4.0.0...v4.0.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* 🖌️ Last item in the breadcrumb list should be bold ([50e45c0](https://github.com/ucsc/ucsc-2022/commit/50e45c0f54fdbbba7e2088fcd1e35870648437db))
+* 🛠 Update Truss to v0.7.12, which fixes the footer copyright date ([756d7e3](https://github.com/ucsc/ucsc-2022/commit/756d7e30450d2ac62726cfd632cd1a6c094712db))
+
 ## [4.0.0](https://github.com/ucsc/ucsc-2022/compare/v3.8.0...v4.0.0) (2024-04-12)
 
 
