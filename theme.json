@@ -197,14 +197,7 @@
 					"name": "7"
 				}
 			],
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"fluid": true,
@@ -536,10 +529,13 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": ["page"],
 			"title": "Page no title"
+		},
+		{
+			"name": "page-no-title-with-breadcrumbs",
+			"postTypes": ["page"],
+			"title": "Page no title with breadcrumbs (deprecated)"
 		}
 	]
 }
