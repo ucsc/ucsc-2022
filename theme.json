@@ -123,7 +123,7 @@
 				},
 				{
 					"name": "Violator Gold",
-					"color": "#997404",
+					"color": "#6F4A00",
 					"slug": "ucsc-violator-gold"
 				},
 				{
@@ -529,13 +529,13 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": ["page"],
+			"postTypes": ["page", "posts"],
 			"title": "Page no title"
 		},
 		{
 			"name": "page-no-title-with-breadcrumbs",
-			"postTypes": ["page"],
-			"title": "Page no title with breadcrumbs (deprecated)"
+			"postTypes": ["page", "posts"],
+			"title": "(Do not use) Page no title with breadcrumbs"
 		}
 	]
 }
