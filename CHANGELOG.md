@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/ucsc/ucsc-2022/compare/v4.0.2...v4.0.3) (2024-04-18)
+
+
+### Bug Fixes
+
+* 🚑 Make `page-no-title-` templates available to posts. Reverts change made in v4.0.0. Fixes [#315](https://github.com/ucsc/ucsc-2022/issues/315) ([3904efe](https://github.com/ucsc/ucsc-2022/commit/3904efec5e8134e190289f8bac25238d08d9f6e0))
+
 ### [4.0.2](https://github.com/ucsc/ucsc-2022/compare/v4.0.1...v4.0.2) (2024-04-17)
 
 
