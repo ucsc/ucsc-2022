@@ -529,12 +529,12 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": ["page", "posts"],
+			"postTypes": ["page", "post"],
 			"title": "Page no title"
 		},
 		{
 			"name": "page-no-title-with-breadcrumbs",
-			"postTypes": ["page", "posts"],
+			"postTypes": ["page", "post"],
 			"title": "(Do not use) Page no title with breadcrumbs"
 		}
 	]
