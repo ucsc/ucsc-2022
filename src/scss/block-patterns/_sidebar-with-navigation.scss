@@ -2,6 +2,7 @@
 
 .ucsc__sidebar-with-navigation {
 	flex-direction: column-reverse;
+	gap: var(--wp--preset--spacing--40);
 
 	@include media-query($wp-columns-unstack) {
 		flex-direction: row;
