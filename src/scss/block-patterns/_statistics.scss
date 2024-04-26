@@ -11,3 +11,7 @@
 	text-decoration-color: var(--wp--preset--color--ucsc-primary-yellow);
 	text-underline-offset: 8px;
 }
+
+.ucsc__no-cover .ucsc__statistics-content {
+	transform: none;
+}
