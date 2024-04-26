@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Page Header with bottom text bar
+ * Title: Header with color bar beneath
  * Slug: ucsc-2022/page-header-color-bar
  * Block Types: core/cover, core/heading
  * Categories: banner

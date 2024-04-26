@@ -1,4 +1,9 @@
-/* BLOCK PATTERN: Homepage Hero */
+/*
+BLOCK PATTERNS:
+	Page header,
+	Page header with color bar below,
+	Page header with marquee
+*/
 
 .ucsc-page-header {
 	margin: 0;
@@ -25,4 +30,18 @@
 
 .ucsc-page-header__title {
 	display: inline-block;
+}
+
+.ucsc-marquee {
+	display: inline-block;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		display: inline-block;
+		text-wrap: pretty;
+	}
 }
