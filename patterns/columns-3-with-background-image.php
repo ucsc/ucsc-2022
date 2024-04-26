@@ -1,13 +1,14 @@
 <?php
  /**
   * Title: 3 columns with background image
+	* Viewport Width: 1080
   * Slug: ucsc-2022/columns-3-with-background-image
   * Categories: grid
   */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"ucsc-secondary-blue","textColor":"white","className":"ucsc__columns-3-with-background-image","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull ucsc__columns-3-with-background-image has-white-color has-ucsc-secondary-blue-background-color has-text-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"/wp-content/themes/ucsc-2022/images/demo-pattern-tile.png","id":2007,"isRepeated":true,"dimRatio":0,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-cover alignfull is-repeated" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40)"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2007 is-repeated" style="background-position:50% 50%;background-image:url(/wp-content/themes/ucsc-2022/images/demo-pattern-tile.png)"></div><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull ucsc__columns-3-with-background-image has-white-color has-ucsc-secondary-blue-background-color has-text-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"/wp-content/themes/ucsc-2022/images/endless-clouds.png","id":2007,"isRepeated":true,"dimRatio":0,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-cover alignfull is-repeated" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40)"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2007 is-repeated" style="background-position:50% 50%;background-image:url(/wp-content/themes/ucsc-2022/images/endless-clouds.png)"></div><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"var:preset|spacing|60","left":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-columns" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"fontSize":"eight"} -->
