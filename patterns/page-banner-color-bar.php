@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Page Header with bottom text bar
- * Slug: ucsc-2022/page-header-color-bar
+ * Title: Banner with bottom color bar
+ * Slug: ucsc-2022/page-banner-color-bar
  * Block Types: core/cover, core/heading
  * Categories: banner
  */
@@ -17,7 +17,7 @@
 <!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"0"}},"border":{"width":"0px","style":"none","radius":"0px"}}} -->
 <div class="wp-block-columns alignfull" style="border-style:none;border-width:0px;border-radius:0px;margin-top:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:paragraph {"align":"center","backgroundColor":"ucsc-primary-blue","textColor":"white","className":"is-style-ucsc-intro-text"} -->
-<p class="has-text-align-center is-style-ucsc-intro-text has-white-color has-ucsc-primary-blue-background-color has-text-color has-background">The Office of Research (OR) is your bridge to researchers developing bold solutions for the challenges of our time.&nbsp;<br>We are your partner and advocate in realizing your research goals.</p>
+<p class="has-text-align-center is-style-ucsc-intro-text has-white-color has-ucsc-primary-blue-background-color has-text-color has-background">Add your position statement, tagline, or cover block image description here.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
