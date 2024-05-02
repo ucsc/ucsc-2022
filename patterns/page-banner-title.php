@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Header with title only
- * Slug: ucsc-2022/page-header
+ * Title: Banner with page title
+ * Slug: ucsc-2022/page-banner-title
  * Block Types: core/cover, core/heading
  * Categories: banner
  */

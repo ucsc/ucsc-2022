@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Header with text marquee
- * Slug: ucsc-2022/page-header-marquee
+ * Title: Banner with title and pre-text
+ * Slug: ucsc-2022/page-banner-title-pre-text
  * Block Types: core/cover, core/heading
  * Categories: banner
  */

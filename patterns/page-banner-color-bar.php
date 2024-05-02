@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Header with color bar beneath
- * Slug: ucsc-2022/page-header-color-bar
+ * Title: Banner with bottom color bar
+ * Slug: ucsc-2022/page-banner-color-bar
  * Block Types: core/cover, core/heading
  * Categories: banner
  */
