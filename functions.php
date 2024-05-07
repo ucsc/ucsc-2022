@@ -370,7 +370,7 @@ add_action('wp_footer', 'ucsc_last_modified', 10);
 
 function ucsc_last_modified()
 {
-	echo '<!-- Last modified code.  --><div class="last-modified__outer" ><div class="last-modified__inner"><div class="last-modified">Last modified: ';
+	echo '<!-- Last modified code.  --><div class="last-modified__outer" role="region" aria-label="Page last modification date" ><div class="last-modified__inner"><div class="last-modified" >Last modified: ';
 	echo do_shortcode('[last-modified]');
 	echo '</div></div></div><!-- End last modified code.  -->';
 }
