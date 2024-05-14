@@ -16,9 +16,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">123</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 
 				<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__statistics-item"} -->
@@ -26,9 +26,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">456</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 
 				<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__statistics-item"} -->
@@ -36,9 +36,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">78910</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column --></div>
 			<!-- /wp:columns -->
 
@@ -48,9 +48,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">11%</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 
 				<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__statistics-item"} -->
@@ -58,9 +58,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">12px</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 
 				<!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"var:preset|spacing|20"}},"className":"ucsc__statistics-item"} -->
@@ -68,9 +68,9 @@
 					<p class="has-text-align-center ucsc__statistics-item-value has-eight-font-size" style="font-style:normal;font-weight:700">13lbs</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
-					<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="font-style:normal;font-weight:700">Lorem ipsum dolor sit</p>
-					<!-- /wp:paragraph --></div>
+					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"0","right":"0"}}},"className":"ucsc__statistics-item-description","fontSize":"two"} -->
+<p class="has-text-align-center ucsc__statistics-item-description has-two-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-right:0;margin-bottom:var(--wp--preset--spacing--20);margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-style:normal;font-weight:400">Lorem ipsum dolor sit</p>
+<!-- /wp:paragraph --></div>
 				<!-- /wp:column --></div>
 			<!-- /wp:columns -->
 
