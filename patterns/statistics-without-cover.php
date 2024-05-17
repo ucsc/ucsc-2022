@@ -1,18 +1,13 @@
 <?php
 /**
- * Title: Statistics
- * Slug: ucsc-2022/statistics
+ * Title: Statistics without cover block
+ * Slug: ucsc-2022/statistics-without-cover
  * Categories: grid
  */
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"0"},"blockGap":"0"}},"className":"ucsc__statistics","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull ucsc__statistics" style="padding-bottom:0"><!-- wp:cover {"dimRatio":20,"overlayColor":"black","lock":{"move":true,"remove":true},"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"var:preset|spacing|70","left":"0"}}}} -->
-	<div class="wp-block-cover" style="padding-top:0;padding-right:0;padding-bottom:var(--wp--preset--spacing--70);padding-left:0"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-20 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
-			<p class="has-text-align-center"></p>
-			<!-- /wp:paragraph --></div></div>
-	<!-- /wp:cover -->
-
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"0"},"blockGap":"0"}},"className":"ucsc__statistics ucsc__no-cover","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull ucsc__statistics ucsc__no-cover" style="padding-bottom:0">
 	<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"0","right":"var:preset|spacing|20","bottom":"0","left":"var:preset|spacing|20"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
 	<div class="wp-block-group" style="padding-top:0;padding-right:var(--wp--preset--spacing--20);padding-bottom:0;padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50","padding":{"top":"var:preset|spacing|60","right":"var:preset|spacing|60","bottom":"0","left":"var:preset|spacing|60"}}},"backgroundColor":"white","textColor":"ucsc-primary-blue","className":"ucsc__statistics-content","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group ucsc__statistics-content has-ucsc-primary-blue-color has-white-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:0;padding-left:var(--wp--preset--spacing--60)"><!-- wp:columns {"lock":{"move":true,"remove":true},"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
