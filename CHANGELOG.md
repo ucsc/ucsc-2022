@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/ucsc/ucsc-2022/compare/v4.0.4...v4.1.0) (2024-05-24)
+
+
+### Features
+
+* **pattern:** Banner pattern that includes text above the page title ([#322](https://github.com/ucsc/ucsc-2022/issues/322)) ([23db2a9](https://github.com/ucsc/ucsc-2022/commit/23db2a99f0e67982b8580e411c6d7d8f4d205b25)), closes [#308](https://github.com/ucsc/ucsc-2022/issues/308)
+* **pattern:** Update statistics block styles and add a plain stats block  Fixes [#283](https://github.com/ucsc/ucsc-2022/issues/283) ([#331](https://github.com/ucsc/ucsc-2022/issues/331)) ([cb70763](https://github.com/ucsc/ucsc-2022/commit/cb707630963b5e165e480bd5a29da8a83c3e3905))
+
+
+### Bug Fixes
+
+* Change breadcrumbs list tag from `<li>` to `<ol>` ([#335](https://github.com/ucsc/ucsc-2022/issues/335)) ([3d9a545](https://github.com/ucsc/ucsc-2022/commit/3d9a54503dce18b2301b5f81ce558c203d6f7d37)), closes [#330](https://github.com/ucsc/ucsc-2022/issues/330)
+* Dashicons are not showing on the front-end when logged out ([#334](https://github.com/ucsc/ucsc-2022/issues/334)) ([3986804](https://github.com/ucsc/ucsc-2022/commit/398680471d0af7495d61a5cb08b2afe1ee23d5b9)), closes [#333](https://github.com/ucsc/ucsc-2022/issues/333)
+* **pattern:** Adjust spacing in and between columns in the `sidebar with navigation` pattern ([#321](https://github.com/ucsc/ucsc-2022/issues/321)) ([4d84de7](https://github.com/ucsc/ucsc-2022/commit/4d84de70e74c6ad04ce177a2abdb63646a7f0e4c)), closes [#319](https://github.com/ucsc/ucsc-2022/issues/319)
+* **pattern:** Change background image of the "3 columns with background" pattern ([#323](https://github.com/ucsc/ucsc-2022/issues/323)) ([944fa35](https://github.com/ucsc/ucsc-2022/commit/944fa35e4518d7883e5f461b9153cddf87f1abb3)), closes [#318](https://github.com/ucsc/ucsc-2022/issues/318)
+* **template:** Reduce the default size of the site title in the header template part ([#329](https://github.com/ucsc/ucsc-2022/issues/329)) ([2018db1](https://github.com/ucsc/ucsc-2022/commit/2018db1d8afd6cc32d22be817bdcfeddce6e2218)), closes [#326](https://github.com/ucsc/ucsc-2022/issues/326)
+
 ### [4.0.4](https://github.com/ucsc/ucsc-2022/compare/v4.0.3...v4.0.4) (2024-04-22)
 
 ### [4.0.3](https://github.com/ucsc/ucsc-2022/compare/v4.0.2...v4.0.3) (2024-04-18)
