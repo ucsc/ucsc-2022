@@ -123,6 +123,7 @@ function ucsc_scripts()
 		'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800&display=swap',
 		false
 	);
+	wp_enqueue_style( 'dashicons' );
 	wp_register_script(
 		'ucsc-front',
 		get_template_directory_uri() . '/build/theme.js',
