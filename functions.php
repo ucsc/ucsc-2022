@@ -276,6 +276,7 @@ function ucsc_breadcrumbs_constructor()
 		'labels' => $labels,
 		'show_on_front' => true,
 		'show_trail_end' => true,
+		'list_tag'        => 'ol',
 		'container_class' => 'ucsc-page-header__breadcrumbs',
 	];
 	return Hybrid\Breadcrumbs\Trail::render($args);
