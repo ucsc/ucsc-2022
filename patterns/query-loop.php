@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: UCSC Query
+ * Title: UCSC Grid
  * Slug: ucsc-2022/query-loop
  * Block Types: core/query
  * Categories: grid page_layout posts query_loop
