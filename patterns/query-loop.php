@@ -3,7 +3,7 @@
  * Title: UCSC Query
  * Slug: ucsc-2022/query-loop
  * Block Types: core/query
- * Categories: grid page_layout posts
+ * Categories: grid page_layout posts query_loop
  */
 ?>
 <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false}} -->

@@ -32,4 +32,8 @@ add_action( 'init', function () {
 		'grid',
 		array( 'label' => __( 'Grid', 'ucsc' ) )
 	);
+	register_block_pattern_category(
+		'query_loop',
+		array( 'label' => __( 'Query Loop', 'ucsc' ) )
+	);
 } );
