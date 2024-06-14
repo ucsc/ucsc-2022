@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: UCSC Post Template
+ * Title: UCSC Query
  * Slug: ucsc-2022/query-loop
- * Block Types: core/post-template core/post-title, core/featured-image, core/post-date, core/post-excerpt
- * Categories: text_layout
+ * Block Types: core/query
+ * Categories: grid page_layout posts
  */
 ?>
-<!-- wp:group -->
+<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false}} -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 <!-- wp:group {"className":"ucsc__card ucsc__card\u002d\u002dquery-loop","layout":{"type":"default"}} -->
 <div class="wp-block-group ucsc__card ucsc__card--query-loop"><!-- wp:post-featured-image {"isLink":true,"width":"","height":"","sizeSlug":"sixteen-nine","className":"ucsc-query-loop__image"} /-->
@@ -20,4 +20,5 @@
 <!-- wp:post-excerpt {"className":"ucsc-query-loop__excerpt"} /--></div>
 <!-- /wp:group -->
 <!-- /wp:post-template --></div>
-<!-- /wp:group -->
+<!-- /wp:query -->
+
