@@ -5,6 +5,7 @@
  * Block Types: core/query
  * Categories: grid page_layout posts query_loop
  */
+
 ?>
 <!-- wp:query -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
