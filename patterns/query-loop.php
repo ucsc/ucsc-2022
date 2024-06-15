@@ -6,7 +6,7 @@
  * Categories: grid page_layout posts query_loop
  */
 ?>
-<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false}} -->
+<!-- wp:query -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 <!-- wp:group {"className":"ucsc__card ucsc__card\u002d\u002dquery-loop","layout":{"type":"default"}} -->
 <div class="wp-block-group ucsc__card ucsc__card--query-loop"><!-- wp:post-featured-image {"isLink":true,"width":"","height":"","sizeSlug":"sixteen-nine","className":"ucsc-query-loop__image"} /-->
