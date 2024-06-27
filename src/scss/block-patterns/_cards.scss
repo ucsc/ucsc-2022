@@ -39,6 +39,10 @@
 
 			img {
 				transform: scale(1.15);
+
+				@media screen and (prefers-reduced-motion: reduce) {
+					transform: none;
+				}
 			}
 		}
 	}
