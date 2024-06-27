@@ -104,3 +104,15 @@
 		}
 	}
 }
+
+/* Hide placeholder in editor */
+.editor-styles-wrapper .ucsc__card--query-loop {
+
+	&:not(&:has(figure)) {
+
+		&::before {
+			content: "";
+			display: none;
+		}
+	}
+}
