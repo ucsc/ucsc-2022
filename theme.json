@@ -536,6 +536,13 @@
 			"name": "page-no-title-with-breadcrumbs",
 			"postTypes": ["page", "post"],
 			"title": "(Do not use) Page no title with breadcrumbs"
+		},
+		{
+			"name": "archive-media_coverage",
+			"postTypes": [
+				"post"
+			],
+			"title": "Media Coverage Archives"
 		}
 	]
 }
