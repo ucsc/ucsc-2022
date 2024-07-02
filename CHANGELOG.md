@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.1](https://github.com/ucsc/ucsc-2022/compare/v4.1.0...v4.1.1) (2024-07-02)
+
 ## [4.1.0](https://github.com/ucsc/ucsc-2022/compare/v4.0.4...v4.1.0) (2024-05-24)
 
 
