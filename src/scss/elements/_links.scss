@@ -61,3 +61,29 @@ a {
 		scroll-margin-top: 11rem;
 	}
 }
+
+/* Linked Images hover and focus transition  */
+:where(.wp-block-image),
+:where(.wp-block-post-featured-image),
+:where(.wp-block-media-text__media) {
+
+	a {
+		display: block;
+		overflow: hidden;
+
+		img {
+			transition: transform 0.3s ease;
+		}
+
+		&:hover,
+		&:focus {
+
+			img {
+				transform: scale(1.15);
+				@media screen and (prefers-reduced-motion: reduce) {
+			  	transform: none;
+				}
+			}
+		}
+	}
+}
