@@ -63,9 +63,6 @@ a {
 }
 
 /* Linked Images hover and focus transition  */
-:where(.wp-block-image),
-:where(.wp-block-post-featured-image),
-:where(.wp-block-media-text__media) {
 
 	a {
 		display: block;
@@ -86,4 +83,11 @@ a {
 			}
 		}
 	}
-}
+figure[style^="background-image"]:has(a) {
+	transition: transform 0.3s ease;
+	&:hover,
+	&:focus {
+		// transform: scale(1.15);
+		background-size:115%!important;
+	}
+	}
