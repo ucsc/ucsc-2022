@@ -25,8 +25,8 @@ if (!function_exists('ucsc_setup')):
 		 * Register additional Pattern category
 		 */
 		register_block_pattern_category(
-			'example_pages',
-			array( 'label' => __( 'Example Pages', 'ucsc-2022' ) )
+			'examples',
+			array( 'label' => __( 'Examples', 'ucsc-2022' ) )
 		);
 
 		/**

@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Landing Page
- * Slug: ucsc-2022/landing-page
- * Categories: example_pages
+ * Title: Topic Page
+ * Slug: ucsc-2022/topic-page
+ * Categories: examples
  */
 ?>
 
