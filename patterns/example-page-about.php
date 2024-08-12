@@ -2,7 +2,7 @@
 /**
  * Title: About Page
  * Slug: ucsc-2022/about-page
- * Categories: example_pages
+ * Categories: examples
  */
 ?>
 
