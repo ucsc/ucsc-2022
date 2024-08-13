@@ -63,17 +63,18 @@ a {
 }
 
 /* Linked Images hover and focus transition  */
-
+figure:has(a) {
 	a {
-		display: block;
 		overflow: hidden;
+		display:block;
 
 		img {
 			transition: transform 0.3s ease;
 		}
 
+		&:focus,
 		&:hover,
-		&:focus {
+		&:active {
 
 			img {
 				transform: scale(1.15);
@@ -83,11 +84,17 @@ a {
 			}
 		}
 	}
+}
+
 figure[style^="background-image"]:has(a) {
-	transition: transform 0.3s ease;
-	&:hover,
-	&:focus {
-		// transform: scale(1.15);
-		background-size:115%!important;
-	}
+	transition: all 0.3s ease;
+	background-size: 100% !important;
+		&:focus,
+		&:hover,
+		&:active {
+			background-size:115% !important;
+			@media screen and (prefers-reduced-motion: reduce) {
+				background-size: 100%;
+			}
+		}
 	}
