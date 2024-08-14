@@ -22,14 +22,6 @@ if (!function_exists('ucsc_setup')):
 		add_editor_style('build/style-index.css');
 
 		/**
-		 * Register additional Pattern category
-		 */
-		register_block_pattern_category(
-			'examples',
-			array( 'label' => __( 'Examples', 'ucsc-2022' ) )
-		);
-
-		/**
 		 * Register primary navigation menu location
 		 */
 		register_nav_menus([
