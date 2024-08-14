@@ -61,8 +61,15 @@ a {
 		scroll-margin-top: 11rem;
 	}
 }
+/**
+	* Linked Images hover, focus, active transition
+	*/
 
-/* Linked Images hover and focus transition  */
+/**
+	* Figure elements that have linked images
+	* transition on hover, focus and active
+	* unless a user "prefers reduced motion."
+	*/
 figure:has(a) {
 	a {
 		overflow: hidden;
@@ -86,6 +93,11 @@ figure:has(a) {
 	}
 }
 
+/**
+	* Figure elements that have linked background images
+	* transition on hover, focus and active
+	* unless a user "prefers reduced motion."
+	*/
 figure[style^="background-image"]:has(a) {
 	transition: all 0.3s ease;
 	background-size: 100% !important;
