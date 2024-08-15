@@ -105,8 +105,23 @@ figure[style^="background-image"]:has(a) {
 		&:hover,
 		&:active {
 			background-size:115% !important;
-			@media screen and (prefers-reduced-motion: reduce) {
-				background-size: 100%;
-			}
 		}
 	}
+
+/**
+	* Prefers reduced motion media query
+	*
+	* With a background image, the entire figure element
+	* needs to be wrapped in the media query
+	*
+	*/
+@media screen and (prefers-reduced-motion: reduce) {
+	figure[style^="background-image"]:has(a) {
+		background-size: 100% !important;
+			&:focus,
+			&:hover,
+			&:active {
+				background-size:100% !important;
+			}
+		}
+}
