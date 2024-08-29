@@ -13,9 +13,9 @@
 		"php": "^8.2",
 		"johnpbloch/wordpress": "6.2.2",
 		"wpackagist-theme/twentytwentyone": "^1.5",
-		"advanced-custom-fields/advanced-custom-fields-pro": "^6.1",
 		"wpackagist-plugin/icon-block": "1.5.0",
-		"gravityforms/gravityforms": "^2.8"
+		"gravityforms/gravityforms": "^2.8",
+		"wpengine/advanced-custom-fields-pro": "6.3.5"
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
@@ -30,22 +30,10 @@
 		  "type": "composer",
 		  "url": "https://wpackagist.org"
 		},
-
-	  {
-		"type": "package",
-		"package": {
-		  "name": "advanced-custom-fields/advanced-custom-fields-pro",
-		  "version": "6.1.6",
-		  "type": "wordpress-plugin",
-		  "dist": {
-			"type": "zip",
-			"url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%WP_PLUGIN_ACF_KEY}&t={%VERSION}"
-		  },
-		  "require": {
-			"ffraenz/private-composer-installer": "^5.0"
-		  }
-		}
-	  },
+		{
+			"type": "composer",
+			"url": "https://connect.advancedcustomfields.com"
+		},
 	  {
 		"type": "package",
 		"package": {

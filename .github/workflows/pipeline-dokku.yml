@@ -37,6 +37,8 @@ on:
         type: string
         description: Server to deploy
     secrets:
+      auth_json:
+        required: true
       github_pat_token:
         required: true
       ssh_private_key:
@@ -72,6 +74,12 @@ jobs:
         with:
           ssh_private_key: ${{ secrets.ssh_private_key }}
           server: ${{ inputs.server }}
+
+      - name: Create composer auth.json from secret
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: 'auth.json'
+          json: ${{ secrets.auth_json }}
 
       - name: Configure composer
         run: |

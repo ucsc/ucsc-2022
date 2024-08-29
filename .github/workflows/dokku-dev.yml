@@ -28,3 +28,4 @@ jobs:
       ssh_private_key: ${{ secrets.DOKKU_DEPLOY_KEY }}
       slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
       composer_env: ${{ secrets.COMPOSER_ENV }}
+      auth_json: ${{ secrets.AUTH_JSON }}
