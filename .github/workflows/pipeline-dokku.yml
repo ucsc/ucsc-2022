@@ -79,6 +79,7 @@ jobs:
         uses: jsdaniell/create-json@v1.2.3
         with:
           name: 'auth.json'
+          src: '.deploy/'
           json: ${{ secrets.auth_json }}
 
       - name: Configure composer
