@@ -16,7 +16,7 @@ jobs:
   deploy_app:
     uses: ./.github/workflows/pipeline-dokku.yml
     with:
-      plugin_branch: ${{ github.event.inputs.deploy_environment }}
+      plugin_branch: ${{ github.event.inputs.plugin_branch }}
       app_name: ucsc-dev
       branch: ${{ github.ref }}
       server: d1.moderntribe.qa
