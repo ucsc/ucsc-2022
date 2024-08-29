@@ -101,6 +101,7 @@ jobs:
 
       - name: Prepare deploy
         run: |
+          ls -la
           mkdir -p ${{ inputs.theme_folder }}
           mkdir -p ${{ inputs.plugin_folder }}
           cp -r $(ls -A | grep -vE ".deploy|.git|node_modules") ${{ inputs.theme_folder }}
@@ -155,7 +156,7 @@ jobs:
           HUSKY: "0"
         working-directory: .deploy
         run: |
-          git add . --all --force
+          git add . --all --force -v
           git commit --allow-empty -m "Deploy ${{ steps.vars.outputs.branch }}"
           git push dokku master --force
 
