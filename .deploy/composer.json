@@ -14,7 +14,6 @@
 		"johnpbloch/wordpress": "6.2.2",
 		"wpackagist-theme/twentytwentyone": "^1.5",
 		"wpackagist-plugin/icon-block": "1.5.0",
-		"gravityforms/gravityforms": "^2.8",
 		"wpengine/advanced-custom-fields-pro": "6.3.5"
 	},
 	"extra": {
