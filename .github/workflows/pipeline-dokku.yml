@@ -136,7 +136,7 @@ jobs:
       - name: Setup Plugin node version
         uses: actions/setup-node@v2
         with:
-          node-version-file: ./.nvmrc
+          node-version: 20.10.0
 
       - name: Build Plugin assets
         run: |
