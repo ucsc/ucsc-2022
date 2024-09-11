@@ -133,6 +133,11 @@ jobs:
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
+      - name: Setup Plugin node version
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: ./.nvmrc
+
       - name: Build Plugin assets
         run: |
           cd ${{ inputs.plugin_folder }}
