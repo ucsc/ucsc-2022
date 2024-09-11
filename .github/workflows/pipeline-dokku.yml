@@ -133,6 +133,13 @@ jobs:
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
+      - name: Build Plugin assets
+        run: |
+          cd ${{ inputs.plugin_folder }}
+          nvm use && npm install
+          npm run build
+          rm -rf node_modules
+
       - name: Define app to deploy
         id: define_app
         run: |
