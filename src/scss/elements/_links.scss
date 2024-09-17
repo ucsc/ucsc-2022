@@ -61,3 +61,67 @@ a {
 		scroll-margin-top: 11rem;
 	}
 }
+/**
+	* Linked Images hover, focus, active transition
+	*/
+
+/**
+	* Figure elements that have linked images
+	* transition on hover, focus and active
+	* unless a user "prefers reduced motion."
+	*/
+figure:has(a) {
+	a {
+		overflow: hidden;
+		display:block;
+
+		img {
+			transition: transform 0.3s ease;
+		}
+
+		&:focus,
+		&:hover,
+		&:active {
+
+			img {
+				transform: scale(1.15);
+				@media screen and (prefers-reduced-motion: reduce) {
+			  	transform: none;
+				}
+			}
+		}
+	}
+}
+
+/**
+	* Figure elements that have linked background images
+	* transition on hover, focus and active
+	* unless a user "prefers reduced motion."
+	*/
+figure[style^="background-image"]:has(a) {
+	transition: all 0.3s ease;
+	background-size: 100% !important;
+		&:focus,
+		&:hover,
+		&:active {
+			background-size:115% !important;
+		}
+	}
+
+/**
+	* Prefers reduced motion media query
+	*
+	* With a background image, the entire figure element
+	* needs to be wrapped in the media query
+	*
+	*/
+@media screen and (prefers-reduced-motion: reduce) {
+	figure[style^="background-image"]:has(a) {
+		background-size: 100% !important;
+			&:focus,
+			&:hover,
+			&:active {
+				background-size:100% !important;
+			}
+		}
+}

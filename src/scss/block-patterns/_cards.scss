@@ -22,28 +22,6 @@
 	height: 100%;
 }
 
-/* Card images */
-:where(.ucsc__card .wp-block-image),
-:where(.ucsc__card .wp-block-post-featured-image) {
-
-	a {
-		display: block;
-		overflow: hidden;
-
-		img {
-			transition: transform 0.3s ease;
-		}
-
-		&:hover,
-		&:focus {
-
-			img {
-				transform: scale(1.15);
-			}
-		}
-	}
-}
-
 /* Links in card overlines and titles */
 :where(.ucsc__card .has-small-font-size:first-child),
 :where(.ucsc__card .wp-block-image + .has-small-font-size),
