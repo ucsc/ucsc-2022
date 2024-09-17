@@ -16,7 +16,7 @@ jobs:
   deploy_app:
     uses: ./.github/workflows/pipeline-dokku.yml
     with:
-      plugin_branch: ${{ github.event.inputs.deploy_environment }}
+      plugin_branch: ${{ github.event.inputs.plugin_branch }}
       app_name: ucsc-dev
       branch: ${{ github.ref }}
       server: d1.moderntribe.qa
@@ -28,3 +28,4 @@ jobs:
       ssh_private_key: ${{ secrets.DOKKU_DEPLOY_KEY }}
       slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
       composer_env: ${{ secrets.COMPOSER_ENV }}
+      auth_json: ${{ secrets.AUTH_JSON }}
