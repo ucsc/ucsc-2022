@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UCSC functions and definitions
  *
@@ -82,22 +83,22 @@ add_action('after_setup_theme', 'ucsc_setup');
  */
 function ucsc_favicons()
 {
-	?>
+?>
 
 	<link rel="shortcut icon" href="<?php echo esc_url(
- 	get_stylesheet_directory_uri()
- ); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
+																		get_stylesheet_directory_uri()
+																	); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
 	<link rel="shortcut icon" href="<?php echo esc_url(
- 	get_stylesheet_directory_uri()
- ); ?>/images/favicons/ucsc-favicon.svg" type="image/svg+xml">
+																		get_stylesheet_directory_uri()
+																	); ?>/images/favicons/ucsc-favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="<?php echo esc_url(
- 	get_stylesheet_directory_uri()
- ); ?>/images/favicons/apple-icon.png">
+																				get_stylesheet_directory_uri()
+																			); ?>/images/favicons/apple-icon.png">
 	<link rel="manifest" href="<?php echo esc_url(
- 	get_stylesheet_directory_uri()
- ); ?>/images/favicons/manifest.webmanifest">
+																get_stylesheet_directory_uri()
+															); ?>/images/favicons/manifest.webmanifest">
 
-	<?php
+<?php
 }
 add_action('wp_head', 'ucsc_favicons');
 
@@ -123,7 +124,7 @@ function ucsc_scripts()
 		'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800&display=swap',
 		false
 	);
-	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_style('dashicons');
 	wp_register_script(
 		'ucsc-front',
 		get_template_directory_uri() . '/build/theme.js',
@@ -360,12 +361,12 @@ add_action('wp_footer', 'ucsc_truss_assets');
 
 function ucsc_truss_assets()
 {
-	?>
+?>
 
 	<!-- Script and style to include our components library, Truss.  -->
-	<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.7.12/dist/ucsc-trss/ucsc-trss.esm.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.7.12/dist/ucsc-trss/ucsc-trss.css">
-	<?php
+	<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.8.2/dist/ucsc-trss/ucsc-trss.esm.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.8.2/dist/ucsc-trss/ucsc-trss.css">
+<?php
 }
 
 add_action('wp_footer', 'ucsc_last_modified', 10);
@@ -393,13 +394,13 @@ remove_action('wp_footer', 'the_block_template_skip_link');
 function ucsc_skip_link()
 {
 	/**
-	* Print the skip-link styles.
-	*/
-	?>
+	 * Print the skip-link styles.
+	 */
+?>
 	<style id="skip-link-styles">
 		.skip-link.screen-reader-text {
 			border: 0;
-			clip: rect(1px,1px,1px,1px);
+			clip: rect(1px, 1px, 1px, 1px);
 			clip-path: inset(50%);
 			height: 1px;
 			margin: -1px;
@@ -433,14 +434,14 @@ function ucsc_skip_link()
 	 */
 	?>
 	<script>
-		( function() {
-			var skipLinkTarget = document.querySelector( 'main' ),
+		(function() {
+			var skipLinkTarget = document.querySelector('main'),
 				sibling,
 				skipLinkTargetID,
 				skipLink;
 
 			// Early exit if a skip-link target can't be located.
-			if ( ! skipLinkTarget ) {
+			if (!skipLinkTarget) {
 				return;
 			}
 
@@ -449,37 +450,37 @@ function ucsc_skip_link()
 			sibling = document.body.firstChild;
 
 			// Early exit if the root element was not found.
-			if ( ! sibling ) {
+			if (!sibling) {
 				return;
 			}
 
 			// Get the skip-link target's ID, and generate one if it doesn't exist.
 			skipLinkTargetID = skipLinkTarget.id;
-			if ( ! skipLinkTargetID ) {
+			if (!skipLinkTargetID) {
 				skipLinkTargetID = 'wp--skip-link--target';
 				skipLinkTarget.id = skipLinkTargetID;
 			}
 
 			// Create a block level element to contain the skip link.
-			skipLinkContainer = document.createElement( 'div' );
-			skipLinkContainer.setAttribute( 'role', 'navigation' );
+			skipLinkContainer = document.createElement('div');
+			skipLinkContainer.setAttribute('role', 'navigation');
 
 			// Create the skip link.
-			skipLink = document.createElement( 'a' );
-			skipLink.setAttribute( 'aria-label', 'skip to content' );
-			skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+			skipLink = document.createElement('a');
+			skipLink.setAttribute('aria-label', 'skip to content');
+			skipLink.classList.add('skip-link', 'screen-reader-text');
 			skipLink.href = '#' + skipLinkTargetID;
 			skipLink.innerHTML = '<?php /* translators: Hidden accessibility text. */ esc_html_e(
-   	'Skip to content'
-   ); ?>';
+															'Skip to content'
+														); ?>';
 
 			skipLinkContainer.append(skipLink);
 
 			// Inject the skip link.
-			sibling.parentElement.insertBefore( skipLinkContainer, sibling );
-		}() );
+			sibling.parentElement.insertBefore(skipLinkContainer, sibling);
+		}());
 	</script>
-	<?php
+<?php
 }
 
 add_action('wp_footer', 'ucsc_skip_link');
