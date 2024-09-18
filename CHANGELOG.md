@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/ucsc/ucsc-2022/compare/v4.1.1...v4.2.0) (2024-09-18)
+
+
+### Features
+
+* ✨ Add style.css version updater for standard-version ([6263aef](https://github.com/ucsc/ucsc-2022/commit/6263aefadb70ed13d02fe8d708769d47ccb8867b))
+* 🎉 Add zoom transition on linked image hover. Fixes [#340](https://github.com/ucsc/ucsc-2022/issues/340) ([e7aedc9](https://github.com/ucsc/ucsc-2022/commit/e7aedc9f02c4c0f3eec2c0a386a30fdd1daf3c8d))
+* Update Truss to v0.8.2 ([9f1cb98](https://github.com/ucsc/ucsc-2022/commit/9f1cb9866283a9ec6f374fd52eefb9daa851f1b2))
+
 ### [4.1.1](https://github.com/ucsc/ucsc-2022/compare/v4.1.0...v4.1.1) (2024-07-02)
 
 ## [4.1.0](https://github.com/ucsc/ucsc-2022/compare/v4.0.4...v4.1.0) (2024-05-24)
