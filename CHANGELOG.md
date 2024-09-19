@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/ucsc/ucsc-2022/compare/v4.2.0...v4.2.1) (2024-09-19)
+
+
+### Bug Fixes
+
+* Add image hover zoom to featured image in latest posts block ([70660f5](https://github.com/ucsc/ucsc-2022/commit/70660f582ff77eb07c191d72704cfec808463dbf)), closes [#340](https://github.com/ucsc/ucsc-2022/issues/340)
+
 ## [4.2.0](https://github.com/ucsc/ucsc-2022/compare/v4.1.1...v4.2.0) (2024-09-18)
 
 
