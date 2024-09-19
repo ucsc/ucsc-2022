@@ -61,6 +61,7 @@ a {
 		scroll-margin-top: 11rem;
 	}
 }
+
 /**
 	* Linked Images hover, focus, active transition
 	*/
@@ -70,10 +71,11 @@ a {
 	* transition on hover, focus and active
 	* unless a user "prefers reduced motion."
 	*/
-figure:has(a) {
+	figure:has(a),
+	.wp-block-latest-posts__featured-image:has(a) {
 	a {
 		overflow: hidden;
-		display:block;
+		display: block;
 
 		img {
 			transition: transform 0.3s ease;
@@ -82,11 +84,10 @@ figure:has(a) {
 		&:focus,
 		&:hover,
 		&:active {
-
 			img {
 				transform: scale(1.15);
 				@media screen and (prefers-reduced-motion: reduce) {
-			  	transform: none;
+					transform: none;
 				}
 			}
 		}
@@ -101,12 +102,12 @@ figure:has(a) {
 figure[style^="background-image"]:has(a) {
 	transition: all 0.3s ease;
 	background-size: 100% !important;
-		&:focus,
-		&:hover,
-		&:active {
-			background-size:115% !important;
-		}
+	&:focus,
+	&:hover,
+	&:active {
+		background-size: 115% !important;
 	}
+}
 
 /**
 	* Prefers reduced motion media query
@@ -115,13 +116,14 @@ figure[style^="background-image"]:has(a) {
 	* needs to be wrapped in the media query
 	*
 	*/
+
 @media screen and (prefers-reduced-motion: reduce) {
 	figure[style^="background-image"]:has(a) {
 		background-size: 100% !important;
-			&:focus,
-			&:hover,
-			&:active {
-				background-size:100% !important;
-			}
+		&:focus,
+		&:hover,
+		&:active {
+			background-size: 100% !important;
 		}
+	}
 }
