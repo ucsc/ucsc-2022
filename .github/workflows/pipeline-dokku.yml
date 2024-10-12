@@ -37,6 +37,8 @@ on:
         type: string
         description: Server to deploy
     secrets:
+      auth_json:
+        required: true
       github_pat_token:
         required: true
       ssh_private_key:
@@ -73,6 +75,13 @@ jobs:
           ssh_private_key: ${{ secrets.ssh_private_key }}
           server: ${{ inputs.server }}
 
+      - name: Create composer auth.json from secret
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: 'auth.json'
+          dir: '.deploy/'
+          json: ${{ secrets.auth_json }}
+
       - name: Configure composer
         run: |
           echo "${{ secrets.composer_env }}" > .env
@@ -101,6 +110,7 @@ jobs:
       - name: Install Theme composer
         working-directory: ${{ inputs.theme_folder }}
         run: |
+          echo ${{ github.event.inputs.plugin_branch }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
 
       # Need specific version, thus cloning plugin here
@@ -122,6 +132,18 @@ jobs:
         run: |
           cd ${{ inputs.plugin_folder }}
           composer install --optimize-autoloader --ignore-platform-reqs --no-dev
+
+      - name: Setup Plugin node version
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.10.0
+
+      - name: Build Plugin assets
+        run: |
+          cd ${{ inputs.plugin_folder }}
+          npm install
+          npm run build
+          rm -rf node_modules
 
       - name: Define app to deploy
         id: define_app
