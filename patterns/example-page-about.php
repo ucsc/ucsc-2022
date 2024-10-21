@@ -25,7 +25,7 @@
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"66.66%","style":{"spacing":{"padding":{"right":"var:preset|spacing|30"}}}} -->
 <div class="wp-block-column" style="padding-right:var(--wp--preset--spacing--30);flex-basis:66.66%"><!-- wp:paragraph {"align":"center","backgroundColor":"ucsc-violator-yellow","className":"is-style-success"} -->
-<p class="has-text-align-center is-style-success has-ucsc-violator-yellow-background-color has-background"><strong>Web editor! Looking for web writing best practices to match this page? </strong><a href="https://sandbox.wordpress.ucsc.edu/about-wildlife-writing-tips/" data-type="page" data-id="2066">You can find them here.</a></p>
+<p class="has-text-align-center is-style-success has-ucsc-violator-yellow-background-color has-background"><strong>Web editor! Looking for web writing best practices to match this page? </strong><a href="https://websites.ucsc.edu/guides/showcase/pattern-about-page/" data-type="page" data-id="2066">You can find them here.</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
