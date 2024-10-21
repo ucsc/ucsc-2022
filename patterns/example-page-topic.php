@@ -15,7 +15,7 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","backgroundColor":"ucsc-violator-yellow","className":"is-style-success"} -->
-<p class="has-text-align-center is-style-success has-ucsc-violator-yellow-background-color has-background"><strong>Web editor! Looking for web writing best practices to match this page? </strong><a href="https://sandbox.wordpress.ucsc.edu/?page_id=2134&amp;preview=true" data-type="page" data-id="2066">You can find them here.</a></p>
+<p class="has-text-align-center is-style-success has-ucsc-violator-yellow-background-color has-background"><strong>Web editor! Looking for web writing best practices to match this page? </strong><a href="https://websites.ucsc.edu/guides/showcase/pattern-landing-page">You can find them here.</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|40","top":"var:preset|spacing|20"}}},"className":"is-style-ucsc-intro-text"} -->
