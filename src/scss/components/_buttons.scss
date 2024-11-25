@@ -56,6 +56,12 @@ a.wp-element-button {
 	background-color: var(--wp--preset--color--white);
 }
 
+.is-style-ucsc-outline-white .wp-element-button {
+	border: 2px solid var(--wp--preset--color--white);
+	color: var(--wp--preset--color--white);
+	background-color: transparent;
+}
+
 /*
 	Button :focus and :hover colors
 */
@@ -93,6 +99,12 @@ a.wp-element-button {
 	background-color: var(--wp--preset--color--ucsc-primary-blue);
 }
 
+.is-style-ucsc-outline-white .wp-element-button:focus,
+.is-style-ucsc-outline-white .wp-element-button:hover {
+	color: var(--wp--preset--color--black);
+	background-color: var(--wp--preset--color--white);
+}
+
 /*
 	Button :active colors
 */
@@ -119,4 +131,9 @@ a.wp-element-button {
 .is-style-ucsc-white .wp-element-button:active {
 	color: var(--wp--preset--color--white);
 	background-color: var(--wp--preset--color--ucsc-primary-blue);
+}
+
+.is-style-ucsc-outline-white .wp-element-button:active {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--black);
 }
