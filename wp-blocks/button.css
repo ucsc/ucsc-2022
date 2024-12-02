@@ -1,3 +1,11 @@
+/**
+ * WP Core Button Blocks
+ *
+ * Note that this file supplements the theme's general `wp-element-button`
+ * styles with specific styles for button within core button blocks. General
+ * styles are contained in the theme's component styles for use across the theme
+ * and dependent plugins.
+ */
 .wp-block-button.aligncenter {
 	text-align: center;
 }
