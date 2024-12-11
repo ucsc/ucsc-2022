@@ -25,6 +25,11 @@ add_action('init', function () {
 	);
 
 	register_block_pattern_category(
+		'examples',
+		array('label' => __('Page Examples', 'ucsc'))
+	);
+
+	register_block_pattern_category(
 		'grid',
 		array('label' => __('Grid', 'ucsc'))
 	);
