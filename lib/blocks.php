@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-add_action( 'init', static function (): void {
+add_action('init', static function (): void {
 	// Register custom blocks from Advanced Custom Fields
-	register_block_type( get_template_directory() . '/blocks/main-nav' );
-	register_block_type( get_template_directory() . '/blocks/breadcrumbs' );
+	register_block_type(get_template_directory() . '/blocks/main-nav');
+	register_block_type(get_template_directory() . '/blocks/breadcrumbs');
 
 	// Remove core block patterns
-	remove_theme_support( 'core-block-patterns' );
+	remove_theme_support('core-block-patterns');
 
 	// Remove included patterns that line 8 doesn't remove
 	if ( has_block( 'core/social-links-shared-background-color' ) ) {
@@ -19,21 +19,26 @@ add_action( 'init', static function (): void {
 	// Register Block Categories
 	register_block_pattern_category(
 		'page_layout',
-		[ 'label' => __( 'Page Layout', 'ucsc' ) ]
+		['label' => __('Page Layout', 'ucsc')]
 	);
 
 	register_block_pattern_category(
 		'text_layout',
-		[ 'label' => __( 'Text Layout', 'ucsc' ) ]
+		['label' => __('Text Layout', 'ucsc')]
 	);
 
 	register_block_pattern_category(
 		'banner',
-		[ 'label' => __( 'Banner', 'ucsc' ) ]
+		['label' => __('Banner', 'ucsc')]
+	);
+
+	register_block_pattern_category(
+		'examples',
+		array('label' => __('Page Examples', 'ucsc'))
 	);
 
 	register_block_pattern_category(
 		'grid',
-		[ 'label' => __( 'Grid', 'ucsc' ) ]
+		['label' => __('Grid', 'ucsc')]
 	);
-} );
+});
