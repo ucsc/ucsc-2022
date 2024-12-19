@@ -1,0 +1,93 @@
+/**
+ * Query pagination.
+ */
+.ucsc-pagination {
+	gap: 0;
+	justify-content: space-between;
+	width: 100%;
+
+	@include media-query($wp-columns-unstack) {
+		justify-content: center;
+		gap: 24px;
+	}
+
+	.page-numbers {
+		display: none;
+		aspect-ratio: 1;
+		width: 48px;
+		background-color: transparent;
+		color: var(--wp--preset--color--ucsc-primary-blue);
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		border-radius: 50%;
+		transition: 0.1s ease-in-out;
+
+		&.current {
+			display: flex;
+			background-color: var(--wp--preset--color--lightest-gray);
+		}
+
+		&.prev,
+		&.next {
+			display: flex;
+			overflow: hidden;
+			text-indent: 1000px;
+			position: relative;
+			border: 1px solid var(--wp--preset--color--light-gray);
+			color: var(--wp--preset--color--dark-gray);
+
+			&::before {
+				content: "";
+				display: block;
+				height: 11px;
+				width: 11px;
+				border-style: solid;
+				border-width: 0 0 1px 1px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+		}
+
+		&.prev {
+
+			&::before {
+				transform: translate(calc(3px - 50%), -50%) rotate(45deg);
+			}
+		}
+
+		&.next {
+
+			&::before {
+				transform: translate(calc(-3px - 50%), -50%) rotate(-135deg);
+			}
+		}
+	}
+
+	a.page-numbers {
+
+		@include media-query($wp-columns-unstack) {
+			display: flex;
+		}
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--wp--preset--color--ucsc-primary-yellow);
+		}
+
+		&.prev,
+		&.next {
+			border: 0 none;
+			background-color: var(--wp--preset--color--ucsc-primary-blue);
+			color: var(--wp--preset--color--white);
+
+			&:hover,
+			&:focus-visible {
+				background-color: var(--wp--preset--color--ucsc-primary-yellow);
+				color: var(--wp--preset--color--ucsc-primary-blue);
+			}
+		}
+	}
+}
