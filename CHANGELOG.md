@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.2](https://github.com/ucsc/ucsc-2022/compare/v4.2.1...v4.2.2) (2025-02-06)
+
+
+### Features
+
+* Add full-page patterns for example Home, About, and Topic pages ([#364](https://github.com/ucsc/ucsc-2022/issues/364)) ([531e69b](https://github.com/ucsc/ucsc-2022/commit/531e69bffaa6e1db6ab0aa27857381da4fd1c3e1)), closes [#350](https://github.com/ucsc/ucsc-2022/issues/350)
+
+
+### Bug Fixes
+
+* Enable required core patterns for compatibility with 6.7.x ([#363](https://github.com/ucsc/ucsc-2022/issues/363)) ([6f90139](https://github.com/ucsc/ucsc-2022/commit/6f90139e812dbedf519752c8016e7cb95ce85eab)), closes [#362](https://github.com/ucsc/ucsc-2022/issues/362)
+
 ### [4.2.1](https://github.com/ucsc/ucsc-2022/compare/v4.2.0...v4.2.1) (2024-09-19)
 
 
