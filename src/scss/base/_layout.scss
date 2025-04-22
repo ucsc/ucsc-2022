@@ -9,9 +9,9 @@ body {
 }
 
 .wp-site-blocks {
-	flex: 1 0 auto;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 100%;
 
 	&:has(.breadcrumbs-region) {
 		grid-template-rows: auto auto 1fr auto;
