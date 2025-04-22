@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.3](https://github.com/ucsc/ucsc-2022/compare/v4.2.2...v4.2.3) (2025-04-22)
+
+
+### Bug Fixes
+
+* 🚑 Layout grid element needs a grid columns rule ([#371](https://github.com/ucsc/ucsc-2022/issues/371)) ([445cf35](https://github.com/ucsc/ucsc-2022/commit/445cf3514ab4ded7eae6a4ffb520f8d44ef9ef14)), closes [#370](https://github.com/ucsc/ucsc-2022/issues/370)
+
 ### [4.2.2](https://github.com/ucsc/ucsc-2022/compare/v4.2.1...v4.2.2) (2025-02-06)
 
 
