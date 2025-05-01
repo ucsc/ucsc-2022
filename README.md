@@ -1,10 +1,10 @@
 # Official WordPress theme for UC Santa Cruz
 
-This theme is being developed in the open. You can preview the work in progress here: <https://www-next.ucsc.edu>
+This theme is being developed in the open. You can preview the work in progress here: <https://www.ucsc.edu>
 
 ## Theme requirements
 
-- WordPress 6.2
+- WordPress 6.7
 - This theme **requires** the following plugins:
   - [UCSC Custom Functionality](https://github.com/ucsc/ucsc-custom-functionality), which adds analytics code and custom shortcodes
   - [Advanced Custom Fields PRO](https://advancedcustomfields.com)
@@ -31,4 +31,4 @@ This theme is being developed in the open. You can preview the work in progress 
 
 ## Contributors
 
-The UCSC WordPress theme is maintained by the University Relations web team in the campus [Communications & Marketing](https://communications.ucsc.edu) office. If you have any questions about this project, you can contact [Rob Knight](https://campusdirectory.ucsc.edu/cd_detail?uid=raknight), [Jason Chafin](https://campusdirectory.ucsc.edu/cd_detail?uid=jchafin), or [submit an issue](https://github.com/ucsc/theme-ucsc/issues) here on Github.
+The UCSC WordPress theme is maintained by the University Advancement web team in the campus [Communications](https://communications.ucsc.edu) office. If you have any questions about this project, you can contact [Rob Knight](https://campusdirectory.ucsc.edu/cd_detail?uid=raknight), [Jason Chafin](https://campusdirectory.ucsc.edu/cd_detail?uid=jchafin), or [submit an issue](https://github.com/ucsc/ucsc-2022/issues) here on Github.
