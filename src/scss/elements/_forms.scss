@@ -1,0 +1,67 @@
+label {
+	display: block;
+	margin-bottom: 0.25em;
+	font-weight: 600;
+}
+
+input,
+select,
+textarea {
+	width: fit-content;
+	max-width: 100%;
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+option {
+	margin-bottom: 0.2lh;
+	padding: 0.12em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: auto;
+	margin-right: 0.3em;
+}
+
+input[type="color"] {
+	height: 3rem;
+	width: 3.2rem;
+	padding: 0.15em 0.18em;
+}
+
+input[type="range"] {
+	padding: 0;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+legend {
+	font-weight: 600;
+	padding: 0 0.5rem;
+	font-size: 1.25rem;
+}
+
+.ucsc-radio-group label,
+.ucsc-checkbox-group label {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 0.9rem;
+	font-weight: 400;
+}
+
+button {
+	padding: 0.8rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	margin-right: 0.8rem;
+}
