@@ -73,7 +73,7 @@ a {
 	*/
 	figure:has(a),
 	.wp-block-latest-posts__featured-image:has(a) {
-	a {
+	a:has(img) {
 		overflow: hidden;
 		display: block;
 
