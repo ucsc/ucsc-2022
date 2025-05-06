@@ -127,3 +127,21 @@ figure[style^="background-image"]:has(a) {
 		}
 	}
 }
+
+/**
+* Styles for the 'eyebrow,' a small
+* affiliation link above the site title
+*/
+.site-header .ucsc-eyebrow a {
+	text-decoration: unset;
+	transition: all 0.3s ease;
+
+	&:focus,
+	&:hover,
+	&:active {
+		box-shadow: 0 0 0 2px var(--wp--preset--color--white);
+		background-color: var(--wp--preset--color--white);
+		z-index: 1;
+		color: var(--wp--preset--color--ucsc-primary-blue);
+	}
+}
