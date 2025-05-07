@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/ucsc/ucsc-2022/compare/v4.2.4...v4.3.0) (2025-05-07)
+
+
+### Features
+
+* ✨ Default styles for form elements  Fixes [#347](https://github.com/ucsc/ucsc-2022/issues/347) ([#375](https://github.com/ucsc/ucsc-2022/issues/375)) ([73c64cf](https://github.com/ucsc/ucsc-2022/commit/73c64cfa6252e00ec667ee51783c090363cc8e81))
+* ✨ Pre-configured template part and styles for the 'eyebrow' affiliation link above the site title in the header ([#377](https://github.com/ucsc/ucsc-2022/issues/377)) ([8c1d8ca](https://github.com/ucsc/ucsc-2022/commit/8c1d8ca18334b138dfde7781f1303173a0e65e9d)), closes [#366](https://github.com/ucsc/ucsc-2022/issues/366)
+
+
+### Bug Fixes
+
+* 🐛 Remove image hover effect rules from caption links ([#376](https://github.com/ucsc/ucsc-2022/issues/376)) ([ca0cf75](https://github.com/ucsc/ucsc-2022/commit/ca0cf7525d62c3c408d475c840aa760d6c4c1286)), closes [#373](https://github.com/ucsc/ucsc-2022/issues/373)
+
 ### [4.2.4](https://github.com/ucsc/ucsc-2022/compare/v4.2.3...v4.2.4) (2025-04-22)
 
 ### [4.2.3](https://github.com/ucsc/ucsc-2022/compare/v4.2.2...v4.2.3) (2025-04-22)
