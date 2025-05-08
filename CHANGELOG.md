@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.3.1](https://github.com/ucsc/ucsc-2022/compare/v4.3.0...v4.3.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* 🐛 Add `flex` back to `.wp-site-blocks` element ([#379](https://github.com/ucsc/ucsc-2022/issues/379)) ([52738b3](https://github.com/ucsc/ucsc-2022/commit/52738b39272fd19c89447cc406e7710118f5485a)), closes [#378](https://github.com/ucsc/ucsc-2022/issues/378)
+
 ## [4.3.0](https://github.com/ucsc/ucsc-2022/compare/v4.2.4...v4.3.0) (2025-05-07)
 
 
