@@ -10,6 +10,7 @@ body {
 
 .wp-site-blocks {
 	display: grid;
+	flex: 1 0 auto;
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: 100%;
 
