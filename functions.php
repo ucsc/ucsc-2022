@@ -364,8 +364,8 @@ function ucsc_truss_assets()
 ?>
 
 	<!-- Script and style to include our components library, Truss.  -->
-	<script type="module" src="https://unpkg.com/@ucsantacruz/truss@0.8.2/dist/ucsc-trss/ucsc-trss.esm.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/@ucsantacruz/truss@0.8.2/dist/ucsc-trss/ucsc-trss.css">
+	<script type="module" src="https://ucsc-truss.netlify.app/ucsc-trss/ucsc-trss.esm.js"></script>
+	<link rel="stylesheet" href="https://ucsc-truss.netlify.app/ucsc-trss/ucsc-trss.css">
 <?php
 }
 
