@@ -18,3 +18,9 @@ GitHub Theme URI: http://github.com/ucsc/ucsc-2022
 body * {
 	box-sizing: border-box;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+}
