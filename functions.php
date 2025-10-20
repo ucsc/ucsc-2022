@@ -484,3 +484,87 @@ function ucsc_skip_link()
 }
 
 add_action('wp_footer', 'ucsc_skip_link');
+
+// Simple JavaScript-only solution for WCSI routing
+// WCSI Class Schedule routing via WordPress rewrites
+add_action('init', function () {
+	// Capture the SPA route segment as a query var
+	add_rewrite_tag('%wcsi_route%', '(.+)');
+	// No hard-coded page rewrites; routing is handled in the request filter dynamically.
+});
+
+add_filter('query_vars', function ($vars) {
+	$vars[] = 'wcsi_route';
+	return $vars;
+});
+
+/**
+ * Force-resolve Class Schedule SPA deep links without redirects to Fix jira issue WPM-35.
+ * This maps requests like:
+ *  - /class-schedule/{type}/{rest}
+ *  - /class-schedule-sample-page/{type}/{rest}
+ * to the page "class-schedule-sample-page" and sets wcsi_route for the SPA.
+ */
+add_filter('request', function ($qv) {
+	// Safety: only on frontend
+	if (is_admin()) {
+		return $qv;
+	}
+
+	$uri = $_SERVER['REQUEST_URI'] ?? '';
+	// Strip query string and leading/trailing slashes
+	$path = trim(parse_url($uri, PHP_URL_PATH) ?? '', '/');
+
+	// Match any page path followed by one of the SPA segments
+	if (preg_match('#^(.+?)/(course|department|subject)/(.+)$#', $path, $m)) {
+		$base_path = $m[1];
+		$route = $m[2] . '/' . $m[3];
+
+		// Try to resolve the base path to a real page (supports nested paths)
+		$page = get_page_by_path($base_path, OBJECT, 'page');
+
+		if ($page instanceof WP_Post) {
+			// Optional: only handle pages that actually contain the ClassSchedule block
+			if (function_exists('has_block')) {
+				$has_block = has_block('ucscblocks/classschedule', $page);
+			} else {
+				$has_block = true; // Fallback if function unavailable
+			}
+
+			if ($has_block) {
+				// Resolve to the found page and pass the SPA route
+				$qv = [
+					'page_id'   => $page->ID,
+					'wcsi_route'=> $route,
+				];
+				return $qv;
+			}
+		}
+
+		// No dev-only fallbacks; require an actual page to resolve.
+	}
+	return $qv;
+});
+
+/**
+ * Prevent canonical redirects from interfering with deep links (e.g., adding a trailing slash)
+ * and avoid redirect hops; let the page load directly.
+ */
+add_filter('redirect_canonical', function ($redirect_url, $requested_url) {
+	$path = trim(parse_url($requested_url, PHP_URL_PATH) ?? '', '/');
+	if (preg_match('#^(.+?)/(course|department|subject)/#', $path, $m)) {
+		$base_path = $m[1];
+		$page = get_page_by_path($base_path, OBJECT, 'page');
+		if ($page instanceof WP_Post) {
+			// Optional block presence check to narrow scope
+			$allow = true;
+			if (function_exists('has_block')) {
+				$allow = has_block('ucscblocks/classschedule', $page);
+			}
+			if ($allow) {
+				return false; // suppress canonical redirect for SPA deep links to valid pages
+			}
+		}
+	}
+	return $redirect_url;
+}, 10, 2);
