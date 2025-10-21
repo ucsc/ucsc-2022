@@ -502,8 +502,8 @@ add_filter('query_vars', function ($vars) {
  * Force-resolve Class Schedule SPA deep links without redirects to Fix jira issue WPM-35.
  * This maps requests like:
  *  - /class-schedule/{type}/{rest}
- *  - /class-schedule-sample-page/{type}/{rest}
- * to the page "class-schedule-sample-page" and sets wcsi_route for the SPA.
+ *  - /my-department-page/{type}/{rest}
+ * to the page "my-department-page" and sets wcsi_route for the SPA.
  */
 add_filter('request', function ($qv) {
 	// Safety: only on frontend
@@ -540,31 +540,6 @@ add_filter('request', function ($qv) {
 				return $qv;
 			}
 		}
-
-		// No dev-only fallbacks; require an actual page to resolve.
 	}
 	return $qv;
 });
-
-/**
- * Prevent canonical redirects from interfering with deep links (e.g., adding a trailing slash)
- * and avoid redirect hops; let the page load directly.
- */
-add_filter('redirect_canonical', function ($redirect_url, $requested_url) {
-	$path = trim(parse_url($requested_url, PHP_URL_PATH) ?? '', '/');
-	if (preg_match('#^(.+?)/(course|department|subject)/#', $path, $m)) {
-		$base_path = $m[1];
-		$page = get_page_by_path($base_path, OBJECT, 'page');
-		if ($page instanceof WP_Post) {
-			// Optional block presence check to narrow scope
-			$allow = true;
-			if (function_exists('has_block')) {
-				$allow = has_block('ucscblocks/classschedule', $page);
-			}
-			if ($allow) {
-				return false; // suppress canonical redirect for SPA deep links to valid pages
-			}
-		}
-	}
-	return $redirect_url;
-}, 10, 2);
