@@ -73,6 +73,21 @@ if (!function_exists('ucsc_setup')):
 		if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
 			include_once get_parent_theme_file_path('vendor/autoload.php');
 		}
+
+		/**
+		 * Register Advanced Custom Fields
+		 */
+		if (file_exists(get_theme_file_path('lib/acf.php'))) {
+			include get_theme_file_path('lib/acf.php');
+		}
+
+		/**
+		 * Register Block Pattern Customizations
+		 */
+		if (file_exists(get_theme_file_path('lib/blocks.php'))) {
+			include get_theme_file_path('lib/blocks.php');
+		}
+
 	}
 endif;
 add_action('after_setup_theme', 'ucsc_setup');
@@ -284,19 +299,7 @@ function ucsc_breadcrumbs_constructor()
 	return Hybrid\Breadcrumbs\Trail::render($args);
 }
 
-/**
- * Register Advanced Custom Fields
- */
-if (file_exists(get_theme_file_path('lib/acf.php'))) {
-	include get_theme_file_path('lib/acf.php');
-}
 
-/**
- * Register Block Pattern Customizations
- */
-if (file_exists(get_theme_file_path('lib/blocks.php'))) {
-	include get_theme_file_path('lib/blocks.php');
-}
 
 /**
  * Register Image Sizes
