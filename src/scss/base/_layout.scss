@@ -1,6 +1,7 @@
-html,
-body {
-	height: 100%;
+html:not(.wp-toolbar),
+body.wp-theme-ucsc-2022 {
+	min-height: 100dvh;
+	height: auto;
 }
 
 body {
