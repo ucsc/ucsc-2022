@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [4.3.3](https://github.com/ucsc/ucsc-2022/compare/v4.3.2...v4.3.3) (2026-04-16)
+
+
+### Bug Fixes
+
+* 🐛 Move ACF and blocks loading to after theme setup function. Fixes [#387](https://github.com/ucsc/ucsc-2022/issues/387) ([#389](https://github.com/ucsc/ucsc-2022/issues/389)) ([8670f7b](https://github.com/ucsc/ucsc-2022/commit/8670f7b085866626a606e9d851b1dbaa68b084c9))
+* **css:** 🚑️ Scope `body` and `html` rules to front-end only and add linting exceptions for modern CSS ([#392](https://github.com/ucsc/ucsc-2022/issues/392)) ([a5199c4](https://github.com/ucsc/ucsc-2022/commit/a5199c4dc94408ef9effbc51480f2821822424d3)), closes [#391](https://github.com/ucsc/ucsc-2022/issues/391)
 
 ### [4.3.2](https://github.com/ucsc/ucsc-2022/compare/v4.3.1...v4.3.2) (2025-05-13)
 
