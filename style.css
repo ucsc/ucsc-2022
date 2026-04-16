@@ -1,18 +1,18 @@
 /*
-Theme Name: UCSC 2022
-Theme URI: http://github.com/ucsc/ucsc-2022
-Author: UC Santa Cruz
-Author URI: https://www.ucsc.edu
-Description: The official WordPress theme for UC Santa Cruz
-Tags: full-site-editing, blog
-Version: 4.3.2
-Requires at least: 6.0
-Tested up to: 6.4.2
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: ucsc-2022
-GitHub Theme URI: http://github.com/ucsc/ucsc-2022
+Theme Name:					UCSC 2022
+Theme URI: 					http://github.com/ucsc/ucsc-2022
+Author: 						UC Santa Cruz
+Author URI: 				https://www.ucsc.edu
+Description: 				The official WordPress theme for UC Santa Cruz
+Tags: 							full-site-editing, blog
+Version: 						4.3.2
+Requires at least: 	6.0
+Tested up to: 			6.9.4
+Requires PHP: 			7.4
+License: 						GNU General Public License v2 or later
+License URI: 				http://www.gnu.org/licenses/gpl-2.0.html
+Update URI: 				http://github.com/ucsc/ucsc-2022/releases
+Text Domain: 				ucsc-2022
 */
 
 body * {
@@ -20,7 +20,9 @@ body * {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
 	@view-transition {
 		navigation: auto;
 	}
+
 }
