@@ -1,0 +1,21 @@
+{
+	"extends": "@wordpress/stylelint-config",
+	"rules": {
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": [
+					"view-transition"
+				]
+			}
+		],
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": [
+					"navigation"
+				]
+			}
+		]
+	}
+}
