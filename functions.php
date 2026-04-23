@@ -93,29 +93,52 @@ endif;
 add_action('after_setup_theme', 'ucsc_setup');
 
 /**
- * Add Favicons
- * See: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+ * Add SVG favicon and web manifest alongside core's Site Icon output.
+ * Core's wp_site_icon() emits PNG/apple-touch-icon from the uploaded Site Icon;
+ * this filter supplements it with the SVG icon and the manifest.
  */
-function ucsc_favicons()
+function ucsc_site_icon_meta_tags($tags)
 {
-?>
-
-	<link rel="shortcut icon" href="<?php echo esc_url(
-																		get_stylesheet_directory_uri()
-																	); ?>/images/favicons/favicon-32x32.png" type="image/png" sizes="any">
-	<link rel="shortcut icon" href="<?php echo esc_url(
-																		get_stylesheet_directory_uri()
-																	); ?>/images/favicons/ucsc-favicon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="<?php echo esc_url(
-																				get_stylesheet_directory_uri()
-																			); ?>/images/favicons/apple-icon.png">
-	<link rel="manifest" href="<?php echo esc_url(
-																get_stylesheet_directory_uri()
-															); ?>/images/favicons/manifest.webmanifest">
-
-<?php
+	$tags[] = sprintf(
+		'<link rel="icon" href="%s" type="image/svg+xml">',
+		esc_url(get_theme_file_uri('images/favicons/ucsc-favicon.svg'))
+	);
+	$tags[] = sprintf(
+		'<link rel="manifest" href="%s">',
+		esc_url(get_theme_file_uri('images/favicons/manifest.webmanifest'))
+	);
+	return $tags;
 }
-add_action('wp_head', 'ucsc_favicons');
+add_filter('wp_site_icon_meta_tags', 'ucsc_site_icon_meta_tags');
+
+/**
+ * Ship theme default favicons when no Site Icon is configured.
+ * Uploading a Site Icon at Appearance → Customize → Site Identity overrides these.
+ */
+function ucsc_default_favicons()
+{
+	if (has_site_icon()) {
+		return;
+	}
+	$favicon_png = esc_url(get_theme_file_uri('images/favicons/favicon-32x32.png'));
+	$favicon_svg = esc_url(get_theme_file_uri('images/favicons/ucsc-favicon.svg'));
+	$apple_icon  = esc_url(get_theme_file_uri('images/favicons/apple-icon.png'));
+	$manifest    = esc_url(get_theme_file_uri('images/favicons/manifest.webmanifest'));
+	printf('<link rel="icon" href="%s" sizes="32x32" type="image/png">' . "\n", $favicon_png);
+	printf('<link rel="icon" href="%s" type="image/svg+xml">' . "\n", $favicon_svg);
+	printf('<link rel="apple-touch-icon" href="%s">' . "\n", $apple_icon);
+	printf('<link rel="manifest" href="%s">' . "\n", $manifest);
+}
+add_action('wp_head', 'ucsc_default_favicons');
+
+/**
+ * Tint mobile browser chrome (Android address bar, iOS 15+ tab bar) with UCSC navy.
+ */
+function ucsc_theme_color_meta()
+{
+	echo '<meta name="theme-color" content="#00458c">' . "\n";
+}
+add_action('wp_head', 'ucsc_theme_color_meta');
 
 /**
  * Enqueue theme scripts and styles.
@@ -473,9 +496,7 @@ function ucsc_skip_link()
 			skipLink.setAttribute('aria-label', 'skip to content');
 			skipLink.classList.add('skip-link', 'screen-reader-text');
 			skipLink.href = '#' + skipLinkTargetID;
-			skipLink.innerHTML = '<?php /* translators: Hidden accessibility text. */ esc_html_e(
-															'Skip to content'
-														); ?>';
+			skipLink.innerHTML = '<?php /* translators: Hidden accessibility text. */ esc_html_e('Skip to content', 'ucsc-2022'); ?>';
 
 			skipLinkContainer.append(skipLink);
 
