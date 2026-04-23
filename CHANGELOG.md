@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.3.4](https://github.com/ucsc/ucsc-2022/compare/v4.3.3...v4.3.4) (2026-04-23)
+
+
+### Bug Fixes
+
+* ⚡️ Fixes the textdomain issue, simplify favicons, and add theme color for PWAs ([b8b00b4](https://github.com/ucsc/ucsc-2022/commit/b8b00b4471041e7ccea93cd80c0839357154972a))
+* 🐛 Fix incorrect textdomain in vendor files: 'ucsc' to 'ucsc-2022' ([3eb36fd](https://github.com/ucsc/ucsc-2022/commit/3eb36fd5dde95dba90ab3765596819ee33b3f8de)), closes [#390](https://github.com/ucsc/ucsc-2022/issues/390)
+* 🐛 Remove `theme` attribute definition from template part includes ([afe0da4](https://github.com/ucsc/ucsc-2022/commit/afe0da4b976ae7b335c22bf470bdb502a49769b1)), closes [#390](https://github.com/ucsc/ucsc-2022/issues/390)
+
 ## [4.3.3](https://github.com/ucsc/ucsc-2022/compare/v4.3.2...v4.3.3) (2026-04-16)
 
 
