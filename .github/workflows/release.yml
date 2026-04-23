@@ -14,10 +14,10 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v4.2.2
-            - uses: actions/setup-node@v3.9.1
+            - uses: actions/checkout@v6.0.2
+            - uses: actions/setup-node@v6.4.0
               with:
-                  node-version: 20
+                  node-version: 24
                   cache: 'npm'
 
             - name: Install Node dependencies
@@ -36,7 +36,7 @@ jobs:
               run: ./node_modules/.bin/wp-scripts plugin-zip
 
             - name: Release
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v3
               with:
                   files: ucsc-2022.zip
                   generate_release_notes: true
