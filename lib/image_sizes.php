@@ -64,12 +64,12 @@ class Image_Sizes {
 	public function register_size_names(): void {
 		add_filter( 'image_size_names_choose', function ( array $sizes ) {
 			$ucsc_sizes = [
-				self::SQUARE_SMALL => __('Square Small', 'ucsc'),
-				self::SQUARE_MEDIUM => __('Square Medium', 'ucsc'),
-				self::SQUARE_LARGE => __('Square Large', 'ucsc'),
-				self::SIXTEEN_NINE_SMALL => __('16:9 Small', 'ucsc'),
-				self::SIXTEEN_NINE => __('16:9 Medium', 'ucsc'),
-				self::SIXTEEN_NINE_LARGE => __('16:9 Large', 'ucsc'),
+				self::SQUARE_SMALL => __('Square Small', 'ucsc-2022'),
+				self::SQUARE_MEDIUM => __('Square Medium', 'ucsc-2022'),
+				self::SQUARE_LARGE => __('Square Large', 'ucsc-2022'),
+				self::SIXTEEN_NINE_SMALL => __('16:9 Small', 'ucsc-2022'),
+				self::SIXTEEN_NINE => __('16:9 Medium', 'ucsc-2022'),
+				self::SIXTEEN_NINE_LARGE => __('16:9 Large', 'ucsc-2022'),
 			];
 
 			foreach ( $ucsc_sizes as $key => $value) {

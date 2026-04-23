@@ -19,26 +19,26 @@ add_action('init', static function (): void {
 	// Register Block Categories
 	register_block_pattern_category(
 		'page_layout',
-		['label' => __('Page Layout', 'ucsc')]
+		['label' => __('Page Layout', 'ucsc-2022')]
 	);
 
 	register_block_pattern_category(
 		'text_layout',
-		['label' => __('Text Layout', 'ucsc')]
+		['label' => __('Text Layout', 'ucsc-2022')]
 	);
 
 	register_block_pattern_category(
 		'banner',
-		['label' => __('Banner', 'ucsc')]
+		['label' => __('Banner', 'ucsc-2022')]
 	);
 
 	register_block_pattern_category(
 		'examples',
-		array('label' => __('Page Examples', 'ucsc'))
+		array('label' => __('Page Examples', 'ucsc-2022'))
 	);
 
 	register_block_pattern_category(
 		'grid',
-		['label' => __('Grid', 'ucsc')]
+		['label' => __('Grid', 'ucsc-2022')]
 	);
 });
