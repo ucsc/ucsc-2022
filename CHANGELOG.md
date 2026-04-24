@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.5.1](https://github.com/ucsc/ucsc-2022/compare/v4.5.0...v4.5.1) (2026-04-24)
+
 ## [4.5.0](https://github.com/ucsc/ucsc-2022/compare/v4.3.4...v4.5.0) (2026-04-23)
 
 ## [4.3.4](https://github.com/ucsc/ucsc-2022/compare/v4.3.3...v4.3.4) (2026-04-23)
