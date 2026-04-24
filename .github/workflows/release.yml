@@ -27,7 +27,7 @@ jobs:
               run: composer validate --strict
 
             - name: Install PHP dependencies
-              run: composer install --no-progress
+              run: composer install --no-dev --no-progress --optimize-autoloader
 
             - name: Build theme
               run: npm run build
