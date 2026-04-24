@@ -11,7 +11,8 @@
 		"lint-fix": "./vendor/bin/phpcbf --extensions=php ."
 	},
 	"require": {
-		"justintadlock/hybrid-breadcrumbs": "^1.0"
+		"justintadlock/hybrid-breadcrumbs": "^1.0",
+		"yahnis-elsts/plugin-update-checker": "^5.5"
 	},
 	"config": {
 		"allow-plugins": {

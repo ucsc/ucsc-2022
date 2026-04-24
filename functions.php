@@ -93,6 +93,25 @@ endif;
 add_action('after_setup_theme', 'ucsc_setup');
 
 /**
+ * Enable automatic theme updates from GitHub releases.
+ * Compares the Version in style.css against the latest GitHub release tag.
+ * see: https://github.com/YahnisElsts/plugin-update-checker
+ */
+if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
+	require_once get_parent_theme_file_path('vendor/autoload.php');
+
+	if (class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+		$ucsc_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+			'https://github.com/ucsc/ucsc-2022/',
+			get_parent_theme_file_path('style.css'),
+			'ucsc-2022'
+		);
+		// Use the release asset (ucsc-2022.zip) instead of the source archive
+		$ucsc_update_checker->getVcsApi()->enableReleaseAssets('/ucsc-2022\.zip/');
+	}
+}
+
+/**
  * Add SVG favicon and web manifest alongside core's Site Icon output.
  * Core's wp_site_icon() emits PNG/apple-touch-icon from the uploaded Site Icon;
  * this filter supplements it with the SVG icon and the manifest.
