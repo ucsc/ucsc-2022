@@ -1,42 +1,32 @@
+# Caller workflow — drop this into each consuming repo at:
+#   .github/workflows/release.yml
+#
+# Update the `uses` path to match your shared-workflows repo and tag.
+# Update `zip-name` to match the package name in that repo's package.json.
+
 name: Build and release
 
 on:
-    push:
-        tags:
-            - 'v*.*.*'
-            - 'v*.*.*-rc.*'
+  push:
+    tags:
+      - 'v*.*.*'
+      - 'v*.*.*-rc.*'
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-
-        steps:
-            - uses: actions/checkout@v6.0.2
-            - uses: actions/setup-node@v6.4.0
-              with:
-                  node-version: 24
-                  cache: 'npm'
-
-            - name: Install Node dependencies
-              run: npm install
-
-            - name: Validate composer.json and composer.lock
-              run: composer validate --strict
-
-            - name: Install PHP dependencies
-              run: composer install --no-dev --no-progress --optimize-autoloader
-
-            - name: Build theme
-              run: npm run build
-
-            - name: Package theme
-              run: ./node_modules/.bin/wp-scripts plugin-zip
-
-            - name: Release
-              uses: softprops/action-gh-release@v3
-              with:
-                  files: ucsc-2022.zip
-                  generate_release_notes: true
+  release:
+    # Point this at your shared repo. Pin to a tag for stability.
+    uses: ucsc/actions/.github/workflows/release.yml@v1
+    with:
+      zip-name: ucsc-2022.zip
+      #
+      # DEFAULTS
+      # Uncomment the following lines to adjust the defaults:
+      #
+      # node-version: '24'
+      # build-command: 'build'
+      # use-composer: true
+      # composer-args: '--no-dev --no-progress --optimize-autoloader'
+      # generate-release-notes: true
