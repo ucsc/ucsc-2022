@@ -20,7 +20,7 @@ jobs:
     # Point this at your shared repo. Pin to a tag for stability.
     uses: ucsc/actions/.github/workflows/release.yml@v1
     with:
-      zip-name: ucsc-2022.zip
+      zip-name: ${{ github.event.repository.name }}.zip
       #
       # DEFAULTS
       # Uncomment the following lines to adjust the defaults:
