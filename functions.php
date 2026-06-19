@@ -35,6 +35,7 @@ if (!function_exists('ucsc_setup')):
 		$styled_blocks = [
 			'core/button',
 			'core/columns',
+			'core/cover',
 			'core/post-template',
 			'core/post-author',
 			'core/site-title',
@@ -190,6 +191,13 @@ function ucsc_scripts()
 		true
 	);
 	wp_enqueue_script('ucsc-front');
+	wp_enqueue_script(
+		'cover-block-video-controls',
+		get_theme_file_uri('lib/cover-block-video-controls.js'),
+		[],
+		wp_get_theme()->get('Version'),
+		['strategy' => 'defer']
+	);
 }
 add_action('wp_enqueue_scripts', 'ucsc_scripts');
 
@@ -319,6 +327,41 @@ function ucsc_post_subtitle($block_content = '', $block = [])
 	}
 	return $block_content;
 }
+
+add_filter('render_block_core/cover', function ($block_content, $block) {
+	if (empty($block['attrs']['backgroundType']) || $block['attrs']['backgroundType'] !== 'video') {
+		return $block_content;
+	}
+	if (empty($block['attrs']['url'])) {
+		return $block_content;
+	}
+
+	// Normalize to the scheme of the current request so the emitted URL
+	// isn't blocked as mixed content when the page is served over https.
+	$video_url = set_url_scheme($block['attrs']['url']);
+	$vtt_url   = preg_replace('/\.(mp4|webm|mov|m4v)$/i', '.vtt', $video_url);
+
+	// Resolve to a local filesystem path independent of http/https. The
+	// stored block URL and site_url() can disagree on scheme (e.g. on a
+	// Local site reachable over both), which would break a plain
+	// str_replace() and skip the track over https.
+	$relative = wp_make_link_relative($vtt_url);
+	$vtt_path = wp_normalize_path(ABSPATH . ltrim($relative, '/'));
+	if (! file_exists($vtt_path)) {
+		return $block_content;
+	}
+
+	$track = sprintf(
+		'<track kind="captions" src="%s" srclang="en" label="English" default>',
+		esc_url($vtt_url)
+	);
+
+	// Inject the <track> just before </video>
+	return preg_replace('#</video>#', $track . '</video>', $block_content, 1);
+}, 10, 2);
+
+
+
 add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
 
 /**
