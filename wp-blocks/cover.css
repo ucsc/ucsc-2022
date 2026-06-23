@@ -1,0 +1,72 @@
+.cv-controls {
+	background: var(--wp--preset--color--ucsc-secondary-blue);
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: fit-content;
+
+	/* The inset is the horizontal distance from the edge to the point where the
+	   curve's tangent is horizontal. It controls how "deep" the curve is, and
+	   thus how far the shoulders extend out from the body. */
+	--tab-inset: 4rem;
+	padding: 0.35em var(--tab-inset);
+
+	/* Straight-sided fallback for browsers without shape() support. */
+	clip-path: polygon(0 0, 100% 0, calc(100% - var(--tab-inset)) 100%, var(--tab-inset) 100%);
+
+	/* Smooth S-curved sides. Each curve's control points sit at half the
+	   inset with a horizontal tangent at both the top and bottom, so the
+	   shoulders are evenly rounded and the curve is symmetric. */
+	clip-path: shape(from 0 0, curve to var(--tab-inset) 100% with calc(var(--tab-inset) / 2) 0 / calc(var(--tab-inset) / 2) 100%, line to calc(100% - var(--tab-inset)) 100%, curve to 100% 0 with calc(100% - var(--tab-inset) / 2) 100% / calc(100% - var(--tab-inset) / 2) 0, close);
+}
+
+.wp-block-cover + .cv-controls {
+	margin-block-start: 0;
+	backdrop-filter: blur(10px);
+}
+
+.cv-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	color: #fff;
+	border: 0;
+	padding: 0.6em 1em;
+	font-size: 1rem;
+	line-height: 1;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.25s;
+	min-width: 8em;
+	margin: 0 0.2em;
+	gap: 0.4em;
+
+	&:hover,
+	&:active {
+		background: var(--wp--preset--color--ucsc-primary-blue);
+	}
+
+	&:focus-visible {
+		outline: 2px solid #a3ffa4;
+		outline-offset: -2px;
+	}
+
+}
+
+/* Fixed-size SVG icons. Both share a 24x24 viewBox, so equal width/height
+   here guarantees the play and pause icons render at the same size and the
+   button doesn't shift when toggling. */
+.cv-icon {
+	flex: none;
+	width: 1.2em;
+	height: 1.2em;
+	display: block;
+}
+
+/* Active state for the captions button. The .is-on class is added via
+	 JavaScript when the toggle is active. */
+.cv-cc.is-on {
+	background: var(--wp--preset--color--ucsc-green);
+	color: #000;
+}
