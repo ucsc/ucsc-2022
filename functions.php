@@ -61,7 +61,7 @@ if (!function_exists('ucsc_setup')):
 			$args = [
 				'handle' => "ucsc-$name[1]",
 				'src' => get_theme_file_uri("wp-blocks/$name[1].css"),
-				($args['path'] = get_theme_file_path("wp-blocks/$name[1].css")),
+				'path' => get_theme_file_path("wp-blocks/$name[1].css"),
 			];
 			wp_enqueue_block_style($block, $args);
 		}
