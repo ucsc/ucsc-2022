@@ -4,33 +4,15 @@
 // Truss Header
 ////////////////////////////////////////////////////////////////////////////////
 
-// In order for the sticky header to show at the top of the viewport while
-// open on mobile, the Truss header above it needs to collapse.
+// NOTE: this scoped-CSS host class only exists in older Truss builds; the
+// current component is shadow-DOM encapsulated, so theme selectors cannot
+// reach inside it. The open mobile menu no longer depends on collapsing the
+// Truss header — the panel anchors to the header's measured bottom edge
+// instead (see main-nav.js and .site-header__navigation below).
 .sc-trss-ucsc-header-h {
 	display: grid;
 	grid-template-rows: 1fr;
-	transition: grid-template-rows 0.2s ease;
 	background-color: var(--wp--preset--color--ucsc-royal-blue);
-
-	.main-nav--is-open & {
-		grid-template-rows: 0fr;
-	}
-
-	.main-nav--is-open &,
-	.main-nav--is-closing & {
-
-		.trss-ucsc-header {
-			overflow: hidden;
-		}
-	}
-
-	.header-region--stuck & {
-		grid-template-rows: 1fr;
-
-		.trss-ucsc-header {
-			overflow: auto;
-		}
-	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +30,14 @@
 	@include media-query($desktop-menu) {
 		background-color: var(--wp--preset--color--white);
 		overflow: visible;
+	}
+
+	// While the mobile menu is open, lift the header — and the menu panel and
+	// close button inside it — above everything else, including the Truss
+	// header's internal elements (which carry z-indexes up to 100).
+	.main-nav--is-open &,
+	.main-nav--is-closing & {
+		z-index: 1000;
 	}
 }
 
@@ -193,14 +183,31 @@
 	height: 0;
 	transition: height 0.2s ease;
 
-	// CASE: The mobile nav is open or opening.
-	.main-nav--is-open & {
-		height: calc(100svh - var(--site-header-height));
+	// CASE: The mobile nav is open, opening, or closing. Anchor the panel to
+	// the viewport, starting at the header's measured bottom edge
+	// (--nav-panel-top, set by main-nav.js at open time): with top + height
+	// derived from the same value, the panel bottom lands exactly on the
+	// viewport bottom edge, no matter what sits above the sticky header
+	// (the Truss header, alert banners, etc.).
+	.main-nav--is-open &,
+	.main-nav--is-closing & {
+		position: fixed;
+		top: var(--nav-panel-top, var(--site-header-height, 0px));
+		right: 0;
+		left: 0;
 	}
 
-	// CASE: The mobile nav's opening animation is complete and it is fully open.
-	.main-nav--is-open:not(.main-nav--is-opening) & {
-		overflow: auto;
+	// CASE: The mobile nav is open or opening. The panel is scrollable the
+	// moment it opens — gating overflow on the opening animation finishing
+	// left the menu permanently unscrollable when the height transition never
+	// completed. The var() fallbacks keep the calc valid (and the transition
+	// animatable) even if the measurements never ran.
+	.main-nav--is-open & {
+		height: calc(100svh - var(--nav-panel-top, var(--site-header-height, 0px)));
+		overflow-y: auto;
+		// Keep scroll gestures inside the panel; without this, hitting the
+		// panel's scroll boundary chains the gesture to the locked page.
+		overscroll-behavior: contain;
 	}
 
 	@include media-query($desktop-menu) {
