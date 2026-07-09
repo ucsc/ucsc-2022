@@ -3,12 +3,12 @@
 	"description": "2022 WordPress theme for UC Santa Cruz websites",
 	"license": "GPL-2.0-or-later",
 	"require-dev": {
-		"wp-coding-standards/wpcs": "^2.2",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
+		"wp-coding-standards/wpcs": "^3.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.2"
 	},
 	"scripts": {
 		"lint": "./vendor/bin/phpcs",
-		"lint-fix": "./vendor/bin/phpcbf --extensions=php ."
+		"lint-fix": "./vendor/bin/phpcbf"
 	},
 	"require": {
 		"justintadlock/hybrid-breadcrumbs": "^1.0",
