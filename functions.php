@@ -171,11 +171,14 @@ function ucsc_scripts()
 		[],
 		wp_get_theme()->get('Version')
 	);
+	$ucsc_css_path = get_theme_file_path('build/style-index.css');
 	wp_enqueue_style(
 		'ucsc-styles-scss',
 		get_template_directory_uri() . '/build/style-index.css',
 		[],
-		wp_get_theme()->get('Version')
+		// Version on file contents, not the theme version — otherwise rebuilt
+		// assets are served from stale browser caches until the next release.
+		file_exists($ucsc_css_path) ? (string) filemtime($ucsc_css_path) : wp_get_theme()->get('Version')
 	);
 	wp_enqueue_style(
 		'ucsc-google-roboto-font',
@@ -183,11 +186,14 @@ function ucsc_scripts()
 		false
 	);
 	wp_enqueue_style('dashicons');
+	$ucsc_theme_asset = file_exists(get_theme_file_path('build/theme.asset.php'))
+		? include get_theme_file_path('build/theme.asset.php')
+		: ['dependencies' => [], 'version' => wp_get_theme()->get('Version')];
 	wp_register_script(
 		'ucsc-front',
 		get_template_directory_uri() . '/build/theme.js',
-		[],
-		wp_get_theme()->get('Version'),
+		$ucsc_theme_asset['dependencies'],
+		$ucsc_theme_asset['version'],
 		true
 	);
 	wp_enqueue_script('ucsc-front');

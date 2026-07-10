@@ -21,7 +21,10 @@ const lock = () => {
 	locked = true;
 
 	style.position = 'fixed';
-	style.marginTop = `-${ scroll }px`;
+	style.marginTop = `-${scroll}px`;
+	// A fixed body with no explicit width sizes shrink-to-fit, which can
+	// exceed the viewport and shove right-anchored elements off-screen.
+	style.width = '100%';
 };
 
 /**
@@ -32,8 +35,10 @@ const lock = () => {
 const unlock = () => {
 	const style = document.body.style;
 
-	style.position = 'static';
-	style.marginTop = '0px';
+	// Clear the inline overrides entirely so stylesheet rules regain control.
+	style.position = '';
+	style.marginTop = '';
+	style.width = '';
 
 	scroller.scrollTop = scroll;
 	locked = false;
