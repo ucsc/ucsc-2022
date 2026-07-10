@@ -1,7 +1,8 @@
 {
-	"extends": "@wordpress/stylelint-config",
+	"extends": "@wordpress/stylelint-config/scss",
 	"rules": {
-		"at-rule-no-unknown": [
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": [
 			true,
 			{
 				"ignoreAtRules": [
@@ -14,6 +15,15 @@
 			{
 				"ignoreProperties": [
 					"navigation"
+				]
+			}
+		],
+		"selector-class-pattern": null,
+		"length-zero-no-unit": [
+			true,
+			{
+				"ignoreFunctions": [
+					"var"
 				]
 			}
 		]
