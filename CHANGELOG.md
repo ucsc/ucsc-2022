@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.0](https://github.com/ucsc/ucsc-2022/compare/v5.0.0...v5.1.0) (2026-07-13)
+
+
+### Features
+
+* **block:** 🎨 Update appearance of video block controls ([7a993df](https://github.com/ucsc/ucsc-2022/commit/7a993df68e6a093e11df88e5d1cdb8ccc68607af))
+
 ## [5.0.0](https://github.com/ucsc/ucsc-2022/compare/v4.5.2...v5.0.0) (2026-07-13)
 
 
