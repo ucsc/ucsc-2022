@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.0](https://github.com/ucsc/ucsc-2022/compare/v4.5.2...v5.0.0) (2026-07-13)
+
+
+### Bug Fixes
+
+* functions.php: `path` key to `wp_enqueue_block_style` args array ([638db61](https://github.com/ucsc/ucsc-2022/commit/638db61674e41df716b700f218dea013c27b8bc2))
+* Main menu did not scroll properly on small screens ([#401](https://github.com/ucsc/ucsc-2022/issues/401)) ([7d4833f](https://github.com/ucsc/ucsc-2022/commit/7d4833fca5252bb303693d0ce202289e949161e4)), closes [#355](https://github.com/ucsc/ucsc-2022/issues/355) [#393](https://github.com/ucsc/ucsc-2022/issues/393) [#394](https://github.com/ucsc/ucsc-2022/issues/394)
+* stylelint can now lint Sass files. ([d2ea0ef](https://github.com/ucsc/ucsc-2022/commit/d2ea0efb3dfd26f17b1460549b01a28da06992c4))
+
 ## [4.5.2](https://github.com/ucsc/ucsc-2022/compare/v4.5.1...v4.5.2) (2026-05-07)
 
 ## [4.5.1](https://github.com/ucsc/ucsc-2022/compare/v4.5.0...v4.5.1) (2026-04-24)
