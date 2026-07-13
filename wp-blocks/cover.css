@@ -1,14 +1,16 @@
 .cv-controls {
-	background: var(--wp--preset--color--ucsc-secondary-blue);
+	background: #00458c;
+	background: linear-gradient(0deg, rgba(0, 69, 140, 1) 4%, rgba(0, 106, 173, 1) 57%, rgba(210, 231, 244, 1) 124%);
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
 	width: fit-content;
+	height: fit-content;
 
 	/* The inset is the horizontal distance from the edge to the point where the
 	   curve's tangent is horizontal. It controls how "deep" the curve is, and
 	   thus how far the shoulders extend out from the body. */
-	--tab-inset: 4rem;
+	--tab-inset: 4.4rem;
 	padding: 0.35em var(--tab-inset);
 
 	/* Straight-sided fallback for browsers without shape() support. */
