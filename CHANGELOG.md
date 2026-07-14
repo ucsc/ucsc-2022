@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.1](https://github.com/ucsc/ucsc-2022/compare/v5.1.0...v5.1.1) (2026-07-14)
+
+
+### Bug Fixes
+
+* **core/cover:** Captions button should only appear when usable ([b874c17](https://github.com/ucsc/ucsc-2022/commit/b874c1748a951a04803b72ad1a4308312443e16b))
+
 ## [5.1.0](https://github.com/ucsc/ucsc-2022/compare/v5.0.0...v5.1.0) (2026-07-13)
 
 
