@@ -1,25 +1,14 @@
 .cv-controls {
 	background: #00458c;
-	background: linear-gradient(0deg, rgba(0, 69, 140, 1) 4%, rgba(0, 106, 173, 1) 57%, rgba(210, 231, 244, 1) 124%);
+	border-top: 3px solid #fdc700;
 	display: flex;
+	box-shadow: 0 10px 30px rgba(0, 60, 108, 0.28);
 	justify-content: center;
-	margin: 0 auto;
+	margin-block-end: var(--wp--custom--spacing--medium) !important;
 	width: fit-content;
 	height: fit-content;
-
-	/* The inset is the horizontal distance from the edge to the point where the
-	   curve's tangent is horizontal. It controls how "deep" the curve is, and
-	   thus how far the shoulders extend out from the body. */
-	--tab-inset: 4.4rem;
-	padding: 0.35em var(--tab-inset);
-
-	/* Straight-sided fallback for browsers without shape() support. */
-	clip-path: polygon(0 0, 100% 0, calc(100% - var(--tab-inset)) 100%, var(--tab-inset) 100%);
-
-	/* Smooth S-curved sides. Each curve's control points sit at half the
-	   inset with a horizontal tangent at both the top and bottom, so the
-	   shoulders are evenly rounded and the curve is symmetric. */
-	clip-path: shape(from 0 0, curve to var(--tab-inset) 100% with calc(var(--tab-inset) / 2) 0 / calc(var(--tab-inset) / 2) 100%, line to calc(100% - var(--tab-inset)) 100%, curve to 100% 0 with calc(100% - var(--tab-inset) / 2) 100% / calc(100% - var(--tab-inset) / 2) 0, close);
+	border-radius: 0 0 16px 16px;
+	padding: 0.48em 0.8em;
 }
 
 .wp-block-cover + .cv-controls {
@@ -34,11 +23,11 @@
 	background: transparent;
 	color: #fff;
 	border: 0;
-	padding: 0.6em 1em;
+	padding: 0.56em 0.8em;
 	font-size: 1rem;
 	line-height: 1;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 8px;
 	transition: background-color 0.25s;
 	min-width: 8em;
 	margin: 0 0.2em;
@@ -46,7 +35,7 @@
 
 	&:hover,
 	&:active {
-		background: var(--wp--preset--color--ucsc-primary-blue);
+		background: var(--wp--preset--color--ucsc-secondary-blue);
 	}
 
 	&:focus-visible {
@@ -69,6 +58,6 @@
 /* Active state for the captions button. The .is-on class is added via
 	 JavaScript when the toggle is active. */
 .cv-cc.is-on {
-	background: var(--wp--preset--color--ucsc-green);
+	background: var(--wp--preset--color--ucsc-primary-yellow);
 	color: #000;
 }
