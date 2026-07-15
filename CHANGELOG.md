@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.2](https://github.com/ucsc/ucsc-2022/compare/v5.1.1...v5.1.2) (2026-07-15)
+
+
+### Bug Fixes
+
+* **core/cover:** 🎨 Improve appearance of player controls ([cc6b464](https://github.com/ucsc/ucsc-2022/commit/cc6b464ad3ebbbc8be9548be40927e14deacc126))
+
 ## [5.1.1](https://github.com/ucsc/ucsc-2022/compare/v5.1.0...v5.1.1) (2026-07-14)
 
 
