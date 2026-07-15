@@ -2,18 +2,17 @@
 	background: #00458c;
 	border-top: 3px solid #fdc700;
 	display: flex;
-	box-shadow: 0 10px 30px rgba(0, 60, 108, 0.28);
+	box-shadow: 0 12px 26px rgba(0, 60, 108, 0.28);
 	justify-content: center;
-	margin-block-end: var(--wp--custom--spacing--medium) !important;
 	width: fit-content;
 	height: fit-content;
-	border-radius: 0 0 16px 16px;
-	padding: 0.48em 0.8em;
+	border-radius: 0 0 12px 12px;
+	padding: 0.36em 0.4em;
 }
 
 .wp-block-cover + .cv-controls {
 	margin-block-start: 0;
-	backdrop-filter: blur(10px);
+	margin-block-end: var(--wp--custom--spacing--medium);
 }
 
 .cv-btn {
@@ -24,14 +23,14 @@
 	color: #fff;
 	border: 0;
 	padding: 0.56em 0.8em;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1;
 	cursor: pointer;
-	border-radius: 8px;
+	border-radius: 6px;
 	transition: background-color 0.25s;
-	min-width: 8em;
-	margin: 0 0.2em;
-	gap: 0.4em;
+	min-width: 6em;
+	margin: 0 0.22em;
+	gap: 0.2em;
 
 	&:hover,
 	&:active {
