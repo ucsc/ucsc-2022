@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.3](https://github.com/ucsc/ucsc-2022/compare/v5.1.2...v5.1.3) (2026-07-15)
+
+
+### Bug Fixes
+
+* **core/cover:** 🎨 Refine styles for cover controls and buttons ([5e97f1a](https://github.com/ucsc/ucsc-2022/commit/5e97f1a4a02f1438107aa9c4ede9f6f6526d08ac))
+* **docs:** 📝 Remove QA section from PR template ([9d32420](https://github.com/ucsc/ucsc-2022/commit/9d32420567cbd261599ecfece323757af153321e))
+
 ## [5.1.2](https://github.com/ucsc/ucsc-2022/compare/v5.1.1...v5.1.2) (2026-07-15)
 
 
