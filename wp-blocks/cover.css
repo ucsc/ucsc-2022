@@ -8,6 +8,7 @@
 	height: fit-content;
 	border-radius: 0 0 12px 12px;
 	padding: 0.36em 0.4em;
+	margin: auto;
 }
 
 .wp-block-cover + .cv-controls {
