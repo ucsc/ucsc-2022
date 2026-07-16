@@ -101,14 +101,26 @@ add_action('after_setup_theme', 'ucsc_setup');
 if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
 	require_once get_parent_theme_file_path('vendor/autoload.php');
 
-	if (class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
-		$ucsc_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
-			'https://github.com/ucsc/ucsc-2022/',
-			get_parent_theme_file_path('style.css'),
-			'ucsc-2022'
-		);
-		// Use the release asset (ucsc-2022.zip) instead of the source archive
-		$ucsc_update_checker->getVcsApi()->enableReleaseAssets('/ucsc-2022\.zip/');
+	// Update checks only matter in the dashboard and during cron, so skip the
+	// work on front-end requests. wp_is_auto_update_enabled_for_type() lives in
+	// an admin-only file, so make sure it's loaded before calling it; it returns
+	// false whenever the site has disabled updates (AUTOMATIC_UPDATER_DISABLED /
+	// WP_AUTO_UPDATE_CORE constants, automatic_updater_disabled / auto_update_theme
+	// filters, host overrides, etc.).
+	if ((is_admin() || wp_doing_cron()) && class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+		if (!function_exists('wp_is_auto_update_enabled_for_type')) {
+			require_once ABSPATH . 'wp-admin/includes/update.php';
+		}
+
+		if (wp_is_auto_update_enabled_for_type('theme')) {
+			$ucsc_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+				'https://github.com/ucsc/ucsc-2022/',
+				get_parent_theme_file_path('style.css'),
+				'ucsc-2022'
+			);
+			// Use the release asset (ucsc-2022.zip) instead of the source archive
+			$ucsc_update_checker->getVcsApi()->enableReleaseAssets('/ucsc-2022\.zip/');
+		}
 	}
 }
 
