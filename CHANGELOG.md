@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.2.0](https://github.com/ucsc/ucsc-2022/compare/v5.1.3...v5.2.0) (2026-07-16)
+
+
+### Bug Fixes
+
+* **composer:** Only run the auto-update library under specific conditions ([14a15a6](https://github.com/ucsc/ucsc-2022/commit/14a15a6e9311098ede9fad7ed936e2798f23341d))
+* **core/cover:** Injected video controls should be centered under the video ([13ac382](https://github.com/ucsc/ucsc-2022/commit/13ac382e6b2440c7cd773819f95f291c58fb4e71))
+
 ## [5.1.3](https://github.com/ucsc/ucsc-2022/compare/v5.1.2...v5.1.3) (2026-07-15)
 
 
