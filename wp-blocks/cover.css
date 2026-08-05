@@ -1,4 +1,11 @@
+/* Keep the controls above overlapping block patterns such as Statistics
+   (src/scss/block-patterns/_statistics.scss), whose transformed container uses
+   z-index: 1 and can otherwise intercept pointer events intended for these
+   buttons. Some sites add their own pull-up patterns at the same depth, so the
+   bar needs a stacking order of its own rather than a fix scoped to Statistics. */
 .cv-controls {
+	position: relative;
+	z-index: 2;
 	background: #00458c;
 	border-top: 3px solid #fdc700;
 	display: flex;
