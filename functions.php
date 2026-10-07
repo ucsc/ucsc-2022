@@ -224,6 +224,7 @@ add_action('wp_enqueue_scripts', 'ucsc_scripts');
  */
 function ucsc_googleapi_scripts()
 {
+	echo '<link rel="preconnect" href="https://truss.ucsc.edu">';
 	echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 }
