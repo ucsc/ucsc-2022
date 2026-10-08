@@ -224,6 +224,7 @@ add_action('wp_enqueue_scripts', 'ucsc_scripts');
  */
 function ucsc_googleapi_scripts()
 {
+	echo '<link rel="preconnect" href="https://truss.ucsc.edu">';
 	echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 }
@@ -463,15 +464,15 @@ function ucsc_add_custom_body_close_code()
 	echo '<trss-ucsc-footer style="--trss-content-width:80rem;"></trss-ucsc-footer>';
 }
 
-add_action('wp_footer', 'ucsc_truss_assets');
+add_action('wp_head', 'ucsc_truss_assets');
 
 function ucsc_truss_assets()
 {
 ?>
 
 	<!-- Script and style to include our components library, Truss.  -->
-	<script type="module" src="https://ucsc-truss.netlify.app/ucsc-trss/ucsc-trss.esm.js"></script>
-	<link rel="stylesheet" href="https://ucsc-truss.netlify.app/ucsc-trss/ucsc-trss.css">
+	<script type="module" src="https://truss.ucsc.edu/ucsc-trss/ucsc-trss.esm.js"></script>
+	<link rel="stylesheet" href="https://truss.ucsc.edu/ucsc-trss/ucsc-trss.css">
 <?php
 }
 

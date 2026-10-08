@@ -1,6 +1,6 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
 	"templateParts": [
 		{
 			"name": "header",
@@ -157,6 +157,7 @@
 			"contentSize": "80rem"
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"spacingScale": {
 				"steps": 0
 			},
@@ -203,6 +204,7 @@
 			"fluid": true,
 			"lineHeight": true,
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"fontSizes": [
 				{
 					"slug": "small",
@@ -302,7 +304,7 @@
 					"name": "Roboto"
 				},
 				{
-					"fontFamily": "Garamond, \"Hoefler Text\", \"Times New Roman\", Times, serif serif",
+					"fontFamily": "Garamond, \"Hoefler Text\", \"Times New Roman\", Times, serif",
 					"slug": "serif",
 					"name": "Serif"
 				}
@@ -512,13 +514,6 @@
 					}
 				}
 			},
-			"core/block-post": {
-				"spacing": {
-					"margin": {
-						"top": "0"
-					}
-				}
-			},
 			"core/button": {
 				"border": {
 					"radius": "100px"
@@ -531,11 +526,6 @@
 			"name": "page-no-title",
 			"postTypes": ["page", "post"],
 			"title": "Page no title"
-		},
-		{
-			"name": "page-no-title-with-breadcrumbs",
-			"postTypes": ["page", "post"],
-			"title": "(Do not use) Page no title with breadcrumbs"
 		}
 	]
 }
