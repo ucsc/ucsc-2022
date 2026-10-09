@@ -1,4 +1,5 @@
 {
+	"apiVersion": 3,
 	"name": "acf/breadcrumbs",
 	"title": "Breadcrumbs",
 	"description": "Displays breadcrumbs.",
