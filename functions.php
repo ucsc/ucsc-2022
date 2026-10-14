@@ -317,16 +317,16 @@ add_filter('render_block', 'ucsc_post_author_link', 8, 2);
  */
 function ucsc_post_subtitle($block_content = '', $block = [])
 {
-	// Check for single post; use `global $post` to access data outide the Loop.
+	// Check for single post;
 	if (is_single()) {
-		global $post;
 		$post_id = get_the_id();
+		$subtitle = '';
 		if (function_exists('get_field')) {
-			$subtitle = get_field('subtitle-copy');
+			$subtitle = esc_html(get_field('subtitle-copy'));
 		}
 
 		if (
-			'' !== $subtitle &&
+			!empty($subtitle) &&
 			isset($block['blockName']) &&
 			'core/post-title' === $block['blockName']
 		) {
