@@ -305,7 +305,7 @@ function ucsc_post_author_link($block_content = '', $block = [])
 	}
 	return $block_content;
 }
-add_filter('render_block', 'ucsc_post_author_link', 8, 2);
+add_filter('render_block_core/post-author-name', 'ucsc_post_author_link', 8, 2);
 
 /**
  * Add Subtitle meta field
@@ -347,6 +347,8 @@ function ucsc_post_subtitle($block_content = '', $block = [])
 	return $block_content;
 }
 
+add_filter('render_block_core/post-title', 'ucsc_post_subtitle', 10, 2);
+
 add_filter('render_block_core/cover', function ($block_content, $block) {
 	if (empty($block['attrs']['backgroundType']) || $block['attrs']['backgroundType'] !== 'video') {
 		return $block_content;
@@ -379,9 +381,6 @@ add_filter('render_block_core/cover', function ($block_content, $block) {
 	return preg_replace('#</video>#', $track . '</video>', $block_content, 1);
 }, 10, 2);
 
-
-
-add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
 
 /**
  * Breadcrumbs constructor callback helper
