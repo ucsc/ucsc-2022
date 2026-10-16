@@ -1,6 +1,6 @@
 # Roadmap
 
-Work planned for the theme, ordered by priority. Items combine three sources: the 2026-07-08 audit of v4.5.2 plus the GitHub issue backlog, the 2026-10-09 audit against `main` at `b9dc62f` (v5.2.0), and the 2026-10-12 agent-visibility audit. When you finish an item on a branch, move it to [Done](#done) in the same PR, with its commit or release.
+Work planned for the theme, ordered by priority. Items combine three sources: the 2026-07-08 audit of v4.5.2 plus the GitHub issue backlog, the 2026-10-09 audit against `main` at `b9dc62f` (v5.2.0), and the 2026-10-12 agent-visibility audit. Each section ends with its own Done list. When you finish an item on a branch, move it to its section's Done list in the same PR, with its commit or release.
 
 Priority key:
 
@@ -19,14 +19,11 @@ Priority key:
 3. **Sidebar navigation JS crashes when the current page is a top-level item.** `currentItem.closest( 'li.wp-block-navigation-submenu' )` returns `null` for a top-level `.current-menu-item`, so the `querySelector` call throws. `bindEvents()` and `fixAriaAttributes()` then never run ([src/js/block-patterns/sidebar-with-navigation.js:140-141](src/js/block-patterns/sidebar-with-navigation.js#L140-L141)). `init()` also calls `initBlockOnPageLoad()` a second time with no argument ([:153](src/js/block-patterns/sidebar-with-navigation.js#L153)).
    1. Add a null guard for the top-level case.
    2. Remove the redundant `initBlockOnPageLoad()` call.
-4. **Nested `<main>` landmarks on archive, category, and blog pages.** `parts/post-query.html` sets `"tagName":"main"` on the Query block ([parts/post-query.html:1](parts/post-query.html#L1)). It is placed inside templates whose wrapper group is already `<main>` (`archive.html`, `category.html`, `home.html`). Change the Query `tagName` to `div` or `section`. Pairs with "Article semantics and content boundaries" under agent visibility.
-5. **Footer navigation is hardcoded to database IDs.** `wp:navigation {"ref":1938}`, `1942`, and `1945` ([parts/site-footer.html:8-16](parts/site-footer.html#L8-L16)) only exist on one site. Every other install renders empty or fallback menus. Footer social links point to relative URLs (`"url":"twitter.com"`), which resolve against the current site.
-   1. Remove the hardcoded `ref`s so editors choose menus per site.
-   2. Replace the social links with real URLs, or remove them.
-6. **Core block patterns are not actually removed.** `remove_theme_support( 'core-block-patterns' )` runs on `init` priority 10 ([lib/blocks.php:9](lib/blocks.php#L9)). Core's `_register_core_block_patterns_and_categories` is hooked to `init` priority 10 earlier, from `default-filters.php`, so core patterns are already registered by then. The workaround below it uses `has_block()`, which inspects post content, not the pattern registry, so it never fires. One slug also has a trailing space ([lib/blocks.php:12-17](lib/blocks.php#L12-L17)).
+4. **Footer social links point to generic platform homepages.** `0da3ef2` removed the hardcoded navigation `ref`s and the Twitter link and made the other links absolute, but they go to `https://instagram.com`, `https://facebook.com`, `https://youtube.com`, and `https://linkedin.com`, not UCSC's accounts ([parts/site-footer.html](parts/site-footer.html)). Point them at the official UCSC accounts, or remove them so editors add their own.
+5. **Core block patterns are not actually removed.** `remove_theme_support( 'core-block-patterns' )` runs on `init` priority 10 ([lib/blocks.php:9](lib/blocks.php#L9)). Core's `_register_core_block_patterns_and_categories` is hooked to `init` priority 10 earlier, from `default-filters.php`, so core patterns are already registered by then. The workaround below it uses `has_block()`, which inspects post content, not the pattern registry, so it never fires. One slug also has a trailing space ([lib/blocks.php:12-17](lib/blocks.php#L12-L17)).
    1. Move the call to `after_setup_theme`.
    2. Delete the workaround once the hook is fixed.
-7. **The main nav toggle has no accessible state.** The hamburger `<button>` has a server-rendered `aria-label` (`6ff650d`), but it never gets `aria-expanded` or `aria-controls` ([blocks/main-nav/index.php:1-5](blocks/main-nav/index.php#L1-L5)). The JS-generated submenu toggles have no label and no state either ([main-nav.js:249](src/js/components/main-nav.js#L249)). The `<nav>` has no `aria-label`, which makes it ambiguous next to the Truss header nav.
+6. **The main nav toggle has no accessible state.** The hamburger `<button>` has a server-rendered `aria-label` (`6ff650d`), but it never gets `aria-expanded` or `aria-controls` ([blocks/main-nav/index.php:1-5](blocks/main-nav/index.php#L1-L5)). The JS-generated submenu toggles have no label and no state either ([main-nav.js:249](src/js/components/main-nav.js#L249)). The `<nav>` has no `aria-label`, which makes it ambiguous next to the Truss header nav.
    1. Add `aria-expanded`/`aria-controls` to the hamburger toggle.
    2. Give the submenu toggles a label, `aria-expanded`/`aria-controls`, and `type="button"`.
    3. Add an `aria-label` to the `<nav>`.
@@ -35,22 +32,29 @@ Priority key:
    6. Move focus into the open menu, and back to the toggle on close.
 
    Related tracker items: [issue 359](https://github.com/ucsc/ucsc-2022/issues/359) (header z-index), [issue 358](https://github.com/ucsc/ucsc-2022/issues/358) (hover state), [issue 325](https://github.com/ucsc/ucsc-2022/issues/325) (44px targets), [issue 317](https://github.com/ucsc/ucsc-2022/issues/317) (ribbon contrast), [issue 332](https://github.com/ucsc/ucsc-2022/issues/332) (CLS), [issue 338](https://github.com/ucsc/ucsc-2022/issues/338)/[issue 339](https://github.com/ucsc/ucsc-2022/issues/339) (sidebar toggles).
-8. **Mobile menu Phase 2.** Phase 1 (v5.0.0) fixed the deadlocks; [issue 302](https://github.com/ucsc/ucsc-2022/issues/302) (toggle overlaps header content) is still open and the state machine still depends on `transitionend`.
+7. **Mobile menu Phase 2.** Phase 1 (v5.0.0) fixed the deadlocks; [issue 302](https://github.com/ucsc/ucsc-2022/issues/302) (toggle overlaps header content) is still open and the state machine still depends on `transitionend`.
    1. Make the open panel a fixed overlay anchored to the viewport (`position: fixed; overflow-y: auto; overscroll-behavior: contain`) so its height needs no JS.
    2. Replace `src/js/utils/body-lock.js` with `html.main-nav--is-open { overflow: hidden }`.
    3. Animate `transform`/`opacity` instead of `height` so interrupted animations can't break state.
    4. Replace the resize chain with one `matchMedia('(min-width: 1060px)')` listener.
    5. Fold in the toggle-accessibility item above.
    6. Test on iOS Safari (long menus, mid-page scroll, double-tap, rotation), narrow Firefox, keyboard only, and VoiceOver.
-9. **Breadcrumbs structured data fails Google validation** ([issue 330](https://github.com/ucsc/ucsc-2022/issues/330)). `itemListElement` is missing the required `position` field in the microdata printed by the theme's breadcrumbs (`justintadlock/hybrid-breadcrumbs`, `Trail::render()` in `functions.php`). On news.ucsc.edu, Yoast's breadcrumb JSON-LD already includes `position`, and the checked pages carried no theme microdata, so the error likely comes from pages that use the theme's breadcrumbs block. Add `position`, or drop the microdata when Yoast is active so there's one breadcrumb source.
+8. **Breadcrumbs structured data fails Google validation** ([issue 330](https://github.com/ucsc/ucsc-2022/issues/330)). `itemListElement` is missing the required `position` field in the microdata printed by the theme's breadcrumbs (`justintadlock/hybrid-breadcrumbs`, `Trail::render()` in `functions.php`). On news.ucsc.edu, Yoast's breadcrumb JSON-LD already includes `position`, and the checked pages carried no theme microdata, so the error likely comes from pages that use the theme's breadcrumbs block. Add `position`, or drop the microdata when Yoast is active so there's one breadcrumb source.
+
+### P1 done
+
+- [x] **Escaped the ACF subtitle field and stopped empty subtitles from rendering.** `ucsc_post_subtitle()` now wraps the field in `esc_html()` (closes the stored-XSS finding), initializes `$subtitle` so it's defined when ACF is inactive, tests with `!empty()` so unset fields no longer append an empty `.post-subtitle` div, and drops the unused `global $post` — `f3f8529`, fixes [issue 405](https://github.com/ucsc/ucsc-2022/issues/405). The filter now runs only on `core/post-title` (see [P2 done](#p2-done)).
+- [x] **Repaired the malformed template and template-part JSON** broken by the v4.3.4 find/replace — `b565ae3` · v5.0.0. **Deployment caveat:** sites where the header part was ever saved in the Site Editor keep a database copy of the broken markup that overrides the fixed file. Those sites need **Appearance → Editor → Template Parts → header → Clear customizations**. Include this in release notes.
+- [x] **Mobile menu Phase 1:** the menu scrolls and closes reliably; panel anchored to the header's measured bottom edge; body-lock width fix; header lifted above Truss internals while open. Fixes [issue 355](https://github.com/ucsc/ucsc-2022/issues/355), [issue 393](https://github.com/ucsc/ucsc-2022/issues/393), [issue 394](https://github.com/ucsc/ucsc-2022/issues/394) — `7d4833f` ([PR 401](https://github.com/ucsc/ucsc-2022/pull/401)) · v5.0.0.
+- [x] **Fixed the broken `path` argument in the block-style loader**, so small per-block stylesheets are inlined again and get RTL support — `638db61` · v5.0.0. Optional follow-up: `'ver' => filemtime($path)` for per-block cache busting.
+- [x] **Removed the nested `<main>` on archive, category, and blog pages.** The Query block in `parts/post-query.html` now renders a `<div>` inside the templates' existing `<main>` — `3de3c98`.
+- [x] **Removed the hardcoded footer navigation IDs.** `parts/site-footer.html` no longer references menus `1938`, `1942`, and `1945`, which only existed on one site; editors choose footer menus per site. The Twitter link is gone and the other social links are absolute URLs — `0da3ef2`. **Deployment caveat:** sites that relied on those IDs need their footer menus chosen in the Site Editor.
 
 ## P2: Correctness and fragility
 
 ### theme.json and presets
 
-1. **The minimum WordPress version is wrong everywhere.** theme.json v3 requires WP 6.6. `style.css` says `Requires at least: 6.0`, `readme.txt` says `5.8`, and `README.md` says `6.7`. The PHP minimum is also inconsistent (7.4 / 7.0 / ">8.0"). `readme.txt` is the untouched starter template ("Theme Name", "Short description…").
-   1. Choose one supported WordPress and PHP floor and set it in all three files.
-   2. Fill in `readme.txt` or delete it.
+1. **`readme.txt` is still the starter template.** `557d8d3` and `d66e81e` set one floor (WP 6.9, tested up to 7.1, PHP 8.0) in `style.css` and `readme.txt`, but `readme.txt` still has the `=== Theme Name ===` header and placeholder sections. Fill it in or delete it.
 2. **Undefined CSS custom properties.** These are referenced but never defined, so the declarations fall back to `inherit` or the initial value:
    - `--wp--custom--color--black`: core/heading text color ([theme.json:466](theme.json#L466))
    - `--wp--custom--color--link-decoration` ([src/scss/elements/\_links.scss:3](src/scss/elements/_links.scss#L3))
@@ -101,7 +105,15 @@ Priority key:
 3. **Truss is printed with raw `echo` in `wp_head`, without versioning** ([functions.php:467-477](functions.php#L467-L477)).
    1. Use `wp_enqueue_script_module()` (WP 6.5+) and `wp_enqueue_style()` so caching plugins and dependency handling see it.
    2. Pin a version instead of tracking the evergreen deploy.
-4. **`render_block` filters do work before checking the block name.** `ucsc_post_subtitle()` calls `is_single()` and `get_field()` for every block rendered on single posts, and `ucsc_post_author_link()` (priority 8) runs on every block site-wide. Check `$block['blockName']` first, or switch to targeted `render_block_core/post-title` filters.
+
+### P2 done
+
+- [x] **Set one WordPress and PHP floor.** `style.css` and `readme.txt` now say WP 6.9, tested up to 7.1, PHP 8.0; `README.md` no longer lists conflicting versions — `557d8d3`, `d66e81e`.
+- [x] **`theme.json` upgraded to schema v3** (closes [issue 345](https://github.com/ucsc/ucsc-2022/issues/345)); fixed the `serif serif` font stack; removed the rule for the non-existent `core/block-post` block; removed "(Do not use) Page no title with breadcrumbs" from the template picker — `3b865ee`, `5c5b41f` · PR 404. Generated CSS confirmed identical before and after.
+- [x] **Removed the unregistered ACF block style handles and the stray `echo`.** `acf/breadcrumb-styles` and `acf/main-nav-styles` are gone from `blocks/*/block.json`, and `blocks/main-nav/index.php` no longer `echo`es `wp_nav_menu()`. The hamburger toggle also gained a server-rendered `aria-label` — `52d3ad3`, `6ff650d`.
+- [x] **Theme CSS and `theme.js` versioned by file contents**, so rebuilt assets aren't served from stale caches — `7d4833f` ([PR 401](https://github.com/ucsc/ucsc-2022/pull/401)) · v5.0.0.
+- [x] **Truss loads in the `<head>` from `truss.ucsc.edu` with a `preconnect` hint** — `5960f2f`, `b9dc62f` · PR 404.
+- [x] **Scoped the title and author filters to their blocks.** `ucsc_post_subtitle()` runs on `render_block_core/post-title` and `ucsc_post_author_link()` on `render_block_core/post-author-name`, instead of on every block — `a844c2e`.
 
 ## P3: Cleanup and maintainability
 
@@ -122,7 +134,7 @@ Priority key:
    1. Make file names and slugs agree (`card-yellow.php` → `card-yellow-cta`, `post-query-card.php` → `query-loop-card`, `example-page-*` → `*-page`).
    2. Replace the nonexistent block type `core/featured-image` in `post-query-card.php` with `core/post-featured-image`.
 6. **Register block styles in PHP.** `wp-blocks/styles.js` uses client-side `registerBlockStyle()` with `style_handle`, which is a PHP-only argument and is ignored in JS. Server-side `register_block_style()` makes the styles visible in Global Styles and in REST.
-7. **Finish modernizing the two ACF blocks.** Ship the mobile-toggle JS as a `viewScript` on `main-nav` instead of in the global bundle. Both blocks already declare ACF Blocks V3 (see [Done](#done)).
+7. **Finish modernizing the two ACF blocks.** Ship the mobile-toggle JS as a `viewScript` on `main-nav` instead of in the global bundle. Both blocks already declare ACF Blocks V3 (see [P3 done](#p3-done)).
 8. **theme.json tidy-up.** Steps 7–11 are follow-ups from the v3 upgrade.
    1. Resolve `settings.custom.spacing`, which duplicates `spacingSizes` with a second scale.
    2. Resolve the conflict between `custom.border.radius: 0` and the button radius of `100px`.
@@ -163,6 +175,11 @@ Priority key:
     1. `ucsc-gutenberg-blocks`: 8 blocks registered in JS with no `apiVersion`; needs `useBlockProps()` and possibly deprecations.
     2. `ucsc-custom-functionality`: 9 `block.json` files without `apiVersion`.
 
+### P3 done
+
+- [x] **License set to GPL-2.0-or-later everywhere** — `9c76e23` · v5.0.0.
+- [x] **ACF blocks declare ACF Blocks V3.** `blocks/breadcrumbs/block.json` and `blocks/main-nav/block.json` set `"acf": { "blockVersion": 3 }`, so they work in the WP 7.1 iframe editor without relying on ACF 6.8.9's default. This is ACF's own block version, not the WordPress `apiVersion` field — `480f92a`.
+
 ## Tooling and CI
 
 1. **`npm run lint:js` crashes** with `prettier.resolveConfig.sync is not a function`. `@wordpress/prettier-config@2.9` hoists Prettier 3, but `eslint-plugin-prettier@3` (from `@wordpress/scripts@25`) needs Prettier 2. JS is effectively unlinted. Upgrade `@wordpress/scripts`; 25.x is from early 2023. Order the work:
@@ -180,6 +197,11 @@ Priority key:
 5. **Node version drift.**
    1. Align `.nvmrc` (pins 20.18.0) with the shared release workflow (defaults to Node 24).
    2. Replace Husky 8's `husky install` postinstall, which is deprecated in Husky 9.
+
+### Tooling done
+
+- [x] **Restored PHP linting** (WPCS 3.3.0) so the security sniffs actually run — `44b7955` · v5.0.0.
+- [x] **Stylelint can now lint Sass files** — `d2ea0ef` · v5.0.0.
 
 ## Agent visibility and machine readability
 
@@ -213,7 +235,7 @@ _The original 2026-10-12 production audit sampled the homepage and one article (
 8. **Optional agent interfaces (evaluate; P3).** _Owner: site plugin._ The original audit recorded a 404 for `llms.txt`. Google requires no AI text file. Public discovery does not require an agent API.
    1. Treat `llms.txt` as an experiment with a named consumer and measurable use. Keep any index generated from canonical public content.
    2. Evaluate WordPress Abilities API actions separately for staff tools, with endpoint permissions and authentication defined first.
-9. **Article semantics and content boundaries (proposed; P1).** _Owner: theme + news template plugin._ `templates/single.html` has `<main>`, a title, date and byline, but no `<article>` wrapper around the story. The nested-`<main>` defect is tracked under P1 above.
+9. **Article semantics and content boundaries (proposed; P1).** _Owner: theme + news template plugin._ `templates/single.html` has `<main>`, a title, date and byline, but no `<article>` wrapper around the story. The nested-`<main>` defect is fixed (see [P1 done](#p1-done)).
    1. Audit database template overrides on news.ucsc.edu before changing files.
    2. Put the title, byline, dates and body inside one article region. Keep comments and related stories outside that region.
    3. Audit heading levels in templates and patterns.
@@ -251,6 +273,10 @@ _The original 2026-10-12 production audit sampled the homepage and one article (
     3. Preserve visible focus and reliable links.
     4. Include these controls in accessibility checks and a browser-agent smoke test.
 
+### Agent visibility done
+
+_Nothing yet._
+
 ### Acceptance checks
 
 1. **Content extraction:** An unauthenticated HTML request contains the story title, summary where available, byline, publication date, and full body. One `<main>` contains the page content. One `<article>` identifies the story. Related content and comments remain distinct.
@@ -280,20 +306,10 @@ _The original 2026-10-12 production audit sampled the homepage and one article (
 6. **Ongoing:** fold P3 cleanup into PRs that touch nearby files.
 7. **Cross-repo:** raise the shared items with the Truss, `ucsc-custom-functionality`, `ucsc-blocks`, `ucsc-primary-sites`, hosting, and newsroom owners.
 
-## Done
+## Other completed work
 
-1. **Escaped the ACF subtitle field and stopped empty subtitles from rendering.** `ucsc_post_subtitle()` now wraps the field in `esc_html()` (closes the stored-XSS finding), initializes `$subtitle` so it's defined when ACF is inactive, tests with `!empty()` so unset fields no longer append an empty `.post-subtitle` div, and drops the unused `global $post` — `f3f8529`, fixes [issue 405](https://github.com/ucsc/ucsc-2022/issues/405). The remaining filter-ordering point moved to Performance.
-2. **Repaired the malformed template and template-part JSON** broken by the v4.3.4 find/replace — `b565ae3` · v5.0.0. **Deployment caveat:** sites where the header part was ever saved in the Site Editor keep a database copy of the broken markup that overrides the fixed file. Those sites need **Appearance → Editor → Template Parts → header → Clear customizations**. Include this in release notes.
-3. **Mobile menu Phase 1:** the menu scrolls and closes reliably; panel anchored to the header's measured bottom edge; body-lock width fix; header lifted above Truss internals while open. Fixes [issue 355](https://github.com/ucsc/ucsc-2022/issues/355), [issue 393](https://github.com/ucsc/ucsc-2022/issues/393), [issue 394](https://github.com/ucsc/ucsc-2022/issues/394) — `7d4833f` ([PR 401](https://github.com/ucsc/ucsc-2022/pull/401)) · v5.0.0.
-4. **Fixed the broken `path` argument in the block-style loader**, so small per-block stylesheets are inlined again and get RTL support — `638db61` · v5.0.0. Optional follow-up: `'ver' => filemtime($path)` for per-block cache busting.
-5. **Restored PHP linting** (WPCS 3.3.0) so the security sniffs actually run — `44b7955` · v5.0.0.
-6. **Stylelint can now lint Sass files** — `d2ea0ef` · v5.0.0.
-7. **Theme CSS and `theme.js` versioned by file contents**, so rebuilt assets aren't served from stale caches — `7d4833f` ([PR 401](https://github.com/ucsc/ucsc-2022/pull/401)) · v5.0.0.
-8. **License set to GPL-2.0-or-later everywhere** — `9c76e23` · v5.0.0.
-9. **Cover block background videos:** play/pause and captions controls, reduced-motion support, styling refinements; captions button appears only when a captions file exists — `79bdb99` … `13ac382` · v5.0.0–v5.2.0.
-10. **Dashboard auto-update library runs only under specific conditions** — `14a15a6` · v5.2.0.
-11. **Truss loads in the `<head>` from `truss.ucsc.edu` with a `preconnect` hint** — `5960f2f`, `b9dc62f` · PR 404.
-12. **`theme.json` upgraded to schema v3** (closes [issue 345](https://github.com/ucsc/ucsc-2022/issues/345)); fixed the `serif serif` font stack; removed the rule for the non-existent `core/block-post` block; removed "(Do not use) Page no title with breadcrumbs" from the template picker — `3b865ee`, `5c5b41f` · PR 404. Generated CSS confirmed identical before and after.
-13. **Replaced the footer curves** ([issue 403](https://github.com/ucsc/ucsc-2022/issues/403)) — `431f692` · PR 404.
-14. **ACF blocks declare ACF Blocks V3.** `blocks/breadcrumbs/block.json` and `blocks/main-nav/block.json` set `"acf": { "blockVersion": 3 }`, so they work in the WP 7.1 iframe editor without relying on ACF 6.8.9's default. This is ACF's own block version, not the WordPress `apiVersion` field — `480f92a`.
-15. **Removed the unregistered ACF block style handles and the stray `echo`.** `acf/breadcrumb-styles` and `acf/main-nav-styles` are gone from `blocks/*/block.json`, and `blocks/main-nav/index.php` no longer `echo`es `wp_nav_menu()`. The hamburger toggle also gained a server-rendered `aria-label` — `52d3ad3`, `6ff650d`.
+Work that didn't come from a roadmap section.
+
+- [x] **Cover block background videos:** play/pause and captions controls, reduced-motion support, styling refinements; captions button appears only when a captions file exists — `79bdb99` … `13ac382` · v5.0.0–v5.2.0.
+- [x] **Dashboard auto-update library runs only under specific conditions** — `14a15a6` · v5.2.0.
+- [x] **Replaced the footer curves** ([issue 403](https://github.com/ucsc/ucsc-2022/issues/403)) — `431f692` · PR 404.
