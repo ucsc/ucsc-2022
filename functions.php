@@ -305,7 +305,7 @@ function ucsc_post_author_link($block_content = '', $block = [])
 	}
 	return $block_content;
 }
-add_filter('render_block', 'ucsc_post_author_link', 8, 2);
+add_filter('render_block_core/post-author-name', 'ucsc_post_author_link', 8, 2);
 
 /**
  * Add Subtitle meta field
@@ -317,16 +317,16 @@ add_filter('render_block', 'ucsc_post_author_link', 8, 2);
  */
 function ucsc_post_subtitle($block_content = '', $block = [])
 {
-	// Check for single post; use `global $post` to access data outide the Loop.
+	// Check for single post;
 	if (is_single()) {
-		global $post;
 		$post_id = get_the_id();
+		$subtitle = '';
 		if (function_exists('get_field')) {
-			$subtitle = get_field('subtitle-copy');
+			$subtitle = esc_html(get_field('subtitle-copy'));
 		}
 
 		if (
-			'' !== $subtitle &&
+			!empty($subtitle) &&
 			isset($block['blockName']) &&
 			'core/post-title' === $block['blockName']
 		) {
@@ -346,6 +346,8 @@ function ucsc_post_subtitle($block_content = '', $block = [])
 	}
 	return $block_content;
 }
+
+add_filter('render_block_core/post-title', 'ucsc_post_subtitle', 10, 2);
 
 add_filter('render_block_core/cover', function ($block_content, $block) {
 	if (empty($block['attrs']['backgroundType']) || $block['attrs']['backgroundType'] !== 'video') {
@@ -379,9 +381,6 @@ add_filter('render_block_core/cover', function ($block_content, $block) {
 	return preg_replace('#</video>#', $track . '</video>', $block_content, 1);
 }, 10, 2);
 
-
-
-add_filter('render_block', 'ucsc_post_subtitle', 10, 2);
 
 /**
  * Breadcrumbs constructor callback helper

@@ -9,13 +9,11 @@
 		"breadcrumbs"
 	],
 	"acf": {
+		"blockVersion": 3,
 		"mode": "preview",
 		"renderTemplate": "index.php"
 	},
 	"supports": {
 		"jsx": true
-	},
-	"style": [
-		"acf/breadcrumb-styles"
-	]
+	}
 }

@@ -4,7 +4,6 @@ This theme is being developed in the open. You can preview the work in progress 
 
 ## Theme requirements
 
-- WordPress 6.7
 - This theme **requires** the following plugins:
   - [UCSC Custom Functionality](https://github.com/ucsc/ucsc-custom-functionality), which adds analytics code and custom shortcodes
   - [Advanced Custom Fields PRO](https://advancedcustomfields.com)
@@ -13,7 +12,7 @@ This theme is being developed in the open. You can preview the work in progress 
 ## Development requirements
 
 - Node and NPM
-- [Composer](https://getcomposer.org/) and PHP >8.0
+- [Composer](https://getcomposer.org/)
 - [Local by WP Engine](https://localwp.com/) for the development server
 
 ## Development workflow

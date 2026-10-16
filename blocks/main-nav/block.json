@@ -6,11 +6,11 @@
 	"icon": "text",
 	"keywords": ["navigation", "main"],
 	"acf": {
+		"blockVersion": 3,
 		"mode": "preview",
 		"renderTemplate": "index.php"
 	},
 	"supports": {
 		"jsx": true
-	},
-	"style": ["acf/main-nav-styles"]
+	}
 }
