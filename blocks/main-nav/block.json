@@ -12,6 +12,5 @@
 	},
 	"supports": {
 		"jsx": true
-	},
-	"style": ["acf/main-nav-styles"]
+	}
 }

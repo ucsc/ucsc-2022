@@ -15,8 +15,5 @@
 	},
 	"supports": {
 		"jsx": true
-	},
-	"style": [
-		"acf/breadcrumb-styles"
-	]
+	}
 }
