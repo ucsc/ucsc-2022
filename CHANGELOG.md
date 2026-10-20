@@ -1,6 +1,26 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [26.10.19](https://github.com/ucsc/ucsc-2022/compare/v5.2.0...v26.10.19) (2026-10-20)
+
+
+### Features
+
+* 🎨 Update theme.json to version 3 ([3b865ee](https://github.com/ucsc/ucsc-2022/commit/3b865ee496960e1404e08a838b023b955dc576bf)), closes [#345](https://github.com/ucsc/ucsc-2022/issues/345)
+
+
+### Bug Fixes
+
+* ⚡️ Fix/remove broken links and references in site footer blocks ([0da3ef2](https://github.com/ucsc/ucsc-2022/commit/0da3ef24281da4f611ee91e8a2106bcea227e29e))
+* ⚡️ Remove style declarations in ACF block.json files ([52d3ad3](https://github.com/ucsc/ucsc-2022/commit/52d3ad3a82772de587964f9e6dca6e4d3b1818fc))
+* ⚡️ Scope title and author block filter functions from *all* blocks to specific blocks ([a844c2e](https://github.com/ucsc/ucsc-2022/commit/a844c2e34f1662e5b404bd8137e6bd8f61bc6f8d))
+* ⚡️ Update ACF blocks (main nav and breadcrumbs) to use ACF API v3 ([480f92a](https://github.com/ucsc/ucsc-2022/commit/480f92a34b2e28a60f5d5418a0b734320504f2f4))
+* 🎨 Fix typo in serif font stack. ([5c5b41f](https://github.com/ucsc/ucsc-2022/commit/5c5b41f21736aa59b18043110990a0da3640f193))
+* 🎨 Remove curves in the footer. Fixes [#403](https://github.com/ucsc/ucsc-2022/issues/403) ([431f692](https://github.com/ucsc/ucsc-2022/commit/431f6926de85332595b773dc7e1633c6bf92093b))
+* 🐛 Escape ACF post sub headline field and check for content before printing ([f3f8529](https://github.com/ucsc/ucsc-2022/commit/f3f8529cd280d0830da8913f630b2b317a664a6c)), closes [#405](https://github.com/ucsc/ucsc-2022/issues/405)
+* 🐛 Remove `echo` from main nav php. Add `aria-label` to the mobile menu ([6ff650d](https://github.com/ucsc/ucsc-2022/commit/6ff650d901eca8a283edefd536780130fc2c6d0e))
+* 🐛 Remove `main` tag from `post-query` template part ([3de3c98](https://github.com/ucsc/ucsc-2022/commit/3de3c98ac336cdc8668a004ac0a4421363153007))
 
 ## [5.2.0](https://github.com/ucsc/ucsc-2022/compare/v5.1.3...v5.2.0) (2026-07-16)
 
