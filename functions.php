@@ -349,7 +349,100 @@ function ucsc_post_subtitle($block_content = '', $block = [])
 
 add_filter('render_block_core/post-title', 'ucsc_post_subtitle', 10, 2);
 
-add_filter('render_block_core/cover', function ($block_content, $block) {
+/**
+ * Find the URL of an uploaded caption file by its file name.
+ *
+ * Looks the file up in the media library rather than on disk, because the
+ * caption may have been uploaded in a different month folder than its video,
+ * and some hosts (e.g. CampusPress) serve uploads from a CDN or a rewritten
+ * /files/ path that doesn't exist under ABSPATH.
+ *
+ * Only captions uploaded by someone who can edit the post containing the
+ * video are used, so a user who can upload media can't set the captions on
+ * a page they can't edit by uploading a .vtt with a matching name.
+ *
+ * @param string $vtt_name File name to match, e.g. "my-video.vtt".
+ * @param int    $post_id  ID of the post the video is shown in, or 0 if the
+ *                         video isn't in a post (e.g. a template part).
+ * @return string Attachment URL, or an empty string if none was found.
+ */
+function ucsc_find_vtt_attachment_url($vtt_name, $post_id)
+{
+	foreach (ucsc_get_vtt_attachment_ids($vtt_name) as $attachment_id) {
+		$uploader = (int) get_post_field('post_author', $attachment_id);
+		$allowed  = $post_id
+			? user_can($uploader, 'edit_post', $post_id)
+			: user_can($uploader, 'edit_others_posts');
+		if ($allowed) {
+			return (string) wp_get_attachment_url($attachment_id);
+		}
+	}
+	return '';
+}
+
+/**
+ * Get the IDs of caption attachments with a given file name, newest first.
+ *
+ * @param string $vtt_name File name to match, e.g. "my-video.vtt".
+ * @return int[] Attachment IDs.
+ */
+function ucsc_get_vtt_attachment_ids($vtt_name)
+{
+	$cache_key = 'ucsc_vtt_ids_' . md5($vtt_name);
+	$cached    = get_transient($cache_key);
+	if (is_array($cached)) {
+		return $cached;
+	}
+
+	$attachment_ids = get_posts([
+		'post_type'      => 'attachment',
+		'post_status'    => 'inherit',
+		'posts_per_page' => 20,
+		'fields'         => 'ids',
+		'no_found_rows'  => true,
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+		'meta_query'     => [
+			[
+				'key'     => '_wp_attached_file',
+				'value'   => $vtt_name,
+				'compare' => 'LIKE',
+			],
+		],
+	]);
+
+	// LIKE also matches names that only end with $vtt_name (e.g.
+	// "other-my-video.vtt"), so require an exact base name match.
+	$ids = [];
+	foreach ($attachment_ids as $attachment_id) {
+		$file = get_post_meta($attachment_id, '_wp_attached_file', true);
+		if (wp_basename($file) === $vtt_name) {
+			$ids[] = (int) $attachment_id;
+		}
+	}
+
+	// Matches the max-age CampusPress sends on /files/ upload redirects.
+	set_transient($cache_key, $ids, WEEK_IN_SECONDS);
+	return $ids;
+}
+
+/**
+ * Clear the cached caption lookup when a .vtt file is added, changed or removed.
+ *
+ * @param int $attachment_id Attachment post ID.
+ */
+function ucsc_clear_vtt_attachment_cache($attachment_id)
+{
+	$file = get_post_meta($attachment_id, '_wp_attached_file', true);
+	if ($file && preg_match('/\.vtt$/i', $file)) {
+		delete_transient('ucsc_vtt_ids_' . md5(wp_basename($file)));
+	}
+}
+add_action('add_attachment', 'ucsc_clear_vtt_attachment_cache');
+add_action('edit_attachment', 'ucsc_clear_vtt_attachment_cache');
+add_action('delete_attachment', 'ucsc_clear_vtt_attachment_cache');
+
+add_filter('render_block_core/cover', function ($block_content, $block, $instance = null) {
 	if (empty($block['attrs']['backgroundType']) || $block['attrs']['backgroundType'] !== 'video') {
 		return $block_content;
 	}
@@ -357,20 +450,21 @@ add_filter('render_block_core/cover', function ($block_content, $block) {
 		return $block_content;
 	}
 
-	// Normalize to the scheme of the current request so the emitted URL
-	// isn't blocked as mixed content when the page is served over https.
-	$video_url = set_url_scheme($block['attrs']['url']);
-	$vtt_url   = preg_replace('/\.(mp4|webm|mov|m4v)$/i', '.vtt', $video_url);
-
-	// Resolve to a local filesystem path independent of http/https. The
-	// stored block URL and site_url() can disagree on scheme (e.g. on a
-	// Local site reachable over both), which would break a plain
-	// str_replace() and skip the track over https.
-	$relative = wp_make_link_relative($vtt_url);
-	$vtt_path = wp_normalize_path(ABSPATH . ltrim($relative, '/'));
-	if (! file_exists($vtt_path)) {
+	$path = wp_parse_url($block['attrs']['url'], PHP_URL_PATH);
+	if (! $path || ! preg_match('/\.(mp4|webm|mov|m4v)$/i', $path)) {
 		return $block_content;
 	}
+	$vtt_name = preg_replace('/\.(mp4|webm|mov|m4v)$/i', '.vtt', wp_basename($path));
+
+	$post_id = isset($instance->context['postId']) ? (int) $instance->context['postId'] : (int) get_the_ID();
+	$vtt_url = ucsc_find_vtt_attachment_url($vtt_name, $post_id);
+	if (! $vtt_url) {
+		return $block_content;
+	}
+
+	// Normalize to the scheme of the current request so the emitted URL
+	// isn't blocked as mixed content when the page is served over https.
+	$vtt_url = set_url_scheme($vtt_url);
 
 	$track = sprintf(
 		'<track kind="captions" src="%s" srclang="en" label="English" default>',
@@ -379,7 +473,7 @@ add_filter('render_block_core/cover', function ($block_content, $block) {
 
 	// Inject the <track> just before </video>
 	return preg_replace('#</video>#', $track . '</video>', $block_content, 1);
-}, 10, 2);
+}, 10, 3);
 
 
 /**
