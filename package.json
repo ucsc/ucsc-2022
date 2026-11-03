@@ -64,7 +64,7 @@
 		"readme.txt",
 		"*.php"
 	],
-	"standard-version": {
+	"commit-and-tag-version": {
 		"bumpFiles": [
 			{
 				"filename": "package-lock.json",
