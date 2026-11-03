@@ -34,6 +34,7 @@
 	"prettier": "@wordpress/prettier-config",
 	"homepage": "https://github.com/ucsc/ucsc-2022#readme",
 	"devDependencies": {
+		"@ucsantacruz/wordpress-version-updater": "^1.1.1",
 		"@wordpress/prettier-config": "^2.9.0",
 		"@wordpress/scripts": "^25.3.0",
 		"commit-and-tag-version": "^12.7.1",
@@ -75,7 +76,7 @@
 			},
 			{
 				"filename": "style.css",
-				"updater": "wp-theme-version-updater.js"
+				"updater": "node_modules/@ucsantacruz/wordpress-version-updater/index.js"
 			}
 		]
 	}
