@@ -40,3 +40,6 @@ settings.json
 # Misc
 utility.php
 *.zip
+
+# Personal Claude Code instructions
+CLAUDE.local.md
