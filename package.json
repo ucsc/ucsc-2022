@@ -14,7 +14,7 @@
 		"postinstall": "husky install",
 		"postpackages-update": "npm run build",
 		"release": "commit-and-tag-version",
-		"dryrun": "commit-and-tag-version --dry-run",
+		"release:dryrun": "commit-and-tag-version --dry-run",
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
 		"test": "lint-staged",
@@ -36,7 +36,7 @@
 	"prettier": "@wordpress/prettier-config",
 	"homepage": "https://github.com/ucsc/ucsc-2022#readme",
 	"devDependencies": {
-		"@ucsantacruz/wordpress-version-updater": "^1.1.1",
+		"@ucsantacruz/wordpress-version-updater": "^2.0.0",
 		"@wordpress/prettier-config": "^2.9.0",
 		"@wordpress/scripts": "^25.3.0",
 		"commit-and-tag-version": "^12.7.1",
@@ -67,10 +67,13 @@
 		"*.php"
 	],
 	"commit-and-tag-version": {
+		"scripts": {
+			"prerelease": "wordpress-version-updater check style.css"
+		},
 		"bumpFiles": [
 			{
 				"filename": "style.css",
-				"updater": "wordpress-version-updater.js"
+				"updater": "node_modules/@ucsantacruz/wordpress-version-updater/index.js"
 			},
 			{
 				"filename": "package-lock.json",
