@@ -14,6 +14,7 @@
 		"postinstall": "husky install",
 		"postpackages-update": "npm run build",
 		"release": "commit-and-tag-version",
+		"dryrun": "commit-and-tag-version --dry-run",
 		"start": "wp-scripts start",
 		"start:hot": "wp-scripts start --hot",
 		"test": "lint-staged",
@@ -67,16 +68,16 @@
 	"commit-and-tag-version": {
 		"bumpFiles": [
 			{
+				"filename": "style.css",
+				"updater": "wordpress-version-updater.js"
+			},
+			{
 				"filename": "package-lock.json",
 				"type": "json"
 			},
 			{
 				"filename": "package.json",
 				"type": "json"
-			},
-			{
-				"filename": "style.css",
-				"updater": "node_modules/@ucsantacruz/wordpress-version-updater/index.js"
 			}
 		]
 	}
