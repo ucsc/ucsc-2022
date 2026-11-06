@@ -195,13 +195,13 @@ Priority key:
    2. Update `actions/setup-node@v2`.
    3. Replace the deprecated `::set-output` syntax.
 5. **Node version drift.**
-   1. Align `.nvmrc` (pins 20.18.0) with the shared release workflow (defaults to Node 24).
-   2. Replace Husky 8's `husky install` postinstall, which is deprecated in Husky 9.
+   1. Replace Husky 8's `husky install` postinstall, which is deprecated in Husky 9.
 
 ### Tooling done
 
 - [x] **Restored PHP linting** (WPCS 3.3.0) so the security sniffs actually run — `44b7955` · v5.0.0.
 - [x] **Stylelint can now lint Sass files** — `d2ea0ef` · v5.0.0.
+- [x] **`.nvmrc` pins Node 24** (`v24.21.0`), matching the shared release workflow — `461be98` · PR 413.
 
 ## Agent visibility and machine readability
 
@@ -313,4 +313,4 @@ Work that didn't come from a roadmap section.
 - [x] **Cover block background videos:** play/pause and captions controls, reduced-motion support, styling refinements; captions button appears only when a captions file exists — `79bdb99` … `13ac382` · v5.0.0–v5.2.0.
 - [x] **Dashboard auto-update library runs only under specific conditions** — `14a15a6` · v5.2.0.
 - [x] **Replaced the footer curves** ([issue 403](https://github.com/ucsc/ucsc-2022/issues/403)) — `431f692` · PR 404.
-- [x] **Replaced the local `style.css` version updater with `@ucsantacruz/wordpress-version-updater`** ([issue 408](https://github.com/ucsc/ucsc-2022/issues/408)). A release now stops if the package is missing — `5e8fbe0` · PR 413.
+- [x] **Replaced the local `style.css` version updater with `@ucsantacruz/wordpress-version-updater`** ([issue 408](https://github.com/ucsc/ucsc-2022/issues/408)). v2.0.0 of the package checks the `Version` header with `wordpress-version-updater check style.css` in the `prerelease` hook, so a release stops if the package or the header is missing — `5e8fbe0`, `461be98` · PR 413.
