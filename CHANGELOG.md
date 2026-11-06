@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2026.11.2](https://github.com/ucsc/ucsc-2022/compare/v2026.11.1...v2026.11.2) (2026-11-06)
+
+
+### Bug Fixes
+
+* **cover-block:** 🐛 Captions files are now discovered properly via `get_posts` search ([5dee6e5](https://github.com/ucsc/ucsc-2022/commit/5dee6e574f7353f37094d23bcc0249d7b3e310d9)), closes [#409](https://github.com/ucsc/ucsc-2022/issues/409)
+
 ## [2026.11.1](https://github.com/ucsc/ucsc-2022/compare/v26.10.19...v2026.11.1) (2026-11-06)
 
 
