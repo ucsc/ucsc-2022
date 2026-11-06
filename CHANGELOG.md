@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2026.11.1](https://github.com/ucsc/ucsc-2022/compare/v26.10.19...v2026.11.1) (2026-11-06)
+
+
+### Bug Fixes
+
+* 🐛 Replace local style.css version updater with npm package ([a18e3a5](https://github.com/ucsc/ucsc-2022/commit/a18e3a54a83ffc9efd2bf08ba04f3b085f70f519)), closes [#408](https://github.com/ucsc/ucsc-2022/issues/408)
+* 🐛 Stop release when version updater package is missing ([beced6e](https://github.com/ucsc/ucsc-2022/commit/beced6e5c28d2311d42a95f4428f1ac140f33e2f)), closes [#408](https://github.com/ucsc/ucsc-2022/issues/408)
+* 📝 Update the version update package to v2.0.0 and modify config files ([6bf9585](https://github.com/ucsc/ucsc-2022/commit/6bf95855d3555acf6440fcc178636f9360442395))
+
 ### [26.10.19](https://github.com/ucsc/ucsc-2022/compare/v5.2.0...v26.10.19) (2026-10-20)
 
 
