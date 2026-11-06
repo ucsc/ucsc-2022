@@ -313,3 +313,4 @@ Work that didn't come from a roadmap section.
 - [x] **Cover block background videos:** play/pause and captions controls, reduced-motion support, styling refinements; captions button appears only when a captions file exists — `79bdb99` … `13ac382` · v5.0.0–v5.2.0.
 - [x] **Dashboard auto-update library runs only under specific conditions** — `14a15a6` · v5.2.0.
 - [x] **Replaced the footer curves** ([issue 403](https://github.com/ucsc/ucsc-2022/issues/403)) — `431f692` · PR 404.
+- [x] **Replaced the local `style.css` version updater with `@ucsantacruz/wordpress-version-updater`** ([issue 408](https://github.com/ucsc/ucsc-2022/issues/408)). A release now stops if the package is missing — `5e8fbe0` · PR 413.
