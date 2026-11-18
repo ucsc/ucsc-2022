@@ -39,10 +39,10 @@ Priority key:
    4. Replace the resize chain with one `matchMedia('(min-width: 1060px)')` listener.
    5. Fold in the toggle-accessibility item above.
    6. Test on iOS Safari (long menus, mid-page scroll, double-tap, rotation), narrow Firefox, keyboard only, and VoiceOver.
-8. **Breadcrumbs structured data fails Google validation** ([issue 330](https://github.com/ucsc/ucsc-2022/issues/330)). `itemListElement` is missing the required `position` field in the microdata printed by the theme's breadcrumbs (`justintadlock/hybrid-breadcrumbs`, `Trail::render()` in `functions.php`). On news.ucsc.edu, Yoast's breadcrumb JSON-LD already includes `position`, and the checked pages carried no theme microdata, so the error likely comes from pages that use the theme's breadcrumbs block. Add `position`, or drop the microdata when Yoast is active so there's one breadcrumb source.
 
 ### P1 done
 
+- [x] **Breadcrumbs now use `core/breadcrumbs`, so Google no longer sees the Hybrid microdata without `position`** (closes [issue 330](https://github.com/ucsc/ucsc-2022/issues/330) and [issue 411](https://github.com/ucsc/ucsc-2022/issues/411)). Core prints no microdata, so Yoast stays the one schema source. Removes the ACF block and `justintadlock/hybrid-breadcrumbs` — `31b635d`, `fc57e15`, `ac48ce4`. **Breaking:** the theme now requires WordPress 7.0 (`13217a9`), the front page shows no trail, and `.breadcrumbs__*` / `.ucsc-page-header__breadcrumbs` classes are gone. **Deployment caveat:** a Breadcrumbs part saved in the Site Editor keeps the old `acf/breadcrumbs` markup. The front end works through a shim; reset the part under **Appearance → Editor → Template Parts → Breadcrumbs → Clear customizations** to fix the editor view.
 - [x] **Escaped the ACF subtitle field and stopped empty subtitles from rendering.** `ucsc_post_subtitle()` now wraps the field in `esc_html()` (closes the stored-XSS finding), initializes `$subtitle` so it's defined when ACF is inactive, tests with `!empty()` so unset fields no longer append an empty `.post-subtitle` div, and drops the unused `global $post` — `f3f8529`, fixes [issue 405](https://github.com/ucsc/ucsc-2022/issues/405). The filter now runs only on `core/post-title` (see [P2 done](#p2-done)).
 - [x] **Repaired the malformed template and template-part JSON** broken by the v4.3.4 find/replace — `b565ae3` · v5.0.0. **Deployment caveat:** sites where the header part was ever saved in the Site Editor keep a database copy of the broken markup that overrides the fixed file. Those sites need **Appearance → Editor → Template Parts → header → Clear customizations**. Include this in release notes.
 - [x] **Mobile menu Phase 1:** the menu scrolls and closes reliably; panel anchored to the header's measured bottom edge; body-lock width fix; header lifted above Truss internals while open. Fixes [issue 355](https://github.com/ucsc/ucsc-2022/issues/355), [issue 393](https://github.com/ucsc/ucsc-2022/issues/393), [issue 394](https://github.com/ucsc/ucsc-2022/issues/394) — `7d4833f` ([PR 401](https://github.com/ucsc/ucsc-2022/pull/401)) · v5.0.0.
@@ -81,18 +81,15 @@ Priority key:
 2. **Unescaped attribute in the Truss header.** `$should_use_logo` is printed into an attribute without escaping, and `search-action="/"` is hardcoded, which breaks subdirectory installs ([functions.php:454-457](functions.php#L454-L457)).
    1. Wrap `$should_use_logo` in `esc_attr()`.
    2. Replace `search-action="/"` with `esc_url( home_url( '/' ) )`.
-3. **Missing direct-access guards and unescaped-output triage.** No theme PHP file has a `defined( 'ABSPATH' ) || exit;` guard. PHPCS reports 8 `EscapeOutput.OutputNotEscaped` findings (5 in `functions.php`, 1 each in `header-plugin.php`, `footer-plugin.php`, and `blocks/breadcrumbs/index.php`). (The subtitle XSS was separate — it was a filter return, which this sniff doesn't flag.)
+3. **Missing direct-access guards and unescaped-output triage.** No theme PHP file has a `defined( 'ABSPATH' ) || exit;` guard. PHPCS reports 7 `EscapeOutput.OutputNotEscaped` findings (5 in `functions.php`, 1 each in `header-plugin.php` and `footer-plugin.php`). (The subtitle XSS was separate — it was a filter return, which this sniff doesn't flag.)
    1. Add the guard to `lib/*.php`, `blocks/*/index.php`, `header-plugin.php`, and `footer-plugin.php`.
    2. Fix the real escaping finding (the Truss attribute above).
-   3. Give the intentional `do_blocks()`/breadcrumb-trail echoes documented `// phpcs:ignore` annotations so the baseline reads zero.
+   3. Give the intentional `do_blocks()` echoes documented `// phpcs:ignore` annotations so the baseline reads zero.
 4. **The last-modified footer prints a raw shortcode when the plugin is inactive.** `ucsc_last_modified()` always runs `do_shortcode( '[last-modified]' )` ([functions.php:481-486](functions.php#L481-L486)).
    1. Gate it on `shortcode_exists()`.
    2. Do the same for `[site-search]` in [templates/search.html](templates/search.html), which has no fallback when the plugin is off.
 5. **The front-end bundle loads on every admin screen.** `ucsc_add_admin_scripts()` enqueues `build/theme.js` (nav, sticky header, sidebar behaviors) on all `admin_enqueue_scripts` ([functions.php:236-247](functions.php#L236-L247)). Nothing in it targets wp-admin. Remove it.
-6. **Breadcrumbs fatal if Composer deps are missing.** `ucsc_breadcrumbs_constructor()` calls `Hybrid\Breadcrumbs\Trail` unconditionally ([functions.php:403](functions.php#L403)). That's fine for release zips, but a fresh clone without `composer install` white-screens.
-   1. Add a `class_exists()` guard.
-   2. Add a release check that the zip contains `vendor/`.
-7. **The custom skip link adds an unlabeled navigation landmark.** The replacement skip link is wrapped in `<div role="navigation">` and assigns an undeclared global, `skipLinkContainer` ([functions.php:572-573](functions.php#L572-L573)). The core removal works on 6.9 (verified), but the replacement creates an extra landmark for one link. Drop the `role` or the custom implementation.
+6. **The custom skip link adds an unlabeled navigation landmark.** The replacement skip link is wrapped in `<div role="navigation">` and assigns an undeclared global, `skipLinkContainer` ([functions.php:572-573](functions.php#L572-L573)). The core removal works on 6.9 (verified), but the replacement creates an extra landmark for one link. Drop the `role` or the custom implementation.
 
 ### Performance
 
@@ -108,6 +105,7 @@ Priority key:
 
 ### P2 done
 
+- [x] **Breadcrumbs no longer fatal when Composer deps are missing.** `core/breadcrumbs` needs no Composer package, and `justintadlock/hybrid-breadcrumbs` is removed — `ac48ce4` · [issue 411](https://github.com/ucsc/ucsc-2022/issues/411).
 - [x] **Set one WordPress and PHP floor.** `style.css` and `readme.txt` now say WP 6.9, tested up to 7.1, PHP 8.0; `README.md` no longer lists conflicting versions — `557d8d3`, `d66e81e`.
 - [x] **`theme.json` upgraded to schema v3** (closes [issue 345](https://github.com/ucsc/ucsc-2022/issues/345)); fixed the `serif serif` font stack; removed the rule for the non-existent `core/block-post` block; removed "(Do not use) Page no title with breadcrumbs" from the template picker — `3b865ee`, `5c5b41f` · PR 404. Generated CSS confirmed identical before and after.
 - [x] **Removed the unregistered ACF block style handles and the stray `echo`.** `acf/breadcrumb-styles` and `acf/main-nav-styles` are gone from `blocks/*/block.json`, and `blocks/main-nav/index.php` no longer `echo`es `wp_nav_menu()`. The hamburger toggle also gained a server-rendered `aria-label` — `52d3ad3`, `6ff650d`.
@@ -174,6 +172,7 @@ Priority key:
 14. **Block API v3 warnings in UCSC plugins (other repos).** Editor console warnings come from two plugins. Track in those repos.
     1. `ucsc-gutenberg-blocks`: 8 blocks registered in JS with no `apiVersion`; needs `useBlockProps()` and possibly deprecations.
     2. `ucsc-custom-functionality`: 9 `block.json` files without `apiVersion`.
+15. **Remove the breadcrumbs compatibility shim in a later release.** Delete the `pre_render_block` filter for `acf/breadcrumbs` and the deprecated `ucsc_breadcrumbs_constructor()` in `functions.php`, once sites have reset any Breadcrumbs part saved in the Site Editor.
 
 ### P3 done
 
@@ -294,12 +293,12 @@ _Nothing yet._
 - [OpenAI: crawler controls](https://developers.openai.com/api/docs/bots) — separate search, training, and user-requested access.
 - [Cloudflare: Markdown for Agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/) — content negotiation and cache separation.
 
-**Theme boundary:** presentation, semantics, accessible controls, fallback content, and rendered-output checks belong here. Publisher schema, canonical URLs, feeds and sitemaps belong in persistent site plugins. Bot access belongs in hosting and university policy. Editorial summaries and source links need newsroom ownership. Prioritize the Truss fallback, readable dates, article semantics, release checks, and operable controls for theme work; pair them with the breadcrumb schema, nav accessibility, and performance items. Evaluate `llms.txt` and agent APIs after the public content works reliably.
+**Theme boundary:** presentation, semantics, accessible controls, fallback content, and rendered-output checks belong here. Publisher schema, canonical URLs, feeds and sitemaps belong in persistent site plugins. Bot access belongs in hosting and university policy. Editorial summaries and source links need newsroom ownership. Prioritize the Truss fallback, readable dates, article semantics, release checks, and operable controls for theme work; pair them with the nav accessibility, and performance items. Evaluate `llms.txt` and agent APIs after the public content works reliably.
 
 ## Suggested sequencing
 
 1. **Now (one release):** core-pattern removal, shortcode guards, ACF hook/slug fix, undefined theme.json tokens and font-size slugs, and `<time>` markup for the last-modified footer — small and mostly mechanical. Run the auto-fix formatting passes (`composer lint-fix`, `lint:style --fix`) as their own commits, and add the PR lint workflow so it stays clean.
-2. **Next (dedicated effort):** mobile menu Phase 2 together with the nav-toggle accessibility and null-safety items (one component, one test pass); breadcrumb structured data; operable controls for browser agents.
+2. **Next (dedicated effort):** mobile menu Phase 2 together with the nav-toggle accessibility and null-safety items (one component, one test pass); operable controls for browser agents.
 3. **SEO settings and plugins:** Yoast descriptions and publisher identity; schema and sitemap audit.
 4. **Then:** build tooling (Sass `@use` migration → wp-scripts/prettier → husky/Node), then the ACF block modernization, dead-JS cleanup, and the performance items.
 5. **Agent visibility:** server-rendered Truss fallback, readable dates, article semantics, and release checks (P1); archives, sources, format consistency, and measurement (P2).
