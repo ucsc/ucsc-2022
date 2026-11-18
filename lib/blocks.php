@@ -3,7 +3,6 @@
 add_action('init', static function (): void {
 	// Register custom blocks from Advanced Custom Fields
 	register_block_type(get_template_directory() . '/blocks/main-nav');
-	register_block_type(get_template_directory() . '/blocks/breadcrumbs');
 
 	// Remove core block patterns
 	remove_theme_support('core-block-patterns');

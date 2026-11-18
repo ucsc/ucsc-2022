@@ -1,6 +1,6 @@
 === Theme Name ===
 Contributors: herm71, robknight
-Requires at least: 6.9
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
 License: GPLv2 or later

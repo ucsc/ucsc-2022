@@ -1,0 +1,35 @@
+/* core/breadcrumbs: ported from the old Hybrid breadcrumbs styles */
+.wp-block-breadcrumbs li {
+	font-size: 0.85rem;
+	line-height: 1.1;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+}
+
+.wp-block-breadcrumbs a {
+	border-bottom: 0;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.68);
+}
+
+.wp-block-breadcrumbs a:active,
+.wp-block-breadcrumbs a:focus,
+.wp-block-breadcrumbs a:hover {
+	color: var(--wp--preset--color--ucsc-primary-blue);
+	text-decoration: underline;
+	text-decoration-thickness: 0.1em;
+	text-underline-offset: 0.15em;
+}
+
+.wp-block-breadcrumbs [aria-current="page"] {
+	color: rgba(0, 0, 0, 0.68);
+	font-weight: 500;
+}
+
+/* Restyle core's separator instead of adding a second one. */
+.wp-block-breadcrumbs li:not(:last-child)::after {
+	margin: 0 0.58em;
+	font-weight: 600;
+	color: var(--wp--preset--color--ucsc-ocean-blue);
+	opacity: 1;
+}
