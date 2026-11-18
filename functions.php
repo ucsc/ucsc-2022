@@ -54,6 +54,7 @@ if (!function_exists('ucsc_setup')):
 			'core/paragraph',
 			'ucscblocks/accordion',
 			'core/details',
+			'core/breadcrumbs',
 			'outermost/icon-block',
 		];
 		foreach ($styled_blocks as $block) {
