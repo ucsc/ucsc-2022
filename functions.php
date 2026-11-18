@@ -68,15 +68,6 @@ if (!function_exists('ucsc_setup')):
 		}
 
 		/**
-		 * Include ThemeHybrid/HyridBreadcrumbs Class
-		 * see: https://github.com/themehybrid/hybrid-breadcrumbs
-		 * and https://themehybrid.com/weblog/integrating-hybrid-breadcrumbs-into-wordpress-themes
-		 */
-		if (file_exists(get_parent_theme_file_path('vendor/autoload.php'))) {
-			include_once get_parent_theme_file_path('vendor/autoload.php');
-		}
-
-		/**
 		 * Register Advanced Custom Fields
 		 */
 		if (file_exists(get_theme_file_path('lib/acf.php'))) {
@@ -478,23 +469,33 @@ add_filter('render_block_core/cover', function ($block_content, $block, $instanc
 
 
 /**
+ * Render core/breadcrumbs wherever a saved template part still holds the
+ * retired acf/breadcrumbs block. Remove in a later release.
+ */
+add_filter('pre_render_block', function ($pre_render, $parsed_block) {
+	if ('acf/breadcrumbs' !== $parsed_block['blockName']) {
+		return $pre_render;
+	}
+	return render_block([
+		'blockName' => 'core/breadcrumbs',
+		'attrs' => ['separator' => '/'],
+		'innerBlocks' => [],
+		'innerHTML' => '',
+		'innerContent' => [],
+	]);
+}, 10, 2);
+
+/**
  * Breadcrumbs constructor callback helper
+ *
+ * @deprecated Use the core/breadcrumbs block. Remove in a later release.
  *
  * @return string
  */
 function ucsc_breadcrumbs_constructor()
 {
-	$labels = [
-		'title' => '',
-	];
-	$args = [
-		'labels' => $labels,
-		'show_on_front' => true,
-		'show_trail_end' => true,
-		'list_tag'        => 'ol',
-		'container_class' => 'ucsc-page-header__breadcrumbs',
-	];
-	return Hybrid\Breadcrumbs\Trail::render($args);
+	_deprecated_function(__FUNCTION__, '2026.12.0', 'the core/breadcrumbs block');
+	return do_blocks('<!-- wp:breadcrumbs /-->');
 }
 
 
