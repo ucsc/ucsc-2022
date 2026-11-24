@@ -1,6 +1,22 @@
-.wp-block-image figcaption {
+/*
+ * A caption shorter than one line is centered below the image.
+ * A longer caption wraps and stays left aligned.
+ * Gallery captions are an overlay on the image, so they are excluded.
+ * The caption font size and color are set in theme.json.
+ */
+.wp-block-image figcaption:not(.wp-block-gallery figcaption) {
+	max-inline-size: max-content;
+	margin-inline: auto;
 	text-align: left;
-	font-size: var(--wp--preset--font-size--small);
-	color: var(--ucsc-dark-gray);
 }
 
+/*
+ * An image with no alignment is in a figure as wide as the content.
+ * Put the image and the caption in one column that is as wide as the image,
+ * so that the caption is centered below the image and not below the figure.
+ */
+figure.wp-block-image:has(> figcaption):not(.alignleft, .alignright, .aligncenter, .wp-block-gallery figure) {
+	display: grid;
+	grid-template-columns: fit-content(100%);
+	justify-items: start;
+}

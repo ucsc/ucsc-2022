@@ -50,6 +50,8 @@ if (!function_exists('ucsc_setup')):
 			'core/latest-posts',
 			'core/quote',
 			'core/image',
+			'core/video',
+			'core/embed',
 			'core/search',
 			'core/paragraph',
 			'ucscblocks/accordion',
