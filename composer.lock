@@ -4,55 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abfaf25bad590600346097fb40d429a2",
+    "content-hash": "3d5adfdab7c171f246f571c16b19e8d2",
     "packages": [
-        {
-            "name": "justintadlock/hybrid-breadcrumbs",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/justintadlock/hybrid-breadcrumbs.git",
-                "reference": "9e06be3b12ac3855b58f4c97f352c7916dd6f91b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-breadcrumbs/zipball/9e06be3b12ac3855b58f4c97f352c7916dd6f91b",
-                "reference": "9e06be3b12ac3855b58f4c97f352c7916dd6f91b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Hybrid\\Breadcrumbs\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Tadlock",
-                    "email": "justintadlock@gmail.com",
-                    "homepage": "https://themehybrid.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A powerful breadcrumb script for inclusion with WordPress themes.",
-            "homepage": "https://github.com/justintadlock/hybrid-breadcrumbs",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "forum": "https://themehybrid.com/board/topics",
-                "issues": "https://github.com/justintadlock/hybrid-breadcrumbs/issues",
-                "source": "https://github.com/justintadlock/hybrid-breadcrumbs/tree/master"
-            },
-            "time": "2018-10-23T19:57:54+00:00"
-        },
         {
             "name": "yahnis-elsts/plugin-update-checker",
             "version": "v5.6",
@@ -529,5 +482,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
