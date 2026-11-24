@@ -1,0 +1,9 @@
+/*
+ * A caption shorter than one line is centered below the embed.
+ * A longer caption wraps and stays left aligned.
+ */
+.wp-block-embed figcaption {
+	max-inline-size: max-content;
+	margin-inline: auto;
+	text-align: left;
+}

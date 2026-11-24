@@ -413,6 +413,14 @@
 			"lineHeight": "var(--wp--custom--line-height--xx-large)"
 		},
 		"elements": {
+			"caption": {
+				"color": {
+					"text": "var(--ucsc-dark-gray)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)"
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--five)",
