@@ -188,12 +188,8 @@ Priority key:
 2. **Stylelint reports 100 errors**: 92 `no-descending-specificity`, plus whitespace. **PHPCS reports 664 errors and 93 warnings** (re-measured 2026-10-14) across 39 files; 613 can be fixed automatically, and 8 are `EscapeOutput.OutputNotEscaped`.
    1. Fix the escaping findings first (listed under P1/P2).
    2. Do the auto-fixable formatting in one dedicated commit (`composer lint-fix`, `npm run lint:style -- --fix`), not mixed with other changes.
-3. **No lint job on pull requests.** The only workflows are Dokku deploy and release. Add a PR workflow that runs `lint:style`, `lint:js`, and `composer lint` on changed files.
-4. **Outdated Actions in `pipeline-dokku.yml`.**
-   1. Update `actions/checkout@v2`.
-   2. Update `actions/setup-node@v2`.
-   3. Replace the deprecated `::set-output` syntax.
-5. **Node version drift.**
+3. **No lint job on pull requests.** The only workflow is release. Add a PR workflow that runs `lint:style`, `lint:js`, and `composer lint` on changed files.
+4. **Node version drift.**
    1. Replace Husky 8's `husky install` postinstall, which is deprecated in Husky 9.
 
 ### Tooling done
